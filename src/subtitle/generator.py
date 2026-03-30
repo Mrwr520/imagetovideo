@@ -61,7 +61,7 @@ class SubtitleGenerator:
         return self.assign_timestamps(segments, total_duration)
 
     # 字幕提前量（秒），补偿视频编码和播放器渲染延迟
-    SUBTITLE_ADVANCE: float = 1.5
+    SUBTITLE_ADVANCE: float = 1
 
     def _generate_from_word_timings(
         self,
