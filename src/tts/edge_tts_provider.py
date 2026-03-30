@@ -52,7 +52,7 @@ class EdgeTTSProvider(BaseTTSProvider):
         self._default_voice = default_voice or self.DEFAULT_VOICE
 
     async def synthesize(self, text: str, voice: str, output_path: Path) -> TTSResult:
-        """使用 Edge TTS 将文本合成为 MP3 音频文件。
+        """使用 Edge TTS 将文本合成为 MP3 音频文件，同时提取词级时间戳。
 
         Args:
             text: 待合成的文本。
@@ -60,28 +60,34 @@ class EdgeTTSProvider(BaseTTSProvider):
             output_path: 输出音频文件路径。
 
         Returns:
-            TTSResult 包含音频路径、时长和采样率。
-
-        Raises:
-            ValueError: 文本为空时抛出。
-            RuntimeError: 合成失败时抛出。
+            TTSResult 包含音频路径、时长、采样率和词级时间戳。
         """
         if not text or not text.strip():
             raise ValueError("合成文本不能为空")
 
         voice = voice or self._default_voice
 
-        # 确保输出目录存在
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # 确保输出文件为 .mp3 扩展名
         if output_path.suffix.lower() != ".mp3":
             output_path = output_path.with_suffix(".mp3")
 
+        # Collect word-level timing data from edge-tts WordBoundary events
+        word_timings: list[tuple[float, float, str]] = []
+
         try:
             communicate = edge_tts.Communicate(text, voice)
-            await communicate.save(str(output_path))
+            with open(str(output_path), "wb") as f:
+                async for chunk in communicate.stream():
+                    if chunk["type"] == "audio":
+                        f.write(chunk["data"])
+                    elif chunk["type"] == "WordBoundary":
+                        # offset and duration are in 100-nanosecond units (ticks)
+                        offset_sec = chunk["offset"] / 10_000_000
+                        duration_sec = chunk["duration"] / 10_000_000
+                        word_text = chunk["text"]
+                        word_timings.append((offset_sec, duration_sec, word_text))
         except Exception as e:
             raise RuntimeError(f"Edge TTS 合成失败: {e}") from e
 
@@ -89,13 +95,13 @@ class EdgeTTSProvider(BaseTTSProvider):
             raise RuntimeError("Edge TTS 合成失败：输出文件为空")
 
         duration = self._get_audio_duration(output_path)
-        # Edge TTS 默认输出 24kHz MP3
         sample_rate = self._get_sample_rate(output_path)
 
         return TTSResult(
             audio_path=output_path,
             duration=duration,
             sample_rate=sample_rate,
+            word_timings=word_timings if word_timings else None,
         )
 
     def list_voices(self) -> list[dict]:

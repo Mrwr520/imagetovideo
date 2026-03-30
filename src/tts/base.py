@@ -14,6 +14,7 @@ class TTSResult:
     audio_path: Path
     duration: float  # 音频时长（秒）
     sample_rate: int
+    word_timings: list | None = None  # [(offset_ms, duration_ms, text), ...]
 
 
 class BaseTTSProvider(ABC):

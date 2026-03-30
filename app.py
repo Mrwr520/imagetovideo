@@ -44,6 +44,8 @@ def _init_session_state() -> None:
         st.session_state["audio_path"] = None
     if "audio_duration" not in st.session_state:
         st.session_state["audio_duration"] = 0.0
+    if "word_timings" not in st.session_state:
+        st.session_state["word_timings"] = None
     if "video_path" not in st.session_state:
         st.session_state["video_path"] = None
     # Batch mode state
@@ -752,6 +754,7 @@ def _render_step_tts(selections: dict) -> None:
 
             st.session_state["audio_path"] = str(result.audio_path)
             st.session_state["audio_duration"] = result.duration
+            st.session_state["word_timings"] = result.word_timings
             st.session_state["pipeline_step"] = 3
         except Exception as e:
             st.error(f"❌ 语音合成失败：{e}")
@@ -774,6 +777,7 @@ def _render_step_tts(selections: dict) -> None:
             if st.button("🔄 重新合成", key="regen_tts_btn"):
                 st.session_state["audio_path"] = None
                 st.session_state["audio_duration"] = 0.0
+                st.session_state["word_timings"] = None
                 st.rerun()
     else:
         st.info("点击上方按钮合成语音。")
@@ -858,7 +862,8 @@ def _render_step_video(selections: dict) -> None:
                 progress_bar.progress(10, text="生成字幕...")
                 subtitle_gen = SubtitleGenerator()
                 audio_dur = st.session_state.get("audio_duration", 0)
-                segments = subtitle_gen.generate(narration, audio_dur)
+                word_timings = st.session_state.get("word_timings")
+                segments = subtitle_gen.generate(narration, audio_dur, word_timings=word_timings)
                 ctx.subtitle_data = [
                     {"index": s.index, "start_time": s.start_time,
                      "end_time": s.end_time, "text": s.text}
@@ -920,6 +925,7 @@ def _render_step_preview() -> None:
         st.session_state["narration"] = ""
         st.session_state["audio_path"] = None
         st.session_state["audio_duration"] = 0.0
+        st.session_state["word_timings"] = None
         st.session_state["video_path"] = None
         st.session_state["uploaded_images"] = []
         st.rerun()

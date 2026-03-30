@@ -12,11 +12,13 @@ from src.tts.cosyvoice import CosyVoiceProvider
 from src.tts.edge_tts_provider import EdgeTTSProvider
 from src.tts.fish_speech import FishSpeechProvider
 from src.tts.melotts import MeloTTSProvider
+from src.tts.volcano import VolcanoTTSProvider
 
 logger = logging.getLogger(__name__)
 
 # Provider name -> (Provider class, config keys used for instantiation)
 _PROVIDER_REGISTRY: dict[str, Type[BaseTTSProvider]] = {
+    "volcano": VolcanoTTSProvider,
     "cosyvoice": CosyVoiceProvider,
     "fish_speech": FishSpeechProvider,
     "chattts": ChatTTSProvider,
@@ -77,6 +79,13 @@ class TTSAdapter:
         # 根据不同 provider 构造参数
         if name == "edge_tts":
             return cls(default_voice=cfg.get("default_voice"))
+        elif name == "volcano":
+            return cls(
+                appid=cfg.get("appid", ""),
+                access_token=cfg.get("access_token", ""),
+                cluster=cfg.get("cluster", "volcano_tts"),
+                default_voice=cfg.get("default_voice"),
+            )
         elif name == "cosyvoice":
             return cls(
                 api_base=cfg.get("api_base", "http://localhost:9880"),

@@ -17,10 +17,10 @@ class SubtitleSegment:
 class SubtitleStyle:
     """字幕样式配置数据类。"""
     font_family: str = "Microsoft YaHei"
-    font_size: int = 36
+    font_size: int = 14
     color: str = "#FFFFFF"
     outline_color: str = "#000000"
-    outline_width: int = 2
+    outline_width: int = 1
     position: str = "bottom"  # 字幕位置
 
 
@@ -31,22 +31,86 @@ _PUNCTUATION = set("，。！？、；：""''（）,.!?;:()")
 class SubtitleGenerator:
     """根据解说词文本和语音时长生成字幕段落列表。"""
 
-    MAX_CHARS_PER_LINE: int = 15  # 每行最大中文字符数
+    MAX_CHARS_PER_LINE: int = 20  # 每行最大中文字符数
 
-    def generate(self, text: str, total_duration: float) -> list[SubtitleSegment]:
+    def generate(
+        self,
+        text: str,
+        total_duration: float,
+        word_timings: list[tuple[float, float, str]] | None = None,
+    ) -> list[SubtitleSegment]:
         """根据文本和总时长生成字幕段落列表。
+
+        如果提供了 word_timings（来自 TTS 的词级时间戳），则使用精确时间；
+        否则回退到按字符数比例分配。
 
         Args:
             text: 解说词文本。
-            total_duration: 语音总时长（秒），必须为正数。
+            total_duration: 语音总时长（秒）。
+            word_timings: 可选的词级时间戳 [(offset_sec, duration_sec, word), ...]
 
         Returns:
             带时间轴的 SubtitleSegment 列表。
         """
+        if word_timings:
+            return self._generate_from_word_timings(word_timings, total_duration)
+
         segments = self.split_text(text)
         if not segments:
             return []
         return self.assign_timestamps(segments, total_duration)
+
+    def _generate_from_word_timings(
+        self,
+        word_timings: list[tuple[float, float, str]],
+        total_duration: float,
+    ) -> list[SubtitleSegment]:
+        """从 TTS 词级时间戳生成精确同步的字幕。
+
+        将连续的词合并为不超过 MAX_CHARS_PER_LINE 的字幕段，
+        时间戳直接取自 TTS 引擎的实际发音时间。
+        """
+        if not word_timings:
+            return []
+
+        limit = self.MAX_CHARS_PER_LINE
+        result: list[SubtitleSegment] = []
+        idx = 0
+
+        current_text = ""
+        current_start = word_timings[0][0]
+        current_end = word_timings[0][0]
+
+        for offset, dur, word in word_timings:
+            word_end = offset + dur
+
+            # Check if adding this word would exceed the line limit
+            if current_text and len(current_text) + len(word) > limit:
+                # Flush current segment
+                result.append(SubtitleSegment(
+                    index=idx,
+                    start_time=current_start,
+                    end_time=current_end,
+                    text=current_text,
+                ))
+                idx += 1
+                current_text = word
+                current_start = offset
+                current_end = word_end
+            else:
+                current_text += word
+                current_end = word_end
+
+        # Flush last segment
+        if current_text:
+            result.append(SubtitleSegment(
+                index=idx,
+                start_time=current_start,
+                end_time=min(current_end, total_duration),
+                text=current_text,
+            ))
+
+        return result
 
     def split_text(self, text: str) -> list[str]:
         """按标点符号和语义边界分割文本，每段不超过 MAX_CHARS_PER_LINE 个字符。
