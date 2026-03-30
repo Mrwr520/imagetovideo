@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 import tempfile
 import uuid
 from pathlib import Path
@@ -14,6 +15,8 @@ from src.llm.adapter import LLMAdapter
 from src.narration_mode import NarrationMode
 from src.pipeline import PipelineManager, TaskContext, TaskStatus
 from src.tts.adapter import TTSAdapter
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -680,8 +683,8 @@ def _render_step_narration(selections: dict) -> None:
                         key=f"seg_editor_{i}",
                     )
                     edited_segments.append(edited_seg)
-            # 用 === 重新拼接完整解说词
-            full_narration = "\n===\n".join(edited_segments)
+            # 用换行拼接完整解说词（不使用 === 分隔符，避免 TTS 朗读）
+            full_narration = "\n\n".join(edited_segments)
             st.session_state["narration"] = full_narration
             st.session_state["narration_segments"] = edited_segments
         else:
@@ -847,13 +850,12 @@ def _render_step_video(selections: dict) -> None:
             # We already have narration and audio, so we run compose directly
             from src.subtitle.generator import SubtitleGenerator, SubtitleStyle
             from src.video.composer import VideoComposer, VideoConfig
-            from src.video.ken_burns import KenBurnsParams
 
-            with st.spinner("正在合成视频，请稍候..."):
+            with st.spinner("正在合成视频，请稍候（视频编码较耗时，请耐心等待）..."):
                 progress_bar = st.progress(0, text="准备素材...")
 
                 # Generate subtitles
-                progress_bar.progress(20, text="生成字幕...")
+                progress_bar.progress(10, text="生成字幕...")
                 subtitle_gen = SubtitleGenerator()
                 audio_dur = st.session_state.get("audio_duration", 0)
                 segments = subtitle_gen.generate(narration, audio_dur)
@@ -863,16 +865,17 @@ def _render_step_video(selections: dict) -> None:
                     for s in segments
                 ]
 
-                # Compose video
-                progress_bar.progress(40, text="合成视频中...")
+                # Compose video in a background thread to avoid blocking
+                # Streamlit's main loop (which causes health check failures)
+                progress_bar.progress(20, text="合成视频中（编码耗时较长）...")
                 composer = VideoComposer()
                 video_config = VideoConfig.from_aspect_ratio(
                     selections.get("aspect_ratio", "9:16")
                 )
-                output_path = composer.compose(
+                output_path = _run_in_thread(
+                    composer.compose,
                     ctx=ctx,
                     video_config=video_config,
-                    ken_burns=KenBurnsParams(),
                     subtitle_style=SubtitleStyle(),
                 )
                 progress_bar.progress(100, text="视频合成完成！")
@@ -881,7 +884,9 @@ def _render_step_video(selections: dict) -> None:
             st.session_state["pipeline_step"] = 5
             st.rerun()
         except Exception as e:
-            st.error(f"❌ 视频合成失败：{e}")
+            import traceback
+            logger.error("视频合成失败: %s", e, exc_info=True)
+            st.error(f"❌ 视频合成失败：{e}\n\n详细信息：{traceback.format_exc()}")
 
 
 # ---------------------------------------------------------------------------

@@ -24,9 +24,9 @@ class KenBurnsParams:
         fade_duration: Seconds for fade-in at start and fade-out at end.
     """
 
-    zoom_range: tuple[float, float] = (1.0, 1.3)
-    pan_speed: float = 0.02
-    fade_duration: float = 0.5
+    zoom_range: tuple[float, float] = (1.0, 1.1)
+    pan_speed: float = 0.01
+    fade_duration: float = 0.3
 
 
 def _prepare_image(
@@ -34,35 +34,36 @@ def _prepare_image(
     target_width: int,
     target_height: int,
 ) -> np.ndarray:
-    """Load and resize an image to cover the target resolution.
+    """Load and resize an image to fit within the target resolution.
 
-    The image is scaled so that it fully covers the target area (cover fit),
-    then center-cropped to exactly target_width × target_height.
-    An extra margin is added to allow room for zoom/pan without black borders.
+    The image is scaled to fit entirely inside the target area (contain fit),
+    then placed centered on a black background of exactly target_width × target_height.
+    A small margin is added for subtle zoom/pan room.
     """
     if not isinstance(image, Image.Image):
         image = Image.open(image)
 
     image = image.convert("RGB")
 
-    # Add 40% margin so zoom/pan never reveals black edges
-    margin = 1.4
+    # Add small margin for subtle zoom/pan
+    margin = 1.15
     padded_w = int(target_width * margin)
     padded_h = int(target_height * margin)
 
-    # Cover-fit: scale to fill padded area
+    # Contain-fit: scale to fit inside padded area (show full image)
     src_w, src_h = image.size
-    scale = max(padded_w / src_w, padded_h / src_h)
+    scale = min(padded_w / src_w, padded_h / src_h)
     new_w = int(src_w * scale)
     new_h = int(src_h * scale)
     image = image.resize((new_w, new_h), Image.LANCZOS)
 
-    # Center-crop to padded size
-    left = (new_w - padded_w) // 2
-    top = (new_h - padded_h) // 2
-    image = image.crop((left, top, left + padded_w, top + padded_h))
+    # Place on black background, centered
+    bg = Image.new("RGB", (padded_w, padded_h), (0, 0, 0))
+    offset_x = (padded_w - new_w) // 2
+    offset_y = (padded_h - new_h) // 2
+    bg.paste(image, (offset_x, offset_y))
 
-    return np.array(image)
+    return np.array(bg)
 
 
 def _apply_zoom_pan_frame(
@@ -166,9 +167,7 @@ def create_ken_burns_clip(
 
     clip = VideoClip(make_frame, duration=duration).with_fps(fps)
 
-    # Apply fade-in and fade-out
-    fade = min(params.fade_duration, duration / 2)
-    if fade > 0:
-        clip = clip.with_effects([vfx.FadeIn(fade), vfx.FadeOut(fade)])
+    # Skip fade effects to avoid float64 memory overhead.
+    # For image-narration slideshows, clean cuts between slides are fine.
 
     return clip

@@ -1,12 +1,12 @@
 """视频合成器模块：将图片、音频、字幕、背景音乐合成为最终视频。
 
-Supports 9:16 (vertical) and 16:9 (horizontal) aspect ratios,
-Ken Burns animation, hardcoded subtitles, and BGM mixing.
+针对图片解说场景优化：静态图片展示 + 语音 + 字幕，无动画特效。
 """
 
 from __future__ import annotations
 
 import logging
+import subprocess
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
@@ -14,59 +14,36 @@ from pathlib import Path
 from moviepy import (
     AudioFileClip,
     CompositeAudioClip,
-    CompositeVideoClip,
-    TextClip,
+    ImageClip,
     concatenate_videoclips,
-    vfx,
 )
 from moviepy.audio.fx import AudioFadeOut, AudioLoop, MultiplyVolume
+from PIL import Image
 
 from src.subtitle.generator import SubtitleSegment, SubtitleStyle
-from src.video.ken_burns import KenBurnsParams, create_ken_burns_clip
 
 logger = logging.getLogger(__name__)
 
 # Resolution mapping for supported aspect ratios
 _RESOLUTION_MAP: dict[str, tuple[int, int]] = {
-    "9:16": (1080, 1920),
-    "16:9": (1920, 1080),
+    "9:16": (720, 1280),
+    "16:9": (1280, 720),
 }
 
 
 @dataclass
 class VideoConfig:
-    """Video output configuration.
-
-    Attributes:
-        aspect_ratio: "9:16" for vertical or "16:9" for horizontal.
-        width: Output width in pixels.
-        height: Output height in pixels.
-        fps: Frames per second.
-        bitrate: Target video bitrate (e.g. "4M").
-        codec: Video codec name.
-    """
+    """Video output configuration."""
 
     aspect_ratio: str = "9:16"
-    width: int = 1080
-    height: int = 1920
-    fps: int = 30
-    bitrate: str = "4M"
+    width: int = 720
+    height: int = 1280
+    fps: int = 10
+    bitrate: str = "2M"
     codec: str = "libx264"
 
     @classmethod
     def from_aspect_ratio(cls, aspect_ratio: str, **kwargs) -> VideoConfig:
-        """Create a VideoConfig from an aspect ratio string.
-
-        Args:
-            aspect_ratio: "9:16" or "16:9".
-            **kwargs: Additional overrides for fps, bitrate, codec.
-
-        Returns:
-            A VideoConfig with the correct width/height for the ratio.
-
-        Raises:
-            ValueError: If aspect_ratio is not supported.
-        """
         if aspect_ratio not in _RESOLUTION_MAP:
             raise ValueError(
                 f"Unsupported aspect ratio '{aspect_ratio}'. "
@@ -81,35 +58,84 @@ class VideoConfig:
         )
 
 
+def _fit_image(image_path: Path, target_width: int, target_height: int) -> str:
+    """Resize image to fit entirely within target area, fill background with blurred version.
+
+    Uses contain-fit: scales so the full image is visible,
+    then fills the remaining area with a heavily blurred + darkened
+    version of the image itself (no ugly black bars).
+    """
+    img = Image.open(image_path).convert("RGB")
+    src_w, src_h = img.size
+
+    # Create blurred background (cover-fit the blur layer)
+    from PIL import ImageFilter
+    bg_scale = max(target_width / src_w, target_height / src_h)
+    bg_w = int(src_w * bg_scale)
+    bg_h = int(src_h * bg_scale)
+    bg = img.resize((bg_w, bg_h), Image.LANCZOS)
+    bg_left = (bg_w - target_width) // 2
+    bg_top = (bg_h - target_height) // 2
+    bg = bg.crop((bg_left, bg_top, bg_left + target_width, bg_top + target_height))
+    bg = bg.filter(ImageFilter.GaussianBlur(radius=30))
+    # Darken the blur layer so the main image stands out
+    from PIL import ImageEnhance
+    bg = ImageEnhance.Brightness(bg).enhance(0.4)
+
+    # Contain-fit the main image
+    fg_scale = min(target_width / src_w, target_height / src_h)
+    fg_w = int(src_w * fg_scale)
+    fg_h = int(src_h * fg_scale)
+    fg = img.resize((fg_w, fg_h), Image.LANCZOS)
+
+    # Center paste onto blurred background
+    offset_x = (target_width - fg_w) // 2
+    offset_y = (target_height - fg_h) // 2
+    bg.paste(fg, (offset_x, offset_y))
+
+    tmp = tempfile.mktemp(suffix=".jpg")
+    bg.save(tmp, quality=95)
+    return tmp
+
+
+def _generate_srt(subtitles: list[SubtitleSegment], output_path: Path) -> Path:
+    """Generate an SRT subtitle file from subtitle segments."""
+    lines = []
+    for seg in subtitles:
+        start = _format_srt_time(seg.start_time)
+        end = _format_srt_time(seg.end_time)
+        lines.append(f"{seg.index + 1}")
+        lines.append(f"{start} --> {end}")
+        lines.append(seg.text)
+        lines.append("")
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+    return output_path
+
+
+def _format_srt_time(seconds: float) -> str:
+    """Format seconds as SRT timestamp: HH:MM:SS,mmm"""
+    h = int(seconds // 3600)
+    m = int((seconds % 3600) // 60)
+    s = int(seconds % 60)
+    ms = int((seconds % 1) * 1000)
+    return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+
 class VideoComposer:
-    """Composes final video from images, audio, subtitles, and background music."""
+    """Composes final video from images, audio, subtitles, and background music.
+
+    Optimized for image-narration slideshows: static images, no animation.
+    """
 
     def calculate_image_durations(
         self, image_count: int, total_duration: float
     ) -> list[float]:
-        """Calculate display duration for each image, distributed evenly.
-
-        The base duration is total_duration / image_count (truncated to 3 decimals).
-        Any remainder is distributed one unit (0.001s) at a time to the first images,
-        ensuring the sum equals total_duration exactly.
-
-        Args:
-            image_count: Number of images (must be > 0).
-            total_duration: Total video duration in seconds (must be > 0).
-
-        Returns:
-            List of durations whose length == image_count, each > 0,
-            and whose sum == total_duration.
-
-        Raises:
-            ValueError: If image_count <= 0 or total_duration <= 0.
-        """
+        """Calculate display duration for each image, distributed evenly."""
         if image_count <= 0:
             raise ValueError("image_count must be positive")
         if total_duration <= 0:
             raise ValueError("total_duration must be positive")
 
-        # Work in integer milliseconds to avoid floating-point drift
         total_ms = round(total_duration * 1000)
         base_ms = total_ms // image_count
         remainder_ms = total_ms - base_ms * image_count
@@ -125,88 +151,18 @@ class VideoComposer:
         images: list[Path],
         durations: list[float],
         video_config: VideoConfig,
-        ken_burns: KenBurnsParams,
     ) -> list:
-        """Create Ken Burns video clips for each image.
-
-        Args:
-            images: Ordered list of image file paths.
-            durations: Display duration for each image (same length as images).
-            video_config: Output video configuration.
-            ken_burns: Ken Burns animation parameters.
-
-        Returns:
-            List of MoviePy VideoClip objects.
-        """
+        """Create static ImageClip for each image (no animation)."""
         clips = []
         for img_path, dur in zip(images, durations):
-            clip = create_ken_burns_clip(
-                image=img_path,
-                target_width=video_config.width,
-                target_height=video_config.height,
-                duration=dur,
-                fps=video_config.fps,
-                params=ken_burns,
+            fitted = _fit_image(img_path, video_config.width, video_config.height)
+            clip = (
+                ImageClip(fitted)
+                .with_duration(dur)
+                .with_fps(video_config.fps)
             )
             clips.append(clip)
         return clips
-
-    def add_subtitles(
-        self,
-        video_clip,
-        subtitles: list[SubtitleSegment],
-        style: SubtitleStyle,
-    ):
-        """Overlay hardcoded subtitles onto the video clip.
-
-        Each subtitle segment is rendered as a TextClip positioned at the
-        bottom of the frame, composited on top of the video.
-
-        Args:
-            video_clip: Base MoviePy video clip.
-            subtitles: List of subtitle segments with timing info.
-            style: Subtitle visual style configuration.
-
-        Returns:
-            A CompositeVideoClip with subtitles burned in.
-        """
-        if not subtitles:
-            return video_clip
-
-        subtitle_clips = []
-        for seg in subtitles:
-            duration = seg.end_time - seg.start_time
-            if duration <= 0:
-                continue
-            try:
-                txt_clip = (
-                    TextClip(
-                        text=seg.text,
-                        font_size=style.font_size,
-                        color=style.color,
-                        font=style.font_family,
-                        stroke_color=style.outline_color,
-                        stroke_width=style.outline_width,
-                        method="caption",
-                        size=(video_clip.w * 0.9, None),
-                    )
-                    .with_start(seg.start_time)
-                    .with_duration(duration)
-                    .with_position(("center", 0.85), relative=True)
-                )
-                subtitle_clips.append(txt_clip)
-            except Exception:
-                logger.warning(
-                    "Failed to create subtitle clip for segment %d: '%s'",
-                    seg.index,
-                    seg.text,
-                    exc_info=True,
-                )
-
-        if not subtitle_clips:
-            return video_clip
-
-        return CompositeVideoClip([video_clip, *subtitle_clips])
 
     def mix_audio(
         self,
@@ -215,91 +171,121 @@ class VideoComposer:
         video_duration: float,
         bgm_volume: float = 0.25,
     ) -> Path:
-        """Mix narration audio with optional background music.
-
-        BGM handling:
-        - bgm_volume is clamped to [0.20, 0.30].
-        - If BGM is shorter than video, it loops until it covers the full duration.
-        - If BGM is longer than video, it is trimmed and faded out over the last 2s.
-        - The mixed result is written to a temporary WAV file.
-
-        Args:
-            narration_path: Path to the narration audio file.
-            bgm_path: Path to background music file, or None to skip BGM.
-            video_duration: Target duration in seconds.
-            bgm_volume: Volume multiplier for BGM (clamped to 0.20–0.30).
-
-        Returns:
-            Path to the mixed audio file.
-        """
+        """Mix narration audio with optional background music."""
         narration = AudioFileClip(str(narration_path))
 
         if bgm_path is None:
+            narration.close()
             return narration_path
 
-        # Clamp BGM volume to 20%-30%
         bgm_volume = max(0.20, min(0.30, bgm_volume))
-
         bgm = AudioFileClip(str(bgm_path))
 
-        # Handle BGM duration vs video duration
         if bgm.duration < video_duration:
-            # Loop BGM to cover the full video duration
             bgm = bgm.with_effects([AudioLoop(duration=video_duration)])
         elif bgm.duration > video_duration:
-            # Trim and fade out over the last 2 seconds
             bgm = bgm.with_duration(video_duration)
             fade_duration = min(2.0, video_duration)
             bgm = bgm.with_effects([AudioFadeOut(fade_duration)])
 
-        # Apply volume reduction to BGM
         bgm = bgm.with_effects([MultiplyVolume(bgm_volume)])
 
-        # Mix narration and BGM
         mixed = CompositeAudioClip([narration, bgm])
         mixed = mixed.with_duration(video_duration)
 
-        # Write to temp file
         output_path = Path(tempfile.mktemp(suffix=".wav"))
-        mixed.write_audiofile(
-            str(output_path), fps=44100, logger=None
-        )
+        mixed.write_audiofile(str(output_path), fps=44100, logger=None)
 
-        # Clean up clips
         narration.close()
         bgm.close()
         mixed.close()
 
         return output_path
 
+    def burn_subtitles_ffmpeg(
+        self,
+        video_path: Path,
+        srt_path: Path,
+        output_path: Path,
+        style: SubtitleStyle,
+    ) -> Path:
+        """Use FFmpeg to burn subtitles into video.
+
+        Uses ASS subtitle format embedded via -vf ass= for reliable
+        Windows path handling. Falls back to returning video without
+        subtitles if FFmpeg fails.
+        """
+        import shutil
+
+        # Strategy: copy SRT next to the video file with a simple name
+        # and run FFmpeg from that directory to avoid Windows path issues
+        work_dir = video_path.parent
+        local_srt = work_dir / "subs.srt"
+        shutil.copy2(str(srt_path), str(local_srt))
+
+        font_size = style.font_size
+        # Use subtitles filter with just the filename (run FFmpeg in work_dir)
+        sub_filter = (
+            f"subtitles=subs.srt"
+            f":force_style='FontSize={font_size},"
+            f"FontName=Microsoft YaHei,"
+            f"PrimaryColour=&H00FFFFFF,"
+            f"OutlineColour=&H00000000,"
+            f"Outline={style.outline_width},"
+            f"Alignment=2,"
+            f"MarginV=40'"
+        )
+
+        cmd = [
+            "ffmpeg", "-y",
+            "-i", video_path.name,
+            "-vf", sub_filter,
+            "-c:a", "copy",
+            "-c:v", "libx264",
+            "-preset", "fast",
+            output_path.name,
+        ]
+
+        logger.info("FFmpeg subtitle burn command: %s (cwd=%s)", " ".join(cmd), work_dir)
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=300,
+            cwd=str(work_dir),
+        )
+
+        # Clean up temp srt
+        local_srt.unlink(missing_ok=True)
+
+        if result.returncode != 0:
+            logger.warning(
+                "FFmpeg subtitle burn failed (rc=%d):\nstdout: %s\nstderr: %s",
+                result.returncode, result.stdout, result.stderr,
+            )
+            # Return original video without subtitles rather than crashing
+            return video_path
+
+        return work_dir / output_path.name
+
     def compose(
         self,
         ctx,
         video_config: VideoConfig,
-        ken_burns: KenBurnsParams,
-        subtitle_style: SubtitleStyle,
+        ken_burns=None,  # kept for API compat, ignored
+        subtitle_style: SubtitleStyle | None = None,
     ) -> Path:
         """Compose the final video from images, audio, subtitles, and BGM.
 
         Pipeline:
         1. Load narration audio to determine total duration.
         2. Calculate per-image display durations.
-        3. Create Ken Burns clips for each image.
-        4. Concatenate image clips into a single video.
-        5. Overlay subtitles.
-        6. Mix narration with optional BGM.
-        7. Attach audio and write H.264 MP4.
-
-        Args:
-            ctx: TaskContext with images, audio_path, subtitle_data, bgm_path, etc.
-            video_config: Video output settings.
-            ken_burns: Ken Burns animation parameters.
-            subtitle_style: Subtitle rendering style.
-
-        Returns:
-            Path to the output MP4 file.
+        3. Create static ImageClips for each image.
+        4. Concatenate clips and attach audio.
+        5. Write base video (no subtitles yet).
+        6. Burn subtitles via FFmpeg (avoids memory issues).
         """
-        # 1. Load narration to get total duration
+        if subtitle_style is None:
+            subtitle_style = SubtitleStyle()
+
+        # 1. Get total duration from audio
         narration = AudioFileClip(str(ctx.audio_path))
         total_duration = narration.duration
         narration.close()
@@ -309,42 +295,28 @@ class VideoComposer:
             len(ctx.images), total_duration
         )
 
-        # 3. Create Ken Burns clips
+        # 3. Create static image clips
         clips = self.create_image_clips(
-            ctx.images, durations, video_config, ken_burns
+            ctx.images, durations, video_config
         )
 
-        # 4. Concatenate into a single video
-        video = concatenate_videoclips(clips, method="compose")
+        # 4. Concatenate
+        video = concatenate_videoclips(clips, method="chain")
 
-        # 5. Add subtitles if available
-        if ctx.subtitle_data:
-            subtitles = [
-                SubtitleSegment(**s) if isinstance(s, dict) else s
-                for s in ctx.subtitle_data
-            ]
-            video = self.add_subtitles(video, subtitles, subtitle_style)
-
-        # 6. Mix audio
+        # 5. Mix audio and attach
         audio_path = self.mix_audio(
-            ctx.audio_path,
-            ctx.bgm_path,
-            total_duration,
+            ctx.audio_path, ctx.bgm_path, total_duration,
         )
         final_audio = AudioFileClip(str(audio_path))
         video = video.with_audio(final_audio)
 
-        # 7. Write output
+        # Write base video (without subtitles)
         output_dir = Path(ctx.output_path).parent if ctx.output_path else Path("output")
         output_dir.mkdir(parents=True, exist_ok=True)
-        output_file = (
-            Path(ctx.output_path)
-            if ctx.output_path
-            else output_dir / f"{ctx.task_id}.mp4"
-        )
 
+        base_file = output_dir / f"{ctx.task_id}_base.mp4"
         video.write_videofile(
-            str(output_file),
+            str(base_file),
             codec=video_config.codec,
             bitrate=video_config.bitrate,
             fps=video_config.fps,
@@ -352,10 +324,35 @@ class VideoComposer:
             logger=None,
         )
 
-        # Clean up
+        # Clean up MoviePy resources
         for clip in clips:
             clip.close()
         video.close()
         final_audio.close()
 
-        return output_file
+        # 6. Burn subtitles via FFmpeg
+        final_file = (
+            Path(ctx.output_path)
+            if ctx.output_path
+            else output_dir / f"{ctx.task_id}.mp4"
+        )
+
+        if ctx.subtitle_data:
+            subtitles = [
+                SubtitleSegment(**s) if isinstance(s, dict) else s
+                for s in ctx.subtitle_data
+            ]
+            srt_path = output_dir / f"{ctx.task_id}.srt"
+            _generate_srt(subtitles, srt_path)
+            result_path = self.burn_subtitles_ffmpeg(
+                base_file, srt_path, final_file, subtitle_style,
+            )
+            # Clean up base file if subtitle burn succeeded
+            if result_path != base_file and base_file.exists():
+                base_file.unlink(missing_ok=True)
+            return result_path
+        else:
+            # No subtitles, just rename base to final
+            if base_file != final_file:
+                base_file.rename(final_file)
+            return final_file

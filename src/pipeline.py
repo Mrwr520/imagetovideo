@@ -131,7 +131,6 @@ class PipelineManager:
         from src.subtitle.generator import SubtitleGenerator
         from src.tts.adapter import TTSAdapter
         from src.video.composer import VideoComposer, VideoConfig
-        from src.video.ken_burns import KenBurnsParams
 
         self._config = config
         self._llm = LLMAdapter(config.get("llm", {}))
@@ -162,7 +161,6 @@ class PipelineManager:
         """
         from src.subtitle.generator import SubtitleGenerator
         from src.video.composer import VideoConfig
-        from src.video.ken_burns import KenBurnsParams
 
         ctx.status = TaskStatus.RUNNING
         ctx.progress = 0.0
@@ -258,7 +256,6 @@ class PipelineManager:
 
             # 5. Compose video
             video_config = VideoConfig.from_aspect_ratio(ctx.aspect_ratio)
-            ken_burns = KenBurnsParams()
             from src.subtitle.generator import SubtitleStyle
 
             subtitle_style = SubtitleStyle()
@@ -266,7 +263,6 @@ class PipelineManager:
             output_path = self._composer.compose(
                 ctx=ctx,
                 video_config=video_config,
-                ken_burns=ken_burns,
                 subtitle_style=subtitle_style,
             )
             ctx.output_path = output_path
