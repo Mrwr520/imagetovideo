@@ -306,6 +306,19 @@ def _run_async(coro):
         return asyncio.run(coro)
 
 
+def _run_in_thread(fn, *args, **kwargs):
+    """Run a blocking/CPU-intensive function in a background thread.
+
+    This prevents Streamlit's main event loop from being blocked,
+    which would cause the frontend WebSocket health checks to fail
+    and trigger repeated 'host-config' / 'health' retry loops.
+    """
+    import concurrent.futures
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(fn, *args, **kwargs)
+        return future.result()
+
+
 # ---------------------------------------------------------------------------
 # Helper: save uploaded images to temp files
 # ---------------------------------------------------------------------------
