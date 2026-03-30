@@ -211,20 +211,18 @@ class VideoComposer:
     ) -> Path:
         """Use FFmpeg to burn subtitles into video.
 
-        Uses ASS subtitle format embedded via -vf ass= for reliable
-        Windows path handling. Falls back to returning video without
-        subtitles if FFmpeg fails.
+        Uses the FFmpeg binary bundled with imageio_ffmpeg (same one MoviePy uses)
+        to avoid requiring a system-wide FFmpeg installation.
         """
         import shutil
+        from moviepy.config import FFMPEG_BINARY
 
-        # Strategy: copy SRT next to the video file with a simple name
-        # and run FFmpeg from that directory to avoid Windows path issues
+        # Copy SRT next to video with simple name to avoid Windows path issues
         work_dir = video_path.parent
         local_srt = work_dir / "subs.srt"
         shutil.copy2(str(srt_path), str(local_srt))
 
         font_size = style.font_size
-        # Use subtitles filter with just the filename (run FFmpeg in work_dir)
         sub_filter = (
             f"subtitles=subs.srt"
             f":force_style='FontSize={font_size},"
@@ -237,7 +235,7 @@ class VideoComposer:
         )
 
         cmd = [
-            "ffmpeg", "-y",
+            FFMPEG_BINARY, "-y",
             "-i", video_path.name,
             "-vf", sub_filter,
             "-c:a", "copy",
@@ -260,7 +258,6 @@ class VideoComposer:
                 "FFmpeg subtitle burn failed (rc=%d):\nstdout: %s\nstderr: %s",
                 result.returncode, result.stdout, result.stderr,
             )
-            # Return original video without subtitles rather than crashing
             return video_path
 
         return work_dir / output_path.name
