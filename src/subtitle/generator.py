@@ -60,6 +60,9 @@ class SubtitleGenerator:
             return []
         return self.assign_timestamps(segments, total_duration)
 
+    # 字幕提前量（秒），补偿视频编码和播放器渲染延迟
+    SUBTITLE_ADVANCE: float = 1.5
+
     def _generate_from_word_timings(
         self,
         word_timings: list[tuple[float, float, str]],
@@ -68,11 +71,12 @@ class SubtitleGenerator:
         """从 TTS 词级时间戳生成精确同步的字幕。
 
         将连续的词合并为不超过 MAX_CHARS_PER_LINE 的字幕段，
-        时间戳直接取自 TTS 引擎的实际发音时间。
+        时间戳直接取自 TTS 引擎的实际发音时间，并提前 SUBTITLE_ADVANCE 秒。
         """
         if not word_timings:
             return []
 
+        advance = self.SUBTITLE_ADVANCE
         limit = self.MAX_CHARS_PER_LINE
         result: list[SubtitleSegment] = []
         idx = 0
@@ -84,12 +88,10 @@ class SubtitleGenerator:
         for offset, dur, word in word_timings:
             word_end = offset + dur
 
-            # Check if adding this word would exceed the line limit
             if current_text and len(current_text) + len(word) > limit:
-                # Flush current segment
                 result.append(SubtitleSegment(
                     index=idx,
-                    start_time=current_start,
+                    start_time=max(0, current_start - advance),
                     end_time=current_end,
                     text=current_text,
                 ))
@@ -105,7 +107,7 @@ class SubtitleGenerator:
         if current_text:
             result.append(SubtitleSegment(
                 index=idx,
-                start_time=current_start,
+                start_time=max(0, current_start - advance),
                 end_time=min(current_end, total_duration),
                 text=current_text,
             ))
