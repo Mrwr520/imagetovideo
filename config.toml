@@ -1,0 +1,89 @@
+[general]
+output_dir = "./output"
+temp_dir = "./temp"
+default_aspect_ratio = "9:16"
+
+[llm.qwen]
+api_key = ""
+default_model = "qwen-vl-max"
+models = [
+    "qwen-vl-max",
+    "qwen-vl-plus",
+    "qwen-vl-max-latest",
+]
+
+[llm.deepseek]
+api_key = ""
+default_model = "deepseek-chat"
+models = [
+    "deepseek-chat",
+    "deepseek-reasoner",
+]
+
+[llm.glm]
+api_key = ""
+default_model = "glm-4v"
+models = [
+    "glm-4v",
+    "glm-4v-plus",
+    "glm-4v-flash",
+]
+
+[llm.wenxin]
+api_key = ""
+secret_key = ""
+default_model = "ernie-bot-4"
+models = [
+    "ernie-bot-4",
+    "ernie-bot-turbo",
+    "ernie-4.0-8k",
+]
+
+[llm.openai_compatible]
+api_base = "https://api-vip.codex-for.me/v1"
+api_key = "clp_64ae9ffbceb2f4f287e3e9639fcd6abc563ad547ec3b2ad0d1de75dd9f06afcd"
+default_model = "gpt-5.4"
+models = [
+    "gpt-5.4",
+]
+
+[llm.prompt_template]
+default = "你是一位专业的短视频解说文案创作者。请根据以下图片内容，生成一段{style}风格的解说词。\n要求：\n- 时长约{duration}秒\n- 语气{tone}\n- 适合短视频平台发布\n- 每张图片对应一段解说"
+
+[tts.volcano]
+appid = "9646169309"
+access_token = "_Uqq7q0O0Hg0VVb2Z6PuCHBniCi8A1Hw"
+cluster = "volcano_tts"
+default_voice = "zh_female_shuangkuaisisi_moon_bigtts"
+
+[tts.cosyvoice]
+api_base = "http://localhost:9880"
+default_voice = "中文女"
+
+[tts.fish_speech]
+api_base = "http://localhost:8080"
+default_voice = "default"
+
+[tts.chattts]
+api_base = "http://localhost:9966"
+
+[tts.melotts]
+api_base = "http://localhost:8888"
+
+[tts.edge_tts]
+default_voice = "zh-CN-XiaoxiaoNeural"
+
+[video]
+default_bitrate = "4M"
+default_fps = 30
+codec = "libx264"
+bgm_volume = 0.25
+fade_duration = 0.5
+
+[subtitle]
+font_family = "Microsoft YaHei"
+font_size = 36
+color = "#FFFFFF"
+outline_color = "#000000"
+outline_width = 2
+max_chars_per_line = 15
