@@ -17,7 +17,7 @@ class SubtitleSegment:
 class SubtitleStyle:
     """字幕样式配置数据类。"""
     font_family: str = "Microsoft YaHei"
-    font_size: int = 14
+    font_size: int = 24
     color: str = "#FFFFFF"
     outline_color: str = "#000000"
     outline_width: int = 1
@@ -60,9 +60,6 @@ class SubtitleGenerator:
             return []
         return self.assign_timestamps(segments, total_duration)
 
-    # 字幕提前量（秒），补偿视频编码和播放器渲染延迟
-    SUBTITLE_ADVANCE: float = 1
-
     def _generate_from_word_timings(
         self,
         word_timings: list[tuple[float, float, str]],
@@ -70,46 +67,72 @@ class SubtitleGenerator:
     ) -> list[SubtitleSegment]:
         """从 TTS 词级时间戳生成精确同步的字幕。
 
-        将连续的词合并为不超过 MAX_CHARS_PER_LINE 的字幕段，
-        时间戳直接取自 TTS 引擎的实际发音时间，并提前 SUBTITLE_ADVANCE 秒。
+        策略：
+        1. 先过滤掉纯标点词（TTS 返回的标点不发音，只占时间轴位置）
+        2. 将连续的词合并，在标点处或达到 MAX_CHARS_PER_LINE 时断句
+        3. 每条字幕的 start_time = 第一个字开始发音的时间
+        4. 每条字幕的 end_time = 下一条字幕第一个字开始发音的时间
+           （最后一条用 total_duration），确保字幕无缝衔接、不重叠
         """
         if not word_timings:
             return []
 
-        advance = self.SUBTITLE_ADVANCE
         limit = self.MAX_CHARS_PER_LINE
-        result: list[SubtitleSegment] = []
-        idx = 0
 
+        # 第一步：收集所有"段"的文本和精确时间范围
+        raw_segments: list[tuple[str, float, float]] = []  # (text, start, end)
         current_text = ""
         current_start = word_timings[0][0]
         current_end = word_timings[0][0]
 
         for offset, dur, word in word_timings:
             word_end = offset + dur
+            is_punct = all(c in _PUNCTUATION for c in word)
 
+            if is_punct:
+                # 标点不加入字幕文本，但更新 end 时间
+                current_end = word_end
+                # 在标点处断句（如果已有文本）
+                if current_text:
+                    raw_segments.append((current_text, current_start, current_end))
+                    current_text = ""
+                    current_start = -1  # 等下一个实际字来设置
+                continue
+
+            # 超过字数限制时强制断句
             if current_text and len(current_text) + len(word) > limit:
-                result.append(SubtitleSegment(
-                    index=idx,
-                    start_time=max(0, current_start - advance),
-                    end_time=current_end,
-                    text=current_text,
-                ))
-                idx += 1
+                raw_segments.append((current_text, current_start, current_end))
                 current_text = word
                 current_start = offset
                 current_end = word_end
             else:
+                if current_start < 0:
+                    current_start = offset
                 current_text += word
                 current_end = word_end
 
-        # Flush last segment
+        # 收尾
         if current_text:
+            raw_segments.append((current_text, current_start, current_end))
+
+        if not raw_segments:
+            return []
+
+        # 第二步：构建 SubtitleSegment 列表
+        # end_time 设为下一条的 start_time，实现无缝衔接
+        result: list[SubtitleSegment] = []
+        for i, (text, start, end) in enumerate(raw_segments):
+            if i < len(raw_segments) - 1:
+                next_start = raw_segments[i + 1][1]
+                seg_end = next_start
+            else:
+                seg_end = min(end, total_duration)
+
             result.append(SubtitleSegment(
-                index=idx,
-                start_time=max(0, current_start - advance),
-                end_time=min(current_end, total_duration),
-                text=current_text,
+                index=i,
+                start_time=start,
+                end_time=seg_end,
+                text=text,
             ))
 
         return result

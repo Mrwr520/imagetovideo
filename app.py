@@ -291,6 +291,9 @@ def _render_image_list(images: list[dict]) -> None:
 
     if to_delete is not None:
         images.pop(to_delete)
+        # 清空 file_uploader 的 key，防止 rerun 时被重新注入
+        if "file_uploader" in st.session_state:
+            del st.session_state["file_uploader"]
         st.rerun()
 
 
@@ -877,11 +880,21 @@ def _render_step_video(selections: dict) -> None:
                 video_config = VideoConfig.from_aspect_ratio(
                     selections.get("aspect_ratio", "9:16")
                 )
+                sub_cfg = cfg.get("subtitle", {})
+                sub_style = SubtitleStyle(
+                    font_family=sub_cfg.get("font_family", "Microsoft YaHei"),
+                    font_size=sub_cfg.get("font_size", 24),
+                    color=sub_cfg.get("color", "#FFFFFF"),
+                    outline_color=sub_cfg.get("outline_color", "#000000"),
+                    outline_width=sub_cfg.get("outline_width", 1),
+                )
                 output_path = _run_in_thread(
                     composer.compose,
                     ctx=ctx,
                     video_config=video_config,
-                    subtitle_style=SubtitleStyle(),
+                    subtitle_style=sub_style,
+                    narration_segments=st.session_state.get("narration_segments"),
+                    word_timings=word_timings,
                 )
                 progress_bar.progress(100, text="视频合成完成！")
 

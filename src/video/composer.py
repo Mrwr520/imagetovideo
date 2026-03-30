@@ -59,42 +59,57 @@ class VideoConfig:
 
 
 def _fit_image(image_path: Path, target_width: int, target_height: int) -> str:
-    """Resize image to fit entirely within target area, fill background with blurred version.
+    """Resize image to fit target area intelligently.
 
-    Uses contain-fit: scales so the full image is visible,
-    then fills the remaining area with a heavily blurred + darkened
-    version of the image itself (no ugly black bars).
+    策略：
+    - 如果图片宽高比与目标接近（差距 < 20%），使用 cover-fit 裁切填满，不留黑边
+    - 否则使用 contain-fit + 模糊背景填充
     """
     img = Image.open(image_path).convert("RGB")
     src_w, src_h = img.size
 
-    # Create blurred background (cover-fit the blur layer)
-    from PIL import ImageFilter
-    bg_scale = max(target_width / src_w, target_height / src_h)
-    bg_w = int(src_w * bg_scale)
-    bg_h = int(src_h * bg_scale)
-    bg = img.resize((bg_w, bg_h), Image.LANCZOS)
-    bg_left = (bg_w - target_width) // 2
-    bg_top = (bg_h - target_height) // 2
-    bg = bg.crop((bg_left, bg_top, bg_left + target_width, bg_top + target_height))
-    bg = bg.filter(ImageFilter.GaussianBlur(radius=30))
-    # Darken the blur layer so the main image stands out
-    from PIL import ImageEnhance
-    bg = ImageEnhance.Brightness(bg).enhance(0.4)
+    src_ratio = src_w / src_h
+    target_ratio = target_width / target_height
 
-    # Contain-fit the main image
-    fg_scale = min(target_width / src_w, target_height / src_h)
-    fg_w = int(src_w * fg_scale)
-    fg_h = int(src_h * fg_scale)
-    fg = img.resize((fg_w, fg_h), Image.LANCZOS)
+    # 宽高比差距在 20% 以内，用 cover-fit 裁切填满
+    ratio_diff = abs(src_ratio - target_ratio) / target_ratio
+    if ratio_diff < 0.2:
+        # Cover-fit: 缩放到刚好覆盖目标区域，居中裁切
+        scale = max(target_width / src_w, target_height / src_h)
+        new_w = int(src_w * scale)
+        new_h = int(src_h * scale)
+        resized = img.resize((new_w, new_h), Image.LANCZOS)
+        left = (new_w - target_width) // 2
+        top = (new_h - target_height) // 2
+        result = resized.crop((left, top, left + target_width, top + target_height))
+    else:
+        # Contain-fit + 模糊背景
+        from PIL import ImageFilter, ImageEnhance
 
-    # Center paste onto blurred background
-    offset_x = (target_width - fg_w) // 2
-    offset_y = (target_height - fg_h) // 2
-    bg.paste(fg, (offset_x, offset_y))
+        # 模糊背景层 (cover-fit)
+        bg_scale = max(target_width / src_w, target_height / src_h)
+        bg_w = int(src_w * bg_scale)
+        bg_h = int(src_h * bg_scale)
+        bg = img.resize((bg_w, bg_h), Image.LANCZOS)
+        bg_left = (bg_w - target_width) // 2
+        bg_top = (bg_h - target_height) // 2
+        bg = bg.crop((bg_left, bg_top, bg_left + target_width, bg_top + target_height))
+        bg = bg.filter(ImageFilter.GaussianBlur(radius=30))
+        bg = ImageEnhance.Brightness(bg).enhance(0.4)
+
+        # 前景层 (contain-fit)
+        fg_scale = min(target_width / src_w, target_height / src_h)
+        fg_w = int(src_w * fg_scale)
+        fg_h = int(src_h * fg_scale)
+        fg = img.resize((fg_w, fg_h), Image.LANCZOS)
+
+        offset_x = (target_width - fg_w) // 2
+        offset_y = (target_height - fg_h) // 2
+        bg.paste(fg, (offset_x, offset_y))
+        result = bg
 
     tmp = tempfile.mktemp(suffix=".jpg")
-    bg.save(tmp, quality=95)
+    result.save(tmp, quality=95)
     return tmp
 
 
@@ -128,14 +143,31 @@ class VideoComposer:
     """
 
     def calculate_image_durations(
-        self, image_count: int, total_duration: float
+        self, image_count: int, total_duration: float,
+        narration_segments: list[str] | None = None,
+        word_timings: list[tuple[float, float, str]] | None = None,
     ) -> list[float]:
-        """Calculate display duration for each image, distributed evenly."""
+        """Calculate display duration for each image.
+
+        如果提供了 narration_segments 和 word_timings，则根据每段解说词
+        在语音中的实际起止时间来分配图片时长，实现图片与语音精确同步。
+        否则回退到均分。
+        """
         if image_count <= 0:
             raise ValueError("image_count must be positive")
         if total_duration <= 0:
             raise ValueError("total_duration must be positive")
 
+        # 尝试用 word_timings 精确计算每段的时长
+        if (narration_segments and word_timings
+                and len(narration_segments) == image_count):
+            durations = self._calc_durations_from_timings(
+                narration_segments, word_timings, total_duration, image_count
+            )
+            if durations:
+                return durations
+
+        # 回退：均分
         total_ms = round(total_duration * 1000)
         base_ms = total_ms // image_count
         remainder_ms = total_ms - base_ms * image_count
@@ -145,6 +177,79 @@ class VideoComposer:
             durations_ms[i] += 1
 
         return [ms / 1000.0 for ms in durations_ms]
+
+    @staticmethod
+    def _calc_durations_from_timings(
+        segments: list[str],
+        word_timings: list[tuple[float, float, str]],
+        total_duration: float,
+        image_count: int,
+    ) -> list[float] | None:
+        """根据 word_timings 计算每段解说词对应的语音时长。
+
+        策略：将 word_timings 的所有文字拼接，然后按每段 segment 的字符数
+        依次匹配，找到每段的起始和结束时间。
+        """
+        import re
+
+        # 清理 segment 文本，去掉空白和标点，只保留实际内容字符用于匹配
+        def clean(text: str) -> str:
+            return re.sub(r'[\s，。！？、；：""''（）,.!?;:()\n]', '', text)
+
+        cleaned_segments = [clean(seg) for seg in segments]
+        total_seg_chars = sum(len(s) for s in cleaned_segments)
+
+        if total_seg_chars == 0:
+            return None
+
+        # 将 word_timings 的文字也清理后建立字符级索引
+        # 每个字符对应一个 (offset, end_time)
+        char_times: list[tuple[float, float]] = []
+        for offset, dur, word in word_timings:
+            clean_word = clean(word)
+            end = offset + dur
+            for _ in clean_word:
+                char_times.append((offset, end))
+
+        if not char_times:
+            return None
+
+        # 按段落依次消耗字符，确定每段的起止时间
+        durations: list[float] = []
+        char_idx = 0
+
+        for i, seg_clean in enumerate(cleaned_segments):
+            seg_len = len(seg_clean)
+            if seg_len == 0:
+                # 空段落给最小时长
+                durations.append(0.5)
+                continue
+
+            if char_idx >= len(char_times):
+                # 字符用完了，剩余段落均分剩余时间
+                remaining_time = total_duration - sum(durations)
+                remaining_segs = image_count - i
+                per = max(0.5, remaining_time / max(1, remaining_segs))
+                durations.extend([per] * remaining_segs)
+                break
+
+            seg_start = char_times[min(char_idx, len(char_times) - 1)][0]
+            end_idx = min(char_idx + seg_len - 1, len(char_times) - 1)
+            seg_end = char_times[end_idx][1]
+            char_idx += seg_len
+
+            durations.append(max(0.5, seg_end - seg_start))
+
+        if len(durations) != image_count:
+            return None
+
+        # 归一化确保总时长精确匹配
+        dur_sum = sum(durations)
+        if dur_sum > 0:
+            scale = total_duration / dur_sum
+            durations = [d * scale for d in durations]
+
+        return durations
 
     def create_image_clips(
         self,
@@ -268,6 +373,8 @@ class VideoComposer:
         video_config: VideoConfig,
         ken_burns=None,  # kept for API compat, ignored
         subtitle_style: SubtitleStyle | None = None,
+        narration_segments: list[str] | None = None,
+        word_timings: list | None = None,
     ) -> Path:
         """Compose the final video from images, audio, subtitles, and BGM.
 
@@ -289,7 +396,9 @@ class VideoComposer:
 
         # 2. Calculate image durations
         durations = self.calculate_image_durations(
-            len(ctx.images), total_duration
+            len(ctx.images), total_duration,
+            narration_segments=narration_segments,
+            word_timings=word_timings,
         )
 
         # 3. Create static image clips

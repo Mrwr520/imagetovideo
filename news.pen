@@ -60,7 +60,8 @@
           "content": "2026年3月29日 — 3月30日 · 近48小时权威资讯精选",
           "textAlign": "center",
           "fontFamily": "Inter",
-          "fontSize": 40
+          "fontSize": 40,
+          "fontWeight": "normal"
         },
         {
           "type": "frame",
@@ -210,7 +211,8 @@
                   "content": "3月26日，安全研究人员发现Anthropic近3000份内部文件因CMS配置错误被公开泄露，揭示了一款代号\"Capybara\"的未发布模型Claude Mythos——被Anthropic自身评估为\"在网络安全能力上远超任何现有AI模型\"，因风险过高而决定不予发布。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 32
+                  "fontSize": 32,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -294,7 +296,8 @@
                   "content": "LayerX Security的Roy Paz与剑桥大学的Alexandre Pauwels发现近3,000份Anthropic内部文件因CMS默认权限配置错误而公开可访问",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -325,7 +328,8 @@
                   "content": "Anthropic内部草稿将Mythos描述为\"在网络安全任务中具有前所未有的能力\"，是Claude Opus 4.6之上的\"阶跃式飞跃\"",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -356,7 +360,8 @@
                   "content": "\"可能引发一波AI驱动的漏洞利用浪潮，其速度将远超防御者的应对能力\" —— Anthropic内部安全评估",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -407,7 +412,8 @@
               "content": "这是AI安全领域的标志性事件：一家以\"安全优先\"为创始理念的公司，首次公开承认自己构建了一个\"过于危险而无法发布\"的模型。这意味着前沿AI实验室的内部能力与公开发布之间存在显著鸿沟。Anthropic计划仅向欧洲企业CEO私下演示该模型，引发了关于AI能力分配公平性的深层讨论。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 28
+              "fontSize": 28,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -524,7 +530,8 @@
                   "content": "Bloomberg报道，Apple正在为iOS 27开发\"Extensions\"系统，允许Gemini、Claude等第三方AI聊天机器人直接接入Siri架构。用户可自主选择由哪个AI服务处理查询请求，彻底打破封闭生态壁垒。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 32
+                  "fontSize": 32,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -608,7 +615,8 @@
                   "content": "iOS 27将引入\"Extensions\"系统，通过设置菜单统一管理，覆盖iOS 27、iPadOS 27和macOS 27全平台，用户可自由切换AI服务提供商",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -639,7 +647,8 @@
                   "content": "App Store AI订阅佣金收入2026年已突破10亿美元，Extensions上线前即已达成。Apple将iPhone转变为\"灵活AI中枢\"，通过分发渠道获取AI订阅分成",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -670,7 +679,8 @@
                   "content": "首批支持ChatGPT、Google Gemini、Anthropic Claude等主流AI服务，用户无需手动切换App即可通过Siri路由查询",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -721,7 +731,8 @@
               "content": "Apple不再试图独自赢得AI竞赛，而是将自身定位为AI分发平台。这一战略转型意味着：iPhone的20亿活跃设备将成为所有AI服务商争夺的入口，而Apple通过App Store抽成坐收渔利。对开发者而言，Siri Extensions可能成为继App Store之后最重要的AI分发渠道。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 28
+              "fontSize": 28,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -838,7 +849,8 @@
                   "content": "Anthropic确认Claude付费订阅用户在2026年已翻倍以上增长。第三方信用卡数据分析显示，1-2月间出现爆发式增长。Sacra估算Anthropic年化收入已达190亿美元，Claude Code单项年化收入达25亿美元。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 32
+                  "fontSize": 32,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -922,7 +934,8 @@
                   "content": "年化收入从2025年底的90亿美元飙升至2026年3月的190亿美元，连续三年保持10倍以上年增长率，企业客户（年消费超10万美元）同比增长约7倍",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -953,7 +966,8 @@
                   "content": "超级碗广告投放、Cowork与Dispatch两款智能体工具发布、以及与美国国防部的公开对峙引发的用户声援浪潮，三重因素叠加推动订阅激增",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -984,7 +998,8 @@
                   "content": "2026年保持每两周一次重大更新的节奏：Opus 4.6（百万token上下文）、Sonnet 4.6、Claude Code（默认64K输出token）、Computer Use等密集发布",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1035,7 +1050,8 @@
               "content": "Anthropic正在证明\"安全优先\"的AI公司同样可以实现爆发式商业增长。与五角大楼的对峙非但没有损害品牌，反而激发了开发者社区的强烈认同感。这种\"价值观驱动增长\"的模式，正在重新定义AI行业的竞争维度——技术能力之外，企业立场本身也成为了核心竞争力。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 28
+              "fontSize": 28,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -1152,7 +1168,8 @@
                   "content": "参议员Bernie Sanders与众议员Alexandria Ocasio-Cortez联合提出《AI数据中心暂停法案》，要求立即在联邦层面暂停所有新AI数据中心建设，直至国会通过涵盖AI安全、劳工保护和能源定价的综合立法。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 32
+                  "fontSize": 32,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -1236,7 +1253,8 @@
                   "content": "立即实施联邦级暂停令，禁止新建或扩建AI数据中心；同时禁止向未建立AI安全保障的国家出口AI计算基础设施，阻止全球\"消灭就业竞赛\"",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1267,7 +1285,8 @@
                   "content": "全美已有超过100个地方社区颁布数据中心暂停令，12个州正在推进州级暂停提案。数据中心建设导致多地电费上涨，引发广泛民众不满",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1298,7 +1317,8 @@
                   "content": "Sanders：\"我们不能坐视少数科技寡头做出将重塑经济、民主和人类未来的决定。\" AOC：\"国会有道德义务站在人民一边，在建立框架之前停止数据中心扩张。\"",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1349,7 +1369,8 @@
               "content": "该法案通过可能性不高，但其政治信号意义重大：AI基础设施的能源消耗和社会影响已从技术议题上升为政治议题。100+地方暂停令表明民间阻力正在系统性积累。对AI行业而言，数据中心选址、能源采购和社区关系将成为与算力同等重要的战略变量。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 28
+              "fontSize": 28,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -1466,7 +1487,8 @@
                   "content": "白宫于3月20日发布《国家人工智能政策框架：立法建议》，提出七大立法优先领域，明确推动联邦层面统一AI监管，取代各州\"拼凑式\"立法格局，标志着美国AI治理进入新阶段。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 32
+                  "fontSize": 32,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -1550,7 +1572,8 @@
                   "content": "儿童保护、社区影响、知识产权、言论自由、创新政策、劳动力发展、联邦优先权——框架明确建议国会立法在这七个领域建立统一联邦标准",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1581,7 +1604,8 @@
                   "content": "明确推动联邦优先权（Federal Preemption），禁止各州自行制定AI法规，建立\"一个联邦AI政策，而非50州拼凑\"的监管格局。与欧盟和中国的监管路径形成鲜明对比",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1612,7 +1636,8 @@
                   "content": "美国劳工部副部长Keith Sonderling：\"一个联邦AI政策，而非50州的拼凑。\" 框架虽不具法律约束力，但为国会立法设定了明确方向",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 28
+                  "fontSize": 28,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1663,7 +1688,3579 @@
               "content": "这是美国AI监管从\"放任\"走向\"有序\"的关键转折点。联邦优先权条款将直接影响加州等州的独立AI立法进程。对全球AI企业而言，美国选择了与欧盟AI Act截然不同的\"创新优先、轻触监管\"路径，这将深刻影响跨国AI产品的合规策略和市场准入决策。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 28
+              "fontSize": 28,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MGHHL",
+      "x": 0,
+      "y": 2540,
+      "name": "ME Cover",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-light",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        100,
+        120
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "TUhv2",
+          "name": "topLine",
+          "width": 120,
+          "height": 4,
+          "fill": "$accent-blue"
+        },
+        {
+          "type": "text",
+          "id": "EW5fs",
+          "name": "tagline",
+          "fill": "$accent-blue",
+          "content": "MIDDLE EAST BRIEFING",
+          "fontFamily": "Inter",
+          "fontSize": 36,
+          "fontWeight": "600",
+          "letterSpacing": 6
+        },
+        {
+          "type": "text",
+          "id": "jMzsS",
+          "name": "title",
+          "fill": "$text-dark",
+          "textGrowth": "fixed-width",
+          "width": 1680,
+          "content": "中东局势最新动态",
+          "lineHeight": 1.1,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 120,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "phH8a",
+          "name": "subtitle",
+          "fill": "$text-muted-light",
+          "content": "2026年3月29日 — 3月30日 · 近48小时权威资讯精选",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 40,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "Xzny9",
+          "name": "badge",
+          "fill": "$accent-blue-light",
+          "cornerRadius": 100,
+          "gap": 12,
+          "padding": [
+            12,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "eKAV4",
+              "name": "bIcon",
+              "width": 28,
+              "height": 28,
+              "iconFontName": "globe",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-blue"
+            },
+            {
+              "type": "text",
+              "id": "X4gRv",
+              "name": "bText",
+              "fill": "$accent-blue",
+              "content": "2026.03.30  ·  4条核心新闻  ·  官方来源",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "OT1UE",
+      "x": 2100,
+      "y": 2540,
+      "name": "ME News 1 - Houthis",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-light",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ymGn1",
+          "name": "leftCol",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-light",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "oh821",
+              "name": "mr1",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8GGbo",
+                  "name": "nb1",
+                  "fill": "$accent-red",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DKO2L",
+                      "name": "nt1",
+                      "fill": "#FFFFFF",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "FEevQ",
+                  "name": "st1",
+                  "fill": "$text-muted-light",
+                  "content": "2026.03.29  |  Al Jazeera / PBS",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8i6Wm",
+              "name": "al1",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-red"
+            },
+            {
+              "type": "text",
+              "id": "CRSNk",
+              "name": "hl1",
+              "fill": "$text-dark",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "也门胡塞武装正式参战\n向以色列发射弹道导弹",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "uTZ5n",
+              "name": "sb1",
+              "fill": "#FEF2F2",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UIlg7",
+                  "name": "sbt1",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "3月29日，也门胡塞武装在不到24小时内对以色列发动两次导弹和无人机袭击，标志着这一伊朗支持的武装力量正式加入持续一个月的中东战争，冲突范围进一步扩大。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Mg7qE",
+              "name": "newsImg1",
+              "metadata": {
+                "type": "unsplash",
+                "username": "sergeykoznov",
+                "link": "https://unsplash.com/@sergeykoznov",
+                "author": "Sergey Koznov"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 280,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1710750266502-cd3a2dc8a92f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NzUyMjZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 8
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CDm0e",
+          "name": "rightCol",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card-light",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "SrsQV",
+              "name": "s1a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6dKx0",
+                  "name": "s1ai",
+                  "fill": "$text-dark",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "hzwdz",
+                  "name": "s1al",
+                  "fill": "$accent-blue",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1H3GB",
+              "name": "d1a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "pGTvs",
+              "name": "f1a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ugtl9",
+                  "name": "ft1a",
+                  "fill": "$accent-red",
+                  "content": "袭击规模",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "VJXlw",
+                  "name": "fb1a",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "胡塞武装在24小时内发动两波导弹和无人机袭击，以色列军方确认拦截了来自也门方向的弹道导弹，为战争爆发以来首次",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7k5Nu",
+              "name": "f1b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HCgkD",
+                  "name": "ft1b",
+                  "fill": "$accent-red",
+                  "content": "战略影响",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "DRyWo",
+                  "name": "fb1b",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "胡塞导弹从1600-2000公里外发射，迫使以色列箭式防御系统覆盖更广方位角，红海和曼德海峡航运面临新一轮中断风险",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vHwOz",
+              "name": "d1b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "2UYT1",
+              "name": "s1b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZkDRP",
+                  "name": "s1bi",
+                  "fill": "$text-dark",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jVJYh",
+                  "name": "s1bl",
+                  "fill": "$accent-emerald",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Bq39v",
+              "name": "ins1",
+              "fill": "$text-body",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "胡塞武装参战开辟了第四个威胁环，从东南方向对以色列构成远程打击能力。这不仅是军事升级，更直接威胁全球能源供应链——红海航运中断可能持续数月，远超空袭所能解决的范围。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "mfwos",
+              "name": "src1",
+              "gap": 8,
+              "padding": [
+                12,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "Ze6Pz",
+                  "name": "src1i",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-muted-light"
+                },
+                {
+                  "type": "text",
+                  "id": "jdesg",
+                  "name": "src1t",
+                  "fill": "$text-muted-light",
+                  "content": "来源：Al Jazeera (aljazeera.com) · PBS NewsHour (pbs.org) · WION News",
+                  "fontFamily": "Inter",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "LvzWr",
+      "x": 4200,
+      "y": 2540,
+      "name": "ME News 2 - Pakistan Talks",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-light",
+      "children": [
+        {
+          "type": "frame",
+          "id": "OSqk7",
+          "name": "leftCol2",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-light",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "1uAkc",
+              "name": "mr2",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JL84H",
+                  "name": "nb2",
+                  "fill": "$accent-blue",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nSytz",
+                      "name": "nt2",
+                      "fill": "#FFFFFF",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "WjwSZ",
+                  "name": "st2",
+                  "fill": "$text-muted-light",
+                  "content": "2026.03.29  |  Reuters / Daily Sabah",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YJq6i",
+              "name": "al2",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-blue"
+            },
+            {
+              "type": "text",
+              "id": "W96wk",
+              "name": "hl2",
+              "fill": "$text-dark",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "四国外长巴基斯坦会谈\n聚焦霍尔木兹海峡重开",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "t49AN",
+              "name": "sb2",
+              "fill": "$accent-blue-light",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DtEi8",
+                  "name": "sbt2",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "巴基斯坦、土耳其、埃及和沙特阿拉伯四国外长3月29日在伊斯兰堡举行紧急会谈，讨论结束伊朗战争的途径，初步聚焦于重新开放霍尔木兹海峡航运的方案。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tNDla",
+              "name": "newsImg2",
+              "metadata": {
+                "type": "unsplash",
+                "username": "thomaslohmann",
+                "link": "https://unsplash.com/@thomaslohmann",
+                "author": "Thomas Lohmann"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 280,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1718638779329-0994ce1bafc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NzUyMjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 8
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WY1p7",
+          "name": "rightCol2",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card-light",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZYKsO",
+              "name": "s2a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JjvMc",
+                  "name": "s2ai",
+                  "fill": "$text-dark",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "xUm4Z",
+                  "name": "s2al",
+                  "fill": "$accent-blue",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "IhZA1",
+              "name": "d2a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "EcJYo",
+              "name": "f2a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4UgDs",
+                  "name": "ft2a",
+                  "fill": "$accent-blue",
+                  "content": "参与方",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "1uMmL",
+                  "name": "fb2a",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "巴基斯坦副总理伊沙克·达尔主持，土耳其外长费丹、埃及外长阿卜杜拉提、沙特外交大臣费萨尔亲王出席，为伊朗战争以来首次四国多边会议",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tR8F1",
+              "name": "f2b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JF2nA",
+                  "name": "ft2b",
+                  "fill": "$accent-blue",
+                  "content": "核心议题",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Wz4v1",
+                  "name": "fb2b",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "重开霍尔木兹海峡航运、推动美伊直接谈判、防止冲突进一步升级为\"全面混乱\"，土耳其外长强调需在全球经济遭受更大损害前采取行动",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zQRpw",
+              "name": "d2b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "kSTlm",
+              "name": "s2b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xdnjq",
+                  "name": "s2bi",
+                  "fill": "$text-dark",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cI134",
+                  "name": "s2bl",
+                  "fill": "$accent-emerald",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ypxuz",
+              "name": "ins2",
+              "fill": "$text-body",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "这是战争爆发以来最具实质意义的外交斡旋尝试。四国选择在巴基斯坦而非联合国框架下会谈，反映出地区大国正试图绕开美国主导的谈判框架，建立独立的调解渠道。霍尔木兹海峡的重开将是检验外交成果的第一块试金石。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "nujVu",
+              "name": "src2",
+              "gap": 8,
+              "padding": [
+                12,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hntp1",
+                  "name": "src2i",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-muted-light"
+                },
+                {
+                  "type": "text",
+                  "id": "GaFBK",
+                  "name": "src2t",
+                  "fill": "$text-muted-light",
+                  "content": "来源：Reuters · Daily Sabah (dailysabah.com) · Geo TV (geo.tv)",
+                  "fontFamily": "Inter",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "shuXU",
+      "x": 0,
+      "y": 3820,
+      "name": "ME News 3 - Iran Warning",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-light",
+      "children": [
+        {
+          "type": "frame",
+          "id": "LIBZ6",
+          "name": "leftCol3",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-light",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Uo4wl",
+              "name": "mr3",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lOP6r",
+                  "name": "nb3",
+                  "fill": "$accent-amber",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2fCNN",
+                      "name": "nt3",
+                      "fill": "#FFFFFF",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "5GO0l",
+                  "name": "st3",
+                  "fill": "$text-muted-light",
+                  "content": "2026.03.29  |  NPR / The Guardian",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hZB4b",
+              "name": "al3",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-amber"
+            },
+            {
+              "type": "text",
+              "id": "BrIlg",
+              "name": "hl3",
+              "fill": "$text-dark",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "伊朗警告美国勿发动\n地面入侵 誓言强力反击",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "BjdOa",
+              "name": "sb3",
+              "fill": "#FFFBEB",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6lrs8",
+                  "name": "sbt3",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "伊朗议会议长卡利巴夫3月29日指控美国在公开寻求谈判的同时秘密策划地面进攻，誓言伊朗军队将\"让入侵者化为灰烬\"。与此同时，五角大楼被曝正为数周的有限地面行动做准备。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WlQud",
+              "name": "newsImg3",
+              "metadata": {
+                "type": "unsplash",
+                "username": "mmdam20",
+                "link": "https://unsplash.com/@mmdam20",
+                "author": "Mohammad Mardani"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 280,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1623954217530-b6b7383d9ea7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NzUzNTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 8
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YJl6u",
+          "name": "rightCol3",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card-light",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "4Air6",
+              "name": "s3a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8Gaxs",
+                  "name": "s3ai",
+                  "fill": "$text-dark",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "iSBOf",
+                  "name": "s3al",
+                  "fill": "$accent-blue",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nTUbr",
+              "name": "d3a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "gQfce",
+              "name": "f3a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uuJxC",
+                  "name": "ft3a",
+                  "fill": "$accent-amber",
+                  "content": "伊朗立场",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "V04Sd",
+                  "name": "fb3a",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "议长卡利巴夫声明：\"敌人在公开场合释放谈判信号，暗地里却在策划地面进攻\"，\"我们的导弹已就位，我们的决心和信念更加坚定\"",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SuqJJ",
+              "name": "f3b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0msmf",
+                  "name": "ft3b",
+                  "fill": "$accent-amber",
+                  "content": "美方动态",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ezyUN",
+                  "name": "fb3b",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "据《华盛顿邮报》报道，五角大楼正准备对伊朗实施数周的有限地面行动，可能包括对哈尔克岛和霍尔木兹海峡附近沿海设施的突袭",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "l2I9y",
+              "name": "d3b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "iorS8",
+              "name": "s3b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vt7hC",
+                  "name": "s3bi",
+                  "fill": "$text-dark",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "IU1I0",
+                  "name": "s3bl",
+                  "fill": "$accent-emerald",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "139UV",
+              "name": "ins3",
+              "fill": "$text-body",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "战争进入第二个月，双方的博弈正从空中打击转向地面对抗的临界点。特朗普声称\"很快可以达成协议\"，但五角大楼的地面行动准备与伊朗的强硬表态形成尖锐矛盾，谈判窗口正在急剧收窄。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "vxs4V",
+              "name": "src3",
+              "gap": 8,
+              "padding": [
+                12,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "2D8k8",
+                  "name": "src3i",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-muted-light"
+                },
+                {
+                  "type": "text",
+                  "id": "OSKBC",
+                  "name": "src3t",
+                  "fill": "$text-muted-light",
+                  "content": "来源：NPR (npr.org) · The Guardian · Al Jazeera · Euronews",
+                  "fontFamily": "Inter",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hW3Ep",
+      "x": 2100,
+      "y": 3820,
+      "name": "ME News 4 - US Marines",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-light",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jW0Dp",
+          "name": "leftCol4",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-light",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "QLGhw",
+              "name": "mr4",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tWTJt",
+                  "name": "nb4",
+                  "fill": "$accent-emerald",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3fBbz",
+                      "name": "nt4",
+                      "fill": "#FFFFFF",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "P1bax",
+                  "name": "st4",
+                  "fill": "$text-muted-light",
+                  "content": "2026.03.29  |  CBS News / ABC News",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Qso43",
+              "name": "al4",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-emerald"
+            },
+            {
+              "type": "text",
+              "id": "5Ou4e",
+              "name": "hl4",
+              "fill": "$text-dark",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "3500名美军陆战队\n抵达中东 局势再升级",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "ExW9F",
+              "name": "sb4",
+              "fill": "#ECFDF5",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "65z5m",
+                  "name": "sbt4",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "超过3500名美军士兵（包括搭乘\"的黎波里\"号两栖攻击舰的约2500名海军陆战队员）已抵达中东地区，标志着美国不再仅依赖空中和导弹打击来威慑德黑兰，地面行动可能性显著上升。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "q1NuM",
+              "name": "newsImg4",
+              "metadata": {
+                "type": "unsplash",
+                "username": "william_rudolph",
+                "link": "https://unsplash.com/@william_rudolph",
+                "author": "William Rudolph"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 280,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1641331440443-ef989f08ae2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NzUyMjl8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 8
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zOIpb",
+          "name": "rightCol4",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card-light",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "8lqsF",
+              "name": "s4a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MSvWc",
+                  "name": "s4ai",
+                  "fill": "$text-dark",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FJ2is",
+                  "name": "s4al",
+                  "fill": "$accent-blue",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PnlIg",
+              "name": "d4a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "LQn3N",
+              "name": "f4a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JmgC1",
+                  "name": "ft4a",
+                  "fill": "$accent-emerald",
+                  "content": "部署规模",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HmItG",
+                  "name": "fb4a",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "第31海军陆战队远征部队约2500人搭乘\"的黎波里\"号两栖攻击舰（搭载F-35B隐身战斗机），加上第82空降师增援，总计近7000名额外部队部署中东",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AgSie",
+              "name": "f4b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dIFQc",
+                  "name": "ft4b",
+                  "fill": "$accent-emerald",
+                  "content": "战略信号",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HmfLX",
+                  "name": "fb4b",
+                  "fill": "$text-body",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "部队从日本基地调往中东，配备两栖登陆能力和隐身战机，被外界解读为美国正从纯空袭模式转向可能的地面干预准备",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1yxEd",
+              "name": "d4b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-light"
+            },
+            {
+              "type": "frame",
+              "id": "VJNAc",
+              "name": "s4b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oLV0L",
+                  "name": "s4bi",
+                  "fill": "$text-dark",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "fobIs",
+                  "name": "s4bl",
+                  "fill": "$accent-emerald",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "s0Cw3",
+              "name": "ins4",
+              "fill": "$text-body",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "陆战队的部署是冲突以来最重大的军事姿态转变。两栖攻击舰的到来意味着美军具备了对伊朗沿海目标实施突袭的能力，尤其是控制全球石油出口命脉的哈尔克岛。这将战争推向了一个全新的危险阶段。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "iIJRM",
+              "name": "src4",
+              "gap": 8,
+              "padding": [
+                12,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "N7CjG",
+                  "name": "src4i",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-muted-light"
+                },
+                {
+                  "type": "text",
+                  "id": "Z2MVu",
+                  "name": "src4t",
+                  "fill": "$text-muted-light",
+                  "content": "来源：CBS News (cbsnews.com) · ABC News · USA Today",
+                  "fontFamily": "Inter",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "8jTAX",
+      "x": 0,
+      "y": 5100,
+      "name": "Stock Cover",
+      "width": 1920,
+      "height": 1080,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0F172A",
+            "position": 0
+          },
+          {
+            "color": "#1E3A5F",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        80,
+        100
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Cm1gv",
+          "name": "topBar",
+          "fill": "#DC2626",
+          "cornerRadius": 4,
+          "padding": [
+            8,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "iOBh2",
+              "name": "topTxt",
+              "fill": "#FFFFFF",
+              "content": "MARKET BRIEFING",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700",
+              "letterSpacing": 4
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "mCDBT",
+          "name": "mainTitle",
+          "fill": "#FFFFFF",
+          "textGrowth": "fixed-width",
+          "width": 1720,
+          "content": "股市投资风向标",
+          "lineHeight": 1.05,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 110,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "J5moE",
+          "name": "subTitle",
+          "fill": "#94A3B8",
+          "content": "影响全球市场的5大关键事件 · 投资者必读",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 40,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "CJjhG",
+          "name": "dateLine",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "w5A1U",
+              "name": "dateTag",
+              "fill": "#1E40AF",
+              "cornerRadius": 6,
+              "padding": [
+                8,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E0JcF",
+                  "name": "dateTxt",
+                  "fill": "#FFFFFF",
+                  "content": "2026.03.30",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "zmfbQ",
+              "name": "sepTxt",
+              "fill": "#60A5FA",
+              "content": "道指+406点  ·  油价$119  ·  10Y国债4.4%  ·  黄金$5400+",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xsclb",
+      "x": 2100,
+      "y": 5100,
+      "name": "Stock 1 - Trump Iran Talks",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "2PYWL",
+          "name": "lc1",
+          "width": 1056,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "xZSYp",
+              "name": "mr1",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dFLyD",
+                  "name": "nb1",
+                  "fill": "#16A34A",
+                  "cornerRadius": 4,
+                  "padding": [
+                    4,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1zWbc",
+                      "name": "nt1",
+                      "fill": "#FFFFFF",
+                      "content": "01 利好",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "AC7wI",
+                  "name": "st1",
+                  "fill": "#94A3B8",
+                  "content": "2026.03.30  |  CNBC / Motley Fool",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XEUrc",
+              "name": "al1",
+              "width": 60,
+              "height": 3,
+              "fill": "#16A34A"
+            },
+            {
+              "type": "text",
+              "id": "KKIXF",
+              "name": "hl1",
+              "fill": "#0F172A",
+              "textGrowth": "fixed-width",
+              "width": 944,
+              "content": "特朗普称与伊朗\"认真谈判\"\n道指单日暴涨406点",
+              "lineHeight": 1.12,
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "7dPeC",
+              "name": "sb1",
+              "fill": "#F0FDF4",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T3yYo",
+                  "name": "sbt1",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "3月30日，特朗普在社交媒体表示美国正与伊朗新政权进行\"认真讨论\"以结束军事行动，市场瞬间反弹。道指涨406点，标普500涨0.5%，纳斯达克涨0.3%。但伊朗随后否认谈判进展，涨幅回吐过半。",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vjRwY",
+              "name": "box1",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hQyBp",
+                  "name": "box1t",
+                  "fill": "#1E40AF",
+                  "content": "📌 投资启示",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "1SpMN",
+                  "name": "box1b",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "地缘政治消息驱动的反弹往往短暂且不可持续。3月以来特朗普已多次释放\"和谈\"信号后又反转，形成典型的TACO模式（Trump Announces, Chaos Occurs）。短线交易者需警惕消息面反复，中长线投资者应关注实质性停火进展。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p6rfa",
+              "name": "img1",
+              "metadata": {
+                "type": "unsplash",
+                "username": "hdbernd",
+                "link": "https://unsplash.com/@hdbernd",
+                "author": "Bernd 📷 Dittrich"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1671655313515-a0932880514e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4ODY4ODF8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7jS81",
+          "name": "rc1",
+          "width": 864,
+          "height": "fill_container",
+          "fill": "#F8FAFC",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "iIw3J",
+              "name": "kpi1",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "92QHC",
+                  "name": "k1a",
+                  "width": "fill_container",
+                  "fill": "#DCFCE7",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "49jzy",
+                      "name": "k1av",
+                      "fill": "#16A34A",
+                      "content": "+406",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3d20I",
+                      "name": "k1al",
+                      "fill": "#334155",
+                      "content": "道指涨幅",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZFugg",
+                  "name": "k1b",
+                  "width": "fill_container",
+                  "fill": "#DBEAFE",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DTGWA",
+                      "name": "k1bv",
+                      "fill": "#1E40AF",
+                      "content": "+0.5%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "1kp0W",
+                      "name": "k1bl",
+                      "fill": "#334155",
+                      "content": "标普500",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "6SOg1",
+              "name": "d1",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "text",
+              "id": "u7BiE",
+              "name": "sec1",
+              "fill": "#1E40AF",
+              "content": "📊 关键数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "hrPps",
+              "name": "f1a",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ngx6n",
+                  "name": "f1at",
+                  "fill": "#DC2626",
+                  "content": "TACO效应",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "rmnTj",
+                  "name": "f1ab",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "3月23日特朗普首次暗示和谈，标普500在数分钟内暴涨1.7万亿美元，随后伊朗否认，涨幅蒸发一半。本次重演相同剧本。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "x4uUu",
+              "name": "f1b",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j0l5V",
+                  "name": "f1bt",
+                  "fill": "#DC2626",
+                  "content": "板块表现",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ohzPQ",
+                  "name": "f1bb",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "能源股领跌（油价回落预期），防务股回调，航空和消费板块反弹最为强劲。科技股表现平淡，纳指仅涨0.3%。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QufyW",
+              "name": "d1b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "frame",
+              "id": "T8CLZ",
+              "name": "src1",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "4LDq4",
+                  "name": "src1i",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "#94A3B8"
+                },
+                {
+                  "type": "text",
+                  "id": "hfTWG",
+                  "name": "src1t",
+                  "fill": "#94A3B8",
+                  "content": "来源：CNBC · Motley Fool · Fortune · Times of India",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mwtB8",
+      "x": 4200,
+      "y": 5100,
+      "name": "Stock 2 - Oil Shock",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Tl1HF",
+          "name": "lc2",
+          "width": 1056,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Wf3js",
+              "name": "mr2",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "6yZMk",
+                  "name": "nb2",
+                  "fill": "#DC2626",
+                  "cornerRadius": 4,
+                  "padding": [
+                    4,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2XPIk",
+                      "name": "nt2",
+                      "fill": "#FFFFFF",
+                      "content": "02 利空",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "UMRcG",
+                  "name": "st2",
+                  "fill": "#94A3B8",
+                  "content": "2026.03.29  |  The Guardian / CNBC",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fxL7B",
+              "name": "al2",
+              "width": 60,
+              "height": 3,
+              "fill": "#DC2626"
+            },
+            {
+              "type": "text",
+              "id": "Vcd0e",
+              "name": "hl2",
+              "fill": "#0F172A",
+              "textGrowth": "fixed-width",
+              "width": 944,
+              "content": "油价创月度最大涨幅纪录\n布伦特原油逼近$120",
+              "lineHeight": 1.12,
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "QdUZv",
+              "name": "sb2",
+              "fill": "#FEF2F2",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k1W26",
+                  "name": "sbt2",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "布伦特原油3月触及$119.50/桶，为2022年6月以来最高。伊朗几乎关闭霍尔木兹海峡，全球20%石油供应受阻。IEA称这是\"全球石油市场历史上最大的供应中断\"。油气CEO们在CERAWeek会议上警告：市场低估了中断的严重性。",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tbpuw",
+              "name": "box2",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dAOi8",
+                  "name": "box2t",
+                  "fill": "#1E40AF",
+                  "content": "📌 投资启示",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "UKTdF",
+                  "name": "box2b",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "若霍尔木兹海峡1-3周内未重开，分析师预计布伦特将冲击$110+。能源股（XOM/CVX）短期受益，但高油价将推高通胀、压制消费和科技股。航空、物流、化工板块承压最大。黄金作为避险资产已突破$5400。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PBHH4",
+              "name": "img2",
+              "metadata": {
+                "type": "unsplash",
+                "username": "wonderkim",
+                "link": "https://unsplash.com/@wonderkim",
+                "author": "Wonder KIM"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1758246140766-c5a767963c05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4ODY4ODJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jX0bt",
+          "name": "rc2",
+          "width": 864,
+          "height": "fill_container",
+          "fill": "#F8FAFC",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "GjsE8",
+              "name": "kpi2",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PCZog",
+                  "name": "k2a",
+                  "width": "fill_container",
+                  "fill": "#FEE2E2",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Aj8TU",
+                      "name": "k2av",
+                      "fill": "#DC2626",
+                      "content": "$119",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BPIjq",
+                      "name": "k2al",
+                      "fill": "#334155",
+                      "content": "布伦特/桶",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oqavN",
+                  "name": "k2b",
+                  "width": "fill_container",
+                  "fill": "#FEF3C7",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HSzZQ",
+                      "name": "k2bv",
+                      "fill": "#D97706",
+                      "content": "$5400+",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "89pOI",
+                      "name": "k2bl",
+                      "fill": "#334155",
+                      "content": "黄金/盎司",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4vkjI",
+              "name": "d2",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "text",
+              "id": "mRZn1",
+              "name": "sec2",
+              "fill": "#1E40AF",
+              "content": "📊 关键数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "rSPUi",
+              "name": "f2a",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "M7Sl1",
+                  "name": "f2at",
+                  "fill": "#DC2626",
+                  "content": "供应中断规模",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "gKIL7",
+                  "name": "f2ab",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "霍尔木兹海峡承载全球20%石油和天然气运输，IEA已协调32国释放4亿桶战略石油储备，美国能源部预计下周开始交付",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Rs1H9",
+              "name": "f2b",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kePki",
+                  "name": "f2bt",
+                  "fill": "#DC2626",
+                  "content": "行业预警",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "BWTta",
+                  "name": "f2bb",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "CERAWeek能源峰会上，油气CEO一致认为价格短期内不会回到战前水平。Deutsche Bank警告油价可能推动通胀重新加速",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FenCf",
+              "name": "d2b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "frame",
+              "id": "m2Qvq",
+              "name": "src2",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "SNDF0",
+                  "name": "src2i",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "#94A3B8"
+                },
+                {
+                  "type": "text",
+                  "id": "SOJ66",
+                  "name": "src2t",
+                  "fill": "#94A3B8",
+                  "content": "来源：The Guardian · CNBC CERAWeek · Business Insider",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "vUiH4",
+      "x": 0,
+      "y": 6380,
+      "name": "Stock 3 - Fed Rate",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "vSd0O",
+          "name": "lc3",
+          "width": 1056,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "4tEaZ",
+              "name": "mr3",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "md7KT",
+                  "name": "nb3",
+                  "fill": "#D97706",
+                  "cornerRadius": 4,
+                  "padding": [
+                    4,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "54gQA",
+                      "name": "nt3",
+                      "fill": "#FFFFFF",
+                      "content": "03 中性",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "l9c7r",
+                  "name": "st3",
+                  "fill": "#94A3B8",
+                  "content": "2026.03.28  |  Business Insider / KSL",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Swtin",
+              "name": "al3",
+              "width": 60,
+              "height": 3,
+              "fill": "#D97706"
+            },
+            {
+              "type": "text",
+              "id": "pXHsa",
+              "name": "hl3",
+              "fill": "#0F172A",
+              "textGrowth": "fixed-width",
+              "width": 944,
+              "content": "美联储按兵不动 降息梦碎\n市场开始定价加息可能",
+              "lineHeight": 1.12,
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "HbSQt",
+              "name": "sb3",
+              "fill": "#FFFBEB",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yplgh",
+                  "name": "sbt3",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "美联储维持利率不变，将2026年PCE通胀预期从2.4%上调至2.7%。受伊朗战争推高油价影响，债券市场已完全抹去2026年降息预期。CME FedWatch显示年底前降息概率仅17%，部分交易员开始押注加息。10年期国债收益率升破4.4%。",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hrBul",
+              "name": "box3",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QG1NW",
+                  "name": "box3t",
+                  "fill": "#1E40AF",
+                  "content": "📌 投资启示",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "k4HAh",
+                  "name": "box3b",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "利率预期逆转是当前最大的结构性风险。从\"年内降息2-3次\"到\"可能加息\"，这一转变将重新定价所有风险资产。高估值成长股（科技/AI）首当其冲，而银行、保险等金融股可能受益于更高利率环境。建议增配短久期债券和现金类资产。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Nl0Cd",
+              "name": "img3",
+              "metadata": {
+                "type": "unsplash",
+                "username": "joshuaworoniecki",
+                "link": "https://unsplash.com/@joshuaworoniecki",
+                "author": "Joshua Woroniecki"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1633059050703-0f1b50828402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4ODY5MDF8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uPDP5",
+          "name": "rc3",
+          "width": 864,
+          "height": "fill_container",
+          "fill": "#F8FAFC",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "b4zIe",
+              "name": "kpi3",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CuVut",
+                  "name": "k3a",
+                  "width": "fill_container",
+                  "fill": "#FEE2E2",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6JD11",
+                      "name": "k3av",
+                      "fill": "#DC2626",
+                      "content": "4.4%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6G79i",
+                      "name": "k3al",
+                      "fill": "#334155",
+                      "content": "10Y国债",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HduuZ",
+                  "name": "k3b",
+                  "width": "fill_container",
+                  "fill": "#FEF3C7",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pRJhn",
+                      "name": "k3bv",
+                      "fill": "#D97706",
+                      "content": "2.7%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lRpiE",
+                      "name": "k3bl",
+                      "fill": "#334155",
+                      "content": "PCE通胀",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iTZuV",
+              "name": "d3a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "text",
+              "id": "BXMmh",
+              "name": "sec3",
+              "fill": "#1E40AF",
+              "content": "📊 关键数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "QPyBy",
+              "name": "f3a",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vrk45",
+                  "name": "f3at",
+                  "fill": "#D97706",
+                  "content": "利率预期",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "3NIxX",
+                  "name": "f3ab",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "债券市场已完全定价2026年零降息，CME FedWatch显示仅17%概率年底前降一次，部分机构开始建模加息情景",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PV1gC",
+              "name": "f3b",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "u5Vb7",
+                  "name": "f3bt",
+                  "fill": "#D97706",
+                  "content": "通胀驱动",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Q93tK",
+                  "name": "f3bb",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "油价从战前$70飙升至$119，推动核心PCE从2.5%升至2.7%，Fed理事Miran反对维持利率不变，主张降息应对经济冲击",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OPvCh",
+              "name": "d3b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "frame",
+              "id": "PjC9a",
+              "name": "src3",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "gCz8G",
+                  "name": "src3i",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "#94A3B8"
+                },
+                {
+                  "type": "text",
+                  "id": "hRd4l",
+                  "name": "src3t",
+                  "fill": "#94A3B8",
+                  "content": "来源：Business Insider · KSL · iShares · BusinessWorld",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "7oZzP",
+      "x": 2100,
+      "y": 6380,
+      "name": "Stock 4 - Tesla Q1",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mecdk",
+          "name": "lc4",
+          "width": 1056,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "btAJu",
+              "name": "mr4",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZXIII",
+                  "name": "nb4",
+                  "fill": "#2563EB",
+                  "cornerRadius": 4,
+                  "padding": [
+                    4,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3Mvnk",
+                      "name": "nt4",
+                      "fill": "#FFFFFF",
+                      "content": "04 关注",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "DtoDN",
+                  "name": "st4",
+                  "fill": "#94A3B8",
+                  "content": "2026.03.28  |  Electrek / Tesla IR",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "erlMX",
+              "name": "al4",
+              "width": 60,
+              "height": 3,
+              "fill": "#2563EB"
+            },
+            {
+              "type": "text",
+              "id": "2xcnd",
+              "name": "hl4",
+              "fill": "#0F172A",
+              "textGrowth": "fixed-width",
+              "width": 944,
+              "content": "特斯拉Q1交付预期大幅下调\nUBS砍至34.5万辆",
+              "lineHeight": 1.12,
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "6o5lg",
+              "name": "sb4",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eA4HE",
+                  "name": "sbt4",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "特斯拉官方公布卖方分析师共识：Q1预计交付365,645辆，环比下降18%但同比增长8.6%。UBS更悲观，将预期砍至345,000辆。全年预期仅168.9万辆，同比增长仅3.3%。Robotaxi进展不及预期加剧市场担忧。",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pirbm",
+              "name": "box4",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3KFqW",
+                  "name": "box4t",
+                  "fill": "#1E40AF",
+                  "content": "📌 投资启示",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "DnfdV",
+                  "name": "box4b",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "特斯拉正面临\"增长叙事\"的关键考验。Q1交付数据将于下周公布，若低于34.5万辆（UBS悲观预期），股价可能承压。全年仅3.3%的增长预期意味着市场已不再将其视为高增长公司。关注点转向Robotaxi商业化时间表和能源储存业务（Q1预计14.4GWh）。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r16OI",
+              "name": "img4",
+              "metadata": {
+                "type": "unsplash",
+                "username": "jadonjohnson",
+                "link": "https://unsplash.com/@jadonjohnson",
+                "author": "Jadon Johnson"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1680822140635-8d1d7e8bd6c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4ODY5MDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YKwQ0",
+          "name": "rc4",
+          "width": 864,
+          "height": "fill_container",
+          "fill": "#F8FAFC",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "REp14",
+              "name": "kpi4",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZstiP",
+                  "name": "k4a",
+                  "width": "fill_container",
+                  "fill": "#DBEAFE",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T7PKG",
+                      "name": "k4av",
+                      "fill": "#2563EB",
+                      "content": "365K",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z4gDw",
+                      "name": "k4al",
+                      "fill": "#334155",
+                      "content": "Q1预期交付",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vZfcZ",
+                  "name": "k4b",
+                  "width": "fill_container",
+                  "fill": "#FEE2E2",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r7lbm",
+                      "name": "k4bv",
+                      "fill": "#DC2626",
+                      "content": "-18%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wIN9M",
+                      "name": "k4bl",
+                      "fill": "#334155",
+                      "content": "环比降幅",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gHFvQ",
+              "name": "d4a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "text",
+              "id": "DfEzt",
+              "name": "sec4",
+              "fill": "#1E40AF",
+              "content": "📊 关键数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "O87E7",
+              "name": "f4a",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uVAEA",
+                  "name": "f4at",
+                  "fill": "#2563EB",
+                  "content": "交付分化",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "7cV4f",
+                  "name": "f4ab",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "卖方共识365,645辆，但UBS仅345,000辆，差距达6%，反映市场对需求前景的严重分歧",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "THxfa",
+              "name": "f4b",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0JZim",
+                  "name": "f4bt",
+                  "fill": "#2563EB",
+                  "content": "增长瓶颈",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "haNq5",
+                  "name": "f4bb",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "全年预期168.9万辆仅增3.3%，Q1仅占全年21.6%，分析师押注下半年大幅提速，但缺乏新车型支撑",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0x5xg",
+              "name": "d4b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "frame",
+              "id": "VeVy7",
+              "name": "src4",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "VGlZ4",
+                  "name": "src4i",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "#94A3B8"
+                },
+                {
+                  "type": "text",
+                  "id": "1Ha4e",
+                  "name": "src4t",
+                  "fill": "#94A3B8",
+                  "content": "来源：Electrek · Tesla IR · UBS · GuruFocus",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ERNzY",
+      "x": 4200,
+      "y": 6380,
+      "name": "Stock 5 - Nasdaq Correction",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "p7z1e",
+          "name": "lc5",
+          "width": 1056,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "HaPJP",
+              "name": "mr5",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0SUZZ",
+                  "name": "nb5",
+                  "fill": "#DC2626",
+                  "cornerRadius": 4,
+                  "padding": [
+                    4,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HERjg",
+                      "name": "nt5",
+                      "fill": "#FFFFFF",
+                      "content": "05 利空",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "DWnTP",
+                  "name": "st5",
+                  "fill": "#94A3B8",
+                  "content": "2026.03.27  |  CNBC / The Guardian",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "detRp",
+              "name": "al5",
+              "width": 60,
+              "height": 3,
+              "fill": "#DC2626"
+            },
+            {
+              "type": "text",
+              "id": "dyLwS",
+              "name": "hl5",
+              "fill": "#0F172A",
+              "textGrowth": "fixed-width",
+              "width": 944,
+              "content": "纳斯达克跌入修正区间\n华尔街创六个月新低",
+              "lineHeight": 1.12,
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "wG6iR",
+              "name": "sb5",
+              "fill": "#FEF2F2",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Yj2R2",
+                  "name": "sbt5",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "3月26日纳斯达克收跌2.38%，正式进入修正区间（较高点跌超10%）。标普500跌1.74%至6,477点，道指跌469点。华尔街创六个月新低。关税政策叠加伊朗战争，投资者信心持续恶化。美国有效关税率已从2025年初的2.2%飙升至10.3%。",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qerBf",
+              "name": "box5",
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7VSLC",
+                  "name": "box5t",
+                  "fill": "#1E40AF",
+                  "content": "📌 投资启示",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "y0YUx",
+                  "name": "box5b",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 908,
+                  "content": "纳指进入修正区间通常是中期调整的信号而非崩盘前兆。历史数据显示，修正后6个月平均回报为正。但本轮下跌叠加了战争+关税+通胀三重压力，复苏时间可能更长。建议：1）避免恐慌抛售；2）分批建仓优质蓝筹；3）关注防御性板块（公用事业/医疗）。",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eAkpf",
+              "name": "img5",
+              "metadata": {
+                "type": "unsplash",
+                "username": "nikiclark",
+                "link": "https://unsplash.com/@nikiclark",
+                "author": "Niki Clark"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1672500216525-ff51f8ce3d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4ODY5Mzh8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rmUAl",
+          "name": "rc5",
+          "width": 864,
+          "height": "fill_container",
+          "fill": "#F8FAFC",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "j91q9",
+              "name": "kpi5",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Vexx7",
+                  "name": "k5a",
+                  "width": "fill_container",
+                  "fill": "#FEE2E2",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S3sZe",
+                      "name": "k5av",
+                      "fill": "#DC2626",
+                      "content": "-10%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A2dik",
+                      "name": "k5al",
+                      "fill": "#334155",
+                      "content": "纳指修正",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6vfQD",
+                  "name": "k5b",
+                  "width": "fill_container",
+                  "fill": "#FEF3C7",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CkNz2",
+                      "name": "k5bv",
+                      "fill": "#D97706",
+                      "content": "10.3%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2rEdg",
+                      "name": "k5bl",
+                      "fill": "#334155",
+                      "content": "有效关税率",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NkPWr",
+              "name": "d5a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "text",
+              "id": "S7S1k",
+              "name": "sec5",
+              "fill": "#1E40AF",
+              "content": "📊 关键数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "CqQne",
+              "name": "f5a",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yHwbH",
+                  "name": "f5at",
+                  "fill": "#DC2626",
+                  "content": "市场情绪",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Pu6yW",
+                  "name": "f5ab",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "标普500自战争爆发以来跌幅不到10%，CFRA首席策略师Stovall认为市场对霍尔木兹海峡关闭的反应\"低于预期\"",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Az6ib",
+              "name": "f5b",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Oq3kO",
+                  "name": "f5bt",
+                  "fill": "#DC2626",
+                  "content": "关税叠加",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "BLB3t",
+                  "name": "f5bb",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": 784,
+                  "content": "Penn Wharton估算美国有效关税率已达10.3%，为数十年来最高，企业成本压力持续上升",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "J05Bv",
+              "name": "d5b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E2E8F0"
+            },
+            {
+              "type": "frame",
+              "id": "aM1M4",
+              "name": "src5",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "gFmqi",
+                  "name": "src5i",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "link",
+                  "iconFontFamily": "lucide",
+                  "fill": "#94A3B8"
+                },
+                {
+                  "type": "text",
+                  "id": "tDBLQ",
+                  "name": "src5t",
+                  "fill": "#94A3B8",
+                  "content": "来源：CNBC · The Guardian · EBC Financial · Penn Wharton",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         }
@@ -1712,6 +5309,50 @@
       "value": "#FFFFFF"
     },
     "text-secondary": {
+      "type": "color",
+      "value": "#94A3B8"
+    },
+    "accent-amber": {
+      "type": "color",
+      "value": "#D97706"
+    },
+    "accent-blue": {
+      "type": "color",
+      "value": "#2563EB"
+    },
+    "accent-blue-light": {
+      "type": "color",
+      "value": "#EFF6FF"
+    },
+    "accent-emerald": {
+      "type": "color",
+      "value": "#059669"
+    },
+    "accent-red": {
+      "type": "color",
+      "value": "#DC2626"
+    },
+    "bg-card-light": {
+      "type": "color",
+      "value": "#F8FAFC"
+    },
+    "bg-light": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "border-light": {
+      "type": "color",
+      "value": "#E2E8F0"
+    },
+    "text-body": {
+      "type": "color",
+      "value": "#334155"
+    },
+    "text-dark": {
+      "type": "color",
+      "value": "#0F172A"
+    },
+    "text-muted-light": {
       "type": "color",
       "value": "#94A3B8"
     }

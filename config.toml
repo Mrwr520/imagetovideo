@@ -82,7 +82,7 @@ fade_duration = 0.5
 
 [subtitle]
 font_family = "Microsoft YaHei"
-font_size = 36
+font_size = 15
 color = "#FFFFFF"
 outline_color = "#000000"
 outline_width = 2

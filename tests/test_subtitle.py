@@ -16,10 +16,10 @@ class TestSubtitleStyle:
     def test_default_values(self):
         style = SubtitleStyle()
         assert style.font_family == "Microsoft YaHei"
-        assert style.font_size == 36
+        assert style.font_size == 24
         assert style.color == "#FFFFFF"
         assert style.outline_color == "#000000"
-        assert style.outline_width == 2
+        assert style.outline_width == 1
         assert style.position == "bottom"
 
     def test_custom_values(self):
@@ -59,11 +59,11 @@ class TestSplitText:
         assert result == ["苹果", "香蕉", "橘子"]
 
     def test_force_split_long_segment(self, gen: SubtitleGenerator):
-        # 20 chars, no punctuation -> should be split into 15 + 5
-        text = "一二三四五六七八九十壹贰叁肆伍陆柒捌玖拾"
+        # 25 chars, no punctuation -> should be split into 20 + 5
+        text = "一二三四五六七八九十壹贰叁肆伍陆柒捌玖拾甲乙丙丁戊"
         result = gen.split_text(text)
         assert len(result) == 2
-        assert len(result[0]) == 15
+        assert len(result[0]) == 20
         assert len(result[1]) == 5
         assert result[0] + result[1] == text
 
