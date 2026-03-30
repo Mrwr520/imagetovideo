@@ -1,0 +1,1719 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "yna7F",
+      "x": 0,
+      "y": 0,
+      "name": "Cover Slide",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        100,
+        120
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "d66LE",
+          "name": "topLine",
+          "width": 120,
+          "height": 4,
+          "fill": "$accent-cyan"
+        },
+        {
+          "type": "text",
+          "id": "TLqi9",
+          "name": "tagline",
+          "fill": "$accent-cyan",
+          "content": "AI WEEKLY BRIEFING",
+          "fontFamily": "Inter",
+          "fontSize": 36,
+          "fontWeight": "600",
+          "letterSpacing": 6
+        },
+        {
+          "type": "text",
+          "id": "cjxxn",
+          "name": "title",
+          "fill": "$text-primary",
+          "textGrowth": "fixed-width",
+          "width": 1680,
+          "content": "全球人工智能重磅新闻",
+          "lineHeight": 1.1,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 120,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "zZRIW",
+          "name": "subtitle",
+          "fill": "$text-secondary",
+          "content": "2026年3月29日 — 3月30日 · 近48小时权威资讯精选",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 40
+        },
+        {
+          "type": "frame",
+          "id": "ebvhD",
+          "name": "dateBadge",
+          "fill": "$border-subtle",
+          "cornerRadius": 100,
+          "gap": 12,
+          "padding": [
+            12,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "jRXI8",
+              "name": "dateIcon",
+              "width": 28,
+              "height": 28,
+              "iconFontName": "calendar",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-cyan"
+            },
+            {
+              "type": "text",
+              "id": "sVAp6",
+              "name": "dateText",
+              "fill": "$text-secondary",
+              "content": "2026.03.30  ·  5条核心新闻  ·  PPT演讲文案",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nx9ka",
+      "x": 2100,
+      "y": 0,
+      "name": "News 1 - Anthropic Mythos",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "children": [
+        {
+          "type": "frame",
+          "id": "VcQSt",
+          "name": "leftCol",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-dark",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "m6Yyh",
+              "name": "metaRow",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wlZtn",
+                  "name": "numBadge",
+                  "fill": "$accent-cyan",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Nx8DV",
+                      "name": "numText",
+                      "fill": "$bg-dark",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Hx0Vt",
+                  "name": "srcText",
+                  "fill": "$text-muted",
+                  "content": "2026.03.27  |  Fortune / Axios",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xtHgT",
+              "name": "accentLine",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-orange"
+            },
+            {
+              "type": "text",
+              "id": "WNpqT",
+              "name": "headline",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "Anthropic泄露最强模型\nClaude Mythos",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "qj0Ur",
+              "name": "summaryBox",
+              "fill": "#2A1A10",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5EES3",
+                  "name": "summaryText",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "3月26日，安全研究人员发现Anthropic近3000份内部文件因CMS配置错误被公开泄露，揭示了一款代号\"Capybara\"的未发布模型Claude Mythos——被Anthropic自身评估为\"在网络安全能力上远超任何现有AI模型\"，因风险过高而决定不予发布。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Bc7pi",
+          "name": "rightCol",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "7ObmF",
+              "name": "secTitle1",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SKl2h",
+                  "name": "secIcon1",
+                  "fill": "$text-primary",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "aWy9K",
+                  "name": "secLabel1",
+                  "fill": "$accent-cyan",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7kUpm",
+              "name": "divider1",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "SXwLU",
+              "name": "fact1",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "inBOR",
+                  "name": "factTag1",
+                  "fill": "$accent-orange",
+                  "content": "安全泄露规模",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "JVFuf",
+                  "name": "factBody1",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "LayerX Security的Roy Paz与剑桥大学的Alexandre Pauwels发现近3,000份Anthropic内部文件因CMS默认权限配置错误而公开可访问",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vgLOv",
+              "name": "fact2",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tWS6e",
+                  "name": "factTag2",
+                  "fill": "$accent-orange",
+                  "content": "模型能力定性",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "geZ4e",
+                  "name": "factBody2",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "Anthropic内部草稿将Mythos描述为\"在网络安全任务中具有前所未有的能力\"，是Claude Opus 4.6之上的\"阶跃式飞跃\"",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "83uIg",
+              "name": "fact3",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iv1vl",
+                  "name": "factTag3",
+                  "fill": "$accent-orange",
+                  "content": "官方核心表态",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "nxZld",
+                  "name": "factBody3",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "\"可能引发一波AI驱动的漏洞利用浪潮，其速度将远超防御者的应对能力\" —— Anthropic内部安全评估",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BKNw6",
+              "name": "divider2",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "qKdae",
+              "name": "secTitle2",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6eT4q",
+                  "name": "secIcon2",
+                  "fill": "$text-primary",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GDYFC",
+                  "name": "secLabel2",
+                  "fill": "$accent-green",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "fxXgJ",
+              "name": "insightText",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "这是AI安全领域的标志性事件：一家以\"安全优先\"为创始理念的公司，首次公开承认自己构建了一个\"过于危险而无法发布\"的模型。这意味着前沿AI实验室的内部能力与公开发布之间存在显著鸿沟。Anthropic计划仅向欧洲企业CEO私下演示该模型，引发了关于AI能力分配公平性的深层讨论。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "uVvlO",
+      "x": 4200,
+      "y": 0,
+      "name": "News 2 - Apple Siri",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "children": [
+        {
+          "type": "frame",
+          "id": "GwJkd",
+          "name": "leftCol2",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-dark",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "BiSAq",
+              "name": "metaRow2",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uRGfw",
+                  "name": "numBadge2",
+                  "fill": "$accent-cyan",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nhF7p",
+                      "name": "numText2",
+                      "fill": "$bg-dark",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ZP3sn",
+                  "name": "srcText2",
+                  "fill": "$text-muted",
+                  "content": "2026.03.27  |  Bloomberg / MacRumors",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "08AtC",
+              "name": "accentLine2",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-purple"
+            },
+            {
+              "type": "text",
+              "id": "qLIhM",
+              "name": "headline2",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "Apple将Siri全面开放\n接入第三方AI模型",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "QHYEO",
+              "name": "summaryBox2",
+              "fill": "#1A1528",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3zxlz",
+                  "name": "summaryText2",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "Bloomberg报道，Apple正在为iOS 27开发\"Extensions\"系统，允许Gemini、Claude等第三方AI聊天机器人直接接入Siri架构。用户可自主选择由哪个AI服务处理查询请求，彻底打破封闭生态壁垒。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "liAic",
+          "name": "rightCol2",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "jc794",
+              "name": "st2a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zmx5W",
+                  "name": "si2a",
+                  "fill": "$text-primary",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "akh2a",
+                  "name": "sl2a",
+                  "fill": "$accent-cyan",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B9XWH",
+              "name": "dv2a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "MyTSu",
+              "name": "f2a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3A7JA",
+                  "name": "ft2a",
+                  "fill": "$accent-purple",
+                  "content": "技术架构",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "4dBQX",
+                  "name": "fb2a",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "iOS 27将引入\"Extensions\"系统，通过设置菜单统一管理，覆盖iOS 27、iPadOS 27和macOS 27全平台，用户可自由切换AI服务提供商",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "o0rOr",
+              "name": "f2b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7FKEw",
+                  "name": "ft2b",
+                  "fill": "$accent-purple",
+                  "content": "商业影响",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "1jttQ",
+                  "name": "fb2b",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "App Store AI订阅佣金收入2026年已突破10亿美元，Extensions上线前即已达成。Apple将iPhone转变为\"灵活AI中枢\"，通过分发渠道获取AI订阅分成",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wFP0V",
+              "name": "f2c",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LcabE",
+                  "name": "ft2c",
+                  "fill": "$accent-purple",
+                  "content": "生态格局",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "uBLMu",
+                  "name": "fb2c",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "首批支持ChatGPT、Google Gemini、Anthropic Claude等主流AI服务，用户无需手动切换App即可通过Siri路由查询",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V3C3P",
+              "name": "dv2b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "gZQa5",
+              "name": "st2b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UufrC",
+                  "name": "si2b",
+                  "fill": "$text-primary",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "lT2Zb",
+                  "name": "sl2b",
+                  "fill": "$accent-green",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "KWNEf",
+              "name": "ins2",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "Apple不再试图独自赢得AI竞赛，而是将自身定位为AI分发平台。这一战略转型意味着：iPhone的20亿活跃设备将成为所有AI服务商争夺的入口，而Apple通过App Store抽成坐收渔利。对开发者而言，Siri Extensions可能成为继App Store之后最重要的AI分发渠道。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "AMor8",
+      "x": 0,
+      "y": 1260,
+      "name": "News 3 - Claude Subscriptions",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "children": [
+        {
+          "type": "frame",
+          "id": "oHNXv",
+          "name": "lc3",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-dark",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "slS5p",
+              "name": "mr3",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "3gS3E",
+                  "name": "nb3",
+                  "fill": "$accent-cyan",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VWFM9",
+                      "name": "nt3",
+                      "fill": "$bg-dark",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "VOSvt",
+                  "name": "st3",
+                  "fill": "$text-muted",
+                  "content": "2026.03.28  |  TechCrunch",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Zbihb",
+              "name": "al3",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-green"
+            },
+            {
+              "type": "text",
+              "id": "9ddgy",
+              "name": "hl3",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "Claude付费用户翻倍\n年化收入冲击190亿",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "fMCth",
+              "name": "sb3",
+              "fill": "#0A2018",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "12gG5",
+                  "name": "sbt3",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "Anthropic确认Claude付费订阅用户在2026年已翻倍以上增长。第三方信用卡数据分析显示，1-2月间出现爆发式增长。Sacra估算Anthropic年化收入已达190亿美元，Claude Code单项年化收入达25亿美元。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iZuAr",
+          "name": "rc3",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "VPtP5",
+              "name": "s3a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KAOzg",
+                  "name": "s3ai",
+                  "fill": "$text-primary",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9WNEi",
+                  "name": "s3al",
+                  "fill": "$accent-cyan",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lcXcW",
+              "name": "d3a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "F4EXj",
+              "name": "f3a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "foAV0",
+                  "name": "ft3a",
+                  "fill": "$accent-green",
+                  "content": "收入增长",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ZUfZY",
+                  "name": "fb3a",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "年化收入从2025年底的90亿美元飙升至2026年3月的190亿美元，连续三年保持10倍以上年增长率，企业客户（年消费超10万美元）同比增长约7倍",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SrV4h",
+              "name": "f3b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XlBzg",
+                  "name": "ft3b",
+                  "fill": "$accent-green",
+                  "content": "增长驱动力",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "8XaI5",
+                  "name": "fb3b",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "超级碗广告投放、Cowork与Dispatch两款智能体工具发布、以及与美国国防部的公开对峙引发的用户声援浪潮，三重因素叠加推动订阅激增",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "esl88",
+              "name": "f3c",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zMTvd",
+                  "name": "ft3c",
+                  "fill": "$accent-green",
+                  "content": "产品迭代节奏",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "6LUeN",
+                  "name": "fb3c",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "2026年保持每两周一次重大更新的节奏：Opus 4.6（百万token上下文）、Sonnet 4.6、Claude Code（默认64K输出token）、Computer Use等密集发布",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OoyWJ",
+              "name": "d3b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "YiDul",
+              "name": "s3b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JomZj",
+                  "name": "s3bi",
+                  "fill": "$text-primary",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "3JFjK",
+                  "name": "s3bl",
+                  "fill": "$accent-green",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "GkrY2",
+              "name": "ins3",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "Anthropic正在证明\"安全优先\"的AI公司同样可以实现爆发式商业增长。与五角大楼的对峙非但没有损害品牌，反而激发了开发者社区的强烈认同感。这种\"价值观驱动增长\"的模式，正在重新定义AI行业的竞争维度——技术能力之外，企业立场本身也成为了核心竞争力。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "CdxQU",
+      "x": 2100,
+      "y": 1260,
+      "name": "News 4 - Sanders Datacenter",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "children": [
+        {
+          "type": "frame",
+          "id": "BIyfa",
+          "name": "lc4",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-dark",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "X5ZEA",
+              "name": "mr4",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "6SUa2",
+                  "name": "nb4",
+                  "fill": "$accent-cyan",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rw3Gt",
+                      "name": "nt4",
+                      "fill": "$bg-dark",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "nMM1m",
+                  "name": "st4",
+                  "fill": "$text-muted",
+                  "content": "2026.03.25  |  AP / Wired / 美国参议院",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DRhT7",
+              "name": "al4",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-yellow"
+            },
+            {
+              "type": "text",
+              "id": "AqiNl",
+              "name": "hl4",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "美国议员提案：\n全面冻结AI数据中心建设",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "ma30e",
+              "name": "sb4",
+              "fill": "#1A1808",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NrsA0",
+                  "name": "sbt4",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "参议员Bernie Sanders与众议员Alexandria Ocasio-Cortez联合提出《AI数据中心暂停法案》，要求立即在联邦层面暂停所有新AI数据中心建设，直至国会通过涵盖AI安全、劳工保护和能源定价的综合立法。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IaZi6",
+          "name": "rc4",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "lN6ml",
+              "name": "s4a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uHQIc",
+                  "name": "s4ai",
+                  "fill": "$text-primary",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "g9EBz",
+                  "name": "s4al",
+                  "fill": "$accent-cyan",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "L3vac",
+              "name": "d4a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "DdxTh",
+              "name": "f4a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Gdqrf",
+                  "name": "ft4a",
+                  "fill": "$accent-yellow",
+                  "content": "法案核心内容",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "emczc",
+                  "name": "fb4a",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "立即实施联邦级暂停令，禁止新建或扩建AI数据中心；同时禁止向未建立AI安全保障的国家出口AI计算基础设施，阻止全球\"消灭就业竞赛\"",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SCl3E",
+              "name": "f4b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xNKbE",
+                  "name": "ft4b",
+                  "fill": "$accent-yellow",
+                  "content": "社会背景",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ovftI",
+                  "name": "fb4b",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "全美已有超过100个地方社区颁布数据中心暂停令，12个州正在推进州级暂停提案。数据中心建设导致多地电费上涨，引发广泛民众不满",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ls0OK",
+              "name": "f4c",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0KxNc",
+                  "name": "ft4c",
+                  "fill": "$accent-yellow",
+                  "content": "核心语录",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "z6bch",
+                  "name": "fb4c",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "Sanders：\"我们不能坐视少数科技寡头做出将重塑经济、民主和人类未来的决定。\" AOC：\"国会有道德义务站在人民一边，在建立框架之前停止数据中心扩张。\"",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yUxAB",
+              "name": "d4b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "HNlPS",
+              "name": "s4b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aG2qG",
+                  "name": "s4bi",
+                  "fill": "$text-primary",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "VfT1C",
+                  "name": "s4bl",
+                  "fill": "$accent-green",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "uuwvp",
+              "name": "ins4",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "该法案通过可能性不高，但其政治信号意义重大：AI基础设施的能源消耗和社会影响已从技术议题上升为政治议题。100+地方暂停令表明民间阻力正在系统性积累。对AI行业而言，数据中心选址、能源采购和社区关系将成为与算力同等重要的战略变量。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MrgMD",
+      "x": 4200,
+      "y": 1260,
+      "name": "News 5 - White House AI",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$bg-dark",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ex6j1",
+          "name": "lc5",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-dark",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ow2iT",
+              "name": "mr5",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EJPsw",
+                  "name": "nb5",
+                  "fill": "$accent-cyan",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QOYvL",
+                      "name": "nt5",
+                      "fill": "$bg-dark",
+                      "content": "05",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "1G7ml",
+                  "name": "st5",
+                  "fill": "$text-muted",
+                  "content": "2026.03.20  |  白宫 / Georgetown CSET",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kdLIQ",
+              "name": "al5",
+              "width": 80,
+              "height": 4,
+              "fill": "$accent-cyan"
+            },
+            {
+              "type": "text",
+              "id": "aguMt",
+              "name": "hl5",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 816,
+              "content": "白宫发布国家AI政策\n框架：联邦统一监管",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 72,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "IiX8A",
+              "name": "sb5",
+              "fill": "#081520",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                20,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gE3Z8",
+                  "name": "sbt5",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 768,
+                  "content": "白宫于3月20日发布《国家人工智能政策框架：立法建议》，提出七大立法优先领域，明确推动联邦层面统一AI监管，取代各州\"拼凑式\"立法格局，标志着美国AI治理进入新阶段。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nOrhY",
+          "name": "rc5",
+          "width": 960,
+          "height": "fill_container",
+          "fill": "$bg-card",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "VMhPY",
+              "name": "s5a",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AksYr",
+                  "name": "s5ai",
+                  "fill": "$text-primary",
+                  "content": "📊",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "I2ndc",
+                  "name": "s5al",
+                  "fill": "$accent-cyan",
+                  "content": "关键事实与数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dQCdL",
+              "name": "d5a",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "c5zvp",
+              "name": "f5a",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qs9FY",
+                  "name": "ft5a",
+                  "fill": "$accent-cyan",
+                  "content": "七大立法领域",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "xXZ0t",
+                  "name": "fb5a",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "儿童保护、社区影响、知识产权、言论自由、创新政策、劳动力发展、联邦优先权——框架明确建议国会立法在这七个领域建立统一联邦标准",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QTnhO",
+              "name": "f5b",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d1Wz2",
+                  "name": "ft5b",
+                  "fill": "$accent-cyan",
+                  "content": "核心政策立场",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "uqUol",
+                  "name": "fb5b",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "明确推动联邦优先权（Federal Preemption），禁止各州自行制定AI法规，建立\"一个联邦AI政策，而非50州拼凑\"的监管格局。与欧盟和中国的监管路径形成鲜明对比",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hgkEj",
+              "name": "f5c",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "n1zwb",
+                  "name": "ft5c",
+                  "fill": "$accent-cyan",
+                  "content": "官方定调",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "j8Zz0",
+                  "name": "fb5c",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 832,
+                  "content": "美国劳工部副部长Keith Sonderling：\"一个联邦AI政策，而非50州的拼凑。\" 框架虽不具法律约束力，但为国会立法设定了明确方向",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HUIlb",
+              "name": "d5b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border-subtle"
+            },
+            {
+              "type": "frame",
+              "id": "RWJYj",
+              "name": "s5b",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dVZUn",
+                  "name": "s5bi",
+                  "fill": "$text-primary",
+                  "content": "💡",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "K6OLD",
+                  "name": "s5bl",
+                  "fill": "$accent-green",
+                  "content": "深度洞察",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "VrsPk",
+              "name": "ins5",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 832,
+              "content": "这是美国AI监管从\"放任\"走向\"有序\"的关键转折点。联邦优先权条款将直接影响加州等州的独立AI立法进程。对全球AI企业而言，美国选择了与欧盟AI Act截然不同的\"创新优先、轻触监管\"路径，这将深刻影响跨国AI产品的合规策略和市场准入决策。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 28
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent-cyan": {
+      "type": "color",
+      "value": "#00D4FF"
+    },
+    "accent-green": {
+      "type": "color",
+      "value": "#00E676"
+    },
+    "accent-orange": {
+      "type": "color",
+      "value": "#FF6B35"
+    },
+    "accent-purple": {
+      "type": "color",
+      "value": "#B388FF"
+    },
+    "accent-yellow": {
+      "type": "color",
+      "value": "#FFD740"
+    },
+    "bg-card": {
+      "type": "color",
+      "value": "#141825"
+    },
+    "bg-dark": {
+      "type": "color",
+      "value": "#0B0E17"
+    },
+    "border-subtle": {
+      "type": "color",
+      "value": "#1E293B"
+    },
+    "text-muted": {
+      "type": "color",
+      "value": "#64748B"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#94A3B8"
+    }
+  }
+}

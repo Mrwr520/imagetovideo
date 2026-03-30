@@ -1,0 +1,11 @@
+streamlit
+httpx
+moviepy
+Pillow
+edge-tts
+mutagen
+tomli
+tomli-w
+hypothesis
+pytest
+duckduckgo-search
