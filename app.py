@@ -606,6 +606,7 @@ def _render_step_narration(selections: dict) -> None:
                             searcher = WebSearcher(
                                 timeout=search_cfg.get("timeout", 10.0),
                                 max_results=search_cfg.get("max_results", 10),
+                                proxy=search_cfg.get("proxy"),
                             )
                             results = _run_async(searcher.search(keywords))
                             search_context = searcher.format_for_prompt(results)
@@ -1175,9 +1176,8 @@ def _render_script_step1_domain(selections: dict) -> None:
             searcher = WebSearcher(
                 timeout=search_cfg.get("timeout", 10.0),
                 max_results=search_cfg.get("max_results", 10),
+                proxy=search_cfg.get("proxy"),
             )
-
-            # WebSearcher.search 需要关键词列表
             query = selected_domain.search_template.replace("{sub}", selected_sub)
             topics_raw = _run_async(_search_and_extract_topics(
                 searcher, provider, selected_domain.name, selected_sub, query
@@ -1206,22 +1206,41 @@ async def _search_and_extract_topics(searcher, provider, domain_name, sub_domain
     # 搜索
     results = await searcher.search([query])
 
-    if not results:
-        return []
+    context = ""
+    if results:
+        context = "\n".join(
+            f"- {r.get('title', '')}: {r.get('body', r.get('snippet', ''))}"
+            for r in results[:10]
+        )
 
-    context = "\n".join(
-        f"- {r.get('title', '')}: {r.get('body', r.get('snippet', ''))}"
-        for r in results[:10]
+    # 搜索成功时基于搜索结果提取话题，失败时让 LLM 直接生成
+    topic_requirements = (
+        "要求：\n"
+        "1. 话题必须是一个【具体的小故事/小场景】，不能是大方向或大话题\n"
+        "2. 标题要像短视频爆款标题，具体到一个人、一件事、一个瞬间\n"
+        "3. 切入角度要精准到一个具体的情节点或转折点，30秒内能讲完\n"
+        "4. 有情感冲击力，能在3秒内抓住观众\n\n"
+        "❌ 错误示例：'婚后AA制' '婆媳关系' '职场压力'（太大太泛）\n"
+        "✅ 正确示例：'她把离婚协议放在他生日蛋糕旁边' '实习生第一天就被甩了一巴掌' '妈妈偷偷把女儿的日记本烧了'\n\n"
     )
 
-    extract_prompt = (
-        f"领域：{domain_name} - {sub_domain}\n\n"
-        f"搜索结果：\n{context}\n\n"
-        "请从中提取 3-5 个最适合做 30 秒动漫短剧的话题。\n"
-        "要求：有故事性、有情感冲击力、有核心道理。\n"
-        "严格输出 JSON 数组：\n"
-        '[{"title": "话题标题", "angle": "切入角度", "score": 8.5, "reason": "为什么适合"}]'
-    )
+    if context:
+        extract_prompt = (
+            f"领域：{domain_name} - {sub_domain}\n\n"
+            f"搜索结果：\n{context}\n\n"
+            f"请基于搜索结果，提炼 3-5 个最适合做 30 秒动漫短剧的【具体小故事】。\n"
+            f"{topic_requirements}"
+            "严格输出 JSON 数组：\n"
+            '[{"title": "具体故事标题（像爆款短视频标题）", "angle": "从哪个具体瞬间/情节切入", "score": 8.5, "reason": "为什么30秒能讲好这个故事"}]'
+        )
+    else:
+        extract_prompt = (
+            f"领域：{domain_name} - {sub_domain}\n\n"
+            "网络搜索暂时不可用，请根据你的知识，直接推荐 3-5 个最适合做 30 秒动漫短剧的【具体小故事】。\n"
+            f"{topic_requirements}"
+            "严格输出 JSON 数组：\n"
+            '[{"title": "具体故事标题（像爆款短视频标题）", "angle": "从哪个具体瞬间/情节切入", "score": 8.5, "reason": "为什么30秒能讲好这个故事"}]'
+        )
 
     try:
         raw = await provider.generate_narration([], extract_prompt)
@@ -1230,7 +1249,7 @@ async def _search_and_extract_topics(searcher, provider, domain_name, sub_domain
         if match:
             return json.loads(match.group())
     except Exception:
-        pass
+        logger.warning("话题提取失败", exc_info=True)
     return []
 
 

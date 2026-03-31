@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import os
 from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
@@ -20,9 +21,10 @@ class SearchResult:
 class WebSearcher:
     """使用 DuckDuckGo API 搜索网络信息。"""
 
-    def __init__(self, timeout: float = 10.0, max_results: int = 10) -> None:
+    def __init__(self, timeout: float = 10.0, max_results: int = 10, proxy: str | None = None) -> None:
         self._timeout = timeout
         self._max_results = max_results
+        self._proxy = proxy or os.environ.get("ALL_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
 
     async def search(self, keywords: list[str]) -> list[SearchResult]:
         """根据关键词搜索网络，返回结构化结果。
@@ -44,7 +46,11 @@ class WebSearcher:
         try:
             from duckduckgo_search import DDGS
 
-            with DDGS(timeout=self._timeout) as ddgs:
+            ddgs_kwargs = {"timeout": self._timeout}
+            if self._proxy:
+                ddgs_kwargs["proxy"] = self._proxy
+
+            with DDGS(**ddgs_kwargs) as ddgs:
                 raw_results = list(ddgs.text(query, max_results=self._max_results))
         except Exception:
             logger.warning("网络搜索失败", exc_info=True)
