@@ -1090,7 +1090,11 @@ def _init_script_state() -> None:
     if "script_result" not in st.session_state:
         st.session_state["script_result"] = None
     if "script_step" not in st.session_state:
-        st.session_state["script_step"] = 1  # 1=选领域 2=选话题 3=选角色 4=生成剧本 5=确认
+        st.session_state["script_step"] = 1  # 1=选领域 2=选话题 3=选角色 4=生成剧本 4.5=AI出图 5=确认
+    if "script_images" not in st.session_state:
+        st.session_state["script_images"] = {}  # scene_index -> image_path or bytes
+    if "script_image_gen_results" not in st.session_state:
+        st.session_state["script_image_gen_results"] = []  # SceneImageResult list
 
 
 def _render_script_studio(selections: dict) -> None:
@@ -1098,7 +1102,7 @@ def _render_script_studio(selections: dict) -> None:
     _init_script_state()
 
     st.header("🎬 剧本工作台")
-    st.markdown("选择领域 → 搜索热点 → 选角色 → AI 自动生成剧本 → 对接视频合成")
+    st.markdown("选择领域 → 搜索热点 → 选角色 → AI 自动生成剧本 → AI 出图 → 对接视频合成")
 
     step = st.session_state.get("script_step", 1)
 
@@ -1119,6 +1123,11 @@ def _render_script_studio(selections: dict) -> None:
     if step >= 4:
         st.divider()
         _render_script_step4_generate(selections)
+
+    # Step 4.5: AI 出图
+    if step >= 4.5:
+        st.divider()
+        _render_script_step4_5_image_gen(selections)
 
     # Step 5: 确认并对接 pipeline
     if step >= 5:
@@ -1451,7 +1460,7 @@ def _render_script_step4_generate(selections: dict) -> None:
                 with cols[i]:
                     st.metric(label, f"{result.review.scores.get(k, '-')}/10")
 
-        st.session_state["script_step"] = 5
+        st.session_state["script_step"] = 4.5
         st.rerun()
 
     # 显示已生成的剧本
@@ -1468,14 +1477,274 @@ def _display_script_preview(script) -> None:
             col1, col2 = st.columns([1, 1])
             with col1:
                 st.markdown("**旁白：**")
-                st.text_area(f"旁白_{i}", value=scene.narration, height=60,
+                st.text_area(f"旁白_{i}", value=scene.narration, height=100,
                             key=f"script_narration_{i}")
             with col2:
                 st.markdown("**画面描述：**")
-                st.text_area(f"画面_{i}", value=scene.image_desc, height=60,
+                st.text_area(f"画面_{i}", value=scene.image_desc, height=100,
                             key=f"script_imgdesc_{i}")
             if scene.image_prompt:
                 st.caption(f"🎨 出图提示词：{scene.image_prompt[:100]}...")
+
+
+def _render_script_step4_5_image_gen(selections: dict) -> None:
+    """步骤4.5：AI 出图。"""
+    st.subheader("🎨 步骤4.5：AI 出图")
+
+    result = st.session_state.get("script_result")
+    if not result or not result.script:
+        st.warning("请先生成剧本")
+        return
+
+    script = result.script
+    cfg = _get_config()
+
+    # 侧边栏：出图 provider 选择
+    st.sidebar.divider()
+    st.sidebar.subheader("🎨 出图设置")
+
+    # 导入 adapter 获取 provider 列表
+    try:
+        from src.image_gen.adapter import ImageGenAdapter
+        from src.image_gen import wanx, comfyui  # 触发自注册
+
+        image_gen_cfg = cfg.get("image_gen", {})
+        adapter = ImageGenAdapter(image_gen_cfg)
+        providers = adapter.list_providers()
+        default_provider = adapter.default_provider
+    except Exception as e:
+        st.error(f"出图模块加载失败: {e}")
+        providers = []
+        default_provider = "wanx"
+
+    if providers:
+        provider_idx = providers.index(default_provider) if default_provider in providers else 0
+        selected_provider = st.sidebar.selectbox(
+            "出图 Provider",
+            options=providers,
+            index=provider_idx,
+            key="image_gen_provider_select",
+        )
+
+        # 获取风格列表
+        try:
+            styles = adapter.list_styles(selected_provider)
+            style_ids = [s["id"] for s in styles]
+            style_labels = {s["id"]: s["name"] for s in styles}
+            selected_style = st.sidebar.selectbox(
+                "画风",
+                options=style_ids,
+                format_func=lambda s: style_labels.get(s, s),
+                key="image_gen_style_select",
+            )
+        except Exception:
+            selected_style = "anime"
+    else:
+        selected_provider = "wanx"
+        selected_style = "anime"
+
+    st.markdown(f"**当前设置：** Provider = `{selected_provider}` | 风格 = `{selected_style}`")
+
+    # 显示每个场景的出图状态
+    scene_images = st.session_state.get("script_images", {})
+    gen_results = st.session_state.get("script_image_gen_results", [])
+
+    st.markdown(f"### 场景图片（共 {len(script.scenes)} 个场景）")
+
+    for i, scene in enumerate(script.scenes):
+        with st.expander(f"场景 {i+1}：{scene.character}", expanded=True):
+            col_img, col_ctrl = st.columns([2, 3])
+
+            with col_img:
+                # 显示已有图片
+                if i in scene_images:
+                    img_data = scene_images[i]
+                    if isinstance(img_data, bytes):
+                        st.image(img_data, width=200)
+                    elif isinstance(img_data, (str, Path)):
+                        if Path(img_data).exists():
+                            st.image(str(img_data), width=200)
+                        else:
+                            st.info("图片文件不存在")
+                    else:
+                        st.info("暂无图片")
+                else:
+                    st.info("暂无图片")
+
+            with col_ctrl:
+                st.markdown(f"**出图提示词：**")
+                prompt = scene.image_prompt or scene.image_desc
+                st.caption(prompt[:150] + "..." if len(prompt) > 150 else prompt)
+
+                col_gen, col_upload = st.columns(2)
+                with col_gen:
+                    if st.button(f"🤖 AI 生成", key=f"gen_img_{i}"):
+                        _generate_single_scene_image(
+                            i, prompt, selected_provider, selected_style, cfg
+                        )
+                with col_upload:
+                    uploaded = st.file_uploader(
+                        "手动上传",
+                        type=["png", "jpg", "jpeg", "webp"],
+                        key=f"upload_img_{i}",
+                        label_visibility="collapsed",
+                    )
+                    if uploaded:
+                        scene_images[i] = uploaded.getvalue()
+                        st.session_state["script_images"] = scene_images
+                        st.rerun()
+
+    # 批量生成按钮
+    st.divider()
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        if st.button("🚀 批量生成所有图片", key="batch_gen_all_btn"):
+            _batch_generate_all_images(script, selected_provider, selected_style, cfg)
+
+    with col2:
+        missing = [i for i in range(len(script.scenes)) if i not in scene_images]
+        if missing:
+            st.caption(f"还有 {len(missing)} 个场景未生成图片")
+        else:
+            st.success("所有场景图片已就绪")
+
+    with col3:
+        if not missing:
+            if st.button("✅ 确认图片，进入下一步", key="confirm_images_btn"):
+                st.session_state["script_step"] = 5
+                st.rerun()
+
+
+def _generate_single_scene_image(
+    scene_index: int,
+    prompt: str,
+    provider_name: str,
+    style: str,
+    cfg: dict,
+) -> None:
+    """生成单个场景的图片。"""
+    from pathlib import Path
+    import tempfile
+
+    try:
+        from src.image_gen.adapter import ImageGenAdapter
+        from src.image_gen import wanx, comfyui
+
+        image_gen_cfg = cfg.get("image_gen", {})
+        adapter = ImageGenAdapter(image_gen_cfg)
+
+        # 获取角色参考图
+        ref_images = _get_character_ref_images_for_script()
+
+        with st.spinner(f"正在生成场景 {scene_index + 1} 的图片..."):
+            temp_dir = Path(tempfile.mkdtemp(prefix="script_img_"))
+            output_path = temp_dir / f"scene_{scene_index:03d}.png"
+
+            result = _run_async(adapter.generate(
+                prompt,
+                provider_name=provider_name,
+                style=style,
+                ref_images=ref_images,
+                width=832,
+                height=1216,
+                output_path=output_path,
+            ))
+
+            # 保存到 session state
+            scene_images = st.session_state.get("script_images", {})
+            scene_images[scene_index] = result.image_path.read_bytes()
+            st.session_state["script_images"] = scene_images
+
+            st.success(f"场景 {scene_index + 1} 图片生成成功")
+            st.rerun()
+
+    except Exception as e:
+        st.error(f"场景 {scene_index + 1} 出图失败: {e}")
+
+
+def _batch_generate_all_images(script, provider_name: str, style: str, cfg: dict) -> None:
+    """批量生成所有场景图片。"""
+    from pathlib import Path
+    import tempfile
+
+    try:
+        from src.image_gen.adapter import ImageGenAdapter
+        from src.image_gen import wanx, comfyui
+
+        image_gen_cfg = cfg.get("image_gen", {})
+        adapter = ImageGenAdapter(image_gen_cfg)
+
+        ref_images = _get_character_ref_images_for_script()
+        scene_images = st.session_state.get("script_images", {})
+
+        progress_bar = st.progress(0, text="准备批量出图...")
+        total = len(script.scenes)
+
+        for i, scene in enumerate(script.scenes):
+            # 跳过已有图片的场景
+            if i in scene_images:
+                progress_bar.progress((i + 1) / total, text=f"场景 {i + 1} 已有图片，跳过")
+                continue
+
+            prompt = scene.image_prompt or scene.image_desc
+            if not prompt:
+                progress_bar.progress((i + 1) / total, text=f"场景 {i + 1} 无提示词，跳过")
+                continue
+
+            progress_bar.progress((i + 0.5) / total, text=f"正在生成场景 {i + 1}...")
+
+            try:
+                temp_dir = Path(tempfile.mkdtemp(prefix="script_img_"))
+                output_path = temp_dir / f"scene_{i:03d}.png"
+
+                result = _run_async(adapter.generate(
+                    prompt,
+                    provider_name=provider_name,
+                    style=style,
+                    ref_images=ref_images,
+                    width=832,
+                    height=1216,
+                    output_path=output_path,
+                ))
+
+                scene_images[i] = result.image_path.read_bytes()
+
+            except Exception as e:
+                st.warning(f"场景 {i + 1} 出图失败: {e}")
+
+            progress_bar.progress((i + 1) / total, text=f"场景 {i + 1} 完成")
+
+        st.session_state["script_images"] = scene_images
+        progress_bar.progress(1.0, text="批量出图完成！")
+        st.rerun()
+
+    except Exception as e:
+        st.error(f"批量出图失败: {e}")
+
+
+def _get_character_ref_images_for_script() -> list:
+    """获取当前剧本选中角色的参考图。"""
+    from pathlib import Path
+    from src.character.manager import CharacterManager
+
+    selected_names = st.session_state.get("script_selected_chars", [])
+    if not selected_names:
+        return []
+
+    mgr = CharacterManager()
+    ref_images = []
+
+    for name in selected_names:
+        char = mgr.get_character(name)
+        if char and char.ref_images:
+            char_dir = Path("characters") / name
+            for img_name in char.ref_images:
+                img_path = char_dir / img_name
+                if img_path.exists():
+                    ref_images.append(img_path)
+
+    return ref_images
 
 
 def _render_script_step5_confirm(selections: dict) -> None:
@@ -1488,29 +1757,48 @@ def _render_script_step5_confirm(selections: dict) -> None:
         return
 
     script = result.script
+    scene_images = st.session_state.get("script_images", {})
 
-    st.markdown("剧本确认后，请上传对应的图片（每个场景一张），然后进入语音合成和视频合成流程。")
+    # 检查图片是否齐全
+    missing = [i for i in range(len(script.scenes)) if i not in scene_images]
 
-    # 上传图片（每个场景一张）
-    st.subheader(f"📷 上传 {len(script.scenes)} 张场景图片")
-    uploaded = st.file_uploader(
-        f"请上传 {len(script.scenes)} 张图片（按场景顺序）",
-        type=["jpg", "jpeg", "png", "webp"],
-        accept_multiple_files=True,
-        key="script_images_upload",
-    )
+    if missing:
+        st.warning(f"还有 {len(missing)} 个场景缺少图片，请返回上一步生成或上传图片")
+
+        # 允许手动上传补充
+        st.subheader(f"📷 补充上传缺失的 {len(missing)} 张图片")
+        uploaded = st.file_uploader(
+            f"请上传 {len(missing)} 张图片（按场景顺序：{', '.join(str(i+1) for i in missing)}）",
+            type=["jpg", "jpeg", "png", "webp"],
+            accept_multiple_files=True,
+            key="script_images_upload",
+        )
+
+        if uploaded and len(uploaded) >= len(missing):
+            for idx, uf in zip(missing, uploaded):
+                scene_images[idx] = uf.getvalue()
+            st.session_state["script_images"] = scene_images
+            st.rerun()
+        return
+
+    # 显示所有场景图片预览
+    st.markdown("### 📷 场景图片预览")
+    cols = st.columns(min(len(script.scenes), 5))
+    for i, scene in enumerate(script.scenes):
+        with cols[i % len(cols)]:
+            img_data = scene_images.get(i)
+            if img_data:
+                st.image(img_data, caption=f"场景 {i+1}", width=120)
 
     col1, col2 = st.columns(2)
     with col1:
         if st.button("✅ 确认，进入语音合成", key="script_confirm_btn"):
-            if not uploaded or len(uploaded) < len(script.scenes):
-                st.error(f"请上传 {len(script.scenes)} 张图片")
-                return
-
             # 将剧本数据注入到现有 pipeline 的 session state
             images = []
-            for uf in uploaded[:len(script.scenes)]:
-                images.append({"name": uf.name, "data": uf.getvalue()})
+            for i in range(len(script.scenes)):
+                img_data = scene_images.get(i)
+                if img_data:
+                    images.append({"name": f"scene_{i+1}.png", "data": img_data})
 
             # 收集旁白分段
             narration_segments = []
@@ -1529,9 +1817,8 @@ def _render_script_step5_confirm(selections: dict) -> None:
             st.rerun()
 
     with col2:
-        if st.button("🔄 重新生成剧本", key="script_regen_btn"):
-            st.session_state["script_result"] = None
-            st.session_state["script_step"] = 4
+        if st.button("🔄 返回修改图片", key="script_back_to_images_btn"):
+            st.session_state["script_step"] = 4.5
             st.rerun()
 
 

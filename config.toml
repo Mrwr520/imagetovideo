@@ -73,6 +73,23 @@ api_base = "http://localhost:8888"
 [tts.edge_tts]
 default_voice = "zh-CN-XiaoxiaoNeural"
 
+[image_gen]
+default_provider = "comfyui"
+
+[image_gen.wanx]
+api_key = ""
+model = "wanx2.0-t2i-turbo"
+default_style = "anime"
+
+[image_gen.comfyui]
+api_base = "http://localhost:8188"
+workflow = ""
+workflow_dir = "./workflows"
+default_style = "anime"
+checkpoint = "Illustrious-XL-v0.1.safetensors"
+timeout = 300
+poll_interval = 1.0
+
 [video]
 default_bitrate = "4M"
 default_fps = 30
@@ -92,3 +109,21 @@ color = "#FFFFFF"
 outline_color = "#000000"
 outline_width = 2
 max_chars_per_line = 15
+
+[video_gen]
+default_provider = "wan2gp"
+
+[video_gen.wan2gp]
+model_path = "./models/wan2.1"
+model = "wan2.1-1.3b"
+vram_limit = 8192
+timeout = 600
+python_path = "python"
+
+[video_gen.kling]
+api_key = ""
+api_base = "https://api.kling.ai"
+
+[video_gen.hailuo]
+api_key = ""
+api_base = "https://api.hailuo.ai"
