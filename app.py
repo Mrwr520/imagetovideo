@@ -1079,6 +1079,444 @@ def _render_batch_results() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Script Studio – 剧本工作台
+# ---------------------------------------------------------------------------
+
+def _init_script_state() -> None:
+    """初始化剧本模式的 session state。"""
+    if "script_topics" not in st.session_state:
+        st.session_state["script_topics"] = []
+    if "script_result" not in st.session_state:
+        st.session_state["script_result"] = None
+    if "script_step" not in st.session_state:
+        st.session_state["script_step"] = 1  # 1=选领域 2=选话题 3=选角色 4=生成剧本 5=确认
+
+
+def _render_script_studio(selections: dict) -> None:
+    """剧本工作台主页面。"""
+    _init_script_state()
+
+    st.header("🎬 剧本工作台")
+    st.markdown("选择领域 → 搜索热点 → 选角色 → AI 自动生成剧本 → 对接视频合成")
+
+    step = st.session_state.get("script_step", 1)
+
+    # Step 1: 选领域 + 搜热点
+    _render_script_step1_domain(selections)
+
+    # Step 2: 选话题
+    if step >= 2:
+        st.divider()
+        _render_script_step2_topic()
+
+    # Step 3: 选角色
+    if step >= 3:
+        st.divider()
+        _render_script_step3_characters()
+
+    # Step 4: 生成剧本
+    if step >= 4:
+        st.divider()
+        _render_script_step4_generate(selections)
+
+    # Step 5: 确认并对接 pipeline
+    if step >= 5:
+        st.divider()
+        _render_script_step5_confirm(selections)
+
+
+def _render_script_step1_domain(selections: dict) -> None:
+    """步骤1：选领域 + 搜热点。"""
+    from src.script.domains import load_domains
+
+    st.subheader("📂 步骤1：选择领域")
+
+    cfg = _get_config()
+    domains = load_domains(cfg)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        domain_names = [d.name for d in domains]
+        selected_domain_name = st.selectbox(
+            "选择领域", options=domain_names, key="script_domain_select"
+        )
+        selected_domain = next((d for d in domains if d.name == selected_domain_name), domains[0])
+
+    with col2:
+        sub_options = selected_domain.sub_domains + ["自定义..."]
+        selected_sub = st.selectbox(
+            "选择子领域", options=sub_options, key="script_sub_select"
+        )
+
+    if selected_sub == "自定义...":
+        selected_sub = st.text_input("输入自定义话题", key="script_custom_sub")
+
+    if st.button("🔍 搜索热点", key="script_search_btn"):
+        if not selected_sub or selected_sub == "自定义...":
+            st.error("请选择或输入子领域")
+            return
+
+        cfg = _get_config()
+        llm_adapter = LLMAdapter(cfg.get("llm", {}))
+        provider_name = selections.get("llm_provider", "openai_compatible")
+        model_name = selections.get("llm_model", "")
+
+        try:
+            provider = llm_adapter.get_provider(provider_name, model_name)
+        except Exception as e:
+            st.error(f"LLM 未配置: {e}")
+            return
+
+        with st.spinner("正在搜索热点话题..."):
+            from src.script.hot_topic import search_hot_topics, TopicItem
+            from src.search.web_searcher import WebSearcher
+
+            search_cfg = cfg.get("search", {})
+            searcher = WebSearcher(
+                timeout=search_cfg.get("timeout", 10.0),
+                max_results=search_cfg.get("max_results", 10),
+            )
+
+            # WebSearcher.search 需要关键词列表
+            query = selected_domain.search_template.replace("{sub}", selected_sub)
+            topics_raw = _run_async(_search_and_extract_topics(
+                searcher, provider, selected_domain.name, selected_sub, query
+            ))
+
+            if topics_raw:
+                st.session_state["script_topics"] = topics_raw
+                st.session_state["script_domain"] = selected_domain
+                st.session_state["script_sub"] = selected_sub
+                st.session_state["script_step"] = 2
+                st.rerun()
+            else:
+                st.warning("未找到热门话题，请尝试其他领域或子领域。")
+
+    # 显示已搜索的话题
+    topics = st.session_state.get("script_topics", [])
+    if topics:
+        st.success(f"找到 {len(topics)} 个热门话题")
+
+
+async def _search_and_extract_topics(searcher, provider, domain_name, sub_domain, query):
+    """搜索并提取话题（适配现有 WebSearcher 接口）。"""
+    import json
+    import re
+
+    # 搜索
+    results = await searcher.search([query])
+
+    if not results:
+        return []
+
+    context = "\n".join(
+        f"- {r.get('title', '')}: {r.get('body', r.get('snippet', ''))}"
+        for r in results[:10]
+    )
+
+    extract_prompt = (
+        f"领域：{domain_name} - {sub_domain}\n\n"
+        f"搜索结果：\n{context}\n\n"
+        "请从中提取 3-5 个最适合做 30 秒动漫短剧的话题。\n"
+        "要求：有故事性、有情感冲击力、有核心道理。\n"
+        "严格输出 JSON 数组：\n"
+        '[{"title": "话题标题", "angle": "切入角度", "score": 8.5, "reason": "为什么适合"}]'
+    )
+
+    try:
+        raw = await provider.generate_narration([], extract_prompt)
+        # 解析 JSON
+        match = re.search(r'\[.*\]', raw, re.DOTALL)
+        if match:
+            return json.loads(match.group())
+    except Exception:
+        pass
+    return []
+
+
+def _render_script_step2_topic() -> None:
+    """步骤2：选话题。"""
+    st.subheader("🎯 步骤2：选择话题")
+
+    topics = st.session_state.get("script_topics", [])
+    if not topics:
+        return
+
+    for i, t in enumerate(topics):
+        score = t.get("score", 0)
+        col1, col2, col3 = st.columns([4, 2, 1])
+        with col1:
+            st.markdown(f"**{t.get('title', '')}** — {t.get('angle', '')}")
+            st.caption(t.get("reason", ""))
+        with col2:
+            st.metric("热度", f"{score}/10")
+        with col3:
+            if st.button("选择", key=f"topic_select_{i}"):
+                st.session_state["script_selected_topic"] = t
+                st.session_state["script_step"] = 3
+                st.rerun()
+
+    # 自定义话题
+    custom = st.text_input("或输入自定义话题", key="script_custom_topic")
+    if custom and st.button("使用自定义话题", key="script_use_custom_topic"):
+        st.session_state["script_selected_topic"] = {
+            "title": custom, "angle": "", "score": 0, "reason": "用户自定义"
+        }
+        st.session_state["script_step"] = 3
+        st.rerun()
+
+    selected = st.session_state.get("script_selected_topic")
+    if selected:
+        st.info(f"已选话题：**{selected.get('title', '')}**")
+
+
+def _render_script_step3_characters() -> None:
+    """步骤3：选角色。"""
+    from src.character.manager import CharacterManager
+
+    st.subheader("🎭 步骤3：选择角色")
+
+    mgr = CharacterManager()
+    characters = mgr.list_characters()
+
+    # 显示已有角色
+    if characters:
+        st.markdown("**已有角色：**")
+        cols = st.columns(min(len(characters) + 1, 5))
+        selected_names = st.session_state.get("script_selected_chars", [])
+
+        for i, char in enumerate(characters):
+            with cols[i % len(cols)]:
+                is_selected = char.name in selected_names
+                icon = "✅" if is_selected else "⬜"
+                if st.button(f"{icon} {char.name}\n{char.role_type}", key=f"char_toggle_{i}"):
+                    if is_selected:
+                        selected_names.remove(char.name)
+                    else:
+                        selected_names.append(char.name)
+                    st.session_state["script_selected_chars"] = selected_names
+                    st.rerun()
+                st.caption(char.appearance[:30] + "..." if len(char.appearance) > 30 else char.appearance)
+
+    # 新建角色
+    with st.expander("➕ 新建角色", expanded=not characters):
+        new_name = st.text_input("角色名", key="new_char_name")
+        new_appearance = st.text_area("外貌描述（用于出图提示词）", key="new_char_appearance",
+                                       placeholder="例如：黑色长发少女，白色汉服，杏眼柳叶眉，身材纤细")
+        new_role = st.selectbox("角色类型", ["narrator", "character"], key="new_char_role")
+
+        # 音色选择
+        from src.tts.adapter import TTSAdapter
+        cfg = _get_config()
+        tts_adapter = TTSAdapter(cfg.get("tts", {}))
+        tts_provider = st.session_state.get("selections", {}).get("tts_provider", "edge_tts")
+        try:
+            voices = tts_adapter.list_voices(tts_provider)
+        except Exception:
+            voices = []
+        voice_ids = [v["id"] for v in voices] if voices else [""]
+        voice_labels = {v["id"]: v.get("name", v["id"]) for v in voices} if voices else {}
+        new_voice = st.selectbox("绑定音色", options=voice_ids,
+                                  format_func=lambda v: voice_labels.get(v, v),
+                                  key="new_char_voice")
+
+        new_emotion = st.selectbox("默认情感", ["neutral", "happy", "sad", "angry", "tender"],
+                                    key="new_char_emotion")
+        new_style = st.text_input("风格标签", value="anime style", key="new_char_style")
+
+        # 参考图上传
+        ref_files = st.file_uploader("上传参考图（3张，用于角色一致性）",
+                                      type=["png", "jpg", "jpeg", "webp"],
+                                      accept_multiple_files=True,
+                                      key="new_char_refs")
+
+        # LoRA 预留
+        st.caption("💡 LoRA 模型文件：未来版本支持，当前使用参考图保持角色一致性")
+
+        if st.button("保存角色", key="save_new_char"):
+            if not new_name or not new_appearance:
+                st.error("请填写角色名和外貌描述")
+            else:
+                from src.character.models import Character
+                char = Character(
+                    name=new_name,
+                    appearance=new_appearance,
+                    voice_type=new_voice,
+                    emotion_default=new_emotion,
+                    style_tags=new_style,
+                    role_type=new_role,
+                )
+                ref_data = [(f.name, f.getvalue()) for f in ref_files] if ref_files else None
+                mgr.save_character(char, ref_image_data=ref_data)
+                st.success(f"角色 '{new_name}' 已保存")
+                st.rerun()
+
+    # 确认按钮
+    selected_names = st.session_state.get("script_selected_chars", [])
+    if selected_names:
+        st.info(f"已选角色：{', '.join(selected_names)}")
+        if st.button("✅ 确认角色，开始生成剧本", key="confirm_chars_btn"):
+            st.session_state["script_step"] = 4
+            st.rerun()
+    else:
+        st.warning("请至少选择 1 个角色")
+
+
+def _render_script_step4_generate(selections: dict) -> None:
+    """步骤4：生成剧本。"""
+    st.subheader("📝 步骤4：生成剧本")
+
+    topic_data = st.session_state.get("script_selected_topic", {})
+    topic = topic_data.get("title", "")
+    domain_cfg = st.session_state.get("script_domain")
+    domain_name = domain_cfg.name if domain_cfg else ""
+    selected_names = st.session_state.get("script_selected_chars", [])
+
+    st.markdown(f"**话题：** {topic}　|　**领域：** {domain_name}　|　**角色：** {', '.join(selected_names)}")
+
+    if st.button("🤖 生成剧本", key="gen_script_btn"):
+        from src.character.manager import CharacterManager
+        from src.script.pipeline import run_script_pipeline
+
+        cfg = _get_config()
+        llm_adapter = LLMAdapter(cfg.get("llm", {}))
+        provider_name = selections.get("llm_provider", "openai_compatible")
+        model_name = selections.get("llm_model", "")
+
+        try:
+            provider = llm_adapter.get_provider(provider_name, model_name)
+        except Exception as e:
+            st.error(f"LLM 未配置: {e}")
+            return
+
+        mgr = CharacterManager()
+        characters = [mgr.get_character(n) for n in selected_names]
+        characters = [c for c in characters if c is not None]
+
+        if not characters:
+            st.error("未找到选定的角色")
+            return
+
+        progress_bar = st.progress(0, text="准备中...")
+
+        def on_progress(round_num, stage, message):
+            pct = min(int((round_num - 1) * 33 + {"writer": 8, "validator": 16, "reviewer": 24, "prompter": 33}.get(stage, 0)), 99)
+            progress_bar.progress(pct, text=message)
+
+        search_context = topic_data.get("angle", "") + " " + topic_data.get("reason", "")
+
+        result = _run_async(run_script_pipeline(
+            llm_provider=provider,
+            topic=topic,
+            domain=domain_name,
+            characters=characters,
+            search_context=search_context,
+            on_progress=on_progress,
+        ))
+
+        progress_bar.progress(100, text="剧本生成完成！")
+        st.session_state["script_result"] = result
+
+        if result.success:
+            st.success(f"剧本生成成功（{result.rounds} 轮迭代）")
+        else:
+            st.warning(f"剧本经过 {result.rounds} 轮迭代未完全通过审核，可手动编辑调整")
+            if result.errors:
+                for err in result.errors:
+                    st.caption(f"⚠️ {err}")
+
+        if result.review and result.review.scores:
+            cols = st.columns(5)
+            labels = {"hook": "钩子力", "story": "故事性", "emotion": "情感", "punchline": "金句", "visual": "画面"}
+            for i, (k, label) in enumerate(labels.items()):
+                with cols[i]:
+                    st.metric(label, f"{result.review.scores.get(k, '-')}/10")
+
+        st.session_state["script_step"] = 5
+        st.rerun()
+
+    # 显示已生成的剧本
+    result = st.session_state.get("script_result")
+    if result and result.script:
+        _display_script_preview(result.script)
+
+
+def _display_script_preview(script) -> None:
+    """显示剧本预览。"""
+    st.markdown(f"### 📖 {script.title}")
+    for i, scene in enumerate(script.scenes):
+        with st.expander(f"场景 {i+1}：{scene.character} ({scene.emotion})", expanded=True):
+            col1, col2 = st.columns([1, 1])
+            with col1:
+                st.markdown("**旁白：**")
+                st.text_area(f"旁白_{i}", value=scene.narration, height=60,
+                            key=f"script_narration_{i}")
+            with col2:
+                st.markdown("**画面描述：**")
+                st.text_area(f"画面_{i}", value=scene.image_desc, height=60,
+                            key=f"script_imgdesc_{i}")
+            if scene.image_prompt:
+                st.caption(f"🎨 出图提示词：{scene.image_prompt[:100]}...")
+
+
+def _render_script_step5_confirm(selections: dict) -> None:
+    """步骤5：确认剧本，对接现有 pipeline。"""
+    st.subheader("✅ 步骤5：确认并合成视频")
+
+    result = st.session_state.get("script_result")
+    if not result or not result.script:
+        st.warning("请先生成剧本")
+        return
+
+    script = result.script
+
+    st.markdown("剧本确认后，请上传对应的图片（每个场景一张），然后进入语音合成和视频合成流程。")
+
+    # 上传图片（每个场景一张）
+    st.subheader(f"📷 上传 {len(script.scenes)} 张场景图片")
+    uploaded = st.file_uploader(
+        f"请上传 {len(script.scenes)} 张图片（按场景顺序）",
+        type=["jpg", "jpeg", "png", "webp"],
+        accept_multiple_files=True,
+        key="script_images_upload",
+    )
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("✅ 确认，进入语音合成", key="script_confirm_btn"):
+            if not uploaded or len(uploaded) < len(script.scenes):
+                st.error(f"请上传 {len(script.scenes)} 张图片")
+                return
+
+            # 将剧本数据注入到现有 pipeline 的 session state
+            images = []
+            for uf in uploaded[:len(script.scenes)]:
+                images.append({"name": uf.name, "data": uf.getvalue()})
+
+            # 收集旁白分段
+            narration_segments = []
+            for i, scene in enumerate(script.scenes):
+                # 使用编辑后的值（如果用户修改了）
+                edited = st.session_state.get(f"script_narration_{i}", scene.narration)
+                narration_segments.append(edited)
+
+            st.session_state["uploaded_images"] = images
+            st.session_state["narration_segments"] = narration_segments
+            st.session_state["narration"] = "\n\n".join(narration_segments)
+            st.session_state["pipeline_step"] = 3  # 跳到 TTS 步骤
+            st.session_state["script_mode"] = False
+            st.session_state["batch_mode"] = False
+            st.success("剧本已确认，切换到语音合成步骤...")
+            st.rerun()
+
+    with col2:
+        if st.button("🔄 重新生成剧本", key="script_regen_btn"):
+            st.session_state["script_result"] = None
+            st.session_state["script_step"] = 4
+            st.rerun()
+
+
+# ---------------------------------------------------------------------------
 # Main entry
 # ---------------------------------------------------------------------------
 
@@ -1100,18 +1538,21 @@ def main():
     # Store selections in session state for pipeline use
     st.session_state["selections"] = selections
 
-    # Mode toggle: single vs batch
+    # Mode toggle: single vs batch vs script
     mode = st.radio(
         "处理模式",
-        options=["单个视频", "批量模式"],
+        options=["单个视频", "批量模式", "剧本模式"],
         horizontal=True,
         key="mode_radio",
     )
     st.session_state["batch_mode"] = (mode == "批量模式")
+    st.session_state["script_mode"] = (mode == "剧本模式")
 
     st.divider()
 
-    if st.session_state["batch_mode"]:
+    if st.session_state.get("script_mode"):
+        _render_script_studio(selections)
+    elif st.session_state["batch_mode"]:
         # Batch mode: image upload + batch group management
         _render_image_upload()
         st.divider()

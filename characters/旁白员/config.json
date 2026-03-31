@@ -1,0 +1,10 @@
+{
+  "name": "旁白员",
+  "appearance": "无具体形象，仅作为旁白解说",
+  "voice_type": "zh_female_shuangkuaisisi_moon_bigtts",
+  "emotion_default": "neutral",
+  "ref_images": [],
+  "lora_path": null,
+  "style_tags": "narrator",
+  "role_type": "narrator"
+}

@@ -2128,7 +2128,8 @@
                   "fill": "$text-muted-light",
                   "content": "来源：Al Jazeera (aljazeera.com) · PBS NewsHour (pbs.org) · WION News",
                   "fontFamily": "Inter",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -2470,7 +2471,8 @@
                   "fill": "$text-muted-light",
                   "content": "来源：Reuters · Daily Sabah (dailysabah.com) · Geo TV (geo.tv)",
                   "fontFamily": "Inter",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -2812,7 +2814,8 @@
                   "fill": "$text-muted-light",
                   "content": "来源：NPR (npr.org) · The Guardian · Al Jazeera · Euronews",
                   "fontFamily": "Inter",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -3154,7 +3157,8 @@
                   "fill": "$text-muted-light",
                   "content": "来源：CBS News (cbsnews.com) · ABC News · USA Today",
                   "fontFamily": "Inter",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -5265,6 +5269,176 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "mKaoM",
+      "x": 0,
+      "y": 7660,
+      "name": "GEO Cover",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white",
+      "children": [
+        {
+          "type": "frame",
+          "id": "MhSAZ",
+          "name": "leftC",
+          "width": 1060,
+          "height": "fill_container",
+          "fill": "$lt-bg-white",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            100,
+            80
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qEeOt",
+              "name": "tagR",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8SUXO",
+                  "name": "tagBg",
+                  "fill": "$lt-accent-red",
+                  "cornerRadius": 100,
+                  "padding": [
+                    8,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i41w4",
+                      "name": "tagTx",
+                      "fill": "#FFFFFF",
+                      "content": "BREAKING",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "PaY0F",
+                  "name": "dateTx",
+                  "fill": "$lt-text-muted",
+                  "content": "2026年3月30-31日",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "DcdTo",
+              "name": "covTitle",
+              "fill": "$lt-text-dark",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "全球国际局势\n重磅新闻速递",
+              "lineHeight": 1.1,
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "YiT9O",
+              "name": "covSub",
+              "fill": "$lt-text-muted",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "近24小时权威资讯精选 · 核心新闻",
+              "lineHeight": 1.4,
+              "fontFamily": "Inter",
+              "fontSize": 36
+            },
+            {
+              "type": "frame",
+              "id": "B2ZQz",
+              "name": "bar",
+              "width": 100,
+              "height": 6,
+              "fill": "$lt-accent-blue",
+              "cornerRadius": 3
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "waVKM",
+          "name": "rightC",
+          "clip": true,
+          "width": 860,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774936782233.png",
+            "mode": "fill"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NByAP",
+      "x": 2100,
+      "y": 7660,
+      "name": "GEO 1 - Iran Ceasefire",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white"
+    },
+    {
+      "type": "frame",
+      "id": "N4vK0",
+      "x": 4200,
+      "y": 7660,
+      "name": "GEO 2 - Oil Crisis",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white"
+    },
+    {
+      "type": "frame",
+      "id": "lGbr6",
+      "x": 0,
+      "y": 8920,
+      "name": "GEO 3 - Kuwait Airport",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white"
+    },
+    {
+      "type": "frame",
+      "id": "oNPUn",
+      "x": 2100,
+      "y": 8920,
+      "name": "GEO 4 - Ukraine",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white"
+    },
+    {
+      "type": "frame",
+      "id": "ZPFb6",
+      "x": 4200,
+      "y": 8920,
+      "name": "GEO 5 - Russia Lavrov",
+      "width": 1920,
+      "height": 1080,
+      "fill": "$lt-bg-white"
     }
   ],
   "variables": {
@@ -5355,6 +5529,46 @@
     "text-muted-light": {
       "type": "color",
       "value": "#94A3B8"
+    },
+    "lt-accent-amber": {
+      "type": "color",
+      "value": "#D97706"
+    },
+    "lt-accent-blue": {
+      "type": "color",
+      "value": "#2563EB"
+    },
+    "lt-accent-green": {
+      "type": "color",
+      "value": "#059669"
+    },
+    "lt-accent-red": {
+      "type": "color",
+      "value": "#DC2626"
+    },
+    "lt-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "lt-border": {
+      "type": "color",
+      "value": "#E5E7EB"
+    },
+    "lt-tag-bg": {
+      "type": "color",
+      "value": "#EFF6FF"
+    },
+    "lt-text-body": {
+      "type": "color",
+      "value": "#374151"
+    },
+    "lt-text-dark": {
+      "type": "color",
+      "value": "#111827"
+    },
+    "lt-text-muted": {
+      "type": "color",
+      "value": "#6B7280"
     }
   }
 }
