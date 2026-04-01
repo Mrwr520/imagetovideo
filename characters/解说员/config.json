@@ -1,0 +1,10 @@
+{
+  "name": "解说员",
+  "appearance": "黑色长发",
+  "voice_type": "zh_female_maomao_moon_bigtts",
+  "emotion_default": "neutral",
+  "ref_images": [],
+  "lora_path": null,
+  "style_tags": "anime style",
+  "role_type": "character"
+}

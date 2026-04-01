@@ -1216,30 +1216,30 @@ async def _search_and_extract_topics(searcher, provider, domain_name, sub_domain
     # 搜索成功时基于搜索结果提取话题，失败时让 LLM 直接生成
     topic_requirements = (
         "要求：\n"
-        "1. 话题必须是一个【具体的小故事/小场景】，不能是大方向或大话题\n"
-        "2. 标题要像短视频爆款标题，具体到一个人、一件事、一个瞬间\n"
-        "3. 切入角度要精准到一个具体的情节点或转折点，30秒内能讲完\n"
-        "4. 有情感冲击力，能在3秒内抓住观众\n\n"
-        "❌ 错误示例：'婚后AA制' '婆媳关系' '职场压力'（太大太泛）\n"
-        "✅ 正确示例：'她把离婚协议放在他生日蛋糕旁边' '实习生第一天就被甩了一巴掌' '妈妈偷偷把女儿的日记本烧了'\n\n"
+        "1. 话题必须是一个【具体的道理/观点/人生智慧】，不是故事情节\n"
+        "2. 标题要像短视频爆款标题，引发好奇和深思\n"
+        "3. 切入角度要精准，30秒内能讲透一个道理\n"
+        "4. 有洞察力，能让观众产生'原来如此'的感觉\n\n"
+        "❌ 错误示例：'她提分手那晚' '他把戒指扔了'（这是故事，不是道理）\n"
+        "✅ 正确示例：'鬼谷子说：看清一个人，只需要这一招' '红楼梦告诉你：越善良的人越要学会拒绝' '为什么越努力的人越不被珍惜'\n\n"
     )
 
     if context:
         extract_prompt = (
             f"领域：{domain_name} - {sub_domain}\n\n"
             f"搜索结果：\n{context}\n\n"
-            f"请基于搜索结果，提炼 3-5 个最适合做 30 秒动漫短剧的【具体小故事】。\n"
+            f"请基于搜索结果，提炼 3-5 个最适合做 30 秒短视频的【道理/观点/人生智慧】。\n"
             f"{topic_requirements}"
             "严格输出 JSON 数组：\n"
-            '[{"title": "具体故事标题（像爆款短视频标题）", "angle": "从哪个具体瞬间/情节切入", "score": 8.5, "reason": "为什么30秒能讲好这个故事"}]'
+            '[{"title": "道理类标题（引发深思）", "angle": "用什么例子/典故来讲这个道理", "score": 8.5, "reason": "为什么这个道理能引发共鸣"}]'
         )
     else:
         extract_prompt = (
             f"领域：{domain_name} - {sub_domain}\n\n"
-            "网络搜索暂时不可用，请根据你的知识，直接推荐 3-5 个最适合做 30 秒动漫短剧的【具体小故事】。\n"
+            "网络搜索暂时不可用，请根据你的知识，直接推荐 3-5 个最适合做 30 秒短视频的【道理/观点/人生智慧】。\n"
             f"{topic_requirements}"
             "严格输出 JSON 数组：\n"
-            '[{"title": "具体故事标题（像爆款短视频标题）", "angle": "从哪个具体瞬间/情节切入", "score": 8.5, "reason": "为什么30秒能讲好这个故事"}]'
+            '[{"title": "道理类标题（引发深思）", "angle": "用什么例子/典故来讲这个道理", "score": 8.5, "reason": "为什么这个道理能引发共鸣"}]'
         )
 
     try:
@@ -1479,8 +1479,8 @@ def _display_script_preview(script) -> None:
 
 
 def _render_script_step5_confirm(selections: dict) -> None:
-    """步骤5：确认剧本，对接现有 pipeline。"""
-    st.subheader("✅ 步骤5：确认并合成视频")
+    """步骤5：确认剧本，自动获取 Pixabay 素材，对接 pipeline。"""
+    st.subheader("✅ 步骤5：获取素材并合成")
 
     result = st.session_state.get("script_result")
     if not result or not result.script:
@@ -1489,9 +1489,151 @@ def _render_script_step5_confirm(selections: dict) -> None:
 
     script = result.script
 
-    st.markdown("剧本确认后，请上传对应的图片（每个场景一张），然后进入语音合成和视频合成流程。")
+    # 素材获取方式选择
+    source = st.radio(
+        "视频素材来源",
+        options=["🔍 Pixabay 自动搜索（免费）", "📷 手动上传图片"],
+        horizontal=True,
+        key="script_source_radio",
+    )
 
-    # 上传图片（每个场景一张）
+    if "Pixabay" in source:
+        _render_pixabay_fetch(script, selections)
+    else:
+        _render_manual_upload(script, selections)
+
+
+def _render_pixabay_fetch(script, selections: dict) -> None:
+    """Pixabay 自动搜索素材。"""
+    cfg = _get_config()
+    api_key = cfg.get("pixabay", {}).get("api_key", "")
+
+    if not api_key:
+        st.error("请在 config.toml 的 [pixabay] 中配置 api_key")
+        return
+
+    # 用 LLM 将中文画面描述转为英文搜索关键词
+    if "pixabay_en_keywords" not in st.session_state:
+        st.session_state["pixabay_en_keywords"] = None
+
+    if st.session_state["pixabay_en_keywords"] is None:
+        # 自动翻译关键词
+        cfg = _get_config()
+        llm_adapter = LLMAdapter(cfg.get("llm", {}))
+        provider_name = selections.get("llm_provider", "openai_compatible")
+        model_name = selections.get("llm_model", "")
+        try:
+            provider = llm_adapter.get_provider(provider_name, model_name)
+            descs = [s.image_desc or s.narration for s in script.scenes]
+            translate_prompt = (
+                "将以下中文画面描述翻译为 Pixabay 视频搜索关键词。\n"
+                "规则：\n"
+                "1. 每个描述输出 2-4 个英文单词，用空格分隔\n"
+                "2. 关键词要具体、可视化（如 sunset city, girl crying, old temple）\n"
+                "3. 每个关键词前加 'anime' 前缀\n"
+                "4. 严格输出 JSON 数组，数量与输入一致\n\n"
+                "输入：\n" + "\n".join(f"{i+1}. {d}" for i, d in enumerate(descs)) + "\n\n"
+                "输出示例：[\"anime sunset temple\", \"anime girl thinking rain\", \"anime old book candle\"]"
+            )
+            import json as _json
+            import re as _re
+            raw = _run_async(provider.generate_narration([], translate_prompt))
+            match = _re.search(r'\[.*\]', raw, _re.DOTALL)
+            if match:
+                en_kws = _json.loads(match.group())
+                if isinstance(en_kws, list) and len(en_kws) >= len(script.scenes):
+                    st.session_state["pixabay_en_keywords"] = [str(k) for k in en_kws[:len(script.scenes)]]
+        except Exception:
+            pass
+
+    # 回退：如果翻译失败，用简单的英文关键词
+    en_keywords = st.session_state.get("pixabay_en_keywords")
+    if not en_keywords:
+        en_keywords = [f"anime animation" for _ in script.scenes]
+        st.session_state["pixabay_en_keywords"] = en_keywords
+
+    # 显示每个场景的搜索关键词（可编辑）
+    st.markdown("**每个场景的搜索关键词（已自动翻译为英文，可编辑）：**")
+    keywords = []
+    for i, scene in enumerate(script.scenes):
+        default_kw = en_keywords[i] if i < len(en_keywords) else "anime animation"
+        kw = st.text_input(
+            f"场景{i+1} 关键词",
+            value=default_kw,
+            key=f"pixabay_kw_{i}",
+        )
+        keywords.append(kw)
+
+    # BGM 情感
+    emotions = [s.emotion for s in script.scenes]
+    dominant_emotion = max(set(emotions), key=emotions.count) if emotions else "neutral"
+    st.caption(f"BGM 情感匹配：{dominant_emotion}")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🔍 搜索并下载素材", key="pixabay_fetch_btn"):
+            from src.media.pixabay import PixabayClient
+
+            client = PixabayClient(api_key)
+            temp_dir = Path(tempfile.mkdtemp(prefix="pixabay_"))
+
+            with st.spinner("正在从 Pixabay 搜索图片素材..."):
+                progress = st.progress(0, text="搜索中...")
+
+                image_paths = _run_async(
+                    client.search_and_download_images(keywords, temp_dir)
+                )
+                progress.progress(100, text="图片下载完成！")
+
+            # 保存到 session
+            valid_paths = [p for p in image_paths if p and p.exists()]
+            st.session_state["script_image_paths"] = image_paths
+
+            st.success(f"成功获取 {len(valid_paths)}/{len(keywords)} 张图片素材")
+
+            # 预览
+            cols = st.columns(min(len(image_paths), 4))
+            for i, p in enumerate(image_paths):
+                with cols[i % len(cols)]:
+                    if p and p.exists():
+                        st.image(str(p), caption=f"场景{i+1}", use_container_width=True)
+                    else:
+                        st.warning(f"场景{i+1}: 未找到")
+
+    with col2:
+        if st.button("✅ 确认素材，开始合成", key="pixabay_confirm_btn"):
+            image_paths = st.session_state.get("script_image_paths", [])
+            valid_paths = [p for p in image_paths if p and Path(p).exists()]
+
+            if not valid_paths:
+                st.error("没有可用的图片素材，请先搜索下载")
+                return
+
+            # 收集旁白
+            narration_segments = []
+            for i, scene in enumerate(script.scenes):
+                edited = st.session_state.get(f"script_narration_{i}", scene.narration)
+                narration_segments.append(edited)
+
+            # 将图片注入 pipeline
+            images = []
+            for p in valid_paths:
+                images.append({
+                    "name": Path(p).name,
+                    "data": Path(p).read_bytes(),
+                })
+
+            st.session_state["uploaded_images"] = images
+            st.session_state["narration_segments"] = narration_segments
+            st.session_state["narration"] = "\n\n".join(narration_segments)
+            st.session_state["pipeline_step"] = 3
+            # 标记需要跳转到单个视频模式（在 main() 开头处理）
+            st.session_state["_jump_to_single"] = True
+            st.rerun()
+
+
+def _render_manual_upload(script, selections: dict) -> None:
+    """手动上传图片（原有逻辑）。"""
     st.subheader(f"📷 上传 {len(script.scenes)} 张场景图片")
     uploaded = st.file_uploader(
         f"请上传 {len(script.scenes)} 张图片（按场景顺序）",
@@ -1502,34 +1644,29 @@ def _render_script_step5_confirm(selections: dict) -> None:
 
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("✅ 确认，进入语音合成", key="script_confirm_btn"):
+        if st.button("✅ 确认，进入语音合成", key="script_confirm_manual_btn"):
             if not uploaded or len(uploaded) < len(script.scenes):
                 st.error(f"请上传 {len(script.scenes)} 张图片")
                 return
 
-            # 将剧本数据注入到现有 pipeline 的 session state
             images = []
             for uf in uploaded[:len(script.scenes)]:
                 images.append({"name": uf.name, "data": uf.getvalue()})
 
-            # 收集旁白分段
             narration_segments = []
             for i, scene in enumerate(script.scenes):
-                # 使用编辑后的值（如果用户修改了）
                 edited = st.session_state.get(f"script_narration_{i}", scene.narration)
                 narration_segments.append(edited)
 
             st.session_state["uploaded_images"] = images
             st.session_state["narration_segments"] = narration_segments
             st.session_state["narration"] = "\n\n".join(narration_segments)
-            st.session_state["pipeline_step"] = 3  # 跳到 TTS 步骤
-            st.session_state["script_mode"] = False
-            st.session_state["batch_mode"] = False
-            st.success("剧本已确认，切换到语音合成步骤...")
+            st.session_state["pipeline_step"] = 3
+            st.session_state["_jump_to_single"] = True
             st.rerun()
 
     with col2:
-        if st.button("🔄 重新生成剧本", key="script_regen_btn"):
+        if st.button("🔄 重新生成剧本", key="script_regen_manual_btn"):
             st.session_state["script_result"] = None
             st.session_state["script_step"] = 4
             st.rerun()
@@ -1556,6 +1693,11 @@ def main():
 
     # Store selections in session state for pipeline use
     st.session_state["selections"] = selections
+
+    # 处理从剧本模式跳转到单个视频模式的请求
+    if st.session_state.pop("_jump_to_single", False):
+        # 在 radio widget 渲染前设置默认值
+        st.session_state["mode_radio"] = "单个视频"
 
     # Mode toggle: single vs batch vs script
     mode = st.radio(

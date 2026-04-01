@@ -80,6 +80,9 @@ codec = "libx264"
 bgm_volume = 0.25
 fade_duration = 0.5
 
+[pixabay]
+api_key = "55258275-2f4a614986c8153ec11cc8fbc"
+
 [search]
 timeout = 10.0
 max_results = 10

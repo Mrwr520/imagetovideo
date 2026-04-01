@@ -58,12 +58,44 @@ class VideoConfig:
         )
 
 
-def _fit_image(image_path: Path, target_width: int, target_height: int) -> str:
-    """Resize image to fit target area intelligently.
+def _fit_image_for_pan(image_path: Path, target_width: int, target_height: int, pan_ratio: float = 0.3) -> str:
+    """Resize image taller than target to allow vertical panning.
 
-    策略：
-    - 如果图片宽高比与目标接近（差距 < 20%），使用 cover-fit 裁切填满，不留黑边
-    - 否则使用 contain-fit + 模糊背景填充
+    图片缩放到宽度填满目标，高度比目标多出 pan_ratio 的空间，
+    用于上下平移动画。
+    """
+    img = Image.open(image_path).convert("RGB")
+    src_w, src_h = img.size
+
+    # 缩放宽度填满目标，高度按比例
+    scale = target_width / src_w
+    new_w = target_width
+    new_h = int(src_h * scale)
+
+    # 确保高度至少比目标多 pan_ratio
+    min_h = int(target_height * (1 + pan_ratio))
+    if new_h < min_h:
+        scale = min_h / src_h
+        new_w = int(src_w * scale)
+        new_h = min_h
+
+    img = img.resize((new_w, new_h), Image.LANCZOS)
+
+    # 如果宽度超出目标，居中裁切宽度
+    if new_w > target_width:
+        left = (new_w - target_width) // 2
+        img = img.crop((left, 0, left + target_width, new_h))
+
+    tmp = tempfile.mktemp(suffix=".jpg")
+    img.save(tmp, quality=95)
+    return tmp
+
+
+def _fit_image(image_path: Path, target_width: int, target_height: int) -> str:
+    """Resize image to fit target area intelligently (static, no pan).
+
+    如果图片宽高比与目标接近（差距 < 20%），使用 cover-fit 裁切填满。
+    否则使用 contain-fit + 模糊背景填充。
     """
     img = Image.open(image_path).convert("RGB")
     src_w, src_h = img.size
@@ -256,16 +288,51 @@ class VideoComposer:
         images: list[Path],
         durations: list[float],
         video_config: VideoConfig,
+        enable_pan: bool = True,
     ) -> list:
-        """Create static ImageClip for each image (no animation)."""
+        """Create image clips with alternating vertical pan animation.
+
+        奇数场景：从上往下平移
+        偶数场景：从下往上平移
+        """
+        from moviepy import VideoClip
+        import numpy as np
+
         clips = []
-        for img_path, dur in zip(images, durations):
-            fitted = _fit_image(img_path, video_config.width, video_config.height)
-            clip = (
-                ImageClip(fitted)
-                .with_duration(dur)
-                .with_fps(video_config.fps)
-            )
+        for idx, (img_path, dur) in enumerate(zip(images, durations)):
+            if enable_pan:
+                # 生成比目标高的图片，用于平移
+                fitted_path = _fit_image_for_pan(
+                    img_path, video_config.width, video_config.height, pan_ratio=0.3
+                )
+                img = Image.open(fitted_path)
+                img_array = np.array(img)
+                img_h, img_w = img_array.shape[:2]
+                target_h = video_config.height
+                max_offset = img_h - target_h
+
+                # 奇数场景从上到下，偶数场景从下到上
+                pan_down = (idx % 2 == 0)
+
+                def make_frame(t, _arr=img_array, _max=max_offset,
+                               _th=target_h, _tw=video_config.width,
+                               _dur=dur, _down=pan_down):
+                    progress = t / _dur if _dur > 0 else 0
+                    progress = max(0.0, min(1.0, progress))
+                    if _down:
+                        offset = int(_max * progress)
+                    else:
+                        offset = int(_max * (1 - progress))
+                    return _arr[offset:offset + _th, :_tw]
+
+                clip = VideoClip(make_frame, duration=dur).with_fps(video_config.fps)
+            else:
+                fitted = _fit_image(img_path, video_config.width, video_config.height)
+                clip = (
+                    ImageClip(fitted)
+                    .with_duration(dur)
+                    .with_fps(video_config.fps)
+                )
             clips.append(clip)
         return clips
 
@@ -401,9 +468,9 @@ class VideoComposer:
             word_timings=word_timings,
         )
 
-        # 3. Create static image clips
+        # 3. Create image clips with vertical pan animation
         clips = self.create_image_clips(
-            ctx.images, durations, video_config
+            ctx.images, durations, video_config, enable_pan=True
         )
 
         # 4. Concatenate

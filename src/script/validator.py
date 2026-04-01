@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from src.script.models import Script
 
-MIN_SCENES = 3
-MAX_SCENES = 5
-MIN_NARRATION_LEN = 10
-MAX_NARRATION_LEN = 50
+MIN_SCENES = 4
+MAX_SCENES = 6
+MIN_NARRATION_LEN = 30
+MAX_NARRATION_LEN = 150
 MIN_IMAGE_DESC_LEN = 10
 
 
