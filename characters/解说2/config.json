@@ -1,7 +1,7 @@
 {
-  "name": "解说员",
-  "appearance": "黑色长发",
-  "voice_type": "zh_female_liuchangnv_uranus_bigtts",
+  "name": "解说2",
+  "appearance": "黑色头发",
+  "voice_type": "zh_male_ruyayichen_uranus_bigtts",
   "emotion_default": "neutral",
   "ref_images": [],
   "lora_path": null,

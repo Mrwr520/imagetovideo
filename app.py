@@ -350,20 +350,35 @@ async def _synthesize_with_emotions(tts_adapter, script, provider_name, default_
     """
     from src.character.manager import CharacterManager
     from src.tts.base import TTSResult
-    from mutagen.mp3 import MP3
-    import io
 
     mgr = CharacterManager()
     all_audio_bytes = bytearray()
     all_word_timings = []
     total_duration = 0.0
+    volcano_cfg = cfg.get("tts", {}).get("volcano", {})
+    default_speed_ratio = volcano_cfg.get("default_speed_ratio", 1.2)
+    supported_voice_ids = {
+        item["id"] for item in tts_adapter.list_voices(provider_name)
+    }
+    fallback_voice = (
+        default_voice
+        if default_voice in supported_voice_ids
+        else volcano_cfg.get("default_voice", "")
+    )
 
     for i, scene in enumerate(script.scenes):
-        # 确定音色：优先用角色绑定的音色
-        voice = default_voice
+        # 剧本模式只使用当前 provider 支持的 2.0 音色。
+        voice = fallback_voice
         char = mgr.get_character(scene.character)
-        if char and char.voice_type:
+        if char and char.voice_type in supported_voice_ids:
             voice = char.voice_type
+        elif char and char.voice_type:
+            logger.warning(
+                "角色 '%s' 配置的音色 '%s' 不在 Volcano 2.0 列表中，改用 '%s'",
+                scene.character,
+                char.voice_type,
+                fallback_voice or volcano_cfg.get("default_voice", ""),
+            )
 
         # 确定情感
         emotion = scene.emotion if scene.emotion and scene.emotion != "neutral" else ""
@@ -377,6 +392,7 @@ async def _synthesize_with_emotions(tts_adapter, script, provider_name, default_
             output_path=seg_path,
             emotion=emotion,
             emotion_scale=4,
+            speed_ratio=default_speed_ratio,
         )
 
         # 收集音频数据
@@ -834,7 +850,9 @@ def _render_step_tts(selections: dict) -> None:
             st.session_state["audio_path"] = str(result.audio_path)
             st.session_state["audio_duration"] = result.duration
             st.session_state["word_timings"] = result.word_timings
-            st.session_state["pipeline_step"] = 3
+            st.session_state["pipeline_step"] = 4
+            if st.session_state.get("script_mode"):
+                st.session_state["script_step"] = 7
         except Exception as e:
             st.error(f"❌ 语音合成失败：{e}")
             return
@@ -851,6 +869,8 @@ def _render_step_tts(selections: dict) -> None:
         with col1:
             if st.button("✅ 确认语音，进入视频合成", key="confirm_tts_btn"):
                 st.session_state["pipeline_step"] = 4
+                if st.session_state.get("script_mode"):
+                    st.session_state["script_step"] = 7
                 st.rerun()
         with col2:
             if st.button("🔄 重新合成", key="regen_tts_btn"):
@@ -979,6 +999,8 @@ def _render_step_video(selections: dict) -> None:
 
             st.session_state["video_path"] = str(output_path)
             st.session_state["pipeline_step"] = 5
+            if st.session_state.get("script_mode"):
+                st.session_state["script_step"] = 8
             st.rerun()
         except Exception as e:
             import traceback
@@ -1211,6 +1233,21 @@ def _render_script_studio(selections: dict) -> None:
     if step >= 5:
         st.divider()
         _render_script_step5_confirm(selections)
+
+    # Step 6: 语音合成（在剧本模式内完成，不跳转）
+    if step >= 6:
+        st.divider()
+        _render_step_tts(selections)
+
+    # Step 7: 视频合成
+    if step >= 7:
+        st.divider()
+        _render_step_video(selections)
+
+    # Step 8: 预览下载
+    if step >= 8:
+        st.divider()
+        _render_step_preview()
 
 
 def _render_script_step1_domain(selections: dict) -> None:
@@ -1654,12 +1691,15 @@ def _render_script_step4_5_image_gen(selections: dict) -> None:
                 prompt = scene.image_prompt or scene.image_desc
                 st.caption(prompt[:150] + "..." if len(prompt) > 150 else prompt)
 
-                col_gen, col_upload = st.columns(2)
+                col_gen, col_pix, col_upload = st.columns(3)
                 with col_gen:
                     if st.button(f"🤖 AI 生成", key=f"gen_img_{i}"):
                         _generate_single_scene_image(
                             i, prompt, selected_provider, selected_style, cfg
                         )
+                with col_pix:
+                    if st.button(f"🔍 Pixabay", key=f"pix_img_{i}"):
+                        _pixabay_single_scene(i, prompt, cfg)
                 with col_upload:
                     uploaded = st.file_uploader(
                         "手动上传",
@@ -1674,24 +1714,212 @@ def _render_script_step4_5_image_gen(selections: dict) -> None:
 
     # 批量生成按钮
     st.divider()
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        if st.button("🚀 批量生成所有图片", key="batch_gen_all_btn"):
+        if st.button("🚀 批量AI生成", key="batch_gen_all_btn"):
             _batch_generate_all_images(script, selected_provider, selected_style, cfg)
 
     with col2:
+        if st.button("🔍 一键Pixabay获取", key="batch_pixabay_all_btn"):
+            _batch_pixabay_all_images(script, cfg)
+
+    with col3:
         missing = [i for i in range(len(script.scenes)) if i not in scene_images]
         if missing:
             st.caption(f"还有 {len(missing)} 个场景未生成图片")
         else:
             st.success("所有场景图片已就绪")
 
-    with col3:
+    with col4:
         if not missing:
             if st.button("✅ 确认图片，进入下一步", key="confirm_images_btn"):
-                st.session_state["script_step"] = 5
+                # 将图片和旁白注入 pipeline session state
+                result = st.session_state.get("script_result")
+                if result and result.script:
+                    images = []
+                    for i in range(len(result.script.scenes)):
+                        if i in scene_images:
+                            img_data = scene_images[i]
+                            if isinstance(img_data, bytes):
+                                images.append({"name": f"scene_{i+1}.png", "data": img_data})
+                            elif isinstance(img_data, (str, Path)) and Path(img_data).exists():
+                                images.append({"name": f"scene_{i+1}.png", "data": Path(img_data).read_bytes()})
+
+                    narration_segments = []
+                    for i, scene in enumerate(result.script.scenes):
+                        edited = st.session_state.get(f"script_narration_{i}", scene.narration)
+                        narration_segments.append(edited)
+
+                    st.session_state["uploaded_images"] = images
+                    st.session_state["narration_segments"] = narration_segments
+                    st.session_state["narration"] = "\n\n".join(narration_segments)
+                    st.session_state["pipeline_step"] = 3
+
+                st.session_state["script_step"] = 6
                 st.rerun()
+
+
+def _batch_pixabay_all_images(script, cfg: dict) -> None:
+    """一键从 Pixabay 获取所有场景图片。"""
+    api_key = cfg.get("pixabay", {}).get("api_key", "")
+    if not api_key:
+        st.error("请在 config.toml 的 [pixabay] 中配置 api_key")
+        return
+
+    from src.media.pixabay import PixabayClient
+    client = PixabayClient(api_key)
+
+    # 先用 LLM 批量翻译所有场景的关键词
+    descs = [s.image_desc or s.narration for s in script.scenes]
+    keywords = []
+
+    try:
+        llm_adapter = LLMAdapter(cfg.get("llm", {}))
+        selections = st.session_state.get("selections", {})
+        provider = llm_adapter.get_provider(
+            selections.get("llm_provider", "openai_compatible"),
+            selections.get("llm_model", ""),
+        )
+        import json as _json, re as _re
+
+        translate_prompt = (
+            "把下面每行中文画面描述翻译成 3 个英文搜索词（核心名词，不要形容词）。\n"
+            "输出 JSON 数组，每项是一个字符串。\n\n"
+            + "\n".join(f"{i+1}. {d}" for i, d in enumerate(descs))
+            + "\n\n只输出 JSON 数组，不要其他内容。"
+        )
+        raw = _run_async(provider.generate_narration([], translate_prompt))
+        match = _re.search(r'\[.*\]', raw, _re.DOTALL)
+        if match:
+            kw_list = _json.loads(match.group())
+            if isinstance(kw_list, list) and len(kw_list) >= len(script.scenes):
+                keywords = [str(k).strip() for k in kw_list[:len(script.scenes)]]
+    except Exception as e:
+        logger.warning("Pixabay 关键词翻译失败: %s", e)
+
+    # 回退：用简单描述
+    if len(keywords) != len(script.scenes):
+        keywords = [f"scene {i+1}" for i in range(len(script.scenes))]
+
+    progress = st.progress(0, text="Pixabay 搜索中...")
+    scene_images = st.session_state.get("script_images", {})
+    used_ids = set()
+    success_count = 0
+
+    for i, kw in enumerate(keywords):
+        query = f"anime {kw}"
+        progress.progress(
+            int((i / len(keywords)) * 100),
+            text=f"场景{i+1}/{len(keywords)}: 搜索 '{query}'..."
+        )
+
+        try:
+            results = _run_async(client.search_images(query, per_page=10))
+            if not results:
+                results = _run_async(client.search_images(query, per_page=10, image_type="all"))
+            if not results:
+                # 最后回退：只搜 anime
+                results = _run_async(client.search_images("anime illustration", per_page=10))
+
+            selected = None
+            for r in results:
+                if r.id not in used_ids:
+                    selected = r
+                    used_ids.add(r.id)
+                    break
+            if not selected and results:
+                selected = results[0]
+
+            if selected and selected.download_url:
+                import httpx as _httpx
+                resp = _httpx.get(selected.download_url, timeout=30, follow_redirects=True)
+                resp.raise_for_status()
+                scene_images[i] = resp.content
+                success_count += 1
+                logger.info("场景%d Pixabay下载成功: %s (id=%d)", i+1, query, selected.id)
+            else:
+                logger.warning("场景%d Pixabay无结果: %s", i+1, query)
+        except Exception as e:
+            logger.warning("场景%d Pixabay失败: %s - %s", i+1, query, e)
+
+    st.session_state["script_images"] = scene_images
+    progress.progress(100, text=f"完成！成功获取 {success_count}/{len(keywords)} 张图片")
+    st.rerun()
+
+
+def _pixabay_single_scene(scene_index: int, prompt: str, cfg: dict) -> None:
+    """用 Pixabay 搜索单个场景的图片素材。"""
+    api_key = cfg.get("pixabay", {}).get("api_key", "")
+    if not api_key:
+        st.error("请在 config.toml 的 [pixabay] 中配置 api_key")
+        return
+
+    from src.media.pixabay import PixabayClient
+
+    client = PixabayClient(api_key)
+
+    # 从剧本获取中文画面描述（比英文通用提示词更有区分度）
+    result = st.session_state.get("script_result")
+    if result and result.script and scene_index < len(result.script.scenes):
+        scene = result.script.scenes[scene_index]
+        desc = scene.image_desc or scene.narration
+    else:
+        desc = prompt
+
+    # 用 LLM 翻译为有区分度的英文搜索关键词
+    query = f"anime illustration"
+    try:
+        llm_adapter = LLMAdapter(cfg.get("llm", {}))
+        selections = st.session_state.get("selections", {})
+        provider = llm_adapter.get_provider(
+            selections.get("llm_provider", "openai_compatible"),
+            selections.get("llm_model", ""),
+        )
+        translate_prompt = (
+            f"把下面的中文画面描述翻译成 3 个英文单词，用于图片搜索。"
+            f"只要核心名词，不要形容词，不要 anime/illustration。\n\n"
+            f"{desc}\n\n只输出 3 个英文单词，空格分隔，不要其他内容。"
+        )
+        raw = _run_async(provider.generate_narration([], translate_prompt))
+        kw = raw.strip().split("\n")[0].strip()
+        if kw:
+            query = f"anime {kw}"
+    except Exception:
+        pass
+
+    with st.spinner(f"场景{scene_index+1}: Pixabay 搜索 '{query}'..."):
+        results = _run_async(client.search_images(query, per_page=10))
+        if not results:
+            results = _run_async(client.search_images(query, per_page=10, image_type="all"))
+
+    if results:
+        # 避免和其他场景重复
+        used_ids = st.session_state.get("_pixabay_used_ids", set())
+        selected = None
+        for r in results:
+            if r.id not in used_ids:
+                selected = r
+                used_ids.add(r.id)
+                break
+        if not selected:
+            selected = results[0]
+        st.session_state["_pixabay_used_ids"] = used_ids
+
+        img_url = selected.download_url
+        if img_url:
+            import httpx as _httpx
+            try:
+                resp = _httpx.get(img_url, timeout=30, follow_redirects=True)
+                resp.raise_for_status()
+                scene_images = st.session_state.get("script_images", {})
+                scene_images[scene_index] = resp.content
+                st.session_state["script_images"] = scene_images
+                st.rerun()
+            except Exception as e:
+                st.error(f"下载失败: {e}")
+    else:
+        st.warning(f"场景{scene_index+1}: Pixabay 未找到，关键词: {query}")
 
 
 def _generate_single_scene_image(
@@ -1975,8 +2203,7 @@ def _render_pixabay_fetch(script, selections: dict) -> None:
             st.session_state["narration_segments"] = narration_segments
             st.session_state["narration"] = "\n\n".join(narration_segments)
             st.session_state["pipeline_step"] = 3
-            # 标记需要跳转到单个视频模式（在 main() 开头处理）
-            st.session_state["_jump_to_single"] = True
+            st.session_state["script_step"] = 6
             st.rerun()
 
 
@@ -2012,7 +2239,7 @@ def _render_manual_upload(script, selections: dict) -> None:
             st.session_state["narration_segments"] = narration_segments
             st.session_state["narration"] = "\n\n".join(narration_segments)
             st.session_state["pipeline_step"] = 3
-            st.session_state["_jump_to_single"] = True
+            st.session_state["script_step"] = 6
             st.rerun()
 
     with col2:
@@ -2046,13 +2273,23 @@ def main():
 
     # 处理从剧本模式跳转到单个视频模式的请求
     if st.session_state.pop("_jump_to_single", False):
-        # 在 radio widget 渲染前设置默认值
-        st.session_state["mode_radio"] = "单个视频"
+        st.session_state["batch_mode"] = False
+        st.session_state["script_mode"] = False
+        # 强制 radio 选中"单个视频"
+        if "mode_radio" in st.session_state:
+            del st.session_state["mode_radio"]
 
     # Mode toggle: single vs batch vs script
+    default_mode_idx = 0
+    if st.session_state.get("script_mode"):
+        default_mode_idx = 2
+    elif st.session_state.get("batch_mode"):
+        default_mode_idx = 1
+
     mode = st.radio(
         "处理模式",
         options=["单个视频", "批量模式", "剧本模式"],
+        index=default_mode_idx,
         horizontal=True,
         key="mode_radio",
     )
