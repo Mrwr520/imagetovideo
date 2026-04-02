@@ -69,6 +69,13 @@ DEFAULT_CONFIG: dict = {
         },
     },
     "tts": {
+        "volcano": {
+            "appid": "",
+            "access_token": "",
+            "resource_id": "seed-tts-2.0",
+            "default_voice": "zh_female_shuangkuaisisi_uranus_bigtts",
+            "default_speed_ratio": 1.2,
+        },
         "cosyvoice": {
             "api_base": "http://localhost:9880",
             "default_voice": "中文女",

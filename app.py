@@ -342,6 +342,66 @@ def _save_images_to_temp(images: list[dict]) -> list[Path]:
     return paths
 
 
+async def _synthesize_with_emotions(tts_adapter, script, provider_name, default_voice, temp_dir, cfg):
+    """按场景分段合成语音，每段带上对应的 emotion 参数。
+
+    支持多角色：根据 scene.character 查找角色配置中的 voice_type。
+    合成后拼接为一个完整音频文件。
+    """
+    from src.character.manager import CharacterManager
+    from src.tts.base import TTSResult
+    from mutagen.mp3 import MP3
+    import io
+
+    mgr = CharacterManager()
+    all_audio_bytes = bytearray()
+    all_word_timings = []
+    total_duration = 0.0
+
+    for i, scene in enumerate(script.scenes):
+        # 确定音色：优先用角色绑定的音色
+        voice = default_voice
+        char = mgr.get_character(scene.character)
+        if char and char.voice_type:
+            voice = char.voice_type
+
+        # 确定情感
+        emotion = scene.emotion if scene.emotion and scene.emotion != "neutral" else ""
+
+        # 合成单段
+        seg_path = temp_dir / f"seg_{i}.mp3"
+        result = await tts_adapter.synthesize(
+            text=scene.narration,
+            provider_name=provider_name,
+            voice=voice,
+            output_path=seg_path,
+            emotion=emotion,
+            emotion_scale=4,
+        )
+
+        # 收集音频数据
+        seg_bytes = seg_path.read_bytes()
+        all_audio_bytes.extend(seg_bytes)
+
+        # 偏移 word timings
+        if result.word_timings:
+            for offset, dur, word in result.word_timings:
+                all_word_timings.append((offset + total_duration, dur, word))
+
+        total_duration += result.duration
+
+    # 写入合并后的音频
+    merged_path = temp_dir / "narration.mp3"
+    merged_path.write_bytes(bytes(all_audio_bytes))
+
+    return TTSResult(
+        audio_path=merged_path,
+        duration=total_duration,
+        sample_rate=24000,
+        word_timings=all_word_timings if all_word_timings else None,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Helper: clean narration text for TTS
 # ---------------------------------------------------------------------------
@@ -746,15 +806,30 @@ def _render_step_tts(selections: dict) -> None:
 
         try:
             temp_dir = Path(tempfile.mkdtemp(prefix="narrator_tts_"))
-            output_path = temp_dir / "narration.mp3"
 
-            with st.spinner("正在合成语音..."):
-                progress_bar = st.progress(0, text="初始化语音合成...")
-                progress_bar.progress(30, text="合成中...")
+            # 检查是否有剧本数据（剧本模式下按场景分段合成，带情感参数）
+            script_result = st.session_state.get("script_result")
+            has_script = (script_result and script_result.script
+                          and len(script_result.script.scenes) > 0)
+
+            if has_script and provider_name == "volcano":
+                # 剧本模式：按场景分段合成，每段带 emotion
                 result = _run_async(
-                    tts_adapter.synthesize(narration, provider_name, voice, output_path)
+                    _synthesize_with_emotions(
+                        tts_adapter, script_result.script, provider_name,
+                        voice, temp_dir, cfg,
+                    )
                 )
-                progress_bar.progress(100, text="语音合成完成！")
+            else:
+                # 普通模式：整段合成
+                output_path = temp_dir / "narration.mp3"
+                with st.spinner("正在合成语音..."):
+                    progress_bar = st.progress(0, text="初始化语音合成...")
+                    progress_bar.progress(30, text="合成中...")
+                    result = _run_async(
+                        tts_adapter.synthesize(narration, provider_name, voice, output_path)
+                    )
+                    progress_bar.progress(100, text="语音合成完成！")
 
             st.session_state["audio_path"] = str(result.audio_path)
             st.session_state["audio_duration"] = result.duration
@@ -889,6 +964,8 @@ def _render_step_video(selections: dict) -> None:
                     outline_color=sub_cfg.get("outline_color", "#000000"),
                     outline_width=sub_cfg.get("outline_width", 1),
                 )
+                # 剧本模式才启用画面平移动画，普通模式静态展示
+                is_script_mode = bool(st.session_state.get("script_result"))
                 output_path = _run_in_thread(
                     composer.compose,
                     ctx=ctx,
@@ -896,6 +973,7 @@ def _render_step_video(selections: dict) -> None:
                     subtitle_style=sub_style,
                     narration_segments=st.session_state.get("narration_segments"),
                     word_timings=word_timings,
+                    enable_pan=is_script_mode,
                 )
                 progress_bar.progress(100, text="视频合成完成！")
 

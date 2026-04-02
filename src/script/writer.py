@@ -49,11 +49,16 @@ SYSTEM_PROMPT = """你是一个顶级短视频口播文案大师，专门制作"
   例如："记住：真正的胜利，从来不是靠蛮力，而是靠准备。"
 
 ## emotion 标注规则（控制 TTS 语气变化）
-- 第 1 段用 "surprise" 或 "neutral"（悬念感）
-- 第 2 段用 "sad" 或 "tender"（共情）
-- 第 3 段用 "neutral"（沉稳讲述）
-- 第 4 段用 "surprise"（恍然大悟）
-- 第 5 段用 "angry"（坚定有力，不是真的愤怒，是掷地有声）
+可选值：neutral, happy, sad, angry, surprise, fear, tender
+根据每段内容的实际情感自由选择，不要所有段落都用同一个。
+参考（不强制）：
+- 悬念/好奇的段落 → surprise
+- 共情/心酸的段落 → sad 或 tender
+- 沉稳讲述的段落 → neutral
+- 恍然大悟/震撼的段落 → surprise
+- 坚定有力/掷地有声的段落 → angry
+- 温暖治愈的段落 → tender 或 happy
+关键是要有情感起伏，不能从头到尾一个语气。
 
 ## 输出要求
 - 严格输出 JSON，不要输出任何其他内容
@@ -62,7 +67,7 @@ SYSTEM_PROMPT = """你是一个顶级短视频口播文案大师，专门制作"
 - 旁白中适当加入"……"表示停顿，加入"？"表示反问语气
 - image_desc 描述与当段内容相关的意境画面
 - character 必须是给定角色列表中的名字
-- emotion 严格按上面的规则标注"""
+- emotion 根据内容自由选择，但必须有变化"""
 
 USER_TEMPLATE = """## 话题
 {topic}

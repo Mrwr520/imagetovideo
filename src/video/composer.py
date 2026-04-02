@@ -442,6 +442,7 @@ class VideoComposer:
         subtitle_style: SubtitleStyle | None = None,
         narration_segments: list[str] | None = None,
         word_timings: list | None = None,
+        enable_pan: bool = False,
     ) -> Path:
         """Compose the final video from images, audio, subtitles, and BGM.
 
@@ -470,7 +471,7 @@ class VideoComposer:
 
         # 3. Create image clips with vertical pan animation
         clips = self.create_image_clips(
-            ctx.images, durations, video_config, enable_pan=True
+            ctx.images, durations, video_config, enable_pan=enable_pan
         )
 
         # 4. Concatenate

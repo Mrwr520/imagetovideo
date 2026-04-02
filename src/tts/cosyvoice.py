@@ -37,7 +37,7 @@ class CosyVoiceProvider(BaseTTSProvider):
         self._api_base = api_base.rstrip("/")
         self._default_voice = default_voice
 
-    async def synthesize(self, text: str, voice: str, output_path: Path) -> TTSResult:
+    async def synthesize(self, text: str, voice: str, output_path: Path, **kwargs) -> TTSResult:
         """通过 CosyVoice HTTP API 合成语音。
 
         Args:

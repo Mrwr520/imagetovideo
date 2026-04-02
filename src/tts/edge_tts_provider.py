@@ -51,7 +51,7 @@ class EdgeTTSProvider(BaseTTSProvider):
         """
         self._default_voice = default_voice or self.DEFAULT_VOICE
 
-    async def synthesize(self, text: str, voice: str, output_path: Path) -> TTSResult:
+    async def synthesize(self, text: str, voice: str, output_path: Path, **kwargs) -> TTSResult:
         """使用 Edge TTS 将文本合成为 MP3 音频文件，同时提取词级时间戳。
 
         Args:

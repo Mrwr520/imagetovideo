@@ -84,7 +84,10 @@ class TTSAdapter:
                 appid=cfg.get("appid", ""),
                 access_token=cfg.get("access_token", ""),
                 cluster=cfg.get("cluster", "volcano_tts"),
+                resource_id=cfg.get("resource_id"),
+                model=cfg.get("model"),
                 default_voice=cfg.get("default_voice"),
+                default_speed_ratio=cfg.get("default_speed_ratio", 1.2),
             )
         elif name == "cosyvoice":
             return cls(
@@ -126,6 +129,7 @@ class TTSAdapter:
         provider_name: str,
         voice: str,
         output_path: Path,
+        **kwargs,
     ) -> TTSResult:
         """合成语音，失败时自动回退到 Edge TTS。
 
@@ -134,27 +138,24 @@ class TTSAdapter:
             provider_name: 要使用的 TTS provider 名称。
             voice: 音色标识符。
             output_path: 输出音频文件路径。
+            **kwargs: 额外参数透传给 provider（如 emotion, emotion_scale）。
 
         Returns:
             TTSResult 包含音频路径、时长和采样率。
-            如果发生了回退，result 中的 audio_path 可能与请求的 output_path 不同
-            （Edge TTS 会强制 .mp3 扩展名）。
         """
         # 尝试使用指定 provider
         if provider_name != _FALLBACK_PROVIDER:
             try:
                 provider = self._get_or_create_provider(provider_name)
-                return await provider.synthesize(text, voice, output_path)
+                return await provider.synthesize(text, voice, output_path, **kwargs)
             except Exception as exc:
                 logger.warning(
                     "TTS provider '%s' 合成失败，正在回退到 Edge TTS: %s",
                     provider_name,
                     exc,
                 )
-                # 回退到 Edge TTS
                 return await self._fallback_synthesize(text, voice, output_path)
         else:
-            # 直接使用 Edge TTS
             provider = self._get_or_create_provider(_FALLBACK_PROVIDER)
             return await provider.synthesize(text, voice, output_path)
 

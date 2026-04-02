@@ -21,13 +21,14 @@ class BaseTTSProvider(ABC):
     """所有 TTS Provider 的抽象基类。"""
 
     @abstractmethod
-    async def synthesize(self, text: str, voice: str, output_path: Path) -> TTSResult:
+    async def synthesize(self, text: str, voice: str, output_path: Path, **kwargs) -> TTSResult:
         """将文本合成为音频文件。
 
         Args:
             text: 待合成的文本。
             voice: 音色标识符。
             output_path: 输出音频文件路径。
+            **kwargs: 额外参数（如 emotion, emotion_scale）。
 
         Returns:
             TTSResult 包含音频路径、时长和采样率。
