@@ -3,1062 +3,1053 @@
   "children": [
     {
       "type": "frame",
-      "id": "oMGhz",
+      "id": "A24a6",
       "x": 0,
       "y": 0,
-      "name": "Cover",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
+      "name": "QM-封面",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#F7FBF0",
+      "layout": "none",
       "children": [
         {
           "type": "frame",
-          "id": "qPi3X",
-          "name": "lc",
-          "width": 1060,
+          "id": "ZOlfU",
+          "x": 0,
+          "y": 0,
+          "name": "bg1",
+          "opacity": 0.25,
+          "metadata": {
+            "type": "unsplash",
+            "username": "dunigan",
+            "link": "https://unsplash.com/@dunigan",
+            "author": "Doug R. W. Dunigan"
+          },
+          "clip": true,
+          "width": 1080,
+          "height": 1920,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1707541975934-6681ab58bd9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM1NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "jCtza",
+          "x": 0,
+          "y": 0,
+          "name": "ov1",
+          "width": 1080,
+          "height": 1920,
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            120,
+            80,
+            100,
+            80
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tuhv4",
+              "name": "topTag",
+              "fill": "#4CAF50",
+              "cornerRadius": 40,
+              "padding": [
+                16,
+                40
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ks7Kb",
+                  "name": "topTagT",
+                  "fill": "#FFFFFF",
+                  "content": "中国传统节日",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "uzMsS",
+              "name": "title1",
+              "fill": "#1B5E20",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "清明节的\n前世今生",
+              "lineHeight": 1.1,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 140,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "N0xor",
+              "name": "sub1",
+              "fill": "#558B2F",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "从春秋介子推到现代踏青\n2500年的传承与变迁",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "LMLuA",
+              "name": "divL",
+              "width": 120,
+              "height": 6,
+              "fill": "#4CAF50",
+              "cornerRadius": 3
+            },
+            {
+              "type": "text",
+              "id": "Jy9B1",
+              "name": "foot1",
+              "fill": "#8BC34A",
+              "content": "🌿 每逢清明倍思亲",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Pvg0K",
+      "x": 1280,
+      "y": 0,
+      "name": "QM-起源",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "rXXDm",
+          "name": "h2",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RRvZ2",
+              "name": "h2n",
+              "fill": "#4CAF50",
+              "content": "01",
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "w6E92",
+              "name": "h2line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "ocuaQ",
+              "name": "h2t",
+              "fill": "#1B5E20",
+              "content": "起源",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "800"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tcPJy",
+          "name": "img2",
+          "metadata": {
+            "type": "unsplash",
+            "username": "artchicago",
+            "link": "https://unsplash.com/@artchicago",
+            "author": "Art Institute of Chicago"
+          },
+          "clip": true,
+          "width": "fill_container",
+          "height": 600,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1687383513657-db2258c5b32a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM2Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          },
+          "cornerRadius": 24
+        },
+        {
+          "type": "frame",
+          "id": "szj6G",
+          "name": "body2",
+          "width": "fill_container",
           "height": "fill_container",
-          "fill": "$bg",
           "layout": "vertical",
           "gap": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "fdlLu",
+              "name": "t2a",
+              "fill": "#4CAF50",
+              "content": "春秋时期（约前655年）",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "Eheb6",
+              "name": "t2b",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "晋国公子重耳流亡19年，随臣介子推割股奉君。重耳复国后封赏群臣，唯独忘了介子推。介子推携母隐居绵山，重耳放火烧山逼其出山，介子推抱树而死。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "tanqZ",
+              "name": "t2c",
+              "fill": "#689F38",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "重耳悲痛，下令这一天禁火寒食\n这就是「寒食节」的由来\n后演变为清明节",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "T2Rpp",
+      "x": 2560,
+      "y": 0,
+      "name": "QM-唐宋",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#F0F7E6",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "R4hls",
+          "name": "h3",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ySbRs",
+              "name": "h3n",
+              "fill": "#4CAF50",
+              "content": "02",
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "kSeC6",
+              "name": "h3line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "RQCYy",
+              "name": "h3t",
+              "fill": "#1B5E20",
+              "content": "定型",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "800"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XvCDU",
+          "name": "card3a",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "29qtp",
+              "name": "c3at",
+              "fill": "#4CAF50",
+              "content": "🏛️ 唐代（公元732年）",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "iIUQ4",
+              "name": "c3ad",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "唐玄宗下诏将清明扫墓编入礼典，正式成为国家认定的祭祀节日。寒食与清明合二为一。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E9Tqv",
+          "name": "card3b",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "6NR32",
+              "name": "c3bt",
+              "fill": "#4CAF50",
+              "content": "🎨 宋代",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "AbFA3",
+              "name": "c3bd",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "清明节达到鼎盛。张择端《清明上河图》描绘了北宋汴京清明时节的繁华景象。扫墓、踏青、插柳、放风筝成为固定习俗。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OG0jH",
+          "name": "img3",
+          "metadata": {
+            "type": "unsplash",
+            "username": "clevelandart",
+            "link": "https://unsplash.com/@clevelandart",
+            "author": "The Cleveland Museum of Art"
+          },
+          "clip": true,
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1713107101613-a50a39c88c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM2NTN8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          },
+          "cornerRadius": 20
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "n0XHf",
+      "x": 3840,
+      "y": 0,
+      "name": "QM-习俗",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "qTy2M",
+          "name": "h4",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zfAiT",
+              "name": "h4n",
+              "fill": "#4CAF50",
+              "content": "03",
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "mCnTg",
+              "name": "h4line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "2cV9b",
+              "name": "h4t",
+              "fill": "#1B5E20",
+              "content": "习俗",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "800"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "L1YBL",
+          "name": "grid4",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fmEtx",
+              "name": "r1",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FkcyS",
+                  "name": "c1",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#E8F5E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3l4sE",
+                      "name": "c1i",
+                      "content": "🪦",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5obqH",
+                      "name": "c1t",
+                      "fill": "#1B5E20",
+                      "content": "扫墓祭祖",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TEHuO",
+                      "name": "c1d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "携带酒食果品到墓地，铲除杂草，培上新土，焚香祭拜",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sIQvz",
+                  "name": "c2",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F1F8E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HSmDg",
+                      "name": "c2i",
+                      "content": "🌸",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CIb3e",
+                      "name": "c2t",
+                      "fill": "#1B5E20",
+                      "content": "踏青郊游",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ELsK2",
+                      "name": "c2d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "又叫春游，万物复苏之际，到郊外感受春天气息",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MJeAM",
+              "name": "r2",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0J9Lz",
+                  "name": "c3",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F9FBE7",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wej35",
+                      "name": "c3i",
+                      "content": "🪁",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ALll6",
+                      "name": "c3t",
+                      "fill": "#1B5E20",
+                      "content": "放风筝",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "byxKo",
+                      "name": "c3d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "古人认为放风筝可以放走晦气，剪断线让风筝飞走",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k8oRd",
+                  "name": "c4",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#E8F5E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2pw18",
+                      "name": "c4i",
+                      "content": "🌿",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A2n76",
+                      "name": "c4t",
+                      "fill": "#1B5E20",
+                      "content": "插柳戴柳",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "d9MAf",
+                      "name": "c4d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "民谚：清明不戴柳，红颜成皓首。柳枝辟邪祈福",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "G0jXE",
+      "x": 5120,
+      "y": 0,
+      "name": "QM-诗词",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#1B5E20",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rnIwp",
+          "x": 0,
+          "y": 0,
+          "name": "bg5",
+          "opacity": 0.15,
+          "metadata": {
+            "type": "unsplash",
+            "username": "plain_pix",
+            "link": "https://unsplash.com/@plain_pix",
+            "author": "olivia kim"
+          },
+          "clip": true,
+          "width": 1080,
+          "height": 1920,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1761623418974-c1288110d084?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3MTR8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "6uDtM",
+          "x": 0,
+          "y": 0,
+          "name": "ov5",
+          "width": 1080,
+          "height": 1920,
+          "layout": "vertical",
+          "gap": 50,
           "padding": [
             100,
             80
           ],
           "justifyContent": "center",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "zpE7D",
-              "name": "tr",
-              "gap": 12,
+              "id": "8HJd4",
+              "name": "h5",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
+                  "type": "text",
+                  "id": "t2SU9",
+                  "name": "h5n",
+                  "fill": "#81C784",
+                  "content": "04",
+                  "fontFamily": "Inter",
+                  "fontSize": 100,
+                  "fontWeight": "900"
+                },
+                {
                   "type": "frame",
-                  "id": "4XNQE",
-                  "name": "tb",
-                  "fill": "$red",
-                  "cornerRadius": 100,
-                  "padding": [
-                    8,
-                    20
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "SC17F",
-                      "name": "tt",
-                      "fill": "#FFFFFF",
-                      "content": "BREAKING NEWS",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700",
-                      "letterSpacing": 2
-                    }
-                  ]
+                  "id": "tNDki",
+                  "name": "h5line",
+                  "width": 60,
+                  "height": 5,
+                  "fill": "#81C784"
                 },
                 {
                   "type": "text",
-                  "id": "6eOEy",
-                  "name": "dt",
-                  "fill": "$muted",
-                  "content": "2026年4月2日",
+                  "id": "LWdPP",
+                  "name": "h5t",
+                  "fill": "#FFFFFF",
+                  "content": "诗词",
                   "fontFamily": "Inter",
-                  "fontSize": 28,
-                  "fontWeight": "500"
+                  "fontSize": 64,
+                  "fontWeight": "800"
                 }
               ]
             },
             {
+              "type": "frame",
+              "id": "Sh3UF",
+              "name": "poem1",
+              "width": "fill_container",
+              "fill": "#FFFFFF11",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VwzCt",
+                  "name": "p1t",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "清明时节雨纷纷\n路上行人欲断魂\n借问酒家何处有\n牧童遥指杏花村",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 56,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "DJwDG",
+                  "name": "p1a",
+                  "fill": "#A5D6A7",
+                  "content": "— 杜牧《清明》· 唐代",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I8oto",
+              "name": "poem2",
+              "width": "fill_container",
+              "fill": "#FFFFFF11",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2nxck",
+                  "name": "p2t",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "帝里重清明\n人心自愁思\n车声上路合\n柳色东城翠",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 56,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "y7PkG",
+                  "name": "p2a",
+                  "fill": "#A5D6A7",
+                  "content": "— 孟浩然《清明即事》· 唐代",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ev9a1",
+      "x": 6400,
+      "y": 0,
+      "name": "QM-现代",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "BzCl9",
+          "name": "h6",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
               "type": "text",
-              "id": "3i0hJ",
-              "name": "ct",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "全球重大事件\n每日热点速递",
-              "lineHeight": 1.1,
+              "id": "tv0l9",
+              "name": "h6n",
+              "fill": "#4CAF50",
+              "content": "05",
               "fontFamily": "Inter",
               "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "TcCuK",
+              "name": "h6line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "nP5Mx",
+              "name": "h6t",
+              "fill": "#1B5E20",
+              "content": "现代",
+              "fontFamily": "Inter",
+              "fontSize": 64,
               "fontWeight": "800"
-            },
-            {
-              "type": "text",
-              "id": "riGjb",
-              "name": "cs",
-              "fill": "$muted",
-              "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "Trump伊朗讲话 · SpaceX万亿IPO · 印尼7.4级强震 · 油价跌破$100 · 出生公民权",
-              "lineHeight": 1.5,
-              "fontFamily": "Inter",
-              "fontSize": 32,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "1GYVC",
-              "name": "ab",
-              "width": 100,
-              "height": 6,
-              "fill": "$blue",
-              "cornerRadius": 3
             }
           ]
         },
         {
           "type": "frame",
-          "id": "vR5De",
-          "name": "rc",
-          "clip": true,
-          "width": 860,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1775095316550.png",
-            "mode": "fill"
-          }
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "MZGNG",
-      "x": 2100,
-      "y": 0,
-      "name": "S1-Trump Iran",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "pmZf9",
-          "name": "im",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1775095361915.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "6Iukq",
-          "name": "co",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
-          "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
-          "children": [
-            {
-              "type": "frame",
-              "id": "6nnQj",
-              "name": "mr",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "sLd3b",
-                  "name": "nb",
-                  "fill": "$red",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "0DhSi",
-                      "name": "nt",
-                      "fill": "#FFFFFF",
-                      "content": "01",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "QzETO",
-                  "name": "st",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  NPR / CNBC / Politico",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "7w3yx",
-              "name": "hl",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "Trump黄金时段全国讲话：\n\"伊朗战争核心目标即将完成\"",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "5jWNG",
-              "name": "sb",
-              "fill": "$tag",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "mifyD",
-                  "name": "sbt",
-                  "fill": "$blue",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "Trump在白宫发表上任以来首次黄金时段全国讲话，宣称伊朗战争\"即将结束\"。但同时强调：霍尔木兹海峡不重新开放就不会停火。\"我来了，我看见了，我征服了\"——引用凯撒名言定调。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "8T6kS",
-              "name": "dv",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "N11jo",
-              "name": "fh",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "8rNkz",
-              "name": "fa",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "SSmij",
-                  "name": "fat",
-                  "fill": "$red",
-                  "content": "战争进展",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "8mI1H",
-                  "name": "fab",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "美军已打击超7,000个目标。Trump称战争可在\"数周内\"结束，但以色列在讲话期间仍在轰炸德黑兰。副总统万斯通过中间人向伊朗传递停火条件",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "0dqzd",
-              "name": "fb",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "TEcl3",
-                  "name": "fbt",
-                  "fill": "$red",
-                  "content": "核心表态",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "uS1YR",
-                  "name": "fbb",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "\"霍尔木兹海峡必须重新开放，否则我们将把伊朗炸回石器时代。\" Trump同时暗示美国可能退出NATO，要求其他国家自行保护海峡通行",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "EazVc",
-              "name": "dv2",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "mt8vg",
-              "name": "ih",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "QuuzV",
-              "name": "ib",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "这是一场\"宣布胜利但战争未结束\"的讲话。Trump的民调因战争持续下滑，急需向国内展示成果。但伊朗否认任何谈判，海峡仍然关闭，油价仍在$100以上。言辞与现实的巨大落差，才是真正的新闻。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "hAKcl",
-      "x": 4200,
-      "y": 0,
-      "name": "S2-SpaceX IPO",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "balvD",
-          "name": "im2",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1775095413731.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "opaKb",
-          "name": "co2",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
-          "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
-          "children": [
-            {
-              "type": "frame",
-              "id": "v93w1",
-              "name": "mr2",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "fhRlC",
-                  "name": "nb2",
-                  "fill": "$purple",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ZlUca",
-                      "name": "nt2",
-                      "fill": "#FFFFFF",
-                      "content": "02",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "8Qeop",
-                  "name": "st2",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  TechCrunch / CNBC / Bloomberg",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "eTm6F",
-              "name": "hl2",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "SpaceX秘密提交IPO申请\n估值$1.75万亿创历史纪录",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "KMlXl",
-              "name": "sb2",
-              "fill": "#F5F3FF",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "A2gmN",
-                  "name": "sbt2",
-                  "fill": "$purple",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "马斯克旗下SpaceX已向SEC秘密提交S-1注册文件，目标估值$1.75万亿，计划融资$750亿以上。若成功，将超越2019年沙特阿美成为史上最大IPO。此前SpaceX已完成与xAI的合并。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "cau8c",
-              "name": "dv2",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "idk30",
-              "name": "fh2",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "r3JiW",
-              "name": "fa2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "BmcPw",
-                  "name": "fa2t",
-                  "fill": "$purple",
-                  "content": "估值对比",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "9eY0j",
-                  "name": "fa2b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "$1.75万亿估值仅次于NVIDIA、Apple、Alphabet、Microsoft和Amazon。2022年SpaceX估值仅$900亿，4年增长近20倍。Deepwater预计实际融资可能超$800亿",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "W7hUs",
-              "name": "fb2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Ha72x",
-                  "name": "fb2t",
-                  "fill": "$purple",
-                  "content": "业务版图",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "vWKvZ",
-                  "name": "fb2b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "Starlink卫星互联网（全球用户超1亿）+ 火箭发射（全球市场份额超60%）+ Starship深空探索 + 合并后的xAI人工智能业务。四大业务线构成太空+AI超级平台",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "0o3Xk",
-              "name": "dv2b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "TMI32",
-              "name": "ih2",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "t5jDR",
-              "name": "ib2",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "SpaceX IPO是2026年资本市场最大事件。马斯克同时掌控Tesla、SpaceX、xAI三家万亿级公司，加上在Trump政府的影响力，其个人权力集中度已达到前所未有的水平。这不仅是一次IPO，更是科技寡头时代的标志性事件。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "aJZHw",
-      "x": 0,
-      "y": 1260,
-      "name": "S3-Indonesia Quake",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "k6UCd",
-          "name": "im3",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1775095465184.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "i9MaI",
-          "name": "co3",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
-          "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
-          "children": [
-            {
-              "type": "frame",
-              "id": "xiwpG",
-              "name": "mr3",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "qarFm",
-                  "name": "nb3",
-                  "fill": "$amber",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "YPlb2",
-                      "name": "nt3",
-                      "fill": "#FFFFFF",
-                      "content": "03",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "edCat",
-                  "name": "st3",
-                  "fill": "$muted",
-                  "content": "2026.04.02  |  USGS / AP / Al Jazeera",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "DSVLQ",
-              "name": "hl3",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "印尼7.4级强震引发海啸\n建筑受损 多国发布预警",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "HE3Bg",
-              "name": "sb3",
-              "fill": "#FFFBEB",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "LXaim",
-                  "name": "sbt3",
-                  "fill": "$amber",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "印尼东部北马鲁古海域发生7.4级强震，震中位于特尔纳特岛附近。地震引发最高30厘米海啸波，部分建筑受损。美国太平洋海啸预警中心对太平洋沿岸1000公里范围发布海啸预警。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "fGDms",
-              "name": "dv3",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "WIQhE",
-              "name": "fh3",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "HOPtT",
-              "name": "fa3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "um4Qu",
-                  "name": "fa3t",
-                  "fill": "$amber",
-                  "content": "地震参数",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "KckgT",
-                  "name": "fa3b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "震级7.4（USGS），震源深度约10公里，属浅源强震。震中位于北马鲁古海（Molucca Sea），距特尔纳特岛约100公里。海啸波高达30厘米，暂无重大伤亡报告",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "LVnFN",
-              "name": "fb3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "o4h0N",
-                  "name": "fb3t",
-                  "fill": "$amber",
-                  "content": "影响范围",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "qBPiG",
-                  "name": "fb3b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "东南亚多国收到海啸预警。印尼、菲律宾、马来西亚沿海居民紧急疏散。特尔纳特岛部分建筑出现裂缝和倒塌，救援力量已部署",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "aXiF6",
-              "name": "dv3b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "3FkTa",
-              "name": "ih3",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "qNkHr",
-              "name": "ib3",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "印尼位于环太平洋火山地震带，是全球地震最频繁的国家之一。此次7.4级地震虽未造成大规模伤亡，但浅源特征和海啸风险提醒：该区域的灾害预警和应急响应能力仍是全球防灾减灾的关键课题。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "1G8PH",
-      "x": 2100,
-      "y": 1260,
-      "name": "S4-Oil Markets",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "ccoYC",
-          "name": "im4",
+          "id": "UKGu4",
+          "name": "img6",
           "metadata": {
             "type": "unsplash",
-            "username": "nimisha_mekala",
-            "link": "https://unsplash.com/@nimisha_mekala",
-            "author": "Nimisha Mekala"
+            "username": "anjana_20",
+            "link": "https://unsplash.com/@anjana_20",
+            "author": "Anjana Baburaj"
           },
           "clip": true,
-          "width": 720,
-          "height": "fill_container",
+          "width": "fill_container",
+          "height": 560,
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "https://images.unsplash.com/photo-1640451859877-1374a1155215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwOTU1MDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+            "url": "https://images.unsplash.com/photo-1649693146939-abd6a338af01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
             "mode": "fill"
-          }
+          },
+          "cornerRadius": 24
         },
         {
           "type": "frame",
-          "id": "lupq5",
-          "name": "co4",
-          "width": 1200,
+          "id": "1EqKQ",
+          "name": "body6",
+          "width": "fill_container",
           "height": "fill_container",
-          "fill": "$bg",
           "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
+          "gap": 28,
           "children": [
             {
               "type": "frame",
-              "id": "NjvlF",
-              "name": "mr4",
+              "id": "zuhh6",
+              "name": "b6a",
+              "width": "fill_container",
+              "fill": "#E8F5E9",
+              "cornerRadius": 16,
+              "layout": "vertical",
               "gap": 12,
-              "alignItems": "center",
+              "padding": 32,
               "children": [
                 {
-                  "type": "frame",
-                  "id": "BgC4J",
-                  "name": "nb4",
-                  "fill": "$green",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "o1KMh",
-                      "name": "nt4",
-                      "fill": "#FFFFFF",
-                      "content": "04",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
+                  "type": "text",
+                  "id": "qyDlO",
+                  "name": "b6at",
+                  "fill": "#2E7D32",
+                  "content": "📅 2008年起",
+                  "fontFamily": "Inter",
+                  "fontSize": 44,
+                  "fontWeight": "700"
                 },
                 {
                   "type": "text",
-                  "id": "LFOyW",
-                  "name": "st4",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  CNBC / Reuters",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "tTFah",
-              "name": "hl4",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "油价跌破$100 道指大涨200点\nTrump停战信号提振市场",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "XxWv9",
-              "name": "sb4",
-              "fill": "#ECFDF5",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "rU3Ym",
-                  "name": "sbt4",
-                  "fill": "$green",
+                  "id": "WP2wf",
+                  "name": "b6ad",
+                  "fill": "#444444",
                   "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "Trump暗示伊朗战争可能在数周内结束，全球市场应声反弹。WTI原油收于$100.12/桶（跌1.24%），布伦特原油$101.16/桶（跌2.7%）。道琼斯指数4月首日大涨200点，投资者押注中东冲突即将结束。",
+                  "width": "fill_container",
+                  "content": "清明节被列为国家法定假日，放假1天（后调为3天小长假）",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 24,
+                  "fontSize": 44,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "JD1sb",
-              "name": "dv4",
+              "id": "Kbbx3",
+              "name": "b6b",
               "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "8w5ji",
-              "name": "fh4",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "OZDTU",
-              "name": "fa4",
+              "fill": "#F1F8E9",
+              "cornerRadius": 16,
               "layout": "vertical",
-              "gap": 4,
+              "gap": 12,
+              "padding": 32,
               "children": [
                 {
                   "type": "text",
-                  "id": "pOgXs",
-                  "name": "fa4t",
-                  "fill": "$green",
-                  "content": "油价走势",
+                  "id": "c7huP",
+                  "name": "b6bt",
+                  "fill": "#2E7D32",
+                  "content": "🌐 2006年",
                   "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
+                  "fontSize": 44,
+                  "fontWeight": "700"
                 },
                 {
                   "type": "text",
-                  "id": "UxmJm",
-                  "name": "fa4b",
-                  "fill": "$body",
+                  "id": "x9ZGK",
+                  "name": "b6bd",
+                  "fill": "#444444",
                   "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "布伦特原油从峰值$126回落至$101，但仍比战前$70高出44%。3月原油录得历史最大单月涨幅。IEA 32国已释放4亿桶战略石油储备",
-                  "lineHeight": 1.45,
+                  "width": "fill_container",
+                  "content": "清明节入选第一批国家级非物质文化遗产名录",
+                  "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 24,
+                  "fontSize": 44,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "yGGTe",
-              "name": "fb4",
+              "id": "hoC1d",
+              "name": "b6c",
+              "width": "fill_container",
+              "fill": "#E8F5E9",
+              "cornerRadius": 16,
               "layout": "vertical",
-              "gap": 4,
+              "gap": 12,
+              "padding": 32,
               "children": [
                 {
                   "type": "text",
-                  "id": "kWaf6",
-                  "name": "fb4t",
-                  "fill": "$green",
-                  "content": "市场反应",
+                  "id": "dX7Ph",
+                  "name": "b6ct",
+                  "fill": "#2E7D32",
+                  "content": "💐 新风尚",
                   "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
+                  "fontSize": 44,
+                  "fontWeight": "700"
                 },
                 {
                   "type": "text",
-                  "id": "Hkmh8",
-                  "name": "fb4b",
-                  "fill": "$body",
+                  "id": "laraW",
+                  "name": "b6cd",
+                  "fill": "#444444",
                   "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "道指+200点开启4月。但分析师警告：霍尔木兹海峡仍未开放，停火尚无时间表，市场反弹可能只是\"希望交易\"而非基本面改善",
-                  "lineHeight": 1.45,
+                  "width": "fill_container",
+                  "content": "鲜花祭扫、网络祭祀、生态安葬逐渐取代烧纸钱等传统方式",
+                  "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 24,
+                  "fontSize": 44,
                   "fontWeight": "normal"
                 }
               ]
-            },
-            {
-              "type": "frame",
-              "id": "B6rc1",
-              "name": "dv4b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "ARbX0",
-              "name": "ih4",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "EFwne",
-              "name": "ib4",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "油价从$126回落到$100是市场对\"战争即将结束\"的定价。但真正的风险在于：如果Trump的停战承诺再次落空，油价可能报复性反弹至$130+。当前市场是在交易预期，而非现实。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
             }
           ]
         }
@@ -1066,232 +1057,110 @@
     },
     {
       "type": "frame",
-      "id": "B7Zlm",
-      "x": 4200,
-      "y": 1260,
-      "name": "S5-Birthright",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
+      "id": "WDXJg",
+      "x": 7680,
+      "y": 0,
+      "name": "QM-结尾",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#F7FBF0",
+      "layout": "none",
       "children": [
         {
           "type": "frame",
-          "id": "6CzJn",
-          "name": "im5",
+          "id": "E2TYz",
+          "x": 0,
+          "y": 0,
+          "name": "bg7",
+          "opacity": 0.2,
+          "metadata": {
+            "type": "unsplash",
+            "username": "aaronburden",
+            "link": "https://unsplash.com/@aaronburden",
+            "author": "Aaron Burden"
+          },
           "clip": true,
-          "width": 720,
-          "height": "fill_container",
+          "width": 1080,
+          "height": 1920,
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775095551323.png",
+            "url": "https://images.unsplash.com/photo-1760489969562-0293860f0b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3Nzh8&ixlib=rb-4.1.0&q=80&w=1080",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "s4ZrD",
-          "name": "co5",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
+          "id": "SmAk5",
+          "x": 0,
+          "y": 0,
+          "name": "ov7",
+          "width": 1080,
+          "height": 1920,
           "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
+          "gap": 48,
+          "padding": [
+            120,
+            80
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "g03Y1",
-              "name": "mr5",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "FLugB",
-                  "name": "nb5",
-                  "fill": "$blue",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ORxyg",
-                      "name": "nt5",
-                      "fill": "#FFFFFF",
-                      "content": "05",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "vPxeA",
-                  "name": "st5",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  NPR / 美国最高法院",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
+              "type": "text",
+              "id": "dvIjq",
+              "name": "emoji7",
+              "content": "🌿",
+              "fontFamily": "Inter",
+              "fontSize": 120,
+              "fontWeight": "normal"
             },
             {
               "type": "text",
-              "id": "doJCM",
-              "name": "hl5",
-              "fill": "$dark",
+              "id": "Rkvel",
+              "name": "t7",
+              "fill": "#1B5E20",
               "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "美最高法院审理出生公民权\nTrump行政令或被推翻",
-              "lineHeight": 1.15,
+              "width": 900,
+              "content": "慎终追远\n民德归厚",
+              "lineHeight": 1.2,
+              "textAlign": "center",
               "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
+              "fontSize": 120,
+              "fontWeight": "900"
             },
             {
               "type": "frame",
-              "id": "GDG43",
-              "name": "sb5",
-              "fill": "$tag",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "6ETBt",
-                  "name": "sbt5",
-                  "fill": "$blue",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "美国最高法院多数大法官对Trump政府取消出生公民权的行政令表示质疑，倾向于维护宪法第14修正案——在美国领土出生即自动获得公民身份的权利。这是Trump移民政策面临的最大法律挑战。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "WfJix",
-              "name": "dv5",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
+              "id": "29n7h",
+              "name": "div7",
+              "width": 120,
+              "height": 6,
+              "fill": "#4CAF50",
+              "cornerRadius": 3
             },
             {
               "type": "text",
-              "id": "Eea2k",
-              "name": "fh5",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "zwSAC",
-              "name": "fa5",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Szldl",
-                  "name": "fa5t",
-                  "fill": "$blue",
-                  "content": "宪法争议",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "1wEAN",
-                  "name": "fa5b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "宪法第14修正案（1868年）明确规定：\"所有在美国出生或归化的人，均为美国公民。\" Trump行政令试图限制非法移民子女的出生公民权，被多个联邦法院叫停",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "wStQU",
-              "name": "fb5",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "P8XHk",
-                  "name": "fb5t",
-                  "fill": "$blue",
-                  "content": "法院态度",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "gTF0f",
-                  "name": "fb5b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "多数大法官在口头辩论中对政府立场表示怀疑。如果裁定行政令违宪，将是Trump任期内最重大的司法挫败之一，影响数百万移民家庭",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ln3Nb",
-              "name": "dv5b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "Gh7kh",
-              "name": "ih5",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "gwcMD",
-              "name": "ib5",
-              "fill": "$body",
+              "id": "3Y4D1",
+              "name": "sub7",
+              "fill": "#558B2F",
               "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "出生公民权是美国宪法最基本的权利之一，自1868年以来从未被推翻。此案的结果将定义行政权力与宪法权利的边界，对美国移民政策和数百万家庭产生深远影响。",
-              "lineHeight": 1.45,
+              "width": 800,
+              "content": "清明不只是一个节日\n更是中华民族对生命的敬畏\n对先人的感恩\n对春天的热爱",
+              "lineHeight": 1.6,
+              "textAlign": "center",
               "fontFamily": "Inter",
-              "fontSize": 24,
+              "fontSize": 52,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "WsF1U",
+              "name": "foot7",
+              "fill": "#8BC34A",
+              "content": "点赞关注 · 了解更多传统文化",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 40,
               "fontWeight": "normal"
             }
           ]
