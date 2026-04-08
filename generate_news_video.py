@@ -123,7 +123,7 @@ async def main():
         subtitle_style=SubtitleStyle(font_size=28, outline_width=2),
         narration_segments=SEGMENTS,
         word_timings=tts_result.word_timings,
-        enable_pan=True,
+        enable_pan=False,
     )
 
     print(f"[4/4] 完成!")
