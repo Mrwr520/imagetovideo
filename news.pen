@@ -3,21 +3,21 @@
   "children": [
     {
       "type": "frame",
-      "id": "oMGhz",
+      "id": "EwpCZ",
       "x": 0,
-      "y": 0,
-      "name": "Cover",
+      "y": 2700,
+      "name": "封面B-科技",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg",
+      "fill": "#FFFFFF",
       "children": [
         {
           "type": "frame",
-          "id": "qPi3X",
-          "name": "lc",
+          "id": "YL2uA",
+          "name": "lc2",
           "width": 1060,
           "height": "fill_container",
-          "fill": "$bg",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 28,
           "padding": [
@@ -28,16 +28,16 @@
           "children": [
             {
               "type": "frame",
-              "id": "zpE7D",
-              "name": "tr",
+              "id": "C0sEj",
+              "name": "tr2",
               "gap": 12,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "4XNQE",
-                  "name": "tb",
-                  "fill": "$red",
+                  "id": "gVCiC",
+                  "name": "tb2",
+                  "fill": "#7C3AED",
                   "cornerRadius": 100,
                   "padding": [
                     8,
@@ -46,10 +46,10 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "SC17F",
-                      "name": "tt",
+                      "id": "T1NbX",
+                      "name": "tt2",
                       "fill": "#FFFFFF",
-                      "content": "BREAKING NEWS",
+                      "content": "DEV NEWS",
                       "fontFamily": "Inter",
                       "fontSize": 28,
                       "fontWeight": "700",
@@ -59,10 +59,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "6eOEy",
-                  "name": "dt",
-                  "fill": "$muted",
-                  "content": "2026年4月2日",
+                  "id": "dJemN",
+                  "name": "dt2",
+                  "fill": "#6B7280",
+                  "content": "2026年4月3日",
                   "fontFamily": "Inter",
                   "fontSize": 28,
                   "fontWeight": "500"
@@ -71,12 +71,12 @@
             },
             {
               "type": "text",
-              "id": "3i0hJ",
-              "name": "ct",
-              "fill": "$dark",
+              "id": "DbBme",
+              "name": "ct2",
+              "fill": "#111827",
               "textGrowth": "fixed-width",
               "width": 900,
-              "content": "全球重大事件\n每日热点速递",
+              "content": "代码圈重大资讯\n开发者必读",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 100,
@@ -84,12 +84,12 @@
             },
             {
               "type": "text",
-              "id": "riGjb",
-              "name": "cs",
-              "fill": "$muted",
+              "id": "iekMY",
+              "name": "cs2",
+              "fill": "#6B7280",
               "textGrowth": "fixed-width",
               "width": 900,
-              "content": "Trump伊朗讲话 · SpaceX万亿IPO · 印尼7.4级强震 · 油价跌破$100 · 出生公民权",
+              "content": "Anthropic源码泄露 · ClawCode 7.2万星 · Oracle AI裁员 · 90%开发者用AI · LiteLLM供应链攻击",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 32,
@@ -97,26 +97,26 @@
             },
             {
               "type": "frame",
-              "id": "1GYVC",
-              "name": "ab",
+              "id": "63tpN",
+              "name": "ab2",
               "width": 100,
               "height": 6,
-              "fill": "$blue",
+              "fill": "#7C3AED",
               "cornerRadius": 3
             }
           ]
         },
         {
           "type": "frame",
-          "id": "vR5De",
-          "name": "rc",
+          "id": "EcC3Q",
+          "name": "rc2",
           "clip": true,
           "width": 860,
           "height": "fill_container",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775095316550.png",
+            "url": "./images/generated-1775187807898.png",
             "mode": "fill"
           }
         }
@@ -124,51 +124,51 @@
     },
     {
       "type": "frame",
-      "id": "MZGNG",
+      "id": "xT5ZD",
       "x": 2100,
-      "y": 0,
-      "name": "S1-Trump Iran",
+      "y": 2700,
+      "name": "B1-Anthropic泄露",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg",
+      "fill": "#FFFFFF",
       "children": [
         {
           "type": "frame",
-          "id": "pmZf9",
-          "name": "im",
+          "id": "pfu9g",
+          "name": "im6",
           "clip": true,
           "width": 720,
           "height": "fill_container",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775095361915.png",
+            "url": "./images/generated-1775187859439.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "6Iukq",
-          "name": "co",
+          "id": "orfvA",
+          "name": "co6",
           "width": 1200,
           "height": "fill_container",
-          "fill": "$bg",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 12,
           "padding": 48,
           "children": [
             {
               "type": "frame",
-              "id": "6nnQj",
-              "name": "mr",
+              "id": "i8cob",
+              "name": "mr6",
               "gap": 12,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "sLd3b",
-                  "name": "nb",
-                  "fill": "$red",
+                  "id": "N7T8E",
+                  "name": "nb6",
+                  "fill": "#DC2626",
                   "cornerRadius": 4,
                   "padding": [
                     6,
@@ -177,8 +177,8 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "0DhSi",
-                      "name": "nt",
+                      "id": "whUA7",
+                      "name": "nt6",
                       "fill": "#FFFFFF",
                       "content": "01",
                       "fontFamily": "Inter",
@@ -189,10 +189,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "QzETO",
-                  "name": "st",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  NPR / CNBC / Politico",
+                  "id": "Tp7Bc",
+                  "name": "st6",
+                  "fill": "#6B7280",
+                  "content": "2026.04.01  |  TechCrunch / Ars Technica",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "500"
@@ -201,22 +201,22 @@
             },
             {
               "type": "text",
-              "id": "7w3yx",
-              "name": "hl",
-              "fill": "$dark",
+              "id": "daQ9K",
+              "name": "hl6",
+              "fill": "#111827",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "Trump黄金时段全国讲话：\n\"伊朗战争核心目标即将完成\"",
+              "content": "Anthropic意外泄露Claude Code源码\n8000+GitHub副本被紧急下架",
               "lineHeight": 1.15,
               "fontFamily": "Inter",
-              "fontSize": 48,
+              "fontSize": 46,
               "fontWeight": "700"
             },
             {
               "type": "frame",
-              "id": "5jWNG",
-              "name": "sb",
-              "fill": "$tag",
+              "id": "Wh8gK",
+              "name": "sb6",
+              "fill": "#EFF6FF",
               "cornerRadius": 8,
               "layout": "vertical",
               "padding": [
@@ -226,12 +226,12 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "mifyD",
-                  "name": "sbt",
-                  "fill": "$blue",
+                  "id": "muj1d",
+                  "name": "sbt6",
+                  "fill": "#2563EB",
                   "textGrowth": "fixed-width",
                   "width": 1072,
-                  "content": "Trump在白宫发表上任以来首次黄金时段全国讲话，宣称伊朗战争\"即将结束\"。但同时强调：霍尔木兹海峡不重新开放就不会停火。\"我来了，我看见了，我征服了\"——引用凯撒名言定调。",
+                  "content": "Anthropic因部署错误将Claude Code源码（2000+文件、51.2万行代码）意外公开。安全研究员3月31日发现后，代码已被fork超50,000次。Anthropic紧急发出8000+版权下架请求。泄露揭示内部代号和名为KAIROS的后台智能体。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -241,17 +241,17 @@
             },
             {
               "type": "frame",
-              "id": "8T6kS",
-              "name": "dv",
+              "id": "CUOYG",
+              "name": "dv6",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "N11jo",
-              "name": "fh",
-              "fill": "$blue",
+              "id": "TqxVV",
+              "name": "fh6",
+              "fill": "#2563EB",
               "content": "📊 关键事实与数据",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -259,29 +259,29 @@
             },
             {
               "type": "frame",
-              "id": "8rNkz",
-              "name": "fa",
+              "id": "Pyi5q",
+              "name": "fa6",
               "layout": "vertical",
               "gap": 4,
               "children": [
                 {
                   "type": "text",
-                  "id": "SSmij",
-                  "name": "fat",
-                  "fill": "$red",
-                  "content": "战争进展",
+                  "id": "bNijt",
+                  "name": "fa6t",
+                  "fill": "#DC2626",
+                  "content": "泄露规模",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "8mI1H",
-                  "name": "fab",
-                  "fill": "$body",
+                  "id": "mFpiV",
+                  "name": "fa6b",
+                  "fill": "#374151",
                   "textGrowth": "fixed-width",
                   "width": 1104,
-                  "content": "美军已打击超7,000个目标。Trump称战争可在\"数周内\"结束，但以色列在讲话期间仍在轰炸德黑兰。副总统万斯通过中间人向伊朗传递停火条件",
+                  "content": "2,000+文件、512,000行代码被放到公开服务器。GitHub上被fork 50,000+次后才被发现。Anthropic已发出8,000+DMCA下架请求",
                   "lineHeight": 1.45,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -291,49 +291,17 @@
             },
             {
               "type": "frame",
-              "id": "0dqzd",
-              "name": "fb",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "TEcl3",
-                  "name": "fbt",
-                  "fill": "$red",
-                  "content": "核心表态",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "uS1YR",
-                  "name": "fbb",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "\"霍尔木兹海峡必须重新开放，否则我们将把伊朗炸回石器时代。\" Trump同时暗示美国可能退出NATO，要求其他国家自行保护海峡通行",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "EazVc",
-              "name": "dv2",
+              "id": "Q8D1C",
+              "name": "dv6b",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "mt8vg",
-              "name": "ih",
-              "fill": "$green",
+              "id": "M7iUm",
+              "name": "ih6",
+              "fill": "#059669",
               "content": "💡 深度洞察",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -341,12 +309,12 @@
             },
             {
               "type": "text",
-              "id": "QuuzV",
-              "name": "ib",
-              "fill": "$body",
+              "id": "J8E6k",
+              "name": "ib6",
+              "fill": "#374151",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "这是一场\"宣布胜利但战争未结束\"的讲话。Trump的民调因战争持续下滑，急需向国内展示成果。但伊朗否认任何谈判，海峡仍然关闭，油价仍在$100以上。言辞与现实的巨大落差，才是真正的新闻。",
+              "content": "一家以\"AI安全\"为核心理念的公司，连自己的源码都保不住——这是对整个AI行业安全实践的警示。KAIROS后台智能体的曝光更引发了对AI自主行为的担忧。",
               "lineHeight": 1.45,
               "fontFamily": "Inter",
               "fontSize": 24,
@@ -358,51 +326,51 @@
     },
     {
       "type": "frame",
-      "id": "hAKcl",
+      "id": "UZ8Qt",
       "x": 4200,
-      "y": 0,
-      "name": "S2-SpaceX IPO",
+      "y": 2700,
+      "name": "B2-ClawCode",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg",
+      "fill": "#FFFFFF",
       "children": [
         {
           "type": "frame",
-          "id": "balvD",
-          "name": "im2",
+          "id": "FHOiA",
+          "name": "im7",
           "clip": true,
           "width": 720,
           "height": "fill_container",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775095413731.png",
+            "url": "./images/generated-1775187897703.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "opaKb",
-          "name": "co2",
+          "id": "HefK1",
+          "name": "co7",
           "width": 1200,
           "height": "fill_container",
-          "fill": "$bg",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 12,
           "padding": 48,
           "children": [
             {
               "type": "frame",
-              "id": "v93w1",
-              "name": "mr2",
+              "id": "hcOkY",
+              "name": "mr7",
               "gap": 12,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "fhRlC",
-                  "name": "nb2",
-                  "fill": "$purple",
+                  "id": "tocKv",
+                  "name": "nb7",
+                  "fill": "#059669",
                   "cornerRadius": 4,
                   "padding": [
                     6,
@@ -411,8 +379,8 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "ZlUca",
-                      "name": "nt2",
+                      "id": "P7tLY",
+                      "name": "nt7",
                       "fill": "#FFFFFF",
                       "content": "02",
                       "fontFamily": "Inter",
@@ -423,10 +391,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "8Qeop",
-                  "name": "st2",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  TechCrunch / CNBC / Bloomberg",
+                  "id": "n0SWO",
+                  "name": "st7",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  24-7PressRelease",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "500"
@@ -435,495 +403,21 @@
             },
             {
               "type": "text",
-              "id": "eTm6F",
-              "name": "hl2",
-              "fill": "$dark",
+              "id": "HjrIG",
+              "name": "hl7",
+              "fill": "#111827",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "SpaceX秘密提交IPO申请\n估值$1.75万亿创历史纪录",
+              "content": "Claw Code开源AI编程框架发布\n首日斩获72,000 GitHub Stars",
               "lineHeight": 1.15,
               "fontFamily": "Inter",
-              "fontSize": 48,
+              "fontSize": 46,
               "fontWeight": "700"
             },
             {
               "type": "frame",
-              "id": "KMlXl",
-              "name": "sb2",
-              "fill": "#F5F3FF",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "A2gmN",
-                  "name": "sbt2",
-                  "fill": "$purple",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "马斯克旗下SpaceX已向SEC秘密提交S-1注册文件，目标估值$1.75万亿，计划融资$750亿以上。若成功，将超越2019年沙特阿美成为史上最大IPO。此前SpaceX已完成与xAI的合并。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "cau8c",
-              "name": "dv2",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "idk30",
-              "name": "fh2",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "r3JiW",
-              "name": "fa2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "BmcPw",
-                  "name": "fa2t",
-                  "fill": "$purple",
-                  "content": "估值对比",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "9eY0j",
-                  "name": "fa2b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "$1.75万亿估值仅次于NVIDIA、Apple、Alphabet、Microsoft和Amazon。2022年SpaceX估值仅$900亿，4年增长近20倍。Deepwater预计实际融资可能超$800亿",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "W7hUs",
-              "name": "fb2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Ha72x",
-                  "name": "fb2t",
-                  "fill": "$purple",
-                  "content": "业务版图",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "vWKvZ",
-                  "name": "fb2b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "Starlink卫星互联网（全球用户超1亿）+ 火箭发射（全球市场份额超60%）+ Starship深空探索 + 合并后的xAI人工智能业务。四大业务线构成太空+AI超级平台",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "0o3Xk",
-              "name": "dv2b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "TMI32",
-              "name": "ih2",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "t5jDR",
-              "name": "ib2",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "SpaceX IPO是2026年资本市场最大事件。马斯克同时掌控Tesla、SpaceX、xAI三家万亿级公司，加上在Trump政府的影响力，其个人权力集中度已达到前所未有的水平。这不仅是一次IPO，更是科技寡头时代的标志性事件。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "aJZHw",
-      "x": 0,
-      "y": 1260,
-      "name": "S3-Indonesia Quake",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "k6UCd",
-          "name": "im3",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1775095465184.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "i9MaI",
-          "name": "co3",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
-          "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
-          "children": [
-            {
-              "type": "frame",
-              "id": "xiwpG",
-              "name": "mr3",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "qarFm",
-                  "name": "nb3",
-                  "fill": "$amber",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "YPlb2",
-                      "name": "nt3",
-                      "fill": "#FFFFFF",
-                      "content": "03",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "edCat",
-                  "name": "st3",
-                  "fill": "$muted",
-                  "content": "2026.04.02  |  USGS / AP / Al Jazeera",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "DSVLQ",
-              "name": "hl3",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "印尼7.4级强震引发海啸\n建筑受损 多国发布预警",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "HE3Bg",
-              "name": "sb3",
-              "fill": "#FFFBEB",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "LXaim",
-                  "name": "sbt3",
-                  "fill": "$amber",
-                  "textGrowth": "fixed-width",
-                  "width": 1072,
-                  "content": "印尼东部北马鲁古海域发生7.4级强震，震中位于特尔纳特岛附近。地震引发最高30厘米海啸波，部分建筑受损。美国太平洋海啸预警中心对太平洋沿岸1000公里范围发布海啸预警。",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "fGDms",
-              "name": "dv3",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "WIQhE",
-              "name": "fh3",
-              "fill": "$blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "HOPtT",
-              "name": "fa3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "um4Qu",
-                  "name": "fa3t",
-                  "fill": "$amber",
-                  "content": "地震参数",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "KckgT",
-                  "name": "fa3b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "震级7.4（USGS），震源深度约10公里，属浅源强震。震中位于北马鲁古海（Molucca Sea），距特尔纳特岛约100公里。海啸波高达30厘米，暂无重大伤亡报告",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "LVnFN",
-              "name": "fb3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "o4h0N",
-                  "name": "fb3t",
-                  "fill": "$amber",
-                  "content": "影响范围",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "qBPiG",
-                  "name": "fb3b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "东南亚多国收到海啸预警。印尼、菲律宾、马来西亚沿海居民紧急疏散。特尔纳特岛部分建筑出现裂缝和倒塌，救援力量已部署",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "aXiF6",
-              "name": "dv3b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "3FkTa",
-              "name": "ih3",
-              "fill": "$green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 26,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "qNkHr",
-              "name": "ib3",
-              "fill": "$body",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "印尼位于环太平洋火山地震带，是全球地震最频繁的国家之一。此次7.4级地震虽未造成大规模伤亡，但浅源特征和海啸风险提醒：该区域的灾害预警和应急响应能力仍是全球防灾减灾的关键课题。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 24,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "1G8PH",
-      "x": 2100,
-      "y": 1260,
-      "name": "S4-Oil Markets",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg",
-      "children": [
-        {
-          "type": "frame",
-          "id": "ccoYC",
-          "name": "im4",
-          "metadata": {
-            "type": "unsplash",
-            "username": "nimisha_mekala",
-            "link": "https://unsplash.com/@nimisha_mekala",
-            "author": "Nimisha Mekala"
-          },
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "https://images.unsplash.com/photo-1640451859877-1374a1155215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwOTU1MDZ8&ixlib=rb-4.1.0&q=80&w=1080",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "lupq5",
-          "name": "co4",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg",
-          "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
-          "children": [
-            {
-              "type": "frame",
-              "id": "NjvlF",
-              "name": "mr4",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "BgC4J",
-                  "name": "nb4",
-                  "fill": "$green",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "o1KMh",
-                      "name": "nt4",
-                      "fill": "#FFFFFF",
-                      "content": "04",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "LFOyW",
-                  "name": "st4",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  CNBC / Reuters",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "tTFah",
-              "name": "hl4",
-              "fill": "$dark",
-              "textGrowth": "fixed-width",
-              "width": 1104,
-              "content": "油价跌破$100 道指大涨200点\nTrump停战信号提振市场",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "XxWv9",
-              "name": "sb4",
+              "id": "aWnPx",
+              "name": "sb7",
               "fill": "#ECFDF5",
               "cornerRadius": 8,
               "layout": "vertical",
@@ -934,12 +428,12 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "rU3Ym",
-                  "name": "sbt4",
-                  "fill": "$green",
+                  "id": "LX7i5",
+                  "name": "sbt7",
+                  "fill": "#059669",
                   "textGrowth": "fixed-width",
                   "width": 1072,
-                  "content": "Trump暗示伊朗战争可能在数周内结束，全球市场应声反弹。WTI原油收于$100.12/桶（跌1.24%），布伦特原油$101.16/桶（跌2.7%）。道琼斯指数4月首日大涨200点，投资者押注中东冲突即将结束。",
+                  "content": "基于Python和Rust构建的开源AI编程智能体框架Claw Code正式发布，作为Claude Code和Codex的开源替代品。首日即获72,000 GitHub Stars，成为独立AI辅助开发的基础设施级项目。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -949,17 +443,17 @@
             },
             {
               "type": "frame",
-              "id": "JD1sb",
-              "name": "dv4",
+              "id": "hLLeN",
+              "name": "dv7",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "8w5ji",
-              "name": "fh4",
-              "fill": "$blue",
+              "id": "YH8hO",
+              "name": "fh7",
+              "fill": "#2563EB",
               "content": "📊 关键事实与数据",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -967,29 +461,29 @@
             },
             {
               "type": "frame",
-              "id": "OZDTU",
-              "name": "fa4",
+              "id": "vJJVZ",
+              "name": "fa7",
               "layout": "vertical",
               "gap": 4,
               "children": [
                 {
                   "type": "text",
-                  "id": "pOgXs",
-                  "name": "fa4t",
-                  "fill": "$green",
-                  "content": "油价走势",
+                  "id": "UnKZC",
+                  "name": "fa7t",
+                  "fill": "#059669",
+                  "content": "技术栈",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "UxmJm",
-                  "name": "fa4b",
-                  "fill": "$body",
+                  "id": "OoWGz",
+                  "name": "fa7b",
+                  "fill": "#374151",
                   "textGrowth": "fixed-width",
                   "width": 1104,
-                  "content": "布伦特原油从峰值$126回落至$101，但仍比战前$70高出44%。3月原油录得历史最大单月涨幅。IEA 32国已释放4亿桶战略石油储备",
+                  "content": "Python + Rust 混合架构。定位为Claude Code和OpenAI Codex的完全开源替代。首日72K Stars创开源项目增长纪录",
                   "lineHeight": 1.45,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -999,49 +493,17 @@
             },
             {
               "type": "frame",
-              "id": "yGGTe",
-              "name": "fb4",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "kWaf6",
-                  "name": "fb4t",
-                  "fill": "$green",
-                  "content": "市场反应",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "Hkmh8",
-                  "name": "fb4b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "道指+200点开启4月。但分析师警告：霍尔木兹海峡仍未开放，停火尚无时间表，市场反弹可能只是\"希望交易\"而非基本面改善",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "B6rc1",
-              "name": "dv4b",
+              "id": "k8Ruz",
+              "name": "dv7b",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "ARbX0",
-              "name": "ih4",
-              "fill": "$green",
+              "id": "tDI0k",
+              "name": "ih7",
+              "fill": "#059669",
               "content": "💡 深度洞察",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -1049,12 +511,12 @@
             },
             {
               "type": "text",
-              "id": "EFwne",
-              "name": "ib4",
-              "fill": "$body",
+              "id": "JqDAJ",
+              "name": "ib7",
+              "fill": "#374151",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "油价从$126回落到$100是市场对\"战争即将结束\"的定价。但真正的风险在于：如果Trump的停战承诺再次落空，油价可能报复性反弹至$130+。当前市场是在交易预期，而非现实。",
+              "content": "在Anthropic源码泄露的同一周，一个完全开源的替代品横空出世。开发者社区用脚投票：AI编程工具的未来属于开源。72K Stars的爆发式增长说明市场对闭源AI工具的不满已到临界点。",
               "lineHeight": 1.45,
               "fontFamily": "Inter",
               "fontSize": 24,
@@ -1066,51 +528,51 @@
     },
     {
       "type": "frame",
-      "id": "B7Zlm",
-      "x": 4200,
-      "y": 1260,
-      "name": "S5-Birthright",
+      "id": "eAgj7",
+      "x": 0,
+      "y": 3960,
+      "name": "B3-Oracle裁员",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg",
+      "fill": "#FFFFFF",
       "children": [
         {
           "type": "frame",
-          "id": "6CzJn",
-          "name": "im5",
+          "id": "5st70",
+          "name": "im8",
           "clip": true,
           "width": 720,
           "height": "fill_container",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775095551323.png",
+            "url": "./images/generated-1775187934731.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "s4ZrD",
-          "name": "co5",
+          "id": "205jz",
+          "name": "co8",
           "width": 1200,
           "height": "fill_container",
-          "fill": "$bg",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 12,
           "padding": 48,
           "children": [
             {
               "type": "frame",
-              "id": "g03Y1",
-              "name": "mr5",
+              "id": "nkbqS",
+              "name": "mr8",
               "gap": 12,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "FLugB",
-                  "name": "nb5",
-                  "fill": "$blue",
+                  "id": "fEayh",
+                  "name": "nb8",
+                  "fill": "#D97706",
                   "cornerRadius": 4,
                   "padding": [
                     6,
@@ -1119,8 +581,412 @@
                   "children": [
                     {
                       "type": "text",
-                      "id": "ORxyg",
-                      "name": "nt5",
+                      "id": "q4L3i",
+                      "name": "nt8",
+                      "fill": "#FFFFFF",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "tyCn9",
+                  "name": "st8",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  IBTimes UK",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "DuYub",
+              "name": "hl8",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "Ellison宣布AI已接管Oracle编码\n大规模裁员同步进行",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Y1ZP4",
+              "name": "sb8",
+              "fill": "#FFFBEB",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rpe8a",
+                  "name": "sbt8",
+                  "fill": "#D97706",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "Oracle创始人Larry Ellison公开表示AI已取代人工编码：工程师只需描述期望结果，AI系统自动生成底层逻辑和实现。这使Oracle能以\"显著更小的团队\"更快交付复杂产品，同步进行大规模裁员。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D3i8X",
+              "name": "dv8",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "FILBb",
+              "name": "fh8",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "PITgP",
+              "name": "fa8",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "veua9",
+                  "name": "fa8t",
+                  "fill": "#D97706",
+                  "content": "行业趋势",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "kjbUx",
+                  "name": "fa8b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "开发者角色从\"写代码\"转向\"描述需求+审核AI输出\"。Google内部培训员工适应AI工具，管理多个AI Agent成为新技能。Pendo CEO称开发者大部分工作已变成审核AI生成的代码",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3LIup",
+              "name": "dv8b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "RjWYm",
+              "name": "ih8",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "uiv1t",
+              "name": "ib8",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "Ellison的表态是科技巨头CEO首次公开承认\"AI已取代程序员写代码\"。这不是未来预测，而是正在发生的现实。开发者的核心竞争力正从编码能力转向判断力和架构设计能力。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "UpwBu",
+      "x": 2100,
+      "y": 3960,
+      "name": "B4-JetBrains报告",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "x1t8Z",
+          "name": "im9",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775187973685.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "WSfQc",
+          "name": "co9",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "j8e8a",
+              "name": "mr9",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9Ptup",
+                  "name": "nb9",
+                  "fill": "#2563EB",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gWH1K",
+                      "name": "nt9",
+                      "fill": "#FFFFFF",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "CJoFk",
+                  "name": "st9",
+                  "fill": "#6B7280",
+                  "content": "2026.04.03  |  JetBrains Research",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "5Mc3v",
+              "name": "hl9",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "JetBrains报告：90%开发者\n已在工作中使用AI编码工具",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "TUf2V",
+              "name": "sb9",
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aVEAt",
+                  "name": "sbt9",
+                  "fill": "#2563EB",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "JetBrains 2026年1月调研显示，90%的开发者在工作中定期使用至少一种AI编码工具。AI工程师连续两年成为LinkedIn增长最快职位。世界经济论坛报告AI已全球创造130万个新岗位。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lLDhl",
+              "name": "dv9",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "BVWE1",
+              "name": "fh9",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "2KCD7",
+              "name": "fa9",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SE0KW",
+                  "name": "fa9t",
+                  "fill": "#2563EB",
+                  "content": "核心数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Aqw5L",
+                  "name": "fa9b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "90%开发者使用AI工具（2026年1月）。TypeScript超越Python和JavaScript成为GitHub最常用语言。80%新仓库仅使用6种语言：Python/JS/TS/Java/C++/C#",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ypljZ",
+              "name": "dv9b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "V9VVx",
+              "name": "ih9",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "TIJKk",
+              "name": "ib9",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "90%的采用率意味着AI编码已从\"尝鲜\"变成\"标配\"。不用AI的10%开发者正在成为少数派。问题不再是\"要不要用AI\"，而是\"怎么用好AI\"——判断力比编码能力更重要。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mjNLp",
+      "x": 4200,
+      "y": 3960,
+      "name": "B5-LiteLLM攻击",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "1EEiQ",
+          "name": "im10",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775188020426.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "trDGL",
+          "name": "co10",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "K17N8",
+              "name": "mr10",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ejl6a",
+                  "name": "nb10",
+                  "fill": "#DC2626",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "90DvN",
+                      "name": "nt10",
                       "fill": "#FFFFFF",
                       "content": "05",
                       "fontFamily": "Inter",
@@ -1131,10 +997,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "vPxeA",
-                  "name": "st5",
-                  "fill": "$muted",
-                  "content": "2026.04.01  |  NPR / 美国最高法院",
+                  "id": "jptgB",
+                  "name": "st10",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  SE Daily / Security",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "500"
@@ -1143,22 +1009,22 @@
             },
             {
               "type": "text",
-              "id": "doJCM",
-              "name": "hl5",
-              "fill": "$dark",
+              "id": "kMUA5",
+              "name": "hl10",
+              "fill": "#111827",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "美最高法院审理出生公民权\nTrump行政令或被推翻",
+              "content": "LiteLLM遭供应链攻击\n数千开发者API密钥泄露",
               "lineHeight": 1.15,
               "fontFamily": "Inter",
-              "fontSize": 48,
+              "fontSize": 46,
               "fontWeight": "700"
             },
             {
               "type": "frame",
-              "id": "GDG43",
-              "name": "sb5",
-              "fill": "$tag",
+              "id": "uq3ht",
+              "name": "sb10",
+              "fill": "#FEF2F2",
               "cornerRadius": 8,
               "layout": "vertical",
               "padding": [
@@ -1168,12 +1034,12 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "6ETBt",
-                  "name": "sbt5",
-                  "fill": "$blue",
+                  "id": "14Pzz",
+                  "name": "sbt10",
+                  "fill": "#DC2626",
                   "textGrowth": "fixed-width",
                   "width": 1072,
-                  "content": "美国最高法院多数大法官对Trump政府取消出生公民权的行政令表示质疑，倾向于维护宪法第14修正案——在美国领土出生即自动获得公民身份的权利。这是Trump移民政策面临的最大法律挑战。",
+                  "content": "流行的LLM代理库LiteLLM遭受供应链攻击，恶意代码被注入到官方发布包中，导致数千个开发者环境的API凭证（OpenAI/Anthropic/Azure等）被窃取。这是2026年最严重的AI基础设施安全事件之一。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -1183,17 +1049,17 @@
             },
             {
               "type": "frame",
-              "id": "WfJix",
-              "name": "dv5",
+              "id": "87dl8",
+              "name": "dv10",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "Eea2k",
-              "name": "fh5",
-              "fill": "$blue",
+              "id": "pTetD",
+              "name": "fh10",
+              "fill": "#2563EB",
               "content": "📊 关键事实与数据",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -1201,29 +1067,29 @@
             },
             {
               "type": "frame",
-              "id": "zwSAC",
-              "name": "fa5",
+              "id": "mdnd7",
+              "name": "fa10",
               "layout": "vertical",
               "gap": 4,
               "children": [
                 {
                   "type": "text",
-                  "id": "Szldl",
-                  "name": "fa5t",
-                  "fill": "$blue",
-                  "content": "宪法争议",
+                  "id": "31rse",
+                  "name": "fa10t",
+                  "fill": "#DC2626",
+                  "content": "攻击方式",
                   "fontFamily": "Inter",
                   "fontSize": 24,
                   "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "1wEAN",
-                  "name": "fa5b",
-                  "fill": "$body",
+                  "id": "QFaii",
+                  "name": "fa10b",
+                  "fill": "#374151",
                   "textGrowth": "fixed-width",
                   "width": 1104,
-                  "content": "宪法第14修正案（1868年）明确规定：\"所有在美国出生或归化的人，均为美国公民。\" Trump行政令试图限制非法移民子女的出生公民权，被多个联邦法院叫停",
+                  "content": "恶意代码注入LiteLLM官方PyPI包。攻击者窃取开发者环境中的API密钥（OpenAI、Anthropic、Azure等）。Black Duck报告：98%商业代码库包含开源组件，平均引用1,100+个",
                   "lineHeight": 1.45,
                   "fontFamily": "Inter",
                   "fontSize": 24,
@@ -1233,49 +1099,17 @@
             },
             {
               "type": "frame",
-              "id": "wStQU",
-              "name": "fb5",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "P8XHk",
-                  "name": "fb5t",
-                  "fill": "$blue",
-                  "content": "法院态度",
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "gTF0f",
-                  "name": "fb5b",
-                  "fill": "$body",
-                  "textGrowth": "fixed-width",
-                  "width": 1104,
-                  "content": "多数大法官在口头辩论中对政府立场表示怀疑。如果裁定行政令违宪，将是Trump任期内最重大的司法挫败之一，影响数百万移民家庭",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ln3Nb",
-              "name": "dv5b",
+              "id": "jKv2t",
+              "name": "dv10b",
               "width": "fill_container",
               "height": 1,
-              "fill": "$bdr"
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "Gh7kh",
-              "name": "ih5",
-              "fill": "$green",
+              "id": "YzoEY",
+              "name": "ih10",
+              "fill": "#059669",
               "content": "💡 深度洞察",
               "fontFamily": "Inter",
               "fontSize": 26,
@@ -1283,12 +1117,12 @@
             },
             {
               "type": "text",
-              "id": "gwcMD",
-              "name": "ib5",
-              "fill": "$body",
+              "id": "ehlD7",
+              "name": "ib10",
+              "fill": "#374151",
               "textGrowth": "fixed-width",
               "width": 1104,
-              "content": "出生公民权是美国宪法最基本的权利之一，自1868年以来从未被推翻。此案的结果将定义行政权力与宪法权利的边界，对美国移民政策和数百万家庭产生深远影响。",
+              "content": "AI工具链的供应链安全正成为新的攻击面。当98%的代码库依赖开源组件时，一个被污染的包就能影响整个生态。\"Vibe coding\"（AI生成代码不审核直接用）正在放大这一风险。",
               "lineHeight": 1.45,
               "fontFamily": "Inter",
               "fontSize": 24,
@@ -1300,177 +1134,29 @@
     }
   ],
   "variables": {
-    "accent-cyan": {
+    "orange": {
       "type": "color",
-      "value": "#00D4FF"
-    },
-    "accent-green": {
-      "type": "color",
-      "value": "#00E676"
-    },
-    "accent-orange": {
-      "type": "color",
-      "value": "#FF6B35"
-    },
-    "accent-purple": {
-      "type": "color",
-      "value": "#B388FF"
-    },
-    "accent-yellow": {
-      "type": "color",
-      "value": "#FFD740"
-    },
-    "bg-card": {
-      "type": "color",
-      "value": "#141825"
-    },
-    "bg-dark": {
-      "type": "color",
-      "value": "#0B0E17"
-    },
-    "border-subtle": {
-      "type": "color",
-      "value": "#1E293B"
-    },
-    "text-muted": {
-      "type": "color",
-      "value": "#64748B"
-    },
-    "text-primary": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "text-secondary": {
-      "type": "color",
-      "value": "#94A3B8"
-    },
-    "accent-amber": {
-      "type": "color",
-      "value": "#D97706"
-    },
-    "accent-blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "accent-blue-light": {
-      "type": "color",
-      "value": "#EFF6FF"
-    },
-    "accent-emerald": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "accent-red": {
-      "type": "color",
-      "value": "#DC2626"
-    },
-    "bg-card-light": {
-      "type": "color",
-      "value": "#F8FAFC"
-    },
-    "bg-light": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "border-light": {
-      "type": "color",
-      "value": "#E2E8F0"
-    },
-    "text-body": {
-      "type": "color",
-      "value": "#334155"
-    },
-    "text-dark": {
-      "type": "color",
-      "value": "#0F172A"
-    },
-    "text-muted-light": {
-      "type": "color",
-      "value": "#94A3B8"
-    },
-    "lt-accent-amber": {
-      "type": "color",
-      "value": "#D97706"
-    },
-    "lt-accent-blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "lt-accent-green": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "lt-accent-red": {
-      "type": "color",
-      "value": "#DC2626"
-    },
-    "lt-bg-white": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "lt-border": {
-      "type": "color",
-      "value": "#E5E7EB"
-    },
-    "lt-tag-bg": {
-      "type": "color",
-      "value": "#EFF6FF"
-    },
-    "lt-text-body": {
-      "type": "color",
-      "value": "#374151"
-    },
-    "lt-text-dark": {
-      "type": "color",
-      "value": "#111827"
-    },
-    "lt-text-muted": {
-      "type": "color",
-      "value": "#6B7280"
+      "value": "#F97316"
     },
     "amber": {
       "type": "color",
-      "value": "#D97706"
-    },
-    "bdr": {
-      "type": "color",
-      "value": "#E5E7EB"
-    },
-    "bg": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "body": {
-      "type": "color",
-      "value": "#374151"
-    },
-    "dark": {
-      "type": "color",
-      "value": "#111827"
-    },
-    "green": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "muted": {
-      "type": "color",
-      "value": "#6B7280"
-    },
-    "purple": {
-      "type": "color",
-      "value": "#7C3AED"
+      "value": "#F59E0B"
     },
     "red": {
       "type": "color",
-      "value": "#DC2626"
+      "value": "#F43F5E"
     },
-    "tag": {
+    "blue": {
       "type": "color",
-      "value": "#EFF6FF"
+      "value": "#4F7DFF"
+    },
+    "cyan": {
+      "type": "color",
+      "value": "#22D3EE"
+    },
+    "mint": {
+      "type": "color",
+      "value": "#14B8A6"
     }
   }
 }

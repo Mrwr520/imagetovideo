@@ -56,7 +56,7 @@ access_token = "_Uqq7q0O0Hg0VVb2Z6PuCHBniCi8A1Hw"
 resource_id = "seed-tts-2.0"
 cluster = "volcano_tts"
 default_voice = "zh_female_shuangkuaisisi_uranus_bigtts"
-default_speed_ratio = 1.4
+default_speed_ratio = 1.2
 
 [tts.cosyvoice]
 api_base = "http://localhost:9880"
