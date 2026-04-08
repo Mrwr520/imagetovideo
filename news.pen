@@ -20,11 +20,533 @@
           "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "fdlLu",
+              "name": "t2a",
+              "fill": "#4CAF50",
+              "content": "春秋时期（约前655年）",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "Eheb6",
+              "name": "t2b",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "晋国公子重耳流亡19年，随臣介子推割股奉君。重耳复国后封赏群臣，唯独忘了介子推。介子推携母隐居绵山，重耳放火烧山逼其出山，介子推抱树而死。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "tanqZ",
+              "name": "t2c",
+              "fill": "#689F38",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "重耳悲痛，下令这一天禁火寒食\n这就是「寒食节」的由来\n后演变为清明节",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "T2Rpp",
+      "x": 2560,
+      "y": 0,
+      "name": "QM-唐宋",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#F0F7E6",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "R4hls",
+          "name": "h3",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ySbRs",
+              "name": "h3n",
+              "fill": "#4CAF50",
+              "content": "02",
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "kSeC6",
+              "name": "h3line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "RQCYy",
+              "name": "h3t",
+              "fill": "#1B5E20",
+              "content": "定型",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "800"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XvCDU",
+          "name": "card3a",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "29qtp",
+              "name": "c3at",
+              "fill": "#4CAF50",
+              "content": "🏛️ 唐代（公元732年）",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "iIUQ4",
+              "name": "c3ad",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "唐玄宗下诏将清明扫墓编入礼典，正式成为国家认定的祭祀节日。寒食与清明合二为一。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E9Tqv",
+          "name": "card3b",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "6NR32",
+              "name": "c3bt",
+              "fill": "#4CAF50",
+              "content": "🎨 宋代",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "AbFA3",
+              "name": "c3bd",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "清明节达到鼎盛。张择端《清明上河图》描绘了北宋汴京清明时节的繁华景象。扫墓、踏青、插柳、放风筝成为固定习俗。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OG0jH",
+          "name": "img3",
+          "metadata": {
+            "type": "unsplash",
+            "username": "clevelandart",
+            "link": "https://unsplash.com/@clevelandart",
+            "author": "The Cleveland Museum of Art"
+          },
+          "clip": true,
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1713107101613-a50a39c88c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM2NTN8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          },
+          "cornerRadius": 20
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "n0XHf",
+      "x": 3840,
+      "y": 0,
+      "name": "QM-习俗",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "qTy2M",
+          "name": "h4",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zfAiT",
+              "name": "h4n",
+              "fill": "#4CAF50",
+              "content": "03",
+              "fontFamily": "Inter",
+              "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "mCnTg",
+              "name": "h4line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "2cV9b",
+              "name": "h4t",
+              "fill": "#1B5E20",
+              "content": "习俗",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "800"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "L1YBL",
+          "name": "grid4",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fmEtx",
+              "name": "r1",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FkcyS",
+                  "name": "c1",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#E8F5E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3l4sE",
+                      "name": "c1i",
+                      "content": "🪦",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5obqH",
+                      "name": "c1t",
+                      "fill": "#1B5E20",
+                      "content": "扫墓祭祖",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TEHuO",
+                      "name": "c1d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "携带酒食果品到墓地，铲除杂草，培上新土，焚香祭拜",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sIQvz",
+                  "name": "c2",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F1F8E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HSmDg",
+                      "name": "c2i",
+                      "content": "🌸",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CIb3e",
+                      "name": "c2t",
+                      "fill": "#1B5E20",
+                      "content": "踏青郊游",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ELsK2",
+                      "name": "c2d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "又叫春游，万物复苏之际，到郊外感受春天气息",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MJeAM",
+              "name": "r2",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0J9Lz",
+                  "name": "c3",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F9FBE7",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wej35",
+                      "name": "c3i",
+                      "content": "🪁",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ALll6",
+                      "name": "c3t",
+                      "fill": "#1B5E20",
+                      "content": "放风筝",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "byxKo",
+                      "name": "c3d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "古人认为放风筝可以放走晦气，剪断线让风筝飞走",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k8oRd",
+                  "name": "c4",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#E8F5E9",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    36,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2pw18",
+                      "name": "c4i",
+                      "content": "🌿",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A2n76",
+                      "name": "c4t",
+                      "fill": "#1B5E20",
+                      "content": "插柳戴柳",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "d9MAf",
+                      "name": "c4d",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "民谚：清明不戴柳，红颜成皓首。柳枝辟邪祈福",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 38,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "G0jXE",
+      "x": 5120,
+      "y": 0,
+      "name": "QM-诗词",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#1B5E20",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rnIwp",
+          "x": 0,
+          "y": 0,
+          "name": "bg5",
+          "opacity": 0.15,
+          "metadata": {
+            "type": "unsplash",
+            "username": "plain_pix",
+            "link": "https://unsplash.com/@plain_pix",
+            "author": "olivia kim"
+          },
+          "clip": true,
+          "width": 1080,
+          "height": 1920,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1761623418974-c1288110d084?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3MTR8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "6uDtM",
+          "x": 0,
+          "y": 0,
+          "name": "ov5",
+          "width": 1080,
+          "height": 1920,
+          "layout": "vertical",
+          "gap": 50,
           "padding": [
             100,
             80
           ],
           "justifyContent": "center",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
@@ -33,6 +555,16 @@
               "gap": 12,
               "alignItems": "center",
               "children": [
+                {
+                  "type": "text",
+                  "id": "t2SU9",
+                  "name": "h5n",
+                  "fill": "#81C784",
+                  "content": "04",
+                  "fontFamily": "Inter",
+                  "fontSize": 100,
+                  "fontWeight": "900"
+                },
                 {
                   "type": "frame",
                   "id": "gVCiC",
@@ -64,11 +596,117 @@
                   "fill": "#6B7280",
                   "content": "2026年4月3日",
                   "fontFamily": "Inter",
-                  "fontSize": 28,
-                  "fontWeight": "500"
+                  "fontSize": 64,
+                  "fontWeight": "800"
                 }
               ]
             },
+            {
+              "type": "frame",
+              "id": "Sh3UF",
+              "name": "poem1",
+              "width": "fill_container",
+              "fill": "#FFFFFF11",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VwzCt",
+                  "name": "p1t",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "清明时节雨纷纷\n路上行人欲断魂\n借问酒家何处有\n牧童遥指杏花村",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 56,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "DJwDG",
+                  "name": "p1a",
+                  "fill": "#A5D6A7",
+                  "content": "— 杜牧《清明》· 唐代",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I8oto",
+              "name": "poem2",
+              "width": "fill_container",
+              "fill": "#FFFFFF11",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2nxck",
+                  "name": "p2t",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "帝里重清明\n人心自愁思\n车声上路合\n柳色东城翠",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 56,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "y7PkG",
+                  "name": "p2a",
+                  "fill": "#A5D6A7",
+                  "content": "— 孟浩然《清明即事》· 唐代",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ev9a1",
+      "x": 6400,
+      "y": 0,
+      "name": "QM-现代",
+      "width": 1080,
+      "height": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        80,
+        70
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "BzCl9",
+          "name": "h6",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
             {
               "type": "text",
               "id": "DbBme",
@@ -80,6 +718,24 @@
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 100,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "TcCuK",
+              "name": "h6line",
+              "width": 60,
+              "height": 5,
+              "fill": "#4CAF50"
+            },
+            {
+              "type": "text",
+              "id": "nP5Mx",
+              "name": "h6t",
+              "fill": "#1B5E20",
+              "content": "现代",
+              "fontFamily": "Inter",
+              "fontSize": 64,
               "fontWeight": "800"
             },
             {
@@ -436,7 +1092,7 @@
                   "content": "基于Python和Rust构建的开源AI编程智能体框架Claw Code正式发布，作为Claude Code和Codex的开源替代品。首日即获72,000 GitHub Stars，成为独立AI辅助开发的基础设施级项目。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 24,
+                  "fontSize": 44,
                   "fontWeight": "normal"
                 }
               ]
@@ -464,7 +1120,8 @@
               "id": "vJJVZ",
               "name": "fa7",
               "layout": "vertical",
-              "gap": 4,
+              "gap": 12,
+              "padding": 32,
               "children": [
                 {
                   "type": "text",
@@ -473,8 +1130,8 @@
                   "fill": "#059669",
                   "content": "技术栈",
                   "fontFamily": "Inter",
-                  "fontSize": 24,
-                  "fontWeight": "600"
+                  "fontSize": 44,
+                  "fontWeight": "700"
                 },
                 {
                   "type": "text",
@@ -486,7 +1143,7 @@
                   "content": "Python + Rust 混合架构。定位为Claude Code和OpenAI Codex的完全开源替代。首日72K Stars创开源项目增长纪录",
                   "lineHeight": 1.45,
                   "fontFamily": "Inter",
-                  "fontSize": 24,
+                  "fontSize": 44,
                   "fontWeight": "normal"
                 }
               ]
@@ -541,8 +1198,8 @@
           "id": "5st70",
           "name": "im8",
           "clip": true,
-          "width": 720,
-          "height": "fill_container",
+          "width": 1080,
+          "height": 1920,
           "fill": {
             "type": "image",
             "enabled": true,
@@ -558,8 +1215,13 @@
           "height": "fill_container",
           "fill": "#FFFFFF",
           "layout": "vertical",
-          "gap": 12,
-          "padding": 48,
+          "gap": 48,
+          "padding": [
+            120,
+            80
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
@@ -1125,7 +1787,18 @@
               "content": "AI工具链的供应链安全正成为新的攻击面。当98%的代码库依赖开源组件时，一个被污染的包就能影响整个生态。\"Vibe coding\"（AI生成代码不审核直接用）正在放大这一风险。",
               "lineHeight": 1.45,
               "fontFamily": "Inter",
-              "fontSize": 24,
+              "fontSize": 52,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "WsF1U",
+              "name": "foot7",
+              "fill": "#8BC34A",
+              "content": "点赞关注 · 了解更多传统文化",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 40,
               "fontWeight": "normal"
             }
           ]
