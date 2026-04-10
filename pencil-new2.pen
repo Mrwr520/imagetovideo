@@ -6,7 +6,7 @@
       "id": "TW5H2",
       "x": 0,
       "y": 0,
-      "name": "封面-今日国际快讯",
+      "name": "封面-今日国际快讯 4月10日",
       "width": 1920,
       "height": 1080,
       "fill": "#F5F5F5FF",
@@ -32,7 +32,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775722977537.png",
+            "url": "./images/generated-1775788805344.png",
             "mode": "fill"
           }
         },
@@ -113,7 +113,7 @@
           "id": "7sHsX",
           "name": "subtitleTxt",
           "fill": "#7C3AEDFF",
-          "content": "GLOBAL NEWS BRIEFING",
+          "content": "APRIL 10, 2026 · GLOBAL NEWS",
           "fontFamily": "Geist Mono",
           "fontSize": 42,
           "fontWeight": "700",
@@ -179,7 +179,7 @@
       "id": "X3x98",
       "x": 2100,
       "y": 0,
-      "name": "新闻1-美伊停火",
+      "name": "新闻1-美伊停火协议",
       "width": 1920,
       "height": 1080,
       "fill": "#F5F5F5FF",
@@ -194,7 +194,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775723118846.png",
+            "url": "./images/generated-1775788627529.png",
             "mode": "fill"
           }
         },
@@ -248,7 +248,7 @@
                   "id": "zsExA",
                   "name": "timeTxt",
                   "fill": "#7C3AEDFF",
-                  "content": "2026.04.08 22:00 UTC",
+                  "content": "2026.04.09 14:00 UTC",
                   "fontFamily": "Geist Mono",
                   "fontSize": 24,
                   "fontWeight": "normal"
@@ -275,7 +275,7 @@
               "fill": "#7C3AEDFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "霍尔木兹海峡将临时重新开放",
+              "content": "霍尔木兹海峡重新开放",
               "fontFamily": "Geist Mono",
               "fontSize": 30,
               "fontWeight": "700"
@@ -295,7 +295,7 @@
               "fill": "#3F3F46FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "经过40天的军事冲突，美国与伊朗在巴基斯坦斡旋下达成两周临时停火。伊朗同意临时重新开放霍尔木兹海峡，恢复全球能源运输通道。谈判将于4月10日在伊斯兰堡正式启动。",
+              "content": "特朗普撤回对伊朗的毁灭性打击威胁，美伊双方达成为期两周的停火协议。伊朗同意重新开放霍尔木兹海峡，恢复全球能源运输通道。这标志着持续五周的军事冲突暂时降温。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 22,
@@ -356,7 +356,7 @@
                   "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "停火极其脆弱。以色列明确表示黎巴嫩不在停火范围内，伊朗已警告若违约将退出协议。两周窗口期更像是双方的战略喘息，而非真正的和平转折。关注4月10日伊斯兰堡谈判走向。",
+                  "content": "停火极其脆弱。以色列明确表示停火不适用于黎巴嫩，伊朗已警告若违约将退出协议。两周窗口期更像是双方的战略喘息，而非真正的和平转折。油价和股市的反应说明市场对持久和平并不乐观。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 20,
@@ -369,7 +369,7 @@
               "id": "miaoA",
               "name": "srcBar",
               "fill": "#A1A1AAFF",
-              "content": "来源：Guardian · NPR · Al Jazeera · CFR | 2026.04.08",
+              "content": "来源：AP News · Reuters | 2026.04.09",
               "fontFamily": "Geist Mono",
               "fontSize": 14,
               "fontWeight": "normal"
@@ -383,7 +383,7 @@
       "id": "zeHTH",
       "x": 4200,
       "y": 0,
-      "name": "新闻2-以色列轰炸黎巴嫩",
+      "name": "新闻2-以色列空袭贝鲁特",
       "width": 1920,
       "height": 1080,
       "fill": "#F5F5F5FF",
@@ -438,7 +438,7 @@
                   "id": "IEIBX",
                   "name": "timeT3",
                   "fill": "#7C3AEDFF",
-                  "content": "2026.04.08 停火后数小时",
+                  "content": "2026.04.09 停火后数小时",
                   "fontFamily": "Geist Mono",
                   "fontSize": 20,
                   "fontWeight": "normal"
@@ -452,7 +452,7 @@
               "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "以色列对黎巴嫩发动\n最大规模空袭",
+              "content": "以色列空袭贝鲁特\n致182人死亡",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 56,
@@ -465,7 +465,7 @@
               "fill": "#DC2626FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "\"永恒黑暗行动\" · 254人遇难 · 837人受伤",
+              "content": "停火不适用黎巴嫩 · 最致命一天",
               "fontFamily": "Geist Mono",
               "fontSize": 26,
               "fontWeight": "600"
@@ -485,7 +485,7 @@
               "fill": "#3F3F46FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "美伊停火协议墨迹未干，以色列即出动50架战机向黎巴嫩投下约160枚炸弹，覆盖贝鲁特、南部及贝卡谷地。以方称黎巴嫩不在停火范围内，行动针对真主党指挥中心。伊朗警告若局势持续恶化将退出停火。",
+              "content": "美伊停火协议宣布数小时后，以色列对黎巴嫩中部贝鲁特发动无预警空袭，打击繁忙商业和住宅区。黎巴嫩称至少182人死亡，数百人受伤，成为最新以色列-真主党战争中最致命的一天。以色列称停火不适用于黎巴嫩。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 22,
@@ -546,7 +546,7 @@
                   "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "停火协议存在致命漏洞——未覆盖黎巴嫩战场。以色列借此空间对真主党发动\"清场式\"打击，实质上将停火变成了单方面的战略优势窗口。伊朗的退出威胁若兑现，中东局势将急剧恶化。",
+                  "content": "停火协议存在致命漏洞——未覆盖黎巴嫩战场。以色列借此空间对真主党发动打击，实质上将停火变成了单方面的战略优势窗口。这次袭击严重考验美伊停火协议和美以同盟关系。伊朗若退出停火，中东局势将急剧恶化。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 20,
@@ -559,7 +559,7 @@
               "id": "anQjz",
               "name": "srcT3",
               "fill": "#A1A1AAFF",
-              "content": "来源：Guardian · Al Jazeera · NBC · 以色列国防军声明 | 2026.04.08",
+              "content": "来源：AP News · NBC News | 2026.04.09",
               "fontFamily": "Geist Mono",
               "fontSize": 14,
               "fontWeight": "normal"
@@ -576,7 +576,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775723270956.png",
+            "url": "./images/generated-1775788654224.png",
             "mode": "fill"
           }
         }
@@ -587,7 +587,7 @@
       "id": "fwfsa",
       "x": 0,
       "y": 1280,
-      "name": "新闻3-油价暴跌",
+      "name": "新闻3-股市暴涨",
       "clip": true,
       "width": 1920,
       "height": 1080,
@@ -603,7 +603,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775723665699.png",
+            "url": "./images/generated-1775788682584.png",
             "mode": "fill"
           }
         },
@@ -671,7 +671,7 @@
               "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "原油单日暴跌16%\n创2020年以来最大跌幅",
+              "content": "美股单日暴涨1300点\n创年内最佳表现",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 52,
@@ -684,7 +684,7 @@
               "fill": "#DC2626FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "WTI跌至$94.41 · Brent跌至$94.75",
+              "content": "道指涨1300点 · 标普涨0.62% · 纳指涨0.83%",
               "fontFamily": "Geist Mono",
               "fontSize": 26,
               "fontWeight": "600"
@@ -704,7 +704,7 @@
               "fill": "#3F3F46FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "美伊停火消息传出后，原油价格瞬间跳水。WTI原油暴跌16.4%收于94.41美元，Brent原油跌13.3%至94.75美元，均创下2020年新冠疫情以来最大单日跌幅。此前因霍尔木兹海峡封锁，油价一度飙升至118美元高位。",
+              "content": "美伊停火消息推动美股大幅反弹。道琼斯工业平均指数暴涨1300点，涨幅达到2.7%，创2025年4月以来最佳单日表现。标普500指数上涨0.62%至6824.66点，纳斯达克综合指数攀升0.83%至22822.42点。道指年内转正，上涨0.25%。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 22,
@@ -765,7 +765,7 @@
                   "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "油价暴跌是停火的直接反映，但回调空间有限。海峡仅\"临时\"开放，两周后若谈判破裂油价将迅速反弹。当前价格已消化了最乐观预期，建议关注4月10日谈判结果再做判断。",
+                  "content": "市场反弹是对停火的短期情绪释放，但持续性存疑。油价下跌利好能源成本，但停火仅两周，地缘风险并未消除。以色列对黎巴嫩的空袭已经给市场敲响警钟。建议谨慎乐观，关注4月10日谈判进展。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 20,
@@ -778,7 +778,7 @@
               "id": "Y2qUQ",
               "name": "srcT4",
               "fill": "#A1A1AAFF",
-              "content": "来源：CNBC · Reuters · Axios · Guardian | 2026.04.08",
+              "content": "来源：CNBC · Reuters | 2026.04.08",
               "fontFamily": "Geist Mono",
               "fontSize": 14,
               "fontWeight": "normal"
@@ -792,7 +792,7 @@
       "id": "81Mxe",
       "x": 2100,
       "y": 1280,
-      "name": "新闻4-美股暴涨",
+      "name": "新闻4-沙特石油遇袭",
       "clip": true,
       "width": 1920,
       "height": 1080,
@@ -848,7 +848,7 @@
                   "id": "euLAH",
                   "name": "timeT5",
                   "fill": "#7C3AEDFF",
-                  "content": "2026.04.08 收盘",
+                  "content": "2026.04.10 最新",
                   "fontFamily": "Geist Mono",
                   "fontSize": 20,
                   "fontWeight": "normal"
@@ -862,7 +862,7 @@
               "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "道指飙升1325点\n创一年最大单日涨幅",
+              "content": "伊朗攻击沙特石油设施\n产量大幅削减",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 52,
@@ -875,7 +875,7 @@
               "fill": "#16A34AFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "道指+2.85% · 标普+2.51% · 纳指+2.80%",
+              "content": "管道和生产设施遭袭 · 油价波动",
               "fontFamily": "Geist Mono",
               "fontSize": 24,
               "fontWeight": "600"
@@ -895,7 +895,7 @@
               "fill": "#3F3F46FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "停火消息引爆华尔街。道指收涨1325点至47910点，标普500涨至6782点，纳指涨至22635点。油价暴跌推动航空、运输板块大涨，能源股则遭重挫。市场释放了1.5万亿美元的\"解套行情\"。",
+              "content": "尽管美伊达成停火协议，伊朗仍对沙特关键石油管道和生产设施发动攻击，导致沙特石油产量大幅削减。这是伊朗首次在停火期间对海湾国家发动明显攻击。油价在停火后下跌，但因沙特遇袭再次波动。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 22,
@@ -956,7 +956,7 @@
                   "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "这是典型的\"利空出尽\"反弹，而非趋势反转。停火仅两周，若谈判失败市场将二次探底。美联储\"higher-for-longer\"立场未变，通胀压力仍在。短线可参与反弹，但中线需保持谨慎。",
+                  "content": "伊朗攻击沙特表明停火协议极其脆弱，地区紧张局势并未真正缓解。沙特作为美国盟友遭袭，可能迫使美国重新评估停火策略。油价短期将继续波动，建议密切关注霍尔木兹海峡通行情况和4月10日谈判。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 20,
@@ -969,7 +969,7 @@
               "id": "CakU9",
               "name": "srcT5",
               "fill": "#A1A1AAFF",
-              "content": "来源：Reuters · CNBC · moomoo · AP | 2026.04.08",
+              "content": "来源：CNBC · Reuters | 2026.04.10",
               "fontFamily": "Geist Mono",
               "fontSize": 14,
               "fontWeight": "normal"
@@ -986,7 +986,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775723719920.png",
+            "url": "./images/generated-1775788724849.png",
             "mode": "fill"
           }
         }
@@ -997,7 +997,7 @@
       "id": "DE3pt",
       "x": 4200,
       "y": 1280,
-      "name": "新闻5-NATO军费",
+      "name": "新闻5-美国征兵新政",
       "clip": true,
       "width": 1920,
       "height": 1080,
@@ -1013,7 +1013,7 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1775723754786.png",
+            "url": "./images/generated-1775788775103.png",
             "mode": "fill"
           }
         },
@@ -1067,7 +1067,7 @@
                   "id": "1BXKM",
                   "name": "timeT6",
                   "fill": "#7C3AEDFF",
-                  "content": "2026.04.09",
+                  "content": "2026.04.10 最新",
                   "fontFamily": "Geist Mono",
                   "fontSize": 20,
                   "fontWeight": "normal"
@@ -1081,7 +1081,7 @@
               "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "欧洲军费飙升\nNATO设定GDP 3.5%新目标",
+              "content": "美国计划12月前实施\n自动征兵登记制度",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 50,
@@ -1094,7 +1094,7 @@
               "fill": "#2563EBFF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "2024年总支出$1.47万亿 · 目标再加1.5%安全投资",
+              "content": "五角大楼文件曝光 · 新政策即将实施",
               "fontFamily": "Geist Mono",
               "fontSize": 22,
               "fontWeight": "600"
@@ -1114,7 +1114,7 @@
               "fill": "#3F3F46FF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "海牙峰会上，32个NATO成员国中31国承诺将核心军费提升至GDP的3.5%，另加1.5%安全投资，总目标达5%。欧洲盟国2024年军费已超4820亿美元，为冷战以来最高水平。秘书长吕特批评部分盟国\"未通过考验\"。",
+              "content": "五角大楼提交的文件显示，美国计划在2026年12月前实施自动征兵登记制度。新政策将自动将符合条件的公民纳入征兵系统，无需手动注册。这是美国军事动员体系的重大变革，引发公众对征兵制度回归的担忧。",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 22,
@@ -1175,7 +1175,7 @@
                   "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "欧洲正经历冷战后最大规模的军事重整。但\"钱花了，产出没跟上\"是核心矛盾——装备库存反而在缩水。中东冲突加速了这一进程，7月安卡拉峰会将是检验各国承诺的关键节点。",
+                  "content": "自动征兵登记是美国军事战略调整的信号。中东冲突持续，国防部长警告\"更多美军伤亡可能\"，自动登记为快速动员提供基础。虽然不等于强制征兵，但显示五角大楼正为长期冲突做准备。关注国会对此政策的反应。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
                   "fontSize": 20,
@@ -1188,7 +1188,7 @@
               "id": "mnzzd",
               "name": "srcT6",
               "fill": "#A1A1AAFF",
-              "content": "来源：Atlantic Council · McKinsey · Friends of Europe | 2026.04",
+              "content": "来源：CNBC · AP News | 2026.04.10",
               "fontFamily": "Geist Mono",
               "fontSize": 14,
               "fontWeight": "normal"
