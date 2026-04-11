@@ -1,355 +1,377 @@
 {
-  "version": "2.9",
+  "version": "2.10",
   "children": [
     {
       "type": "frame",
-      "id": "QDtx5",
+      "id": "TW5H2",
       "x": 0,
       "y": 0,
-      "name": "Cover",
+      "name": "封面-今日国际快讯 4月10日",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg-w",
+      "fill": "#F5F5F5FF",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        80,
+        120
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
       "children": [
         {
           "type": "frame",
-          "id": "tg8Av",
-          "name": "lc",
-          "width": 1060,
-          "height": "fill_container",
-          "fill": "$bg-w",
+          "id": "qV6Bk",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "bgImg",
+          "opacity": 0.1,
+          "width": 1920,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775788805344.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "EsDCK",
+          "name": "topBar",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "pBsPu",
+              "name": "dateTxt",
+              "fill": "#1A1A1AFF",
+              "content": "2026年4月9日 星期四",
+              "fontFamily": "Geist Mono",
+              "fontSize": 36,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "frame",
+              "id": "f8qZO",
+              "name": "liveBadge",
+              "fill": "#FF0000DD",
+              "cornerRadius": 2,
+              "gap": 8,
+              "padding": [
+                8,
+                20
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "zlmKI",
+                  "name": "liveDot",
+                  "fill": "#FF0000FF",
+                  "width": 12,
+                  "height": 12
+                },
+                {
+                  "type": "text",
+                  "id": "QQQh2",
+                  "name": "liveTxt",
+                  "fill": "#FFFFFFFF",
+                  "content": "LIVE",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "5Tgqd",
+          "name": "spacer1",
+          "width": 10,
+          "height": 80
+        },
+        {
+          "type": "text",
+          "id": "Cl0xM",
+          "name": "titleTxt",
+          "fill": "#0A0A0AFF",
+          "content": "今日国际快讯",
+          "fontFamily": "Inter",
+          "fontSize": 120,
+          "fontWeight": "900",
+          "letterSpacing": 12
+        },
+        {
+          "type": "text",
+          "id": "7sHsX",
+          "name": "subtitleTxt",
+          "fill": "#7C3AEDFF",
+          "content": "APRIL 10, 2026 · GLOBAL NEWS",
+          "fontFamily": "Geist Mono",
+          "fontSize": 42,
+          "fontWeight": "700",
+          "letterSpacing": 12
+        },
+        {
+          "type": "rectangle",
+          "id": "SFdLc",
+          "name": "divider",
+          "fill": "#7C3AEDFF",
+          "width": 200,
+          "height": 4
+        },
+        {
+          "type": "frame",
+          "id": "Vqq7c",
+          "name": "spacer2",
+          "width": 10,
+          "height": 20
+        },
+        {
+          "type": "text",
+          "id": "pI1e7",
+          "name": "descTxt",
+          "fill": "#52525BFF",
+          "content": "五条重磅新闻 · 两分钟讲透 · 条条跟你有关",
+          "fontFamily": "Inter",
+          "fontSize": 36,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "9stDq",
+          "name": "spacer3",
+          "width": 10,
+          "height": 60
+        },
+        {
+          "type": "frame",
+          "id": "f2nTi",
+          "name": "bottomBar",
+          "width": "fill_container",
+          "gap": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sTy8l",
+              "name": "src1",
+              "fill": "#71717AFF",
+              "content": "来源：Reuters · AP · Guardian · CNBC · Al Jazeera",
+              "fontFamily": "Geist Mono",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "X3x98",
+      "x": 2100,
+      "y": 0,
+      "name": "新闻1-美伊停火协议",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#F5F5F5FF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "IB7Xt",
+          "name": "imgSide",
+          "clip": true,
+          "width": 960,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775788627529.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "BXqcd",
+          "name": "contentSide",
+          "width": 960,
+          "height": 1080,
+          "fill": "#F5F5F5FF",
           "layout": "vertical",
-          "gap": 32,
+          "gap": 16,
           "padding": [
-            100,
-            80
+            48,
+            56
           ],
           "justifyContent": "center",
           "children": [
             {
               "type": "frame",
-              "id": "lrgel",
-              "name": "tr",
-              "gap": 12,
+              "id": "ZJBTv",
+              "name": "topMeta",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "nl1Pw",
-                  "name": "tb",
-                  "fill": "$a-red",
-                  "cornerRadius": 100,
+                  "id": "btQKm",
+                  "name": "breakBadge",
+                  "fill": "#FF0000DD",
+                  "cornerRadius": 2,
                   "padding": [
-                    8,
-                    20
+                    6,
+                    16
                   ],
                   "children": [
                     {
                       "type": "text",
-                      "id": "eAX2d",
-                      "name": "tt",
-                      "fill": "#FFFFFF",
+                      "id": "L8hV0",
+                      "name": "breakTxt",
+                      "fill": "#FFFFFFFF",
                       "content": "BREAKING",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
-                      "fontWeight": "700",
-                      "letterSpacing": 2
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 22,
+                      "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "y4Uml",
-                  "name": "dt",
-                  "fill": "$t-muted",
-                  "content": "2026年3月30-31日",
-                  "fontFamily": "Inter",
-                  "fontSize": 28,
-                  "fontWeight": "500"
+                  "id": "zsExA",
+                  "name": "timeTxt",
+                  "fill": "#7C3AEDFF",
+                  "content": "2026.04.09 14:00 UTC",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "6U91v",
-              "name": "ct",
-              "fill": "$t-dark",
+              "id": "oPfHu",
+              "name": "headline",
+              "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "全球国际局势\n重磅新闻速递",
+              "width": "fill_container",
+              "content": "美伊达成两周临时停火",
               "lineHeight": 1.1,
               "fontFamily": "Inter",
-              "fontSize": 100,
-              "fontWeight": "800"
+              "fontSize": 60,
+              "fontWeight": "900"
             },
             {
               "type": "text",
-              "id": "XS85a",
-              "name": "cs",
-              "fill": "$t-muted",
+              "id": "RpKyi",
+              "name": "subhead",
+              "fill": "#7C3AEDFF",
               "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "近24小时权威资讯精选",
-              "lineHeight": 1.4,
+              "width": "fill_container",
+              "content": "霍尔木兹海峡重新开放",
+              "fontFamily": "Geist Mono",
+              "fontSize": 30,
+              "fontWeight": "700"
+            },
+            {
+              "type": "rectangle",
+              "id": "iGrtE",
+              "name": "divLine",
+              "fill": "#7C3AEDFF",
+              "width": 120,
+              "height": 3
+            },
+            {
+              "type": "text",
+              "id": "Mv2Ql",
+              "name": "bodyTxt",
+              "fill": "#3F3F46FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "特朗普撤回对伊朗的毁灭性打击威胁，美伊双方达成为期两周的停火协议。伊朗同意重新开放霍尔木兹海峡，恢复全球能源运输通道。这标志着持续五周的军事冲突暂时降温。",
+              "lineHeight": 1.5,
               "fontFamily": "Inter",
-              "fontSize": 36,
+              "fontSize": 22,
               "fontWeight": "normal"
             },
             {
               "type": "frame",
-              "id": "ZDBSh",
-              "name": "ab",
-              "width": 100,
-              "height": 6,
-              "fill": "$a-blue",
-              "cornerRadius": 3
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "kCPSz",
-          "name": "rc",
-          "clip": true,
-          "width": 860,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1774937631233.png",
-            "mode": "fill"
-          }
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "Q4hkQ",
-      "x": 2100,
-      "y": 0,
-      "name": "S1-Iran",
-      "width": 1920,
-      "height": 1080,
-      "fill": "$bg-w",
-      "children": [
-        {
-          "type": "frame",
-          "id": "oIywd",
-          "name": "im1",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1774937733873.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "pcvcJ",
-          "name": "co1",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg-w",
-          "layout": "vertical",
-          "gap": 14,
-          "padding": 52,
-          "children": [
-            {
-              "type": "frame",
-              "id": "seCnz",
-              "name": "m1",
-              "gap": 12,
-              "alignItems": "center",
+              "id": "LQ3ER",
+              "name": "analysisBg",
+              "width": "fill_container",
+              "fill": "#EDE9FEFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#7C3AED44"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                14,
+                20
+              ],
               "children": [
                 {
                   "type": "frame",
-                  "id": "yj8QL",
-                  "name": "n1",
-                  "fill": "$a-red",
-                  "cornerRadius": 4,
-                  "padding": [
-                    6,
-                    16
-                  ],
+                  "id": "68ArN",
+                  "name": "analysisLabel",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "OcsmG",
-                      "name": "n1t",
-                      "fill": "#FFFFFF",
-                      "content": "01",
+                      "id": "pcXCd",
+                      "name": "anaIcon",
+                      "fill": "#7C3AEDFF",
+                      "content": "⚡",
                       "fontFamily": "Inter",
-                      "fontSize": 28,
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "T0Waa",
+                      "name": "anaTitle",
+                      "fill": "#7C3AEDFF",
+                      "content": "局势研判",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
                       "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "8udas",
-                  "name": "s1t",
-                  "fill": "$t-muted",
-                  "content": "2026.03.30  |  AP / Guardian",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "5PnpN",
-              "name": "h1",
-              "fill": "$t-dark",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "Trump延长伊朗最后通牒\n停火谈判陷入僵局",
-              "lineHeight": 1.15,
-              "fontFamily": "Inter",
-              "fontSize": 54,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "eeNS8",
-              "name": "sb1",
-              "fill": "$tag-bg",
-              "cornerRadius": 8,
-              "layout": "vertical",
-              "padding": [
-                12,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "uZ4ly",
-                  "name": "sb1t",
-                  "fill": "$a-blue",
+                  "id": "t1T3D",
+                  "name": "anaBody",
+                  "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
-                  "width": 1064,
-                  "content": "Trump宣布将伊朗能源设施打击暂停期延长10天至4月6日。美方15点停火方案被伊朗斥为\"极端主义\"，伊朗提出5项反条件含战争赔偿和霍尔木兹海峡主权承认。",
+                  "width": "fill_container",
+                  "content": "停火极其脆弱。以色列明确表示停火不适用于黎巴嫩，伊朗已警告若违约将退出协议。两周窗口期更像是双方的战略喘息，而非真正的和平转折。油价和股市的反应说明市场对持久和平并不乐观。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 26,
+                  "fontSize": 20,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "j9m2e",
-              "name": "d1",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
               "type": "text",
-              "id": "NO52q",
-              "name": "fh1",
-              "fill": "$a-blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "ld9Ip",
-              "name": "fa1",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "ZtVwA",
-                  "name": "fa1t",
-                  "fill": "$a-red",
-                  "content": "军事态势",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "urxJC",
-                  "name": "fa1b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "美军已打击超7,000个目标，击沉120+舰艇，弹道导弹发射减少90%，无人机攻击减少95%。中东驻军超50,000人",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "fc0Rh",
-              "name": "fb1",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "wXiQO",
-                  "name": "fb1t",
-                  "fill": "$a-red",
-                  "content": "外交僵局",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "CLr0y",
-                  "name": "fb1b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "伊朗外交部：\"美国在自说自话。\" 伊朗5项反条件：战争赔偿、霍尔木兹主权承认、解除全部制裁、以色列撤出加沙、美军撤出中东",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "FQOd7",
-              "name": "d1b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "EhL4F",
-              "name": "ih1",
-              "fill": "$a-green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "PCszZ",
-              "name": "ib1",
-              "fill": "$t-body",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "延长最后通牒实质上是双方为谈判争取时间。核心矛盾——霍尔木兹海峡控制权——涉及全球20%石油运输通道，任何一方都无法轻易让步。4月6日截止日将成为下一个关键节点。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 26,
+              "id": "miaoA",
+              "name": "srcBar",
+              "fill": "#A1A1AAFF",
+              "content": "来源：AP News · Reuters | 2026.04.09",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
               "fontWeight": "normal"
             }
           ]
@@ -358,472 +380,407 @@
     },
     {
       "type": "frame",
-      "id": "JG5ra",
+      "id": "zeHTH",
       "x": 4200,
       "y": 0,
-      "name": "S2-Oil",
+      "name": "新闻2-以色列空袭贝鲁特",
       "width": 1920,
       "height": 1080,
-      "fill": "$bg-w",
+      "fill": "#F5F5F5FF",
       "children": [
         {
           "type": "frame",
-          "id": "TjbVa",
-          "name": "im2",
-          "metadata": {
-            "type": "unsplash",
-            "username": "xenisss",
-            "link": "https://unsplash.com/@xenisss",
-            "author": "Ioannis Xenidis"
-          },
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "https://images.unsplash.com/photo-1771171026607-5015643f612d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ5Mzc3NjF8&ixlib=rb-4.1.0&q=80&w=1080",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "Sb85K",
-          "name": "co2",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg-w",
+          "id": "s7XS6",
+          "name": "contentL",
+          "width": 960,
+          "height": 1080,
+          "fill": "#F5F5F5FF",
           "layout": "vertical",
-          "gap": 14,
-          "padding": 52,
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "justifyContent": "center",
           "children": [
             {
               "type": "frame",
-              "id": "FbCeF",
-              "name": "m2",
-              "gap": 12,
+              "id": "GiwkD",
+              "name": "topM3",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "uNhOk",
-                  "name": "n2",
-                  "fill": "$a-amber",
-                  "cornerRadius": 4,
+                  "id": "YQpfc",
+                  "name": "urgBadge",
+                  "fill": "#DC2626FF",
+                  "cornerRadius": 2,
                   "padding": [
-                    6,
-                    16
+                    4,
+                    12
                   ],
                   "children": [
                     {
                       "type": "text",
-                      "id": "qQ3B2",
-                      "name": "n2t",
-                      "fill": "#FFFFFF",
-                      "content": "02",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
+                      "id": "EeeiD",
+                      "name": "urgTxt",
+                      "fill": "#FFFFFFFF",
+                      "content": "URGENT",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
                       "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "sD6o1",
-                  "name": "s2t",
-                  "fill": "$t-muted",
-                  "content": "2026.03.30  |  IEA / Dallas Fed",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "500"
+                  "id": "IEIBX",
+                  "name": "timeT3",
+                  "fill": "#7C3AEDFF",
+                  "content": "2026.04.09 停火后数小时",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "RDfwX",
-              "name": "h2",
-              "fill": "$t-dark",
+              "id": "qPfK9",
+              "name": "headT3",
+              "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "布伦特原油逼近$115\n霍尔木兹海峡危机加剧",
-              "lineHeight": 1.15,
+              "width": "fill_container",
+              "content": "以色列空袭贝鲁特\n致182人死亡",
+              "lineHeight": 1.1,
               "fontFamily": "Inter",
-              "fontSize": 54,
-              "fontWeight": "700"
+              "fontSize": 56,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "phxmy",
+              "name": "subT3",
+              "fill": "#DC2626FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "停火不适用黎巴嫩 · 最致命一天",
+              "fontFamily": "Geist Mono",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "rectangle",
+              "id": "7jNYC",
+              "name": "divT3",
+              "fill": "#7C3AEDFF",
+              "width": 80,
+              "height": 3
+            },
+            {
+              "type": "text",
+              "id": "sKhFP",
+              "name": "bodyT3",
+              "fill": "#3F3F46FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "美伊停火协议宣布数小时后，以色列对黎巴嫩中部贝鲁特发动无预警空袭，打击繁忙商业和住宅区。黎巴嫩称至少182人死亡，数百人受伤，成为最新以色列-真主党战争中最致命的一天。以色列称停火不适用于黎巴嫩。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
-              "id": "IgSJe",
-              "name": "sb2",
-              "fill": "#FFFBEB",
-              "cornerRadius": 8,
+              "id": "I1zpp",
+              "name": "anaBg3",
+              "width": "fill_container",
+              "fill": "#EDE9FEFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#7C3AED44"
+              },
               "layout": "vertical",
+              "gap": 8,
               "padding": [
-                12,
-                16
+                14,
+                20
               ],
               "children": [
                 {
+                  "type": "frame",
+                  "id": "Dt5ew",
+                  "name": "anaLbl3",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Uw3Ug",
+                      "name": "anaIc3",
+                      "fill": "#7C3AEDFF",
+                      "content": "⚡",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jra75",
+                      "name": "anaTt3",
+                      "fill": "#7C3AEDFF",
+                      "content": "局势研判",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "id": "oOkbK",
-                  "name": "sb2t",
-                  "fill": "$a-amber",
+                  "id": "Sg6Pn",
+                  "name": "anaBd3",
+                  "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
-                  "width": 1064,
-                  "content": "IEA定性为\"全球石油市场历史上最大规模供应中断\"。海峡日均石油流量从2,000万桶骤降至涓流，海湾国家被迫减产至少1,000万桶/日。",
+                  "width": "fill_container",
+                  "content": "停火协议存在致命漏洞——未覆盖黎巴嫩战场。以色列借此空间对真主党发动打击，实质上将停火变成了单方面的战略优势窗口。这次袭击严重考验美伊停火协议和美以同盟关系。伊朗若退出停火，中东局势将急剧恶化。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 26,
+                  "fontSize": 20,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "qMuMA",
-              "name": "dv2",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
               "type": "text",
-              "id": "ziggI",
-              "name": "fh2",
-              "fill": "$a-blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "JXBp7",
-              "name": "fa2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "ueJKr",
-                  "name": "fa2t",
-                  "fill": "$a-amber",
-                  "content": "油价走势",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "4Spzx",
-                  "name": "fa2b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "布伦特原油从战前$70飙升至$115，峰值触及$126。战争溢价为1973年石油禁运以来最高。32国IEA成员国宣布释放4亿桶战略石油储备",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "IGByw",
-              "name": "fb2",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "6ML3W",
-                  "name": "fb2t",
-                  "fill": "$a-amber",
-                  "content": "经济冲击",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "thXK7",
-                  "name": "fb2b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "MSCI欧洲股指自开战以来下跌约11%，亚洲指数下跌9%。数百艘油轮滞留海峡两侧。达拉斯联储研究量化了对全球产出的潜在影响",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ZuiBx",
-              "name": "d2b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "bibNR",
-              "name": "ih2",
-              "fill": "$a-green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "ilbQG",
-              "name": "ib2",
-              "fill": "$t-body",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "霍尔木兹海峡承载全球20%石油消费量，其封锁正在重塑全球能源版图。战略石油储备释放只能缓解短期恐慌，无法替代海峡通行能力。若4月6日前无法达成协议，$150油价将不再是假设。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 26,
+              "id": "anQjz",
+              "name": "srcT3",
+              "fill": "#A1A1AAFF",
+              "content": "来源：AP News · NBC News | 2026.04.09",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
               "fontWeight": "normal"
             }
           ]
+        },
+        {
+          "type": "frame",
+          "id": "1I62w",
+          "name": "imgR3",
+          "clip": true,
+          "width": 960,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775788654224.png",
+            "mode": "fill"
+          }
         }
       ]
     },
     {
       "type": "frame",
-      "id": "bcSbj",
+      "id": "fwfsa",
       "x": 0,
-      "y": 1260,
-      "name": "S3-Kuwait",
+      "y": 1280,
+      "name": "新闻3-股市暴涨",
+      "clip": true,
       "width": 1920,
       "height": 1080,
-      "fill": "$bg-w",
+      "fill": "#F5F5F5FF",
       "children": [
         {
           "type": "frame",
-          "id": "nmncw",
-          "name": "im3",
+          "id": "8tK9M",
+          "name": "imgL4",
           "clip": true,
-          "width": 720,
-          "height": "fill_container",
+          "width": 960,
+          "height": 1080,
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1774937809178.png",
+            "url": "./images/generated-1775788682584.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "EL4vS",
-          "name": "co3",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg-w",
+          "id": "24QiU",
+          "name": "ctR4",
+          "width": 960,
+          "height": 1080,
+          "fill": "#F5F5F5FF",
           "layout": "vertical",
-          "gap": 14,
-          "padding": 52,
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "justifyContent": "center",
           "children": [
             {
               "type": "frame",
-              "id": "rAdCO",
-              "name": "m3",
-              "gap": 12,
+              "id": "MoeWa",
+              "name": "topM4",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "Jl4bG",
-                  "name": "n3",
-                  "fill": "$a-purple",
-                  "cornerRadius": 4,
+                  "id": "T7Jlu",
+                  "name": "mkBadge",
+                  "fill": "#DC2626FF",
+                  "cornerRadius": 2,
                   "padding": [
-                    6,
-                    16
+                    4,
+                    12
                   ],
                   "children": [
                     {
                       "type": "text",
-                      "id": "Fz1PQ",
-                      "name": "n3t",
-                      "fill": "#FFFFFF",
-                      "content": "03",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
+                      "id": "mmUYK",
+                      "name": "mkTxt",
+                      "fill": "#FFFFFFFF",
+                      "content": "MARKET",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
                       "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "E5dds",
-                  "name": "s3t",
-                  "fill": "$t-muted",
-                  "content": "2026.03.30  |  KUNA / IBTimes",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "500"
+                  "id": "zzSbX",
+                  "name": "timeT4",
+                  "fill": "#7C3AEDFF",
+                  "content": "2026.04.08",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "Do8Xj",
-              "name": "h3",
-              "fill": "$t-dark",
+              "id": "AoUCB",
+              "name": "headT4",
+              "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "科威特机场遭无人机袭击\n雷达系统严重受损",
-              "lineHeight": 1.15,
+              "width": "fill_container",
+              "content": "美股单日暴涨1300点\n创年内最佳表现",
+              "lineHeight": 1.1,
               "fontFamily": "Inter",
-              "fontSize": 54,
-              "fontWeight": "700"
+              "fontSize": 52,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "NQIcf",
+              "name": "subT4",
+              "fill": "#DC2626FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "道指涨1300点 · 标普涨0.62% · 纳指涨0.83%",
+              "fontFamily": "Geist Mono",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "rectangle",
+              "id": "ld74l",
+              "name": "divT4",
+              "fill": "#7C3AEDFF",
+              "width": 80,
+              "height": 3
+            },
+            {
+              "type": "text",
+              "id": "7umhN",
+              "name": "bodyT4",
+              "fill": "#3F3F46FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "美伊停火消息推动美股大幅反弹。道琼斯工业平均指数暴涨1300点，涨幅达到2.7%，创2025年4月以来最佳单日表现。标普500指数上涨0.62%至6824.66点，纳斯达克综合指数攀升0.83%至22822.42点。道指年内转正，上涨0.25%。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
-              "id": "1dju3",
-              "name": "sb3",
-              "fill": "#F5F3FF",
-              "cornerRadius": 8,
+              "id": "ZaSPo",
+              "name": "anaBg4",
+              "width": "fill_container",
+              "fill": "#EDE9FEFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#7C3AED44"
+              },
               "layout": "vertical",
+              "gap": 8,
               "padding": [
-                12,
-                16
+                14,
+                20
               ],
               "children": [
                 {
+                  "type": "frame",
+                  "id": "eS0k5",
+                  "name": "anaLbl4",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p4ipb",
+                      "name": "anaIc4",
+                      "fill": "#7C3AEDFF",
+                      "content": "⚡",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wwWI6",
+                      "name": "anaTt4",
+                      "fill": "#7C3AEDFF",
+                      "content": "市场研判",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "id": "Ozfmc",
-                  "name": "sb3t",
-                  "fill": "$a-purple",
+                  "id": "0Fb3b",
+                  "name": "anaBd4",
+                  "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
-                  "width": 1064,
-                  "content": "科威特国际机场3月30日再遭多架无人机袭击，雷达系统严重受损。这是自2月28日伊朗战争爆发以来该机场遭受的最新一轮攻击，机场自3月初起持续关闭，为1990年海湾战争以来首次全面停运。",
+                  "width": "fill_container",
+                  "content": "市场反弹是对停火的短期情绪释放，但持续性存疑。油价下跌利好能源成本，但停火仅两周，地缘风险并未消除。以色列对黎巴嫩的空袭已经给市场敲响警钟。建议谨慎乐观，关注4月10日谈判进展。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 26,
+                  "fontSize": 20,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "Bogzo",
-              "name": "dv3",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
               "type": "text",
-              "id": "PxW2d",
-              "name": "fh3",
-              "fill": "$a-blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "dYFM7",
-              "name": "fa3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "YNRlN",
-                  "name": "fa3t",
-                  "fill": "$a-purple",
-                  "content": "袭击详情",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "SJae5",
-                  "name": "fa3b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "多架伊朗关联无人机袭击机场，雷达系统严重受损，无人员伤亡。3月25日燃料储罐遭无人机打击起火，浓烟覆盖全城。碎片在4号航站楼800米处被发现",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "OHEJD",
-              "name": "fb3",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "ZJmhe",
-                  "name": "fb3t",
-                  "fill": "$a-purple",
-                  "content": "区域影响",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "DBOhP",
-                  "name": "fb3b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "科威特、沙特、巴林、阿联酋、伊拉克、黎巴嫩、塞浦路斯等多国机场关闭。海湾地区民航体系全面瘫痪，数千旅客滞留",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "Jfud5",
-              "name": "d3b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "efb1b",
-              "name": "ih3",
-              "fill": "$a-green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "DupxC",
-              "name": "ib3",
-              "fill": "$t-body",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "伊朗的无人机战术正在将战争外溢至整个海湾地区。民用基础设施成为打击目标，意味着冲突已超越传统军事对抗范畴。海湾国家的\"中立\"立场正变得越来越难以维持。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 26,
+              "id": "Y2qUQ",
+              "name": "srcT4",
+              "fill": "#A1A1AAFF",
+              "content": "来源：CNBC · Reuters | 2026.04.08",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
               "fontWeight": "normal"
             }
           ]
@@ -832,466 +789,408 @@
     },
     {
       "type": "frame",
-      "id": "xfHD5",
+      "id": "81Mxe",
       "x": 2100,
-      "y": 1260,
-      "name": "S4-Ukraine",
+      "y": 1280,
+      "name": "新闻4-沙特石油遇袭",
+      "clip": true,
       "width": 1920,
       "height": 1080,
-      "fill": "$bg-w",
+      "fill": "#F5F5F5FF",
       "children": [
         {
           "type": "frame",
-          "id": "2EfUV",
-          "name": "im4",
-          "clip": true,
-          "width": 720,
-          "height": "fill_container",
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "./images/generated-1774937864039.png",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "SKtxA",
-          "name": "co4",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg-w",
+          "id": "ojyeQ",
+          "name": "ctL5",
+          "width": 960,
+          "height": 1080,
+          "fill": "#F5F5F5FF",
           "layout": "vertical",
-          "gap": 14,
-          "padding": 52,
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "justifyContent": "center",
           "children": [
             {
               "type": "frame",
-              "id": "RNzpY",
-              "name": "m4",
-              "gap": 12,
+              "id": "X2ccW",
+              "name": "topM5",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "R4lBR",
-                  "name": "n4",
-                  "fill": "$a-blue",
-                  "cornerRadius": 4,
+                  "id": "giTqy",
+                  "name": "stBadge",
+                  "fill": "#16A34AFF",
+                  "cornerRadius": 2,
                   "padding": [
-                    6,
-                    16
+                    4,
+                    12
                   ],
                   "children": [
                     {
                       "type": "text",
-                      "id": "XypbB",
-                      "name": "n4t",
-                      "fill": "#FFFFFF",
-                      "content": "04",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
+                      "id": "9lOXI",
+                      "name": "stTxt",
+                      "fill": "#FFFFFFFF",
+                      "content": "STOCKS",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
                       "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "vtEC3",
-                  "name": "s4t",
-                  "fill": "$t-muted",
-                  "content": "2026.03.30  |  Ukrinform / CFR",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "500"
+                  "id": "euLAH",
+                  "name": "timeT5",
+                  "fill": "#7C3AEDFF",
+                  "content": "2026.04.10 最新",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "ikSlw",
-              "name": "h4",
-              "fill": "$t-dark",
+              "id": "KUkpB",
+              "name": "headT5",
+              "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "乌克兰发起反攻\n俄军日损千人创新高",
-              "lineHeight": 1.15,
+              "width": "fill_container",
+              "content": "伊朗攻击沙特石油设施\n产量大幅削减",
+              "lineHeight": 1.1,
               "fontFamily": "Inter",
-              "fontSize": 54,
-              "fontWeight": "700"
+              "fontSize": 52,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "FVwt9",
+              "name": "subT5",
+              "fill": "#16A34AFF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "管道和生产设施遭袭 · 油价波动",
+              "fontFamily": "Geist Mono",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "rectangle",
+              "id": "HRedI",
+              "name": "divT5",
+              "fill": "#7C3AEDFF",
+              "width": 80,
+              "height": 3
+            },
+            {
+              "type": "text",
+              "id": "zwTWS",
+              "name": "bodyT5",
+              "fill": "#3F3F46FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "尽管美伊达成停火协议，伊朗仍对沙特关键石油管道和生产设施发动攻击，导致沙特石油产量大幅削减。这是伊朗首次在停火期间对海湾国家发动明显攻击。油价在停火后下跌，但因沙特遇袭再次波动。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
-              "id": "ES6Oq",
-              "name": "sb4",
-              "fill": "$tag-bg",
-              "cornerRadius": 8,
+              "id": "5SHcF",
+              "name": "anaBg5",
+              "width": "fill_container",
+              "fill": "#EDE9FEFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#7C3AED44"
+              },
               "layout": "vertical",
+              "gap": 8,
               "padding": [
-                12,
-                16
+                14,
+                20
               ],
               "children": [
                 {
+                  "type": "frame",
+                  "id": "8aOlw",
+                  "name": "anaLbl5",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w93mE",
+                      "name": "anaIc5",
+                      "fill": "#7C3AEDFF",
+                      "content": "⚡",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DSIQg",
+                      "name": "anaTt5",
+                      "fill": "#7C3AEDFF",
+                      "content": "市场研判",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "id": "xzCn5",
-                  "name": "sb4t",
-                  "fill": "$a-blue",
+                  "id": "wvvN8",
+                  "name": "anaBd5",
+                  "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
-                  "width": 1064,
-                  "content": "乌克兰武装部队总司令瑟尔斯基宣布将聚焦战略防御并在\"薄弱\"前线发起反攻。俄军3月27日单日损失超1,000人及2,222架无人机。自2022年以来乌克兰已获美国$1,880亿、欧盟$1,970亿援助。",
+                  "width": "fill_container",
+                  "content": "伊朗攻击沙特表明停火协议极其脆弱，地区紧张局势并未真正缓解。沙特作为美国盟友遭袭，可能迫使美国重新评估停火策略。油价短期将继续波动，建议密切关注霍尔木兹海峡通行情况和4月10日谈判。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 26,
+                  "fontSize": 20,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "hHkuP",
-              "name": "dv4",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
               "type": "text",
-              "id": "6Mucp",
-              "name": "fh4",
-              "fill": "$a-blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "mOMvm",
-              "name": "fa4",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "u3GHF",
-                  "name": "fa4t",
-                  "fill": "$a-blue",
-                  "content": "战场态势",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "MxKma",
-                  "name": "fa4b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "泽连斯基称已获取俄军战争计划泄露文件，显示俄方计划本月发起攻势夺取顿涅茨克和卢甘斯克未占领区域。乌军转向\"战略防御+选择性反攻\"策略",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3K9E2",
-              "name": "fb4",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "lzMvi",
-                  "name": "fb4t",
-                  "fill": "$a-blue",
-                  "content": "俄军消耗",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "fbtfO",
-                  "name": "fb4b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "俄军单日损失1,000+人员和2,222架无人机。普京要求寡头为战争提供更多资金支持。乌克兰持续对俄罗斯石油基础设施和军事目标发动无人机攻击",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "LYci9",
-              "name": "d4b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "ccWz4",
-              "name": "ih4",
-              "fill": "$a-green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "6r69P",
-              "name": "ib4",
-              "fill": "$t-body",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "伊朗战争分散了全球对乌克兰的关注，但乌克兰正利用这一窗口期调整战略。俄军的高消耗率表明其攻势难以持续，而乌克兰获得的近$4,000亿国际援助正在转化为战场优势。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 26,
+              "id": "CakU9",
+              "name": "srcT5",
+              "fill": "#A1A1AAFF",
+              "content": "来源：CNBC · Reuters | 2026.04.10",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
               "fontWeight": "normal"
             }
           ]
+        },
+        {
+          "type": "frame",
+          "id": "C7pS0",
+          "name": "imgR5",
+          "clip": true,
+          "width": 960,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775788724849.png",
+            "mode": "fill"
+          }
         }
       ]
     },
     {
       "type": "frame",
-      "id": "UFa2o",
+      "id": "DE3pt",
       "x": 4200,
-      "y": 1260,
-      "name": "S5-Lavrov",
+      "y": 1280,
+      "name": "新闻5-美国征兵新政",
+      "clip": true,
       "width": 1920,
       "height": 1080,
-      "fill": "$bg-w",
+      "fill": "#F5F5F5FF",
       "children": [
         {
           "type": "frame",
-          "id": "QSO6w",
-          "name": "im5",
+          "id": "IiXL1",
+          "name": "imgL6",
           "clip": true,
-          "width": 720,
-          "height": "fill_container",
+          "width": 960,
+          "height": 1080,
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "./images/generated-1774937915907.png",
+            "url": "./images/generated-1775788775103.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "jMHxv",
-          "name": "co5",
-          "width": 1200,
-          "height": "fill_container",
-          "fill": "$bg-w",
+          "id": "G9omB",
+          "name": "ctR6",
+          "width": 960,
+          "height": 1080,
+          "fill": "#F5F5F5FF",
           "layout": "vertical",
-          "gap": 14,
-          "padding": 52,
+          "gap": 16,
+          "padding": [
+            48,
+            56
+          ],
+          "justifyContent": "center",
           "children": [
             {
               "type": "frame",
-              "id": "Gt75h",
-              "name": "m5",
-              "gap": 12,
+              "id": "ypHEY",
+              "name": "topM6",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "kkjgm",
-                  "name": "n5",
-                  "fill": "$a-green",
-                  "cornerRadius": 4,
+                  "id": "WW9CC",
+                  "name": "ntBadge",
+                  "fill": "#2563EBFF",
+                  "cornerRadius": 2,
                   "padding": [
-                    6,
-                    16
+                    4,
+                    12
                   ],
                   "children": [
                     {
                       "type": "text",
-                      "id": "VQQF2",
-                      "name": "n5t",
-                      "fill": "#FFFFFF",
-                      "content": "05",
-                      "fontFamily": "Inter",
-                      "fontSize": 28,
+                      "id": "VpUit",
+                      "name": "ntTxt",
+                      "fill": "#FFFFFFFF",
+                      "content": "NATO",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
                       "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "OKK0T",
-                  "name": "s5t",
-                  "fill": "$t-muted",
-                  "content": "2026.03.30  |  Economic Times / Reuters",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "500"
+                  "id": "1BXKM",
+                  "name": "timeT6",
+                  "fill": "#7C3AEDFF",
+                  "content": "2026.04.10 最新",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "Ql0oq",
-              "name": "h5",
-              "fill": "$t-dark",
+              "id": "1lSEO",
+              "name": "headT6",
+              "fill": "#0A0A0AFF",
               "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "拉夫罗夫指控美国\n企图控制北溪管道",
-              "lineHeight": 1.15,
+              "width": "fill_container",
+              "content": "美国计划12月前实施\n自动征兵登记制度",
+              "lineHeight": 1.1,
               "fontFamily": "Inter",
-              "fontSize": 54,
-              "fontWeight": "700"
+              "fontSize": 50,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "l547Q",
+              "name": "subT6",
+              "fill": "#2563EBFF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "五角大楼文件曝光 · 新政策即将实施",
+              "fontFamily": "Geist Mono",
+              "fontSize": 22,
+              "fontWeight": "600"
+            },
+            {
+              "type": "rectangle",
+              "id": "2k2RW",
+              "name": "divT6",
+              "fill": "#7C3AEDFF",
+              "width": 80,
+              "height": 3
+            },
+            {
+              "type": "text",
+              "id": "HRMYe",
+              "name": "bodyT6",
+              "fill": "#3F3F46FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "五角大楼提交的文件显示，美国计划在2026年12月前实施自动征兵登记制度。新政策将自动将符合条件的公民纳入征兵系统，无需手动注册。这是美国军事动员体系的重大变革，引发公众对征兵制度回归的担忧。",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
-              "id": "mPF9R",
-              "name": "sb5",
-              "fill": "#ECFDF5",
-              "cornerRadius": 8,
+              "id": "CdCJM",
+              "name": "anaBg6",
+              "width": "fill_container",
+              "fill": "#EDE9FEFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#7C3AED44"
+              },
               "layout": "vertical",
+              "gap": 8,
               "padding": [
-                12,
-                16
+                14,
+                20
               ],
               "children": [
                 {
+                  "type": "frame",
+                  "id": "DjIPt",
+                  "name": "anaLbl6",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mhygy",
+                      "name": "anaIc6",
+                      "fill": "#7C3AEDFF",
+                      "content": "⚡",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IYPXa",
+                      "name": "anaTt6",
+                      "fill": "#7C3AEDFF",
+                      "content": "战略研判",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "id": "qvfU5",
-                  "name": "sb5t",
-                  "fill": "$a-green",
+                  "id": "VvzbP",
+                  "name": "anaBd6",
+                  "fill": "#52525BFF",
                   "textGrowth": "fixed-width",
-                  "width": 1064,
-                  "content": "俄罗斯外长拉夫罗夫公开指控美国正在寻求控制北溪天然气管道。该管道于2022年9月在波罗的海遭爆炸破坏，切断了俄罗斯对欧洲的天然气输送。俄方与西方均认定此事件为蓄意破坏。",
+                  "width": "fill_container",
+                  "content": "自动征兵登记是美国军事战略调整的信号。中东冲突持续，国防部长警告\"更多美军伤亡可能\"，自动登记为快速动员提供基础。虽然不等于强制征兵，但显示五角大楼正为长期冲突做准备。关注国会对此政策的反应。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 26,
+                  "fontSize": 20,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "mk6Rn",
-              "name": "dv5",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
               "type": "text",
-              "id": "psg3a",
-              "name": "fh5",
-              "fill": "$a-blue",
-              "content": "📊 关键事实与数据",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "msQ88",
-              "name": "fa5",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "sPaZG",
-                  "name": "fa5t",
-                  "fill": "$a-green",
-                  "content": "能源博弈",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "hJTtr",
-                  "name": "fa5b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "北溪管道2022年9月遭爆炸破坏，切断俄罗斯对欧天然气输送。拉夫罗夫称美国意图通过控制管道获取欧洲能源市场主导权，将能源武器化推向新高度",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "pDcCX",
-              "name": "fb5",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "PIOJv",
-                  "name": "fb5t",
-                  "fill": "$a-green",
-                  "content": "地缘格局",
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "S38pA",
-                  "name": "fb5b",
-                  "fill": "$t-body",
-                  "textGrowth": "fixed-width",
-                  "width": 1096,
-                  "content": "中国限制化肥出口保护国内市场，叠加伊朗战争导致的供应短缺，全球农资市场面临双重压力。俄中在伊朗问题上仅发表\"样板式谴责\"，未提供实质支持",
-                  "lineHeight": 1.45,
-                  "fontFamily": "Inter",
-                  "fontSize": 26,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "vKrN5",
-              "name": "d5b",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "$bdr"
-            },
-            {
-              "type": "text",
-              "id": "EsgG6",
-              "name": "ih5",
-              "fill": "$a-green",
-              "content": "💡 深度洞察",
-              "fontFamily": "Inter",
-              "fontSize": 28,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "IUMwh",
-              "name": "ib5",
-              "fill": "$t-body",
-              "textGrowth": "fixed-width",
-              "width": 1096,
-              "content": "拉夫罗夫的指控折射出大国能源博弈的深层逻辑：伊朗战争+北溪破坏+霍尔木兹封锁，三重冲击正在彻底重构全球能源供应链。欧洲对美国LNG的依赖度持续上升，能源安全已成为地缘政治的核心变量。",
-              "lineHeight": 1.45,
-              "fontFamily": "Inter",
-              "fontSize": 26,
+              "id": "mnzzd",
+              "name": "srcT6",
+              "fill": "#A1A1AAFF",
+              "content": "来源：CNBC · AP News | 2026.04.10",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
               "fontWeight": "normal"
             }
           ]

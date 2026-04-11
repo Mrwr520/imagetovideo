@@ -3,213 +3,21 @@
   "children": [
     {
       "type": "frame",
-      "id": "A24a6",
+      "id": "EwpCZ",
       "x": 0,
-      "y": 0,
-      "name": "QM-封面",
-      "width": 1080,
-      "height": 1920,
-      "fill": "#F7FBF0",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "ZOlfU",
-          "x": 0,
-          "y": 0,
-          "name": "bg1",
-          "opacity": 0.25,
-          "metadata": {
-            "type": "unsplash",
-            "username": "dunigan",
-            "link": "https://unsplash.com/@dunigan",
-            "author": "Doug R. W. Dunigan"
-          },
-          "clip": true,
-          "width": 1080,
-          "height": 1920,
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "https://images.unsplash.com/photo-1707541975934-6681ab58bd9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM1NzN8&ixlib=rb-4.1.0&q=80&w=1080",
-            "mode": "fill"
-          }
-        },
-        {
-          "type": "frame",
-          "id": "jCtza",
-          "x": 0,
-          "y": 0,
-          "name": "ov1",
-          "width": 1080,
-          "height": 1920,
-          "layout": "vertical",
-          "gap": 40,
-          "padding": [
-            120,
-            80,
-            100,
-            80
-          ],
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "tuhv4",
-              "name": "topTag",
-              "fill": "#4CAF50",
-              "cornerRadius": 40,
-              "padding": [
-                16,
-                40
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Ks7Kb",
-                  "name": "topTagT",
-                  "fill": "#FFFFFF",
-                  "content": "中国传统节日",
-                  "fontFamily": "Inter",
-                  "fontSize": 36,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "uzMsS",
-              "name": "title1",
-              "fill": "#1B5E20",
-              "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "清明节的\n前世今生",
-              "lineHeight": 1.1,
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 140,
-              "fontWeight": "900"
-            },
-            {
-              "type": "text",
-              "id": "N0xor",
-              "name": "sub1",
-              "fill": "#558B2F",
-              "textGrowth": "fixed-width",
-              "width": 800,
-              "content": "从春秋介子推到现代踏青\n2500年的传承与变迁",
-              "lineHeight": 1.5,
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "LMLuA",
-              "name": "divL",
-              "width": 120,
-              "height": 6,
-              "fill": "#4CAF50",
-              "cornerRadius": 3
-            },
-            {
-              "type": "text",
-              "id": "Jy9B1",
-              "name": "foot1",
-              "fill": "#8BC34A",
-              "content": "🌿 每逢清明倍思亲",
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 40,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "Pvg0K",
-      "x": 1280,
-      "y": 0,
-      "name": "QM-起源",
-      "width": 1080,
-      "height": 1920,
+      "y": 2700,
+      "name": "封面B-科技",
+      "width": 1920,
+      "height": 1080,
       "fill": "#FFFFFF",
-      "layout": "vertical",
-      "gap": 36,
-      "padding": [
-        80,
-        70
-      ],
       "children": [
         {
           "type": "frame",
-          "id": "rXXDm",
-          "name": "h2",
-          "width": "fill_container",
-          "gap": 16,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "RRvZ2",
-              "name": "h2n",
-              "fill": "#4CAF50",
-              "content": "01",
-              "fontFamily": "Inter",
-              "fontSize": 100,
-              "fontWeight": "900"
-            },
-            {
-              "type": "frame",
-              "id": "w6E92",
-              "name": "h2line",
-              "width": 60,
-              "height": 5,
-              "fill": "#4CAF50"
-            },
-            {
-              "type": "text",
-              "id": "ocuaQ",
-              "name": "h2t",
-              "fill": "#1B5E20",
-              "content": "起源",
-              "fontFamily": "Inter",
-              "fontSize": 64,
-              "fontWeight": "800"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "tcPJy",
-          "name": "img2",
-          "metadata": {
-            "type": "unsplash",
-            "username": "artchicago",
-            "link": "https://unsplash.com/@artchicago",
-            "author": "Art Institute of Chicago"
-          },
-          "clip": true,
-          "width": "fill_container",
-          "height": 600,
-          "fill": {
-            "type": "image",
-            "enabled": true,
-            "url": "https://images.unsplash.com/photo-1687383513657-db2258c5b32a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM2Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-            "mode": "fill"
-          },
-          "cornerRadius": 24
-        },
-        {
-          "type": "frame",
-          "id": "szj6G",
-          "name": "body2",
-          "width": "fill_container",
+          "id": "YL2uA",
+          "name": "lc2",
+          "width": 1060,
           "height": "fill_container",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 28,
           "children": [
@@ -742,9 +550,9 @@
           "children": [
             {
               "type": "frame",
-              "id": "8HJd4",
-              "name": "h5",
-              "gap": 16,
+              "id": "C0sEj",
+              "name": "tr2",
+              "gap": 12,
               "alignItems": "center",
               "children": [
                 {
@@ -759,18 +567,34 @@
                 },
                 {
                   "type": "frame",
-                  "id": "tNDki",
-                  "name": "h5line",
-                  "width": 60,
-                  "height": 5,
-                  "fill": "#81C784"
+                  "id": "gVCiC",
+                  "name": "tb2",
+                  "fill": "#7C3AED",
+                  "cornerRadius": 100,
+                  "padding": [
+                    8,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T1NbX",
+                      "name": "tt2",
+                      "fill": "#FFFFFF",
+                      "content": "DEV NEWS",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "id": "LWdPP",
-                  "name": "h5t",
-                  "fill": "#FFFFFF",
-                  "content": "诗词",
+                  "id": "dJemN",
+                  "name": "dt2",
+                  "fill": "#6B7280",
+                  "content": "2026年4月3日",
                   "fontFamily": "Inter",
                   "fontSize": 64,
                   "fontWeight": "800"
@@ -885,10 +709,13 @@
           "children": [
             {
               "type": "text",
-              "id": "tv0l9",
-              "name": "h6n",
-              "fill": "#4CAF50",
-              "content": "05",
+              "id": "DbBme",
+              "name": "ct2",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "代码圈重大资讯\n开发者必读",
+              "lineHeight": 1.1,
               "fontFamily": "Inter",
               "fontSize": 100,
               "fontWeight": "900"
@@ -910,146 +737,244 @@
               "fontFamily": "Inter",
               "fontSize": 64,
               "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "iekMY",
+              "name": "cs2",
+              "fill": "#6B7280",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "Anthropic源码泄露 · ClawCode 7.2万星 · Oracle AI裁员 · 90%开发者用AI · LiteLLM供应链攻击",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "63tpN",
+              "name": "ab2",
+              "width": 100,
+              "height": 6,
+              "fill": "#7C3AED",
+              "cornerRadius": 3
             }
           ]
         },
         {
           "type": "frame",
-          "id": "UKGu4",
-          "name": "img6",
-          "metadata": {
-            "type": "unsplash",
-            "username": "anjana_20",
-            "link": "https://unsplash.com/@anjana_20",
-            "author": "Anjana Baburaj"
-          },
+          "id": "EcC3Q",
+          "name": "rc2",
           "clip": true,
-          "width": "fill_container",
-          "height": 560,
+          "width": 860,
+          "height": "fill_container",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "https://images.unsplash.com/photo-1649693146939-abd6a338af01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+            "url": "./images/generated-1775187807898.png",
             "mode": "fill"
-          },
-          "cornerRadius": 24
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xT5ZD",
+      "x": 2100,
+      "y": 2700,
+      "name": "B1-Anthropic泄露",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "pfu9g",
+          "name": "im6",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775187859439.png",
+            "mode": "fill"
+          }
         },
         {
           "type": "frame",
-          "id": "1EqKQ",
-          "name": "body6",
-          "width": "fill_container",
+          "id": "orfvA",
+          "name": "co6",
+          "width": 1200,
           "height": "fill_container",
+          "fill": "#FFFFFF",
           "layout": "vertical",
-          "gap": 28,
+          "gap": 12,
+          "padding": 48,
           "children": [
             {
               "type": "frame",
-              "id": "zuhh6",
-              "name": "b6a",
-              "width": "fill_container",
-              "fill": "#E8F5E9",
-              "cornerRadius": 16,
-              "layout": "vertical",
+              "id": "i8cob",
+              "name": "mr6",
               "gap": 12,
-              "padding": 32,
+              "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "qyDlO",
-                  "name": "b6at",
-                  "fill": "#2E7D32",
-                  "content": "📅 2008年起",
-                  "fontFamily": "Inter",
-                  "fontSize": 44,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "N7T8E",
+                  "name": "nb6",
+                  "fill": "#DC2626",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "whUA7",
+                      "name": "nt6",
+                      "fill": "#FFFFFF",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "id": "WP2wf",
-                  "name": "b6ad",
-                  "fill": "#444444",
+                  "id": "Tp7Bc",
+                  "name": "st6",
+                  "fill": "#6B7280",
+                  "content": "2026.04.01  |  TechCrunch / Ars Technica",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "daQ9K",
+              "name": "hl6",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "Anthropic意外泄露Claude Code源码\n8000+GitHub副本被紧急下架",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Wh8gK",
+              "name": "sb6",
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "muj1d",
+                  "name": "sbt6",
+                  "fill": "#2563EB",
                   "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "清明节被列为国家法定假日，放假1天（后调为3天小长假）",
+                  "width": 1072,
+                  "content": "Anthropic因部署错误将Claude Code源码（2000+文件、51.2万行代码）意外公开。安全研究员3月31日发现后，代码已被fork超50,000次。Anthropic紧急发出8000+版权下架请求。泄露揭示内部代号和名为KAIROS的后台智能体。",
                   "lineHeight": 1.5,
                   "fontFamily": "Inter",
-                  "fontSize": 44,
+                  "fontSize": 24,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "Kbbx3",
-              "name": "b6b",
+              "id": "CUOYG",
+              "name": "dv6",
               "width": "fill_container",
-              "fill": "#F1F8E9",
-              "cornerRadius": 16,
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "TqxVV",
+              "name": "fh6",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Pyi5q",
+              "name": "fa6",
               "layout": "vertical",
-              "gap": 12,
-              "padding": 32,
+              "gap": 4,
               "children": [
                 {
                   "type": "text",
-                  "id": "c7huP",
-                  "name": "b6bt",
-                  "fill": "#2E7D32",
-                  "content": "🌐 2006年",
+                  "id": "bNijt",
+                  "name": "fa6t",
+                  "fill": "#DC2626",
+                  "content": "泄露规模",
                   "fontFamily": "Inter",
-                  "fontSize": 44,
-                  "fontWeight": "700"
+                  "fontSize": 24,
+                  "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "x9ZGK",
-                  "name": "b6bd",
-                  "fill": "#444444",
+                  "id": "mFpiV",
+                  "name": "fa6b",
+                  "fill": "#374151",
                   "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "清明节入选第一批国家级非物质文化遗产名录",
-                  "lineHeight": 1.5,
+                  "width": 1104,
+                  "content": "2,000+文件、512,000行代码被放到公开服务器。GitHub上被fork 50,000+次后才被发现。Anthropic已发出8,000+DMCA下架请求",
+                  "lineHeight": 1.45,
                   "fontFamily": "Inter",
-                  "fontSize": 44,
+                  "fontSize": 24,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "hoC1d",
-              "name": "b6c",
+              "id": "Q8D1C",
+              "name": "dv6b",
               "width": "fill_container",
-              "fill": "#E8F5E9",
-              "cornerRadius": 16,
-              "layout": "vertical",
-              "gap": 12,
-              "padding": 32,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "dX7Ph",
-                  "name": "b6ct",
-                  "fill": "#2E7D32",
-                  "content": "💐 新风尚",
-                  "fontFamily": "Inter",
-                  "fontSize": 44,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "laraW",
-                  "name": "b6cd",
-                  "fill": "#444444",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "鲜花祭扫、网络祭祀、生态安葬逐渐取代烧纸钱等传统方式",
-                  "lineHeight": 1.5,
-                  "fontFamily": "Inter",
-                  "fontSize": 44,
-                  "fontWeight": "normal"
-                }
-              ]
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "M7iUm",
+              "name": "ih6",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "J8E6k",
+              "name": "ib6",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "一家以\"AI安全\"为核心理念的公司，连自己的源码都保不住——这是对整个AI行业安全实践的警示。KAIROS后台智能体的曝光更引发了对AI自主行为的担忧。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -1057,46 +982,238 @@
     },
     {
       "type": "frame",
-      "id": "WDXJg",
-      "x": 7680,
-      "y": 0,
-      "name": "QM-结尾",
-      "width": 1080,
-      "height": 1920,
-      "fill": "#F7FBF0",
-      "layout": "none",
+      "id": "UZ8Qt",
+      "x": 4200,
+      "y": 2700,
+      "name": "B2-ClawCode",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
       "children": [
         {
           "type": "frame",
-          "id": "E2TYz",
-          "x": 0,
-          "y": 0,
-          "name": "bg7",
-          "opacity": 0.2,
-          "metadata": {
-            "type": "unsplash",
-            "username": "aaronburden",
-            "link": "https://unsplash.com/@aaronburden",
-            "author": "Aaron Burden"
-          },
+          "id": "FHOiA",
+          "name": "im7",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775187897703.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "HefK1",
+          "name": "co7",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "hcOkY",
+              "name": "mr7",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tocKv",
+                  "name": "nb7",
+                  "fill": "#059669",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P7tLY",
+                      "name": "nt7",
+                      "fill": "#FFFFFF",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "n0SWO",
+                  "name": "st7",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  24-7PressRelease",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "HjrIG",
+              "name": "hl7",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "Claw Code开源AI编程框架发布\n首日斩获72,000 GitHub Stars",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "aWnPx",
+              "name": "sb7",
+              "fill": "#ECFDF5",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LX7i5",
+                  "name": "sbt7",
+                  "fill": "#059669",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "基于Python和Rust构建的开源AI编程智能体框架Claw Code正式发布，作为Claude Code和Codex的开源替代品。首日即获72,000 GitHub Stars，成为独立AI辅助开发的基础设施级项目。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 44,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hLLeN",
+              "name": "dv7",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "YH8hO",
+              "name": "fh7",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "vJJVZ",
+              "name": "fa7",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UnKZC",
+                  "name": "fa7t",
+                  "fill": "#059669",
+                  "content": "技术栈",
+                  "fontFamily": "Inter",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "OoWGz",
+                  "name": "fa7b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "Python + Rust 混合架构。定位为Claude Code和OpenAI Codex的完全开源替代。首日72K Stars创开源项目增长纪录",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 44,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "k8Ruz",
+              "name": "dv7b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "tDI0k",
+              "name": "ih7",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "JqDAJ",
+              "name": "ib7",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "在Anthropic源码泄露的同一周，一个完全开源的替代品横空出世。开发者社区用脚投票：AI编程工具的未来属于开源。72K Stars的爆发式增长说明市场对闭源AI工具的不满已到临界点。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "eAgj7",
+      "x": 0,
+      "y": 3960,
+      "name": "B3-Oracle裁员",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "5st70",
+          "name": "im8",
           "clip": true,
           "width": 1080,
           "height": 1920,
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "https://images.unsplash.com/photo-1760489969562-0293860f0b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NDM3Nzh8&ixlib=rb-4.1.0&q=80&w=1080",
+            "url": "./images/generated-1775187934731.png",
             "mode": "fill"
           }
         },
         {
           "type": "frame",
-          "id": "SmAk5",
-          "x": 0,
-          "y": 0,
-          "name": "ov7",
-          "width": 1080,
-          "height": 1920,
+          "id": "205jz",
+          "name": "co8",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
           "layout": "vertical",
           "gap": 48,
           "padding": [
@@ -1107,47 +1224,568 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "dvIjq",
-              "name": "emoji7",
-              "content": "🌿",
-              "fontFamily": "Inter",
-              "fontSize": 120,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "nkbqS",
+              "name": "mr8",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fEayh",
+                  "name": "nb8",
+                  "fill": "#D97706",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q4L3i",
+                      "name": "nt8",
+                      "fill": "#FFFFFF",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "tyCn9",
+                  "name": "st8",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  IBTimes UK",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
             },
             {
               "type": "text",
-              "id": "Rkvel",
-              "name": "t7",
-              "fill": "#1B5E20",
+              "id": "DuYub",
+              "name": "hl8",
+              "fill": "#111827",
               "textGrowth": "fixed-width",
-              "width": 900,
-              "content": "慎终追远\n民德归厚",
-              "lineHeight": 1.2,
-              "textAlign": "center",
+              "width": 1104,
+              "content": "Ellison宣布AI已接管Oracle编码\n大规模裁员同步进行",
+              "lineHeight": 1.15,
               "fontFamily": "Inter",
-              "fontSize": 120,
-              "fontWeight": "900"
+              "fontSize": 46,
+              "fontWeight": "700"
             },
             {
               "type": "frame",
-              "id": "29n7h",
-              "name": "div7",
-              "width": 120,
-              "height": 6,
-              "fill": "#4CAF50",
-              "cornerRadius": 3
+              "id": "Y1ZP4",
+              "name": "sb8",
+              "fill": "#FFFBEB",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rpe8a",
+                  "name": "sbt8",
+                  "fill": "#D97706",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "Oracle创始人Larry Ellison公开表示AI已取代人工编码：工程师只需描述期望结果，AI系统自动生成底层逻辑和实现。这使Oracle能以\"显著更小的团队\"更快交付复杂产品，同步进行大规模裁员。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D3i8X",
+              "name": "dv8",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
             },
             {
               "type": "text",
-              "id": "3Y4D1",
-              "name": "sub7",
-              "fill": "#558B2F",
+              "id": "FILBb",
+              "name": "fh8",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "PITgP",
+              "name": "fa8",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "veua9",
+                  "name": "fa8t",
+                  "fill": "#D97706",
+                  "content": "行业趋势",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "kjbUx",
+                  "name": "fa8b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "开发者角色从\"写代码\"转向\"描述需求+审核AI输出\"。Google内部培训员工适应AI工具，管理多个AI Agent成为新技能。Pendo CEO称开发者大部分工作已变成审核AI生成的代码",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3LIup",
+              "name": "dv8b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "RjWYm",
+              "name": "ih8",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "uiv1t",
+              "name": "ib8",
+              "fill": "#374151",
               "textGrowth": "fixed-width",
-              "width": 800,
-              "content": "清明不只是一个节日\n更是中华民族对生命的敬畏\n对先人的感恩\n对春天的热爱",
-              "lineHeight": 1.6,
-              "textAlign": "center",
+              "width": 1104,
+              "content": "Ellison的表态是科技巨头CEO首次公开承认\"AI已取代程序员写代码\"。这不是未来预测，而是正在发生的现实。开发者的核心竞争力正从编码能力转向判断力和架构设计能力。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "UpwBu",
+      "x": 2100,
+      "y": 3960,
+      "name": "B4-JetBrains报告",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "x1t8Z",
+          "name": "im9",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775187973685.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "WSfQc",
+          "name": "co9",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "j8e8a",
+              "name": "mr9",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9Ptup",
+                  "name": "nb9",
+                  "fill": "#2563EB",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gWH1K",
+                      "name": "nt9",
+                      "fill": "#FFFFFF",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "CJoFk",
+                  "name": "st9",
+                  "fill": "#6B7280",
+                  "content": "2026.04.03  |  JetBrains Research",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "5Mc3v",
+              "name": "hl9",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "JetBrains报告：90%开发者\n已在工作中使用AI编码工具",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "TUf2V",
+              "name": "sb9",
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aVEAt",
+                  "name": "sbt9",
+                  "fill": "#2563EB",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "JetBrains 2026年1月调研显示，90%的开发者在工作中定期使用至少一种AI编码工具。AI工程师连续两年成为LinkedIn增长最快职位。世界经济论坛报告AI已全球创造130万个新岗位。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lLDhl",
+              "name": "dv9",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "BVWE1",
+              "name": "fh9",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "2KCD7",
+              "name": "fa9",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SE0KW",
+                  "name": "fa9t",
+                  "fill": "#2563EB",
+                  "content": "核心数据",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Aqw5L",
+                  "name": "fa9b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "90%开发者使用AI工具（2026年1月）。TypeScript超越Python和JavaScript成为GitHub最常用语言。80%新仓库仅使用6种语言：Python/JS/TS/Java/C++/C#",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ypljZ",
+              "name": "dv9b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "V9VVx",
+              "name": "ih9",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "TIJKk",
+              "name": "ib9",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "90%的采用率意味着AI编码已从\"尝鲜\"变成\"标配\"。不用AI的10%开发者正在成为少数派。问题不再是\"要不要用AI\"，而是\"怎么用好AI\"——判断力比编码能力更重要。",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mjNLp",
+      "x": 4200,
+      "y": 3960,
+      "name": "B5-LiteLLM攻击",
+      "width": 1920,
+      "height": 1080,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "1EEiQ",
+          "name": "im10",
+          "clip": true,
+          "width": 720,
+          "height": "fill_container",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1775188020426.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "trDGL",
+          "name": "co10",
+          "width": 1200,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "K17N8",
+              "name": "mr10",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ejl6a",
+                  "name": "nb10",
+                  "fill": "#DC2626",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "90DvN",
+                      "name": "nt10",
+                      "fill": "#FFFFFF",
+                      "content": "05",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jptgB",
+                  "name": "st10",
+                  "fill": "#6B7280",
+                  "content": "2026.04.02  |  SE Daily / Security",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "kMUA5",
+              "name": "hl10",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "LiteLLM遭供应链攻击\n数千开发者API密钥泄露",
+              "lineHeight": 1.15,
+              "fontFamily": "Inter",
+              "fontSize": 46,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "uq3ht",
+              "name": "sb10",
+              "fill": "#FEF2F2",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "14Pzz",
+                  "name": "sbt10",
+                  "fill": "#DC2626",
+                  "textGrowth": "fixed-width",
+                  "width": 1072,
+                  "content": "流行的LLM代理库LiteLLM遭受供应链攻击，恶意代码被注入到官方发布包中，导致数千个开发者环境的API凭证（OpenAI/Anthropic/Azure等）被窃取。这是2026年最严重的AI基础设施安全事件之一。",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "87dl8",
+              "name": "dv10",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "pTetD",
+              "name": "fh10",
+              "fill": "#2563EB",
+              "content": "📊 关键事实与数据",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "mdnd7",
+              "name": "fa10",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "31rse",
+                  "name": "fa10t",
+                  "fill": "#DC2626",
+                  "content": "攻击方式",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "QFaii",
+                  "name": "fa10b",
+                  "fill": "#374151",
+                  "textGrowth": "fixed-width",
+                  "width": 1104,
+                  "content": "恶意代码注入LiteLLM官方PyPI包。攻击者窃取开发者环境中的API密钥（OpenAI、Anthropic、Azure等）。Black Duck报告：98%商业代码库包含开源组件，平均引用1,100+个",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jKv2t",
+              "name": "dv10b",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#E5E7EB"
+            },
+            {
+              "type": "text",
+              "id": "YzoEY",
+              "name": "ih10",
+              "fill": "#059669",
+              "content": "💡 深度洞察",
+              "fontFamily": "Inter",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "ehlD7",
+              "name": "ib10",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": 1104,
+              "content": "AI工具链的供应链安全正成为新的攻击面。当98%的代码库依赖开源组件时，一个被污染的包就能影响整个生态。\"Vibe coding\"（AI生成代码不审核直接用）正在放大这一风险。",
+              "lineHeight": 1.45,
               "fontFamily": "Inter",
               "fontSize": 52,
               "fontWeight": "normal"
@@ -1169,177 +1807,29 @@
     }
   ],
   "variables": {
-    "accent-cyan": {
+    "orange": {
       "type": "color",
-      "value": "#00D4FF"
-    },
-    "accent-green": {
-      "type": "color",
-      "value": "#00E676"
-    },
-    "accent-orange": {
-      "type": "color",
-      "value": "#FF6B35"
-    },
-    "accent-purple": {
-      "type": "color",
-      "value": "#B388FF"
-    },
-    "accent-yellow": {
-      "type": "color",
-      "value": "#FFD740"
-    },
-    "bg-card": {
-      "type": "color",
-      "value": "#141825"
-    },
-    "bg-dark": {
-      "type": "color",
-      "value": "#0B0E17"
-    },
-    "border-subtle": {
-      "type": "color",
-      "value": "#1E293B"
-    },
-    "text-muted": {
-      "type": "color",
-      "value": "#64748B"
-    },
-    "text-primary": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "text-secondary": {
-      "type": "color",
-      "value": "#94A3B8"
-    },
-    "accent-amber": {
-      "type": "color",
-      "value": "#D97706"
-    },
-    "accent-blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "accent-blue-light": {
-      "type": "color",
-      "value": "#EFF6FF"
-    },
-    "accent-emerald": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "accent-red": {
-      "type": "color",
-      "value": "#DC2626"
-    },
-    "bg-card-light": {
-      "type": "color",
-      "value": "#F8FAFC"
-    },
-    "bg-light": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "border-light": {
-      "type": "color",
-      "value": "#E2E8F0"
-    },
-    "text-body": {
-      "type": "color",
-      "value": "#334155"
-    },
-    "text-dark": {
-      "type": "color",
-      "value": "#0F172A"
-    },
-    "text-muted-light": {
-      "type": "color",
-      "value": "#94A3B8"
-    },
-    "lt-accent-amber": {
-      "type": "color",
-      "value": "#D97706"
-    },
-    "lt-accent-blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "lt-accent-green": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "lt-accent-red": {
-      "type": "color",
-      "value": "#DC2626"
-    },
-    "lt-bg-white": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "lt-border": {
-      "type": "color",
-      "value": "#E5E7EB"
-    },
-    "lt-tag-bg": {
-      "type": "color",
-      "value": "#EFF6FF"
-    },
-    "lt-text-body": {
-      "type": "color",
-      "value": "#374151"
-    },
-    "lt-text-dark": {
-      "type": "color",
-      "value": "#111827"
-    },
-    "lt-text-muted": {
-      "type": "color",
-      "value": "#6B7280"
+      "value": "#F97316"
     },
     "amber": {
       "type": "color",
-      "value": "#D97706"
-    },
-    "bdr": {
-      "type": "color",
-      "value": "#E5E7EB"
-    },
-    "bg": {
-      "type": "color",
-      "value": "#FFFFFF"
-    },
-    "blue": {
-      "type": "color",
-      "value": "#2563EB"
-    },
-    "body": {
-      "type": "color",
-      "value": "#374151"
-    },
-    "dark": {
-      "type": "color",
-      "value": "#111827"
-    },
-    "green": {
-      "type": "color",
-      "value": "#059669"
-    },
-    "muted": {
-      "type": "color",
-      "value": "#6B7280"
-    },
-    "purple": {
-      "type": "color",
-      "value": "#7C3AED"
+      "value": "#F59E0B"
     },
     "red": {
       "type": "color",
-      "value": "#DC2626"
+      "value": "#F43F5E"
     },
-    "tag": {
+    "blue": {
       "type": "color",
-      "value": "#EFF6FF"
+      "value": "#4F7DFF"
+    },
+    "cyan": {
+      "type": "color",
+      "value": "#22D3EE"
+    },
+    "mint": {
+      "type": "color",
+      "value": "#14B8A6"
     }
   }
 }
