@@ -107,6 +107,10 @@ timeout = 10.0
 max_results = 10
 proxy = "http://127.0.0.1:7890"
 
+[tikhub]
+base_url = "https://api.tikhub.dev"
+token = "p8tTXYZL+E6atUy+TZ6G0U7bKTehfLJD3Cjml2ONB9e+kFetG16jWRuhMw=="
+
 [subtitle]
 font_family = "Microsoft YaHei"
 font_size = 15

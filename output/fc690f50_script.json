@@ -1,0 +1,38 @@
+{
+  "title": "06月09日热点速递｜中国男足将迎战泰国",
+  "opening": {
+    "narration": "家人们好，06月09日，今天有5件事值得聊聊，全是热搜上的大事儿，一分钟带你全部看完。",
+    "image_prompt": "Modern Chinese news broadcast opening graphic, dynamic blue and orange gradient, floating holographic news icons, date display, sleek futuristic design, 16:9, dark background"
+  },
+  "news": [
+    {
+      "headline": "中国男足将迎战泰国",
+      "narration": "先说第一个，中国男足将迎战泰国，热度直接爆了。",
+      "image_prompt": "News illustration about '中国男足将迎战泰国', modern infographic style, clean design, soft lighting, professional media visual, 16:9 aspect ratio, no text"
+    },
+    {
+      "headline": "高考后的第一条抖音",
+      "narration": "接下来，高考后的第一条抖音，热度直接爆了。",
+      "image_prompt": "News illustration about '高考后的第一条抖音', modern infographic style, clean design, soft lighting, professional media visual, 16:9 aspect ratio, no text"
+    },
+    {
+      "headline": "考场外超有爱名场面",
+      "narration": "然后是，考场外超有爱名场面，热度直接爆了。",
+      "image_prompt": "News illustration about '考场外超有爱名场面', modern infographic style, clean design, soft lighting, professional media visual, 16:9 aspect ratio, no text"
+    },
+    {
+      "headline": "我来写高考作文",
+      "narration": "还有一个，我来写高考作文，热度直接爆了。",
+      "image_prompt": "News illustration about '我来写高考作文', modern infographic style, clean design, soft lighting, professional media visual, 16:9 aspect ratio, no text"
+    },
+    {
+      "headline": "用运动迎接夏天",
+      "narration": "最后，用运动迎接夏天，讨论度很高。",
+      "image_prompt": "News illustration about '用运动迎接夏天', modern infographic style, clean design, soft lighting, professional media visual, 16:9 aspect ratio, no text"
+    }
+  ],
+  "closing": {
+    "narration": "好了今天就这些，每天一分钟，热点不错过。喜欢的话点个关注，咱们明天见！",
+    "image_prompt": "Modern subscribe and follow call-to-action graphic, thumbs up, bell notification icon, gradient purple to blue background, minimalist Chinese style, 16:9"
+  }
+}
