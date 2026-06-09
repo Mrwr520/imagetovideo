@@ -1,0 +1,33 @@
+{
+  "title": "06月09日科技圈大事｜OpenAI要上市了",
+  "opening": {
+    "narration": "嗨宝子们，今天科技圈发生了好几件大事，我来跟你们唠唠。",
+    "image_prompt": "Anime style, a beautiful young woman with long silver hair and blue eyes, wearing a white tech-style jacket, sitting in a futuristic room with floating holographic displays, she looks excited and has a speech bubble saying something cheerful, soft neon blue and purple lighting, cute anime aesthetic, 16:9"
+  },
+  "news": [
+    {
+      "headline": "OpenAI提交IPO",
+      "narration": "第一个，OpenAI正式提交了IPO申请，估值可能到一万亿美元。就在Anthropic提交上市一周后，两家AI巨头同时要上市了，这竞争太激烈了吧。",
+      "image_prompt": "Anime style, a cute girl with glasses looking shocked at a giant holographic stock chart going up, speech bubble with exclamation marks, futuristic office background with AI robot mascots, vibrant green and gold colors, dynamic composition, 16:9"
+    },
+    {
+      "headline": "腾讯代码全靠AI写",
+      "narration": "然后呢，腾讯高管说今年他们大部分代码都是AI生成的。程序员现在主要做架构设计，写代码的活都交给AI了。这是真要替代打工人了啊。",
+      "image_prompt": "Anime style, a pretty girl programmer with headphones around her neck, looking at a screen where a cute AI robot character is typing code rapidly, speech bubble showing her surprised reaction, cozy office with plants, warm lighting, manga style, 16:9"
+    },
+    {
+      "headline": "GPT5.6要来了",
+      "narration": "还有个大消息，GPT五点六据说这周就要发布了，据说比现在的模型又强了一大截。AI这进化速度，跟开了加速器似的。",
+      "image_prompt": "Anime style, a beautiful girl with flowing hair standing in front of a massive glowing AI brain visualization, she has sparkles in her eyes and an excited expression, speech bubble with stars, futuristic cyber background, purple and blue neon, 16:9"
+    },
+    {
+      "headline": "世界杯要开了",
+      "narration": "对了，世界杯后天就开幕了，美加墨三国联办的。央视也拿下了转播权，球迷们可以准备熬夜了。",
+      "image_prompt": "Anime style, a cheerful girl wearing a sporty outfit cheering with a foam finger, a big stadium in the background with colorful lights, speech bubble with a soccer ball emoji, energetic and fun atmosphere, bright colors, 16:9"
+    }
+  ],
+  "closing": {
+    "narration": "好啦今天就这些，科技圈每天都有新瓜吃。觉得有意思的话点个关注，咱们明天继续聊！",
+    "image_prompt": "Anime style, the silver-haired girl from the opening waving at the viewer with both hands, big warm smile, speech bubble with a heart and 'See you~', soft warm sunset lighting through window, cozy and inviting atmosphere, 16:9"
+  }
+}

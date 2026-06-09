@@ -53,7 +53,7 @@ SOCIAL_SEARCH_CF_CLEARANCE = ""
 IMAGE_GEN_URL = "https://jiuuij.de5.net/v1/images/generations"
 IMAGE_GEN_KEY = "sk-GyiLtk9MfHxHKzv7wjmLUMeG8Vnhsw0fHPvSIK0tKK0oWDIm"
 IMAGE_GEN_MODEL = "gpt-image-2"
-IMAGE_SIZE = "1024x576"  # 16:9 低分辨率，加快生成速度
+IMAGE_SIZE = "768x432"  # 16:9 小分辨率，手机观看足够，生成更快
 IMAGE_QUALITY = "low"  # low/medium/high，低质量加快速度
 
 
@@ -386,49 +386,76 @@ class SocialSearchAgent:
 def build_script_from_news(news_items: list[dict], count: int = 5) -> dict:
     """从热搜列表构建资讯解说脚本。
 
-    风格：日常聊天、轻松有趣，像朋友分享见闻，不是播报新闻。
-    定位：热点资讯分享，不是新闻节目（避免被平台下架）。
+    风格：日常聊天、轻松有趣，像朋友分享见闻
+    图片：动漫美少女"小星"，性感有魅力，中文对话气泡和主题强相关
+    标题：吸睛爆款风格，每次随机不重复
     """
-    today_short = datetime.now().strftime("%m月%d日")
+    import random
 
-    # 选取前count条
+    today_short = datetime.now().strftime("%m月%d日")
     selected = news_items[:count]
 
+    # 生成吸睛标题和描述
+    video_title, video_desc = _generate_viral_title(selected, today_short)
+
     script = {
-        "title": f"{today_short}全网都在聊｜{selected[0]['title'][:12] if selected else '今天聊啥'}",
+        "title": video_title,
+        "description": video_desc,
         "opening": {
-            "narration": f"嗨，{today_short}，刷了一圈全网，挑了几个有意思的话题跟你们唠唠。",
-            "image_prompt": "Anime style illustration, a cheerful young woman with short hair sitting at a cozy desk, holding a phone, speech bubble saying 'Hi!', warm lighting, pastel colors, Japanese anime aesthetic, 16:9",
+            "narration": random.choice([
+                f"嗨，{today_short}，刷了一圈全网，挑了几个有意思的话题跟你们唠唠。",
+                f"家人们，{today_short}，今天网上可太热闹了，我挑了几个最火的来聊。",
+                f"宝子们好，{today_short}了，最近全网都在讨论这几件事你知道吗？",
+                f"来了来了，{today_short}，今天的瓜真的一个比一个大，给你们盘一下。",
+                f"Hello，{today_short}份的热搜盘点来了，跟不上节奏的赶紧来。",
+            ]),
+            "image_prompt": _build_image_prompt("开场", "今天有料！", "sitting at glowing desk with holographic screens, winking at viewer"),
         },
         "news": [],
         "closing": {
-            "narration": "行，今天就聊到这儿，你们觉得哪个最有意思？评论区聊聊，回见！",
-            "image_prompt": "Anime style illustration, a cute character waving goodbye with a big smile, speech bubble with a heart, soft sunset background, warm and friendly vibe, pastel tones, 16:9",
+            "narration": random.choice([
+                "行，今天就聊到这儿，你们觉得哪个最有意思？评论区聊聊，回见！",
+                "好了，今天的瓜就分享到这，喜欢的话点个赞加个关注，明天继续！",
+                "以上就是今天的全部内容，有想法的评论区见，拜拜咯！",
+                "OK收工，觉得有意思的双击一下，咱们下期再见！",
+                "就聊到这吧，点个关注不迷路，咱们明天接着唠！",
+            ]),
+            "image_prompt": _build_image_prompt("告别", "明天见~❤", "waving at viewer, soft sunset light through window, cherry blossoms"),
         },
     }
 
-    # 日常口语化过渡词
     transitions = [
         "第一个，", "然后呢，", "还有个事儿，", "对了，", "最后一个，",
-        "先聊这个，", "再说说，", "还有，", "另外一个挺有意思的，", "压轴的，",
+        "先聊这个，", "再说说，", "还有，", "另外，", "压轴的，",
     ]
+    random.shuffle(transitions)
 
     for i, item in enumerate(selected):
         title = item["title"]
         hot_val = item.get("hot_value", 0)
-
         transition = transitions[i] if i < len(transitions) else ""
 
-        # 日常口语化描述
         if hot_val > 10000000:
-            narration = f"{transition}{title}，全网都在讨论这个，属实火了。"
+            narration = random.choice([
+                f"{transition}{title}，全网都在讨论这个，属实火了。",
+                f"{transition}{title}，这个话题直接爆了，到处都是。",
+                f"{transition}{title}，热度拉满了，你们刷到没？",
+            ])
         elif hot_val > 5000000:
-            narration = f"{transition}{title}，挺多人关注的。"
+            narration = random.choice([
+                f"{transition}{title}，挺多人关注的。",
+                f"{transition}{title}，讨论度还挺高。",
+                f"{transition}{title}，不少人在聊这个。",
+            ])
         else:
-            narration = f"{transition}{title}，蛮有意思的。"
+            narration = random.choice([
+                f"{transition}{title}，蛮有意思的。",
+                f"{transition}{title}，我觉得值得说说。",
+                f"{transition}{title}，这个挺有意思的你们看看。",
+            ])
 
-        # 配图提示词 - 动漫风格，有人物有对话
-        image_prompt = f"Anime style illustration about '{title}', expressive characters with speech bubbles discussing the topic, vibrant colors, manga aesthetic, dynamic composition, warm lighting, 16:9"
+        speech, scene, extra = _generate_topic_context(title)
+        image_prompt = _build_image_prompt(title, speech, scene, extra)
 
         script["news"].append({
             "headline": title[:20],
@@ -437,6 +464,142 @@ def build_script_from_news(news_items: list[dict], count: int = 5) -> dict:
         })
 
     return script
+
+
+def _generate_viral_title(news_items: list[dict], today_short: str) -> tuple[str, str]:
+    """生成吸睛爆款标题和描述，和热搜内容强关联，每次随机不重复。
+
+    Returns:
+        (title, description)
+    """
+    import random
+
+    top1 = news_items[0]["title"] if len(news_items) > 0 else "今日热点"
+    top2 = news_items[1]["title"] if len(news_items) > 1 else ""
+    top3 = news_items[2]["title"] if len(news_items) > 2 else ""
+    t1_short = top1[:12]
+    t2_short = top2[:10]
+
+    # 标题模板库 - 全部和实际热搜内容强关联
+    title_templates = [
+        # 直接点题型
+        f"{t1_short}！全网都炸了",
+        f"{t1_short}，你怎么看？",
+        f"关于{t1_short}，我有话说",
+        f"{t1_short}这事儿太离谱了吧",
+        # 组合型（多个热搜）
+        f"{t1_short}＋{t2_short}，今天信息量有点大",
+        f"从{t1_short}到{t2_short}，今天热搜质量真高",
+        f"{t1_short}霸榜了！顺便聊聊{t2_short}",
+        # 悬念+热搜型
+        f"刷到{t1_short}我直接愣住了",
+        f"{t1_short}后续来了，比想象的还离谱",
+        f"为什么全网都在讨论{t1_short}？",
+        f"一觉醒来{t1_short}居然上热搜了",
+        # 互动型
+        f"{t1_short}，评论区已经吵翻了",
+        f"今天聊点轻松的：{t1_short}",
+        f"{t1_short}这个话题，你站哪边？",
+        # 反转/情绪型
+        f"本来只想刷五分钟，结果看到{t1_short}...",
+        f"被{t1_short}刷屏了，到底怎么回事",
+        f"不是，{t1_short}也太上头了吧",
+        f"救命！{t1_short}笑不活了",
+    ]
+
+    # 描述模板库 - 设悬念引好奇，不是陈述
+    all_topics = "、".join([item["title"][:8] for item in news_items[:3]])
+    desc_templates = [
+        f"{t1_short}？什么情况？今天热搜有点东西👀 评论区说说你怎么看 #热搜 #日常",
+        f"一觉醒来{t1_short}上热搜了，什么操作😂 还有{t2_short}也绝了 #吃瓜 #热搜",
+        f"谁能想到{t1_short}和{t2_short}能同时上热搜🤣 评论区聊聊 #每日分享",
+        f"今天刷到{t1_short}差点把手机笑掉📱 还有几个也很离谱 #热搜盘点 #日常碎碎念",
+        f"被{t1_short}刷屏了...到底怎么回事？点进来看看👀 #热搜 #吃瓜日常",
+        f"不是，{t1_short}这事也太抽象了吧😅 评论区炸了 #热门话题 #日常",
+        f"今天这几条热搜含金量也太高了吧，特别是{t1_short}这个💫 #热搜 #分享",
+    ]
+
+    return random.choice(title_templates), random.choice(desc_templates)
+
+
+def _generate_topic_context(title: str) -> tuple[str, str, str]:
+    """根据话题智能生成：中文对话气泡、场景、额外人物。"""
+    t = title
+
+    # 科技/AI
+    if any(kw in t for kw in ["AI", "GPT", "OpenAI", "人工智能", "模型", "芯片", "机器人", "算法", "大模型", "Claude"]):
+        return ("AI太猛了！", "surrounded by floating holographic AI code and neural network visuals",
+                "a sexy anime girl named '小月' with short pink hair, tight lab coat showing collarbone, perfect figure, name tag '小月', speech bubble '代码自己写好了~'")
+
+    # 手机/数码
+    if any(kw in t for kw in ["手机", "苹果", "华为", "小米", "iPhone", "发布会", "新品"]):
+        return ("想买！💰", "holding a shiny new phone excitedly, tech store with neon lights",
+                "a gorgeous anime girl named '小夏' with long black hair in tight dress showing figure, name tag '小夏', speech bubble '这也太好看了吧'")
+
+    # 游戏/电竞
+    if any(kw in t for kw in ["游戏", "电竞", "王者", "原神", "Steam", "英雄联盟", "吃鸡"]):
+        return ("开冲！🎮", "wearing gaming headset in neon-lit gaming room with multiple screens",
+                "a cute anime girl named '小悦' with twin tails, crop top showing waist, name tag '小悦', speech bubble '带我上分！'")
+
+    # 体育/足球/篮球
+    if any(kw in t for kw in ["足球", "篮球", "世界杯", "NBA", "男足", "女排", "运动", "奥运", "马刺", "尼克斯"]):
+        return ("加油！⚽", "wearing sexy sporty crop top in a stadium with excited crowd",
+                "a fit anime girl named '小夏' with ponytail in cheerleader outfit showing long legs, name tag '小夏', speech bubble '冲冲冲！'")
+
+    # 娱乐/影视
+    if any(kw in t for kw in ["明星", "演员", "电影", "电视剧", "综艺", "演唱会", "票房", "导演"]):
+        return ("好期待！🎬", "in a luxurious movie premiere red carpet scene",
+                "a glamorous anime girl named '小月' with wavy purple hair in elegant off-shoulder dress showing collarbone, name tag '小月', speech bubble '太帅了吧！'")
+
+    # 美食/饮品
+    if any(kw in t for kw in ["美食", "吃", "奶茶", "火锅", "甜品", "餐厅", "咖啡", "粽", "菜", "辣", "姜"]):
+        return ("馋死了！🤤", "in a dreamy food scene with delicious dishes floating around",
+                "a cute anime girl named '小悦' with short brown hair in off-shoulder apron, name tag '小悦', speech bubble '我全都要！'")
+
+    # 高考/学习
+    if any(kw in t for kw in ["高考", "考试", "考研", "大学", "分数", "志愿", "作文", "考生", "地理"]):
+        return ("加油鸭！📚", "in a pretty library giving encouraging thumbs up, books floating around",
+                "a cute anime girl named '小月' with glasses and bob hair in school uniform short skirt, name tag '小月', speech bubble '终于解放了！'")
+
+    # 天气/季节
+    if any(kw in t for kw in ["天气", "高温", "下雨", "台风", "夏天", "降温"]):
+        return ("好热！☀", "outdoors in sexy summer outfit fanning herself, bright sunny day",
+                "a beautiful anime girl named '小夏' with sunhat in sundress showing shoulders, name tag '小夏', speech bubble '要融化了~'")
+
+    # 经济/财经
+    if any(kw in t for kw in ["股", "经济", "房价", "工资", "市值", "IPO", "上市"]):
+        return ("涨了吗？📈", "looking at holographic stock charts with excitement",
+                "a smart anime girl named '小夏' with long black hair in tight business blouse, name tag '小夏', speech bubble '买买买！'")
+
+    # 社会/生活/搞笑/名场面
+    if any(kw in t for kw in ["搞笑", "名场面", "谣言", "热议", "吐槽", "青春", "有爱"]):
+        return ("笑死！😂", "laughing expressively in a cozy room with phone",
+                "a pretty anime girl named '小悦' with red hair leaning close laughing, name tag '小悦', speech bubble '哈哈不行了'")
+
+    # 默认
+    return ("有意思！✨", "in a cozy modern room with warm lighting, reacting expressively to her phone",
+            "")
+
+
+def _build_image_prompt(topic: str, speech_text: str, scene: str, extra_characters: str = "") -> str:
+    """构建统一风格图片提示词。
+
+    主角：科技博主"小星" - 银发大眼、性感有魅力、表情丰富
+    """
+    main_char = (
+        "a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, "
+        "beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, "
+        "perfect figure, confident and cute expression"
+    )
+
+    extra = f", {extra_characters}" if extra_characters else ""
+    bubble = f", large prominent speech bubble with bold Chinese text '{speech_text}'"
+
+    return (
+        f"Anime illustration, {main_char}, {scene}{extra}{bubble}, "
+        f"vibrant colors, high quality anime art, dynamic angle, soft glow lighting, "
+        f"16:9 aspect ratio"
+    )
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -639,6 +802,7 @@ async def main():
         return
 
     print(f"  📰 标题: {script.get('title', '未命名')}")
+    print(f"  📝 描述: {script.get('description', '')}")
 
     # ══════════════════════════════════════════
     # 步骤2：构建段落列表
@@ -790,6 +954,7 @@ async def main():
     print(f"  ⏱️  时长: {tts_result.duration:.1f}秒")
     print(f"  📊 段落: {len(slide_items)}个")
     print(f"  🎯 标题: {script.get('title', '')}")
+    print(f"  📝 描述: {script.get('description', '')}")
     print("=" * 60)
 
 
