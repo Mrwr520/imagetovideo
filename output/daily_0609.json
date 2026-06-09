@@ -1,0 +1,34 @@
+{
+  "title": "考场外这一幕我真的哭了｜今天热搜太上头",
+  "description": "高考结束考场外发生了什么？有人冲上去抱住，有人举着向日葵等了三天...还有黄百鸣出事了？膳魔师也翻车了？评论区说说你的高考记忆 #高考 #热搜 #感动",
+  "opening": {
+    "narration": "今天热搜被高考承包了，但最打动我的不是考题，是考场外那些等待的人。另外还有两件事也挺炸的，一起聊聊。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, sitting cross-legged on a cozy sofa holding phone with a touched expression, large prominent speech bubble with bold Chinese text '今天泪点有点低...', warm cozy room lighting, vibrant colors, high quality anime art, 16:9"
+  },
+  "news": [
+    {
+      "headline": "考场外的等待",
+      "narration": "你们看到考场外那些视频了吗。有个爸爸穿着西装在烈日下站了三天，每科考完就在人群里踮脚找自己闺女。最后一科铃响的时候，女儿跑出来直接扑他怀里了，旁边的人全在鼓掌。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder top, watching her phone with teary eyes and hand over heart, background shows a blurry warm scene of celebration, a beautiful anime girl named '小夏' with long black hair in tight summer dress leaning over looking at the same phone, name tag '小夏', speech bubble '我也哭了', emotional warm golden lighting, vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "男朋友冲上去抱住",
+      "narration": "还有个男生在校门口等了三天，最后一科结束他女朋友出来那一刻，他直接冲上去把人抱起来转了一圈。底下评论全是酸的，说这就是别人的青春吧。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, off-shoulder outfit showing collarbone, making a heart shape with her hands toward viewer with a big moved smile, background shows anime couples celebrating with confetti, a cute anime girl named '小悦' with short brown hair in crop top beside her making same pose, name tag '小悦', speech bubble '甜哭了！', pink and warm color palette, vibrant, 16:9"
+    },
+    {
+      "headline": "黄百鸣入狱了",
+      "narration": "对了说个娱乐圈的事，黄百鸣被判了五个月。就是拍开心鬼、家有喜事那个。具体原因好像跟商业纠纷有关，挺唏嘘的，毕竟陪了好几代人过年。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder outfit, looking thoughtful with hand on chin, a movie poster style background with dim spotlight, large prominent speech bubble with bold Chinese text '童年回忆啊...', slightly melancholic but stylish atmosphere, vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "膳魔师翻车",
+      "narration": "最后一个跟大家有关的，膳魔师紧急召回了上百万件产品，好像是某批次有安全隐患。家里有他家杯子的赶紧查查型号，别不当回事。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, off-shoulder top, holding up a thermos cup with a suspicious squinting expression, a cute anime girl named '小月' with short pink hair in tight lab coat, name tag '小月', speech bubble '快检查你家的！', clean bright background, vibrant colors, high quality anime art, 16:9"
+    }
+  ],
+  "closing": {
+    "narration": "好了今天就这些。高考结束的朋友们好好放松，人生才刚开始呢。点个关注，明天见。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, sexy off-shoulder outfit, waving with a gentle warm smile, soft sunset glow, large prominent speech bubble with bold Chinese text '明天见❤', cozy warm atmosphere, vibrant colors, high quality anime art, 16:9"
+  }
+}
