@@ -1,0 +1,17 @@
+{
+  "description": "已发布视频记录，避免重复话题",
+  "videos": [
+    {
+      "date": "2026-06-09",
+      "title": "考场外这一幕我真的哭了｜今天热搜太上头",
+      "topics": ["高考地理", "岳阳菜姜辣", "考场外名场面", "黄百鸣入狱", "膳魔师召回"],
+      "category": "日常热搜"
+    },
+    {
+      "date": "2026-06-10",
+      "title": "OpenAI要上市了？估值一万亿！AI圈这周疯了",
+      "topics": ["OpenAI IPO", "Anthropic上市", "SpaceX IPO", "腾讯AI写代码"],
+      "category": "科技"
+    }
+  ]
+}

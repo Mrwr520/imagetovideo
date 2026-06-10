@@ -1,0 +1,29 @@
+{
+  "title": "OpenAI要上市了？估值一万亿！AI圈这周疯了",
+  "description": "OpenAI、Anthropic、SpaceX三家同时要IPO？这周科技圈的信息量也太大了吧...还有腾讯说代码全让AI写了，程序员还有活路吗😅 评论区说说你怎么看 #AI #科技 #OpenAI",
+  "opening": {
+    "narration": "这周科技圈炸了。OpenAI正式提交上市申请了，Anthropic、SpaceX也全都要上。我给你们捋一下怎么回事。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, sitting in a futuristic room with multiple holographic news screens showing stock charts and AI logos, excited wide-eyed expression, large prominent speech bubble with bold Chinese text '科技圈疯了！', vibrant neon blue and purple lighting, high quality anime art, 16:9"
+  },
+  "news": [
+    {
+      "headline": "OpenAI万亿估值上市",
+      "narration": "OpenAI这次IPO估值可能到一万亿美元。苹果花了四十多年才到这个数，OpenAI不到十年。一周前Anthropic也提交了，估值九千多亿。两家AI公司同时冲上市，华尔街都沸腾了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder outfit showing collarbone, looking at a massive holographic display showing '$1 Trillion' with OpenAI logo, jaw-dropped amazed expression, a sexy anime girl named '小月' with short pink hair in tight futuristic jacket showing figure, name tag '小月', speech bubble '一万亿！', golden and green financial data flowing in background, vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "SpaceX史上最大IPO",
+      "narration": "更夸张的是SpaceX，后天上市，融七百五十亿美元，史上最大IPO。而且它现在还搞AI算力出租，谷歌每月付它九个多亿租GPU。马斯克这人真是什么钱都赚。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, tight casual outfit showing collarbone and figure, looking up at a rocket launching in background with stock ticker overlay, impressed expression with sparkly eyes, a fit anime girl named '小夏' with long black hair in tight business outfit, name tag '小夏', speech bubble '马斯克太猛了吧', dramatic lighting with rocket glow, vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "腾讯代码全靠AI",
+      "narration": "还有个跟打工人有关的。腾讯高管直接说了，今年大部分代码都是AI写的，程序员主要做架构设计和审核。写代码这活真的快被AI接管了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder top, sitting at desk with holographic code screens, a cute AI robot typing rapidly on keyboard beside her, thoughtful slightly worried expression, a cute anime girl named '小悦' with twin tails in crop top holding coffee looking stressed, name tag '小悦', speech bubble '我的工作还在吗？', cozy office with blue glow, vibrant colors, high quality anime art, 16:9"
+    }
+  ],
+  "closing": {
+    "narration": "AI公司扎堆上市，程序员快被替代，这世界变化太快了。你觉得AI会取代大部分工作吗？评论区聊聊，关注我明天见。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big blue eyes, sexy off-shoulder outfit, leaning toward viewer with a wink and gentle smile, one hand waving, soft warm sunset lighting, large prominent speech bubble with bold Chinese text '关注我不迷路~', cozy warm atmosphere, vibrant colors, high quality anime art, 16:9"
+  }
+}

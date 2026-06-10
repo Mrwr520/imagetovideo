@@ -8,6 +8,11 @@ inclusion: manual
 
 ## 工作流步骤
 
+### 0. 检查历史记录
+- 读取 `output/history.json`，查看已发布的话题
+- 避免重复选择相同话题（同一个事件除非有重大后续进展）
+- 生成完成后更新 history.json
+
 ### 1. 搜索热点素材
 - 执行命令获取热搜：`python generate_auto_news.py --search "热搜" --search-only`
 - 同时用 web_search 搜索用户指定话题的最新资讯，获取细节内容
@@ -59,6 +64,7 @@ inclusion: manual
 ### 4. 报告结果
 - 告知用户视频输出路径、时长
 - 展示标题和描述（可直接用于发布）
+- **更新 `output/history.json`**，记录本次使用的话题和日期，防止下次重复
 
 ## 避免事项
 - 不生成政治新闻内容
