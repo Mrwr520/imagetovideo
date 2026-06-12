@@ -1,0 +1,94 @@
+{
+  "series": "凡人修仙传",
+  "style": "Chinese xianxia manga style, dramatic lighting, detailed character art, dynamic action poses",
+  "voice": "zh_male_ruyayichen_uranus_bigtts",
+  "episodes_per_arc": 5,
+  "images_per_episode": 8,
+  "duration_target_seconds": 60,
+
+  "characters": {
+    "韩立": {
+      "appearance": "a handsome young man with sharp determined eyes, long black hair tied in a topknot with a jade hairpin, wearing a dark blue Daoist robe with silver cloud patterns, lean athletic build, calm but intense expression",
+      "name_tag": "韩立",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "voice_name": "云舟（年轻冷静有磁性）",
+      "age": "少年 → 青年",
+      "personality": "沉稳内敛，极度谨慎，心思缜密"
+    },
+    "旁白": {
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "voice_name": "儒雅逸辰（沉稳大气仙侠叙事）",
+      "note": "用于叙事过渡，非角色台词部分"
+    },
+    "墨大夫": {
+      "appearance": "an old mysterious man with thin white beard, cunning narrow eyes, wearing tattered grey robes, hunched posture but radiating hidden power, sinister smile",
+      "name_tag": "墨大夫",
+      "voice": "zh_male_dayi_uranus_bigtts",
+      "voice_name": "大壹（浑厚老成）",
+      "age": "老年",
+      "personality": "阴险狡诈，城府极深"
+    },
+    "南宫婉": {
+      "appearance": "a stunningly beautiful woman with long flowing white hair, ethereal ice-blue eyes, wearing elegant white and light blue fairy robes that flow like water, graceful and cold demeanor",
+      "name_tag": "南宫婉",
+      "voice": "zh_female_cancan_uranus_bigtts",
+      "voice_name": "知性灿灿（冷艳仙气）",
+      "age": "青年",
+      "personality": "冷若冰霜，实力强大"
+    },
+    "厉飞雨": {
+      "appearance": "a rugged muscular man with short spiky hair, battle scars on face, wearing heavy black armor with red trim, fierce aggressive expression, broadsword on back",
+      "name_tag": "厉飞雨",
+      "voice": "zh_male_shaonianzixin_uranus_bigtts",
+      "voice_name": "少年梓辛（张狂嚣张）",
+      "age": "青年",
+      "personality": "豪爽直率，战斗狂"
+    },
+    "雷万鹤": {
+      "appearance": "a fat elderly cultivator with round face, kind but often shocked expression, wearing brown and gold robes",
+      "name_tag": "雷万鹤",
+      "voice": "zh_male_dayi_uranus_bigtts",
+      "voice_name": "大壹（浑厚老年）",
+      "age": "老年",
+      "personality": "厚道老实，容易震惊"
+    },
+    "聂盈": {
+      "appearance": "a beautiful female cultivator with elegant features, wearing white robes, warm and caring expression",
+      "name_tag": "聂盈",
+      "voice": "zh_female_qingxinnvsheng_uranus_bigtts",
+      "voice_name": "清新女声（温婉）",
+      "age": "青年",
+      "personality": "温柔善良"
+    },
+    "反派通用": {
+      "note": "慕兰法士等反派角色",
+      "voice": "zh_male_shaonianzixin_uranus_bigtts",
+      "voice_name": "少年梓辛（张狂）"
+    }
+  },
+
+  "arc_plan": [
+    {
+      "arc": 1,
+      "title": "七玄门篇",
+      "episodes": [
+        "EP01: 山村少年韩立被墨大夫选中入七玄门",
+        "EP02: 墨大夫的阴谋 — 韩立发现自己被当作炼药炉",
+        "EP03: 绝地反击 — 韩立用小瓶神液突破修炼",
+        "EP04: 血色之夜 — 七玄门内乱爆发",
+        "EP05: 离开七玄门 — 韩立踏上修仙之路"
+      ]
+    },
+    {
+      "arc": 2,
+      "title": "黄枫谷篇",
+      "episodes": [
+        "EP06: 加入黄枫谷，结识厉飞雨",
+        "EP07: 乱星海试炼",
+        "EP08: 初遇南宫婉",
+        "EP09: 血战魔道修士",
+        "EP10: 结丹之路"
+      ]
+    }
+  ]
+}

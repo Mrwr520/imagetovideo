@@ -816,6 +816,7 @@ async def main():
             "narration": opening["narration"],
             "image_prompt": opening.get("image_prompt", ""),
             "headline": "开场",
+            "voice": opening.get("voice", ""),
         })
 
     for news in script.get("news", []):
@@ -824,6 +825,7 @@ async def main():
                 "narration": news["narration"],
                 "image_prompt": news.get("image_prompt", ""),
                 "headline": news.get("headline", ""),
+                "voice": news.get("voice", ""),
             })
 
     closing = script.get("closing", {})
@@ -832,6 +834,7 @@ async def main():
             "narration": closing["narration"],
             "image_prompt": closing.get("image_prompt", ""),
             "headline": "结尾",
+            "voice": closing.get("voice", ""),
         })
 
     if not slide_items:
@@ -875,28 +878,75 @@ async def main():
         final_images = [p if p is not None else fallback for p in image_paths]
 
     # ══════════════════════════════════════════
-    # 步骤4：TTS语音合成
+    # 步骤4：TTS语音合成（支持多角色多语音）
     # ══════════════════════════════════════════
 
     segments = [item["narration"] for item in slide_items]
-    full_narration = "\n".join(segments)
+    default_voice = args.voice
 
-    print(f"\n[3] 🔊 语音合成...")
+    # 检查是否有多角色语音（段落中带voice字段）
+    has_multi_voice = any(item.get("voice") for item in slide_items)
+
+    print(f"\n[3] 🔊 语音合成{'（多角色）' if has_multi_voice else ''}...")
     tts = VolcanoTTSProvider(
         appid=tts_cfg.get("appid", ""),
         access_token=tts_cfg.get("access_token", ""),
         cluster=tts_cfg.get("cluster", "volcano_tts"),
         resource_id=tts_cfg.get("resource_id"),
-        default_voice=args.voice,
+        default_voice=default_voice,
         default_speed_ratio=args.speed,
     )
-    audio_path = output_dir / f"{task_id}_narration.mp3"
-    tts_result = await tts.synthesize(
-        text=full_narration,
-        voice=args.voice,
-        output_path=audio_path,
-        speed_ratio=args.speed,
-    )
+
+    if has_multi_voice:
+        # 多角色模式：逐段合成再拼接
+        import tempfile
+        all_audio_bytes = bytearray()
+        all_word_timings = []
+        total_duration = 0.0
+
+        for i, item in enumerate(slide_items):
+            voice = item.get("voice", default_voice)
+            text = item["narration"]
+            if not text.strip():
+                continue
+            tmp_path = Path(tempfile.mktemp(suffix=".mp3"))
+            try:
+                result = await tts.synthesize(
+                    text=text,
+                    voice=voice,
+                    output_path=tmp_path,
+                    speed_ratio=args.speed,
+                )
+                all_audio_bytes.extend(tmp_path.read_bytes())
+                if result.word_timings:
+                    for offset, duration, word in result.word_timings:
+                        all_word_timings.append((offset + total_duration, duration, word))
+                total_duration += result.duration
+            finally:
+                tmp_path.unlink(missing_ok=True)
+
+        audio_path = output_dir / f"{task_id}_narration.mp3"
+        audio_path.write_bytes(bytes(all_audio_bytes))
+
+        # 构建一个伪TTSResult
+        from src.tts.base import TTSResult
+        tts_result = TTSResult(
+            audio_path=audio_path,
+            duration=total_duration,
+            sample_rate=24000,
+            word_timings=all_word_timings if all_word_timings else None,
+        )
+    else:
+        # 单语音模式：整体合成
+        full_narration = "\n".join(segments)
+        audio_path = output_dir / f"{task_id}_narration.mp3"
+        tts_result = await tts.synthesize(
+            text=full_narration,
+            voice=default_voice,
+            output_path=audio_path,
+            speed_ratio=args.speed,
+        )
+
     print(f"  ✅ 完成: {tts_result.duration:.1f}秒")
 
     # ══════════════════════════════════════════

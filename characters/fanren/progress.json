@@ -1,0 +1,22 @@
+{
+  "series": "凡人修仙传",
+  "current_episode": 1,
+  "next_chapter_start": 710,
+  "anime_sync_note": "动漫约更新到第202集，对应原著704章附近",
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "百年后重逢旧人，一问南宫婉...",
+      "chapters_covered": "704-710",
+      "plot_summary": "韩立逃离南陇侯追杀，获得紫铖兜古宝，途中救人遇到黄枫谷旧人雷万鹤，得知物是人非后开口问南宫婉下落",
+      "cliffhanger": "南宫婉到底怎么了？",
+      "date": "2026-06-12"
+    }
+  ],
+  "next_episode_plan": {
+    "episode": 2,
+    "chapters": "710-714",
+    "title_hint": "韩立的决心 + 化形入山寻找南宫婉",
+    "key_events": ["得知南宫婉困境", "韩立下定决心前往", "化形潜入", "重逢南宫婉"]
+  }
+}

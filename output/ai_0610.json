@@ -1,0 +1,34 @@
+{
+  "title": "谷歌Gemini今天崩了4小时！AI三国杀越来越离谱",
+  "description": "Gemini宕机了你们知道吗？几百万人用不了AI，谷歌紧急抢修...与此同时Anthropic发了新模型，这个月AI圈简直神仙打架😅 #AI #Gemini #Claude #科技",
+  "opening": {
+    "narration": "今天AI圈出事了。谷歌Gemini崩了四个小时，全球几百万人用不了。与此同时Anthropic偷偷发了新模型，这月AI圈真的是神仙打架。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, looking at her phone with a shocked panicked expression, phone screen showing red error symbols, a sexy anime girl named '小月' with short pink hair in tight jacket showing figure standing behind her also looking surprised, name tag '小月', speech bubble '又崩了？！', dramatic red warning lights in background, vibrant colors, high quality anime art, 16:9"
+  },
+  "news": [
+    {
+      "headline": "Gemini崩了",
+      "narration": "先说Gemini宕机这事。今天早上开始，不管是网页版还是手机App，打开就报错，什么error一零七六、一零九九，反正就是用不了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder top, staring at a laptop screen full of red error messages and 'Error 1076' text, frustrated cute expression with puffed cheeks, cracked screen effect, dark room lit only by screen glow, large prominent speech bubble with bold Chinese text '又报错了！', vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "全球用户炸锅",
+      "narration": "这一崩就是四小时。好多公司工作流都接了Gemini API，有程序员说代码写到一半AI断了，进度全丢。谷歌到现在也没说清原因。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, tight casual outfit showing collarbone, arms crossed looking annoyed, background shows multiple holographic screens all displaying 'SERVICE DOWN' in red, a cute anime girl named '小悦' with twin tails in crop top sitting at desk face-palming, name tag '小悦', speech bubble '代码全没了...', office chaos atmosphere, vibrant colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "Anthropic趁机发新模型",
+      "narration": "有意思的是同一天Anthropic发了Claude Fable五，Gemini 3.5也要上线，GPT五点六也快了。六月三家同时出新模型，AI军备竞赛太卷了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, sexy off-shoulder outfit, standing between three giant floating holographic logos (representing three AI companies), arms spread wide with an amazed expression, a fit anime girl named '小夏' with long black hair in tight dress, name tag '小夏', speech bubble '三家同时放大招！', epic sci-fi battle atmosphere with energy beams, vibrant neon colors, high quality anime art, 16:9"
+    },
+    {
+      "headline": "实时翻译70种语言",
+      "narration": "不过谷歌也有好消息。Gemini 3.5出了实时语音翻译，七十多种语言零延迟。说中文对面直接听英文，以后出国可能真不用学外语了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair, off-shoulder top, speaking into a phone with colorful sound waves and language text flowing between her and another anime girl named '小月' with pink hair on the other side of the frame, name tag '小月', multiple language bubbles floating (中文, English, 日本語), speech bubble '不用学外语了？', bright cheerful tech-forward atmosphere, vibrant colors, high quality anime art, 16:9"
+    }
+  ],
+  "closing": {
+    "narration": "AI发展太快了，今天还能用明天说不定就崩了。你们平时用哪家的AI最多？评论区告诉我，关注我明天接着聊。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, sexy off-shoulder outfit, leaning forward toward viewer with a playful wink and finger pointing at camera, soft warm neon glow background, large prominent speech bubble with bold Chinese text '你用哪家AI？', inviting and cute atmosphere, vibrant colors, high quality anime art, 16:9"
+  }
+}
