@@ -955,6 +955,7 @@ async def main():
 
     print(f"\n[4] 🎬 合成视频...")
 
+    full_narration = "\n".join(segments)
     subtitle_gen = SubtitleGenerator()
     subtitles = subtitle_gen.generate(
         full_narration,

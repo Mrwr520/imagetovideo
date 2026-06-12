@@ -1,67 +1,78 @@
 {
   "title": "韩立百年后现身，一句话全场寂静｜凡人修仙传",
   "description": "筑基小辈变元婴老怪，雷万鹤直接跪了。但韩立只问了一句话，所有人都沉默了...南宫婉到底怎么了？#凡人修仙传 #韩立 #南宫婉 #动态漫画 #仙侠",
-  "voice": "zh_male_ruyayichen_uranus_bigtts",
   "news": [
     {
-      "headline": "遁逃",
-      "narration": "追不上我的。",
-      "image_prompt": "Chinese xianxia manga panel, close-up half body shot, a handsome young man with sharp determined eyes, long black hair tied in topknot with jade hairpin, dark blue Daoist robe with silver cloud patterns, name tag '韩立', looking back over shoulder with confident smirk while flying at high speed, motion blur background, wind blowing hair and robes, large bold speech bubble '追不上我的。', tight composition, dramatic side lighting, 16:9"
+      "headline": "旁白-遁逃",
+      "narration": "韩立以雷遁术一口气逃出百里，确认身后再无追兵，他换上血色披风，化为一道血光消失在天际。",
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, a handsome young man with sharp determined eyes, long black hair tied in topknot with jade hairpin, dark blue Daoist robe with silver cloud patterns, name tag '韩立', looking back over shoulder with confident expression while flying as a streak of blood-red light, motion blur, wind blowing hair, tight half-body composition, dramatic side lighting, 16:9"
     },
     {
-      "headline": "开盒",
-      "narration": "紫铖兜...蛮荒古宝，这趟没白跑。",
-      "image_prompt": "Chinese xianxia manga panel, medium close-up, a handsome young man with sharp eyes and black hair topknot, dark blue robe, name tag '韩立', holding open a jade box with purple glowing silk net inside, eyes widened with surprise and satisfaction, purple light illuminating his face from below, tight framing on hands and face, large bold speech bubble '紫铖兜...蛮荒古宝，这趟没白跑。', 16:9"
+      "headline": "韩立-开盒",
+      "narration": "紫铖兜...蛮荒古宝。这趟没白跑。",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, medium close-up, a handsome young man with sharp eyes and black hair topknot, dark blue robe, name tag '韩立', holding open a jade box with purple glowing silk net inside, satisfied slight smirk, purple light on face, tight framing on hands and face, large bold speech bubble '紫铖兜...蛮荒古宝。', 16:9"
     },
     {
-      "headline": "飓风困人",
-      "narration": "哈哈！敬酒不吃吃罚酒，非要让本上师大费手脚！",
-      "image_prompt": "Chinese xianxia manga panel, medium shot, a bald muscular man in yellow robes with aggressive sinister expression, name tag '慕兰法士', one hand raised controlling a massive swirling hurricane trapping several cultivators, arrogant laughing expression, tight framing, large bold speech bubble '哈哈！敬酒不吃吃罚酒，非要让本上师大费手脚！', dark stormy atmosphere, wind effects, 16:9"
+      "headline": "旁白-遇敌",
+      "narration": "途中，一群修士被慕兰法士困在飓风之中。一名绝色女修即将被擒。",
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, a bald muscular man in yellow robes controlling a massive hurricane trapping several cultivators, a beautiful woman in red robes struggling inside the wind, desperate scene, dynamic composition, dark stormy atmosphere, 16:9"
     },
     {
-      "headline": "巨手擒人",
-      "narration": "先把这个小美人抓过来再说！",
-      "image_prompt": "Chinese xianxia manga panel, dynamic action shot, a giant glowing yellow hand reaching down from above toward a terrified beautiful female cultivator in red robes trapped in wind, her hair flying wildly, desperate expression, tight dramatic composition from above angle, large bold speech bubble '先把这个小美人抓过来再说！', menacing yellow energy glow, 16:9"
+      "headline": "法士-嚣张",
+      "narration": "哈哈！敬酒不吃吃罚酒！先把这小美人抓过来！",
+      "voice": "zh_male_shaonianzixin_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, close-up face, a bald muscular man in yellow robes with arrogant laughing expression, name tag '慕兰法士', one giant yellow energy hand reaching downward, sinister grin, large bold speech bubble '哈哈！先把这小美人抓过来！', menacing dark atmosphere, 16:9"
     },
     {
-      "headline": "韩立出手",
-      "narration": "一个慕兰法士而已，也配？",
-      "image_prompt": "Chinese xianxia manga panel, dynamic half body shot from below angle, a handsome young man with sharp cold eyes and black hair topknot, dark blue robe, name tag '韩立', one hand casually flicking out a beam of azure light that shatters the yellow giant hand into pieces, calm disdainful expression, debris exploding outward, large bold speech bubble '一个慕兰法士而已，也配？', impact explosion effects and speed lines, 16:9"
+      "headline": "韩立-出手",
+      "narration": "一个慕兰法士而已。也配？",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, dynamic half body shot from below, a handsome young man with sharp cold eyes and black hair topknot, dark blue robe, name tag '韩立', one hand casually flicking out azure light that shatters the yellow giant hand, calm disdainful expression, explosion debris, large bold speech bubble '一个慕兰法士而已。也配？', speed lines and impact effects, 16:9"
     },
     {
-      "headline": "法士惊恐",
-      "narration": "什么人！竟敢破我法术？！给我滚出来！",
-      "image_prompt": "Chinese xianxia manga panel, close-up face shot, the bald muscular man in yellow robes, face twisted in shock and fury, veins popping on forehead, eyes darting around searching, name tag '慕兰法士', sweat on face, tight framing on enraged expression, large bold speech bubble '什么人！竟敢破我法术？！给我滚出来！', dark intense atmosphere, 16:9"
+      "headline": "法士-惊恐",
+      "narration": "什么人！给我滚出来！",
+      "voice": "zh_male_shaonianzixin_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, close-up face, the bald man with face twisted in shock and fury, veins popping, eyes darting, name tag '慕兰法士', sweat drops, large bold speech bubble '什么人！给我滚出来！', intense dark atmosphere, 16:9"
     },
     {
-      "headline": "震惊",
-      "narration": "你...你是...韩立？！不可能！你怎么会是元婴期！",
-      "image_prompt": "Chinese xianxia manga panel, extreme close-up face shot, a fat elderly cultivator with round face, eyes bulging in total shock, mouth agape, sweat drops on forehead, trembling hands raised, name tag '雷万鹤', tight framing just on face, dramatic zoom effect lines radiating outward, large bold speech bubble '你...你是...韩立？！不可能！', high contrast lighting, 16:9"
+      "headline": "旁白-亮相",
+      "narration": "韩立身形一闪落在众人面前，周身灵压释放，元婴期的威势让所有人都喘不过气来。",
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, full body dramatic entrance shot, a handsome young man with sharp eyes and long black hair flowing, dark blue Daoist robe billowing, name tag '韩立', standing with invisible pressure wave radiating outward pushing others back, others kneeling from spiritual pressure, dramatic backlighting, epic pose, 16:9"
     },
     {
-      "headline": "叙旧",
-      "narration": "雷师伯，别来无恙。当年那份丹方，帮了我大忙。",
-      "image_prompt": "Chinese xianxia manga panel, medium shot two characters facing each other, left: a handsome young man with calm slight smile, black hair topknot, dark blue robe, name tag '韩立', right: fat elderly man still trembling with disbelief, name tag '雷万鹤', dialogue composition, large bold speech bubble from left '雷师伯，别来无恙。当年那份丹方，帮了我大忙。', warm but dramatic lighting, 16:9"
+      "headline": "雷万鹤-震惊",
+      "narration": "你...你是...韩立？！不可能！你怎么是元婴期！",
+      "voice": "zh_male_dayi_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, extreme close-up face, a fat elderly cultivator with round face, eyes bulging in total shock, mouth agape, trembling, name tag '雷万鹤', zoom effect lines radiating outward, large bold speech bubble '你...你是...韩立？！', high contrast, 16:9"
     },
     {
-      "headline": "物是人非",
-      "narration": "马师兄...已经不在了吧。百年了。",
-      "image_prompt": "Chinese xianxia manga panel, close-up face shot, a handsome young man with sharp eyes now showing deep melancholy, long black hair strands across face, name tag '韩立', eyes cast downward, subtle pain in expression, dark moody side lighting casting half face in shadow, large bold speech bubble '马师兄...已经不在了吧。百年了。', somber tight framing, 16:9"
+      "headline": "韩立-叙旧",
+      "narration": "雷师伯，别来无恙。当年那份丹方，帮了韩某大忙。",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, medium shot two characters, left: handsome young man with calm slight smile, black hair topknot, dark blue robe, name tag '韩立', right: fat elderly man trembling with disbelief, name tag '雷万鹤', large bold speech bubble from left '雷师伯，别来无恙。', warm dramatic lighting, 16:9"
     },
     {
-      "headline": "一问",
-      "narration": "南宫婉。她现在怎么样了。",
-      "image_prompt": "Chinese xianxia manga panel, dramatic extreme close-up of eyes only, a handsome young man with intense burning dark eyes showing deep longing and concern, long black hair strands falling, name tag '韩立', this is the key emotional moment, dramatic shadow from side, large bold speech bubble '南宫婉。她现在怎么样了。', extreme tight framing on eyes, dark cinematic, 16:9"
+      "headline": "韩立-物是人非",
+      "narration": "马师兄...已经不在了吧。",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, close-up face, handsome young man with sharp eyes now showing melancholy, black hair strands across face, name tag '韩立', eyes downcast, dark moody side lighting, large bold speech bubble '马师兄...已经不在了吧。', somber atmosphere, 16:9"
+    },
+    {
+      "headline": "韩立-一问",
+      "narration": "南宫婉。她现在怎样了。",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, dramatic extreme close-up of eyes, a handsome young man with intense burning gaze showing deep longing, black hair falling across face, name tag '韩立', dramatic shadow, large bold speech bubble '南宫婉。她现在怎样了。', cinematic tight framing on eyes, 16:9"
     },
     {
       "headline": "沉默",
-      "narration": "......",
-      "image_prompt": "Chinese xianxia manga panel, medium shot, a fat elderly man and a beautiful female cultivator in white robes exchanging worried silent glances, both avoiding looking at someone off-screen, name tags '雷万鹤' '聂盈', heavy oppressive silence, dark moody atmosphere, large text '......', tight uncomfortable composition, 16:9"
-    },
-    {
-      "headline": "悬念",
-      "narration": "她到底怎么了...下集，韩立的决心。",
-      "image_prompt": "Chinese xianxia manga panel, split composition, main: a handsome young man clenching fists with veins showing, jaw tight, determined dangerous expression, name tag '韩立', faint ghostly overlay of a beautiful woman with flowing white hair and ice-blue eyes fading into mist, name tag '南宫婉', large bold speech bubble '她到底怎么了...', text at bottom 'TO BE CONTINUED', dramatic red and black contrast lighting, 16:9"
+      "narration": "南宫婉到底怎么了？下集，韩立的决心。",
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "image_prompt": "Chinese xianxia manga panel, split composition, top: fat elderly man and beautiful female cultivator exchanging worried silent glances, name tags '雷万鹤' '聂盈', bottom: faint ghostly image of a beautiful woman with flowing white hair and ice-blue eyes fading into mist, name tag '南宫婉', text 'TO BE CONTINUED', dramatic dark lighting, 16:9"
     }
   ]
 }

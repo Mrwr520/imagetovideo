@@ -63,6 +63,11 @@ python generate_auto_news.py --script output/fanren_epXX.json --output-name fanr
 - 南宫婉：zh_female_cancan_uranus_bigtts（知性灿灿）
 - 聂盈/年轻女性：zh_female_qingxinnvsheng_uranus_bigtts（清新女声）
 
+**新角色出现时：**
+- 主要角色（有多集戏份）：在 characters.json 中新增条目，分配独立音色
+- 次要角色/路人：复用已有音色（根据性别年龄匹配）
+- 每次新增角色后立即更新 characters.json，保证后续集数一致
+
 ### 4. 更新进度
 - 更新 `characters/fanren/progress.json`：记录集数、章节范围、标题
 - 确保下次能无缝衔接
