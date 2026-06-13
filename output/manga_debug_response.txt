@@ -1,0 +1,76 @@
+```json
+[
+  {
+    "panel": 1,
+    "speaker": "旁白",
+    "dialogue": "头痛炸裂。钢针扎穿太阳穴。",
+    "image_prompt": "A young man with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, lying on rubble with eyes snapping open, extreme close-up on his face showing intense pain and confusion, background is grey sky and broken ruins, Chinese dialogue bubble above him reading '头痛炸裂！', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 2,
+    "speaker": "叶尘",
+    "dialogue": "老子还活着。",
+    "image_prompt": "A young man with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, struggling to sit up on broken tiles, hand pressing on a cracked iron sword at his waist, mid-shot showing his lean muscular build and torn robes, rubble and ruined pillars in background, Chinese dialogue bubble next to him saying '老子还活着。', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 3,
+    "speaker": "旁白",
+    "dialogue": "丹田空空如也。死锁。",
+    "image_prompt": "Close-up of a young man's abdomen, skin showing mysterious grey birthmark-like pattern and strange grey runes that seal the dantian, torn dark blue Daoist robes revealing the area, his hand touching the runes with a shocked expression, dramatic shadows across the markings, Chinese dialogue bubble above reading '丹田空空如也。', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 4,
+    "speaker": "旁白",
+    "dialogue": "远处兽吼，紧接着一声惨叫。",
+    "image_prompt": "A young man with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, holding a broken iron sword, turning his head sharply towards a distant sound, mid-shot showing his alert posture, background is a desolate wilderness with ruins and dark red sunset, Chinese dialogue bubble reading '吼——', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 5,
+    "speaker": "旁白",
+    "dialogue": "空地中央，少女与三头黑鳞妖兽对峙。",
+    "image_prompt": "A beautiful young woman around 17-18 years old, long black hair tied in a practical battle-ready ponytail with a simple wooden hairpin, wearing patched and mended cyan robes with old bloodstains on the left shoulder, a broken jade fragment hanging from a red string around her neck, holding a thin jian sword with a hairline crack near the guard, facing three black-scaled wolf-like beasts (ironback wolves), medium shot showing the triangular formation of the beasts surrounding her, her expression wary and guarded, Chinese dialogue bubble above beasts reading '吼...', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 6,
+    "speaker": "旁白",
+    "dialogue": "铁背狼扑向少女。剑势已老。",
+    "image_prompt": "Action shot of a young woman with long black ponytail and patched cyan robes, a broken jade fragment on her neck, swinging a thin jian sword with a hairline crack to block, a black-scaled ironback wolf lunging at her throat, claws extended, dramatic mid-action pose, her face shows exhaustion and desperation, Chinese dialogue bubble reading '——！', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 7,
+    "speaker": "叶尘",
+    "dialogue": "跑。唯一的选择。",
+    "image_prompt": "Extreme close-up of a young man's hand, blood dripping from a bitten fingertip onto a cracked ancient jade pendant hanging from a leather cord, the jade starts to emit faint green light, his determined eyes reflected in the jade's glow, background blurred, Chinese dialogue bubble reading '跑。', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 8,
+    "speaker": "旁白",
+    "dialogue": "玉佩共鸣！青光乍现。",
+    "image_prompt": "Two jade fragments (one on the young man's neck, one on the young woman's neck) simultaneously glowing with bright green light, energy waves radiating outward, the three ironback wolves frozen mid-lunge with fear in their eyes, dramatic wide shot showing the scene in the ruined courtyard, the green light illuminating everything, Chinese dialogue bubble reading '嗡——', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 9,
+    "speaker": "旁白",
+    "dialogue": "叶尘动了。断剑没入咽喉。",
+    "image_prompt": "Dynamic action shot of a young man with messy black hair and torn dark blue robes, holding a broken iron sword, driving it into the throat of a black-scaled ironback wolf, his left hand gripping the beast's neck scales, blood splattering, wolf collapsing, close-up on the combat moment showing his battle-hardened instinct, Chinese dialogue bubble reading '噗嗤！', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 10,
+    "speaker": "苏瑶",
+    "dialogue": "你是谁？刚才用的什么功法？",
+    "image_prompt": "A beautiful young woman with long black ponytail and patched cyan robes stained with blood, holding a thin jian sword pointing cautiously at the viewer, a broken jade fragment on her neck, her expression wary and guarded with dark circles under her eyes, standing over the corpses of three ironback wolves, evening sky behind her, Chinese dialogue bubble reading '你是谁？', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 11,
+    "speaker": "叶尘",
+    "dialogue": "叶尘。受伤，失忆。",
+    "image_prompt": "A young man with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, standing with a broken iron sword dripping black blood, his face calm but guarded, mid-shot with the ruined courtyard behind him, Chinese dialogue bubble reading '叶尘。受伤，失忆。', Chinese manga panel style, dramatic lighting, high quality anime art"
+  },
+  {
+    "panel": 12,
+    "speaker": "旁白",
+    "dialogue": "通缉令上——魔道余孽叶尘。",
+    "image_prompt": "A young man with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, holding a wanted poster with both hands, his face showing shock and confusion, extreme close-up on his eyes and the poster which reads '魔道余孽叶尘，屠灭玄云宗三百一十二口', the young woman's hand visible on the edge of the poster, dramatic lighting on his face, Chinese dialogue bubble reading '十万灵石。', Chinese manga panel style, dramatic lighting, high quality anime art"
+  }
+]
+```

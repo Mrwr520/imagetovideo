@@ -1,0 +1,39 @@
+{
+  "title": "SpaceX首日暴涨19%市值2万亿！Claude被政府紧急叫停｜6月13日科技快讯",
+  "description": "SpaceX史上最大IPO首日收涨19%，马斯克成首位万亿富翁？Anthropic最强AI模型Claude Fable 5刚发布3天就被美国政府紧急下架！NVIDIA发布RTX Spark超级芯片本地跑1200亿参数大模型，苹果全面重构Siri AI，Google降价打响AI价格战💥 #科技新闻 #AI #SpaceX",
+  "opening": {
+    "narration": "家人们好，6月13号，这周科技圈的消息真是一个比一个炸裂，我挑了5条最猛的跟你们聊聊。",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, confident and cute expression, sitting at a futuristic holographic desk with multiple floating news screens showing tech logos, large prominent speech bubble with bold Chinese text '科技圈又炸了！', vibrant colors, high quality anime art, dynamic angle, soft glow lighting, 16:9 aspect ratio"
+  },
+  "news": [
+    {
+      "headline": "SpaceX史上最大IPO",
+      "narration": "先说最猛的，SpaceX上市了！这可是史上最大的IPO，募资750亿美元，首日股价从135美元直接飙到161美元，涨了19%，市值直接干到2.1万亿美元。马斯克也因此成了人类历史上第一个资产过万亿的人，真是离谱。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, shocked and excited expression, standing in front of a giant stock market display showing SPCX +19% with rocket launching in background, Wall Street scene with confetti, large prominent speech bubble with bold Chinese text '太疯狂了！💰', vibrant colors, high quality anime art, dynamic angle, soft glow lighting, 16:9 aspect ratio"
+    },
+    {
+      "headline": "Claude被政府紧急叫停",
+      "narration": "再来个更魔幻的，Anthropic的Claude Fable 5，号称目前最强的AI模型，6月9号刚发布，结果6月12号美国政府就紧急下令全面下架了，说是涉及国家安全和出口管制。发布3天就被叫停，这AI到底强到什么程度了？细思极恐。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, worried and curious expression, in a dark server room with red warning lights flashing, a giant screen showing 'ACCESS DENIED' and a government seal, large prominent speech bubble with bold Chinese text '被叫停了？！', vibrant colors, high quality anime art, dynamic angle, dramatic red lighting, 16:9 aspect ratio"
+    },
+    {
+      "headline": "RTX Spark超级芯片",
+      "narration": "对了，英伟达在Computex上发布了一款叫RTX Spark的超级芯片，专门给笔记本和台式机用的。ARM架构20核CPU加Blackwell GPU，128GB统一内存，能在本地跑1200亿参数的大模型，还有1PFLOPS的算力。简单说就是，以后AI不用联网了，你笔记本上就能跑。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, amazed expression holding a glowing futuristic chip, surrounded by holographic neural network visualizations and NVIDIA green light effects, large prominent speech bubble with bold Chinese text '本地跑大模型！', vibrant colors, high quality anime art, dynamic angle, neon green glow lighting, 16:9 aspect ratio"
+    },
+    {
+      "headline": "苹果重构Siri AI",
+      "narration": "还有，苹果在WWDC上正式发布了全新的Siri AI，注意，不是升级，是完全重写了。跟Google Gemini合作，终于能像ChatGPT那样正常聊天了，还有独立App。说实话，Siri终于不智障了，虽然来得有点晚。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, smirking expression holding an iPhone with glowing Siri interface, Apple-style minimalist white and blue gradient background, large prominent speech bubble with bold Chinese text 'Siri终于行了？', vibrant colors, high quality anime art, dynamic angle, soft white and blue lighting, 16:9 aspect ratio"
+    },
+    {
+      "headline": "Google AI降价打价格战",
+      "narration": "最后一个，Google把AI Plus订阅从每月8美元直接砍到5美元，存储还从200GB翻倍到400GB。这就是赤裸裸的价格战了，逼着OpenAI和Anthropic跟进。对咱们用户来说当然是好事，AI服务越来越便宜了。",
+      "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, happy victorious expression with shopping bags, price tags floating showing crossed-out $8 and new $5 price, Google colors in background, large prominent speech bubble with bold Chinese text '降价啦！买买买！', vibrant colors, high quality anime art, dynamic angle, warm golden lighting, 16:9 aspect ratio"
+    }
+  ],
+  "closing": {
+    "narration": "好了，今天就聊到这儿。SpaceX上市、Claude被叫停、英伟达新芯片、Siri重生、Google降价，你们觉得哪个最劲爆？评论区聊聊，觉得有用的点个关注，咱们明天见！",
+    "image_prompt": "Anime illustration, a gorgeous anime girl named '小星' with long flowing silver hair and big sparkling blue eyes, beautiful detailed face, slightly sexy outfit with off-shoulder top showing collarbone, perfect figure, waving at viewer with warm smile, cozy modern room with sunset light through window, cherry blossoms floating, large prominent speech bubble with bold Chinese text '明天见~❤', vibrant colors, high quality anime art, dynamic angle, warm sunset lighting, 16:9 aspect ratio"
+  }
+}

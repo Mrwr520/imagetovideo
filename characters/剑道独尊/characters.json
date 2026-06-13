@@ -1,0 +1,61 @@
+{
+  "series": "剑道独尊",
+  "style": "Chinese xianxia manga style, dramatic lighting, detailed character art, dynamic action poses, ink wash aesthetic",
+  "voice": "zh_male_ruyayichen_uranus_bigtts",
+  "episodes_per_arc": 5,
+  "images_per_episode": 10,
+  "duration_target_seconds": 60,
+
+  "characters": {
+    "旁白": {
+      "voice": "zh_male_ruyayichen_uranus_bigtts",
+      "voice_name": "儒雅逸辰（沉稳大气仙侠叙事）",
+      "note": "用于叙事过渡，不超过总台词20%"
+    },
+    "叶尘": {
+      "appearance": "a young man around 20 years old with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, lean muscular build with hidden scars on his torso, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant (混沌古玉·下片) hanging from a leather cord around his neck, a broken iron sword at his waist, a mysterious grey birthmark-like pattern visible on his lower back when shirtless, calm but piercing gaze that makes people uncomfortable, moves with unconscious battle-honed efficiency even when weakened",
+      "name_tag": "叶尘",
+      "voice": "zh_male_m191_uranus_bigtts",
+      "voice_name": "云舟（年轻冷静有磁性）",
+      "age": "约20岁",
+      "personality": "冷静果断，身经百战的肌肉记忆，失忆但不失锋芒。谨慎但不怕事，隐忍但有底线。极度重视承诺——说了就做到。过度自责倾向——认为玄云宗312人的死与自己有关。",
+      "core_drive": "找到真相：我是谁？玄云宗是谁灭的？谁在利用我的名字？",
+      "arc": "陨落(Ch1-5)→探寻(Ch6-15)→破茧(Ch16-30)→觉醒(Ch31-50)→复仇(Ch51-200)→真相(Ch201-500)→超脱(Ch501-1000)",
+      "flaw": "过度自责，把不属于自己的罪责扛在肩上",
+      "battle_style": "本能流——不需要思考，身体知道该怎么打。近战为主，断剑+玉佩辅助。催动玉佩=赌命。"
+    },
+    "苏瑶": {
+      "appearance": "a beautiful young woman around 17-18 years old, slender but wiry from years of survival, long black hair tied in a practical battle-ready ponytail with a simple wooden hairpin, wearing patched and mended cyan robes with old bloodstains on the left shoulder, a broken jade fragment (混沌古玉·上片) hanging from a red string around her neck, holding a thin jian sword with a hairline crack near the guard, wary and guarded expression that softens only when she thinks nobody is watching, dark circles under her eyes from sleepless nights, hands callused from sword practice",
+      "name_tag": "苏瑶",
+      "voice": "zh_female_cancan_uranus_bigtts",
+      "voice_name": "知性灿灿（冷艳中带温度）",
+      "age": "17-18岁",
+      "personality": "表面冷漠是保护壳——所有她信任过的人都死了。机警谨慎到近乎偏执，对任何人都不轻信。但只要通过她的「测试」，就会用命来护你。内心有母亲留下的强烈正义感，只是被生存压力掩盖了。",
+      "core_drive": "完成母亲遗愿→找到玉佩另一半→查明母亲死因→保护值得保护的人",
+      "arc": "流亡(Ch1-10)→试探(Ch11-30)→守护者觉醒(Ch31-100)→独立成长(Ch101-300)→关键抉择(Ch301+)",
+      "flaw": "不敢依赖任何人——「反正最后都会离开」的深层恐惧",
+      "battle_style": "轻灵流——速度优先，细剑精准刺击，灵力不足时靠走位和预判。和苏瑶打=和影子打架。"
+    },
+    "韩铁山": {
+      "appearance": "a middle-aged man in his 40s with a square jaw and perpetual frown, short iron-grey hair cropped close to the scalp, thick bushy eyebrows, a faded saber scar running from left temple to jawline, stocky powerful build like a blacksmith, wearing simple grey robes with a落星盟 iron badge pinned to his chest, callused hands that look more suited to a forge than a sword, tired eyes that have seen too much bureaucracy and not enough justice",
+      "name_tag": "韩铁山",
+      "voice": "zh_male_dayi_uranus_bigtts",
+      "voice_name": "大壹（浑厚老成）",
+      "age": "中年（40+）",
+      "personality": "一个被困在体制内的老实人。知道自己在做不干净的事，但觉得「换谁来都一样」。表面服从，内心有愧。灰色角色——坏得不彻底，好得不纯粹。被打脸后会是最纠结的那个人。",
+      "core_drive": "维持落星盟运转→完成上级命令→暗中调查「到底为什么要追杀叶尘」→最后的站队选择",
+      "arc": "奉命追杀(Ch3-10)→发现疑点(Ch11-20)→内心挣扎(Ch21-40)→最终站队(Ch50+)",
+      "flaw": "体制惯性——习惯了服从，不敢违抗上级，哪怕知道上级在利用自己"
+    },
+    "反派通用": {
+      "voice": "zh_male_shaonianzixin_uranus_bigtts",
+      "voice_name": "少年梓辛（张狂）",
+      "note": "用于路人反派、挑衅者、龙套打脸对象。不要给重要反派用同一个声音。"
+    },
+    "女性通用": {
+      "voice": "zh_female_qingxinnvsheng_uranus_bigtts",
+      "voice_name": "清新女声（温婉）",
+      "note": "用于路人女性角色"
+    }
+  }
+}
