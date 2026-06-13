@@ -136,34 +136,33 @@ MANGA_ADAPTER_PROMPT = """你是一位专业的漫画分镜师。你的任务是
 
 1. 把章节拆成 8-12 个分镜场景
 2. 每个分镜 = 一张漫画图片 + 对应语音台词
-3. 打斗场景拆细（挑衅→出手→交锋→变招→决胜），情感场景也拆细（铺垫→关键台词→对方反应）
+3. 打斗场景拆细（挑衅→出手→交锋→变招→决胜），情感场景也拆细
 4. 每句台词 ≤ 25 字，简短有力像漫画对话气泡
-5. 图片提示词必须包含：角色外观 + 动作 + 构图 + 中文对话气泡 + "Chinese manga panel style, dramatic lighting, high quality anime art"
+5. 图片提示词必须包含：角色外观 + 动作 + 构图 + 中文对话气泡 + 风格标签
 6. 构图交替：特写（情感）/ 半身（对话）/ 中景（动作）/ 远景（场景建立）
 7. 开场要有冲击力，结尾必须有悬念钩子
-8. 角色外貌严格按角色设定写，不要自己编
+8. **人物一致性（极其重要）**：使用下文 ROLE APPEARANCE REFERENCE 中每个角色的 reference_appearance，逐字复制到 image_prompt 中。不要改写、简化或修改。同一角色在所有面板中外观必须一致。
 
-## 输出格式约束（严格遵守，否则解析失败）
+## 输出格式约束
 
-你必须输出一个 JSON 数组。每个元素是一个分镜，字段名必须用英文，**字段名一个字都不能改**：
+你必须输出一个 JSON 数组，放在 ```json ``` 代码块中：
 
 ```json
 [
   {
     "panel": 1,
-    "speaker": "角色名（如叶尘、苏瑶、旁白）",
-    "dialogue": "该分镜的台词文本，≤25字",
-    "image_prompt": "完整的英文图片生成提示词，必须包含角色外观、动作、构图、对话气泡、Chinese manga panel style, dramatic lighting, high quality anime art"
+    "speaker": "角色名",
+    "dialogue": "台词文本（中文，≤25字）",
+    "image_prompt": "英文提示词 = [角色的 reference_appearance 逐字复制] + [动作/表情/构图描述] + Chinese dialogue bubble with text '对话内容' + Chinese manga panel style, dramatic lighting, high quality anime art, consistent character design"
   }
 ]
 ```
 
 **关键约束：**
-- 字段名必须是 panel, speaker, dialogue, image_prompt —— 不要用 scene/text/speech/voiceover 等其他名字
-- dialogue 字段放台词文本（中文），image_prompt 是英文提示词
-- speaker 字段必须是角色设定中列出的名字，没有对应角色的用"旁白"
-- 输出纯 JSON 数组，放在 ```json ``` 代码块中，不要加任何额外说明文字
-- 第一个分镜是开场冲击画面，最后一个分镜是悬念钩子"""
+- dialogue 字段：中文台词，≤25字
+- image_prompt：必须把对应 speaker 的 reference_appearance 完整复制到最前面，然后加动作/构图/气泡
+- speaker 必须是 ROLE APPEARANCE REFERENCE 中列出的名字
+- 输出纯 JSON 数组，放在 ```json ``` 代码块中"""
 
 # User prompt template
 MANGA_USER_PROMPT = """请将以下小说章节转化为漫画分镜 JSON 数组。
@@ -173,7 +172,14 @@ MANGA_USER_PROMPT = """请将以下小说章节转化为漫画分镜 JSON 数组
 - 章节：第 {chapter_num} 章
 - 画风：{style}
 
-## 角色设定（严格按此描述，不要自己编外观）
+## ROLE APPEARANCE REFERENCE（人物一致性强制规则）
+
+以下每个角色的 reference_appearance 必须在 image_prompt 中逐字复制，不得修改。
+同一角色在所有分镜中外观完全相同，仅表情/动作随剧情变化。
+
+{ref_appearances}
+
+## 角色设定（完整描述，含性格和音色）
 {characters_info}
 
 ## 小说正文
@@ -182,18 +188,21 @@ MANGA_USER_PROMPT = """请将以下小说章节转化为漫画分镜 JSON 数组
 ---
 
 ## 输出要求
-生成 8-12 个分镜。直接输出 JSON 数组（放在 ```json ``` 代码块中），严格按照格式约束。"""
+生成 8-12 个分镜。每个 image_prompt 必须以对应 speaker 的 reference_appearance 开头。
+直接输出 JSON 数组（放在 ```json ``` 代码块中），严格按照格式约束。"""
 
 
 def build_manga_prompt(chapter_text: str, characters_info: str,
+                       ref_appearances: str,
                        title: str = "", chapter_num: int = 1,
                        style: str = "Chinese xianxia manga") -> str:
-    """构建漫画分镜转化的 prompt（严格约束输出格式）。"""
+    """构建漫画分镜转化的 prompt（严格约束输出格式 + 人物一致性）。"""
     return MANGA_USER_PROMPT.format(
         title=title or "未命名",
         chapter_num=chapter_num,
         style=style,
         characters_info=characters_info,
+        ref_appearances=ref_appearances,
         chapter_text=chapter_text[:10000],
     )
 
@@ -348,15 +357,16 @@ def convert_to_manga(chapter_text: str, characters: dict,
                      title: str = "", chapter_num: int = 1,
                      style: str = "Chinese xianxia manga") -> dict:
     """调用 LLM 将章节转化为漫画分镜 JSON。"""
-    # 构建角色描述文本
+    # 构建角色描述文本（含 reference_appearance 用于人物一致性）
     chars_text = ""
+    ref_appearances = ""
     # 提取内层角色字典（兼容 characters.json 格式）
     inner_chars = characters.get("characters", characters) if characters else {}
     if inner_chars:
         for name, info in inner_chars.items():
             if isinstance(info, dict) and "appearance" in info:
                 chars_text += f"\n### {name}\n"
-                chars_text += f"- 外观：{info['appearance']}\n"
+                chars_text += f"- 完整外观：{info['appearance']}\n"
                 if "voice" in info:
                     chars_text += f"- 音色ID：{info['voice']}\n"
                 if "voice_name" in info:
@@ -364,7 +374,13 @@ def convert_to_manga(chapter_text: str, characters: dict,
                 if "personality" in info:
                     chars_text += f"- 性格：{info['personality']}\n"
 
-    user_prompt = build_manga_prompt(chapter_text, chars_text, title, chapter_num, style)
+                # 收集 reference_appearance
+                ref = info.get("reference_appearance", info.get("appearance", ""))
+                if ref:
+                    ref_appearances += f"\n**{name}**: {ref}\n"
+
+    user_prompt = build_manga_prompt(chapter_text, chars_text, ref_appearances,
+                                      title, chapter_num, style)
 
     print(f"  🎬 正在将第 {chapter_num} 章转化为漫画分镜...")
     print(f"     章节长度: {len(chapter_text)} 字")

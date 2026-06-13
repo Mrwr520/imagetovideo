@@ -1,60 +1,71 @@
 {
   "series": "剑道独尊",
   "style": "Chinese xianxia manga style, dramatic lighting, detailed character art, dynamic action poses, ink wash aesthetic",
-  "voice": "zh_male_ruyayichen_uranus_bigtts",
+  "voice": "zh_male_cixingjieshuonan_uranus_bigtts",
   "episodes_per_arc": 5,
   "images_per_episode": 10,
   "duration_target_seconds": 60,
 
+  "_character_consistency_rules": {
+    "description": "每个角色有固定的 reference_appearance，生成图片时必须原样复制到 image_prompt 中，不得修改。这确保跨面板的人物一致性。",
+    "rules": [
+      "生成每张图片的 prompt 时，必须把出场角色的 reference_appearance 完整复制进去",
+      "不要简化、改写或省略 reference_appearance 中的任何细节",
+      "同一个角色在所有面板中外观必须完全一致，仅表情/动作/构图随剧情变化",
+      "对话气泡文字由 dialogue 字段指定，不要编造不同的气泡内容"
+    ]
+  },
+
   "characters": {
     "旁白": {
-      "voice": "zh_male_ruyayichen_uranus_bigtts",
-      "voice_name": "儒雅逸辰（沉稳大气仙侠叙事）",
+      "voice": "zh_male_cixingjieshuonan_uranus_bigtts",
+      "voice_name": "磁性解说男声（沉稳大气叙事）",
       "note": "用于叙事过渡，不超过总台词20%"
     },
     "叶尘": {
-      "appearance": "a young man around 20 years old with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, lean muscular build with hidden scars on his torso, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant (混沌古玉·下片) hanging from a leather cord around his neck, a broken iron sword at his waist, a mysterious grey birthmark-like pattern visible on his lower back when shirtless, calm but piercing gaze that makes people uncomfortable, moves with unconscious battle-honed efficiency even when weakened",
+      "reference_appearance": "a young man around 20 years old, sharp sword-like eyebrows, deep determined dark eyes, messy black hair tied loosely with a leather cord, lean muscular build, wearing torn and bloodstained dark blue Daoist robes with tattered sleeves, a cracked ancient jade pendant hanging from a leather cord around his neck, a broken iron sword at his waist, calm but piercing gaze, battle-honed posture",
+      "appearance": "a young man around 20 years old with sharp sword-like eyebrows and deep determined eyes, messy black hair tied loosely with a leather cord, lean muscular build with hidden scars on his torso, wearing torn and bloodstained dark blue Daoist robes, a cracked ancient jade pendant hanging from a leather cord around his neck, a broken iron sword at his waist, a mysterious grey birthmark-like pattern visible on his lower back when shirtless, calm but piercing gaze that makes people uncomfortable, moves with unconscious battle-honed efficiency even when weakened",
       "name_tag": "叶尘",
-      "voice": "zh_male_m191_uranus_bigtts",
-      "voice_name": "云舟（年轻冷静有磁性）",
+      "voice": "zh_male_gaolengchenwen_uranus_bigtts",
+      "voice_name": "高冷沉稳（年轻冷静有磁性）",
       "age": "约20岁",
-      "personality": "冷静果断，身经百战的肌肉记忆，失忆但不失锋芒。谨慎但不怕事，隐忍但有底线。极度重视承诺——说了就做到。过度自责倾向——认为玄云宗312人的死与自己有关。",
+      "personality": "冷静果断，身经百战的肌肉记忆，失忆但不失锋芒。谨慎但不怕事，隐忍但有底线。",
       "core_drive": "找到真相：我是谁？玄云宗是谁灭的？谁在利用我的名字？",
       "arc": "陨落(Ch1-5)→探寻(Ch6-15)→破茧(Ch16-30)→觉醒(Ch31-50)→复仇(Ch51-200)→真相(Ch201-500)→超脱(Ch501-1000)",
-      "flaw": "过度自责，把不属于自己的罪责扛在肩上",
-      "battle_style": "本能流——不需要思考，身体知道该怎么打。近战为主，断剑+玉佩辅助。催动玉佩=赌命。"
+      "flaw": "过度自责，把不属于自己的罪责扛在肩上"
     },
     "苏瑶": {
-      "appearance": "a beautiful young woman around 17-18 years old, slender but wiry from years of survival, long black hair tied in a practical battle-ready ponytail with a simple wooden hairpin, wearing patched and mended cyan robes with old bloodstains on the left shoulder, a broken jade fragment (混沌古玉·上片) hanging from a red string around her neck, holding a thin jian sword with a hairline crack near the guard, wary and guarded expression that softens only when she thinks nobody is watching, dark circles under her eyes from sleepless nights, hands callused from sword practice",
+      "reference_appearance": "a beautiful young woman around 17-18 years old, slender but wiry build, long black hair tied in a practical battle-ready ponytail with a simple wooden hairpin, wearing patched and mended cyan robes with old bloodstains on the left shoulder, a broken jade fragment hanging from a red string around her neck, holding a thin jian sword, wary and guarded expression, dark circles under her eyes, hands callused from sword practice",
+      "appearance": "a beautiful young woman around 17-18 years old, slender but wiry from years of survival, long black hair tied in a practical battle-ready ponytail with a simple wooden hairpin, wearing patched and mended cyan robes with old bloodstains on the left shoulder, a broken jade fragment hanging from a red string around her neck, holding a thin jian sword with a hairline crack near the guard, wary and guarded expression that softens only when she thinks nobody is watching, dark circles under her eyes from sleepless nights, hands callused from sword practice",
       "name_tag": "苏瑶",
-      "voice": "zh_female_cancan_uranus_bigtts",
-      "voice_name": "知性灿灿（冷艳中带温度）",
+      "voice": "zh_female_gufengshaoyu_uranus_bigtts",
+      "voice_name": "古风少御（冷艳少女）",
       "age": "17-18岁",
-      "personality": "表面冷漠是保护壳——所有她信任过的人都死了。机警谨慎到近乎偏执，对任何人都不轻信。但只要通过她的「测试」，就会用命来护你。内心有母亲留下的强烈正义感，只是被生存压力掩盖了。",
+      "personality": "表面冷漠是保护壳。机警谨慎到近乎偏执，对任何人都不轻信。但只要通过「测试」，就会用命来护你。",
       "core_drive": "完成母亲遗愿→找到玉佩另一半→查明母亲死因→保护值得保护的人",
       "arc": "流亡(Ch1-10)→试探(Ch11-30)→守护者觉醒(Ch31-100)→独立成长(Ch101-300)→关键抉择(Ch301+)",
-      "flaw": "不敢依赖任何人——「反正最后都会离开」的深层恐惧",
-      "battle_style": "轻灵流——速度优先，细剑精准刺击，灵力不足时靠走位和预判。和苏瑶打=和影子打架。"
+      "flaw": "不敢依赖任何人——「反正最后都会离开」的深层恐惧"
     },
     "韩铁山": {
+      "reference_appearance": "a middle-aged man in his 40s, square jaw, short iron-grey hair, thick bushy eyebrows, a faded saber scar from left temple to jawline, stocky powerful build like a blacksmith, wearing simple grey robes with a落星盟 iron badge, callused hands, tired eyes",
       "appearance": "a middle-aged man in his 40s with a square jaw and perpetual frown, short iron-grey hair cropped close to the scalp, thick bushy eyebrows, a faded saber scar running from left temple to jawline, stocky powerful build like a blacksmith, wearing simple grey robes with a落星盟 iron badge pinned to his chest, callused hands that look more suited to a forge than a sword, tired eyes that have seen too much bureaucracy and not enough justice",
       "name_tag": "韩铁山",
-      "voice": "zh_male_dayi_uranus_bigtts",
-      "voice_name": "大壹（浑厚老成）",
+      "voice": "zh_male_baqiqingshu_uranus_bigtts",
+      "voice_name": "霸气青叔（浑厚中年）",
       "age": "中年（40+）",
-      "personality": "一个被困在体制内的老实人。知道自己在做不干净的事，但觉得「换谁来都一样」。表面服从，内心有愧。灰色角色——坏得不彻底，好得不纯粹。被打脸后会是最纠结的那个人。",
-      "core_drive": "维持落星盟运转→完成上级命令→暗中调查「到底为什么要追杀叶尘」→最后的站队选择",
+      "personality": "被困在体制内的老实人。灰色角色——坏得不彻底，好得不纯粹。",
+      "core_drive": "维持落星盟运转→暗中调查真相→最后的站队选择",
       "arc": "奉命追杀(Ch3-10)→发现疑点(Ch11-20)→内心挣扎(Ch21-40)→最终站队(Ch50+)",
-      "flaw": "体制惯性——习惯了服从，不敢违抗上级，哪怕知道上级在利用自己"
+      "flaw": "体制惯性——习惯了服从，不敢违抗上级"
     },
     "反派通用": {
-      "voice": "zh_male_shaonianzixin_uranus_bigtts",
-      "voice_name": "少年梓辛（张狂）",
-      "note": "用于路人反派、挑衅者、龙套打脸对象。不要给重要反派用同一个声音。"
+      "voice": "zh_male_fanjuanqingnian_uranus_bigtts",
+      "voice_name": "反卷青年（嚣张跋扈）",
+      "note": "用于路人反派、挑衅者、龙套打脸对象"
     },
     "女性通用": {
-      "voice": "zh_female_qingxinnvsheng_uranus_bigtts",
-      "voice_name": "清新女声（温婉）",
+      "voice": "zh_female_qingchezizi_uranus_bigtts",
+      "voice_name": "清澈梓梓（温柔女声）",
       "note": "用于路人女性角色"
     }
   }
